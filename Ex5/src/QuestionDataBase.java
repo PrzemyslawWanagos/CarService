@@ -5,8 +5,8 @@ public class QuestionDataBase {
     private List<Question> listOfQuestions = new ArrayList<>();
 
     public QuestionDataBase() {
-
     }
+
     public QuestionDataBase(List<Question> listOfQuestions) {
         this.listOfQuestions = listOfQuestions;
     }
@@ -26,9 +26,8 @@ public class QuestionDataBase {
         this.listOfQuestions = listOfQuestions;
     }
 
-    public void addQuestion(Question question){
+    public void addQuestion(Question question) {
         listOfQuestions.add(question);
-
     }
 
 

@@ -1,15 +1,29 @@
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 public class Play {
     public Play() {
-        System.out.println("wylosowane pytania:");
+        int countOfCorrectAnswers = 0;
+        System.out.println("Wylosowane pytania: ");
         for (Question question : Quiz.selectedQuestions) {
             printQuestion(question);
             Boolean isAnswerCorrect = checkAnswer(question);
-            System.out.println(question.getQuestion()+" answered correctly?"+ isAnswerCorrect);
+            if (isAnswerCorrect) {
+                System.out.println("Odpowiedz poprawna :)");
+                countOfCorrectAnswers++;
+            } else {
+                System.out.println("Odpowiedz niepoprawna:( \n Poprawna odpowiedz to:");
+                StringBuilder msg = new StringBuilder();
+                for (Integer correctAnswer : question.getCorrectAnswers()) {
+                    msg.append(correctAnswer).append(".").append(question.getAnswers()[correctAnswer - 1]);
+                }
+                System.out.println(msg);
+            }
         }
+        System.out.println("Odpowiedziales poprawnie na " + countOfCorrectAnswers + " z " + Quiz.selectedQuestions.size() + " odpowiedzi.");
+        Menu.mainMenu();
     }
 
     private void printQuestion(Question question) {
@@ -20,17 +34,18 @@ public class Play {
     }
 
     private Boolean checkAnswer(Question question) {
-        Boolean isAnswerCorrect = true;
-        List<Integer> providedAnswers = QuizUtils.scanInput("podaj odpowiedz. w pzypadku wielu odpowiezi rozdziel je przecinkiem", 1, question.getAnswers().length);
+        boolean isAnswerCorrect = true;
+        List<Integer> providedAnswers = QuizUtils.scanInput("podaj nr odpowiedzi. W pzypadku wielu odpowiedzi rozdziel je przecinkiem", 1, question.getAnswers().length, false);
         Arrays.sort(question.getCorrectAnswers());
         Collections.sort(providedAnswers);
         //if(Arrays.equals(Arrays.asList(question.getCorrectAnswers()),providedAnswers ));
-        if(question.getCorrectAnswers().length!=providedAnswers.size()){
+        if (question.getCorrectAnswers().length != providedAnswers.size()) {
             isAnswerCorrect = false;
-        }
-        for (int i = 0; i < question.getCorrectAnswers().length; i++) {
-            if (question.getCorrectAnswers()[i] != providedAnswers.get(i)) {
-                isAnswerCorrect = false;
+        } else {
+            for (int i = 0; i < question.getCorrectAnswers().length; i++) {
+                if (!Objects.equals(question.getCorrectAnswers()[i], providedAnswers.get(i))) {
+                    isAnswerCorrect = false;
+                }
             }
         }
         return isAnswerCorrect;

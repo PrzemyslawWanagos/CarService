@@ -1,25 +1,25 @@
 import java.util.Arrays;
 
 public class Question {
-    public static Integer incrementalID =0;
+    public static Integer incrementalID = 0;
     private Integer currentID;
     private Category category;
     private String question;
-    private String [] answers;
-    private Integer [] correctAnswers;
+    private String[] answers;
+    private Integer[] correctAnswers;
 
     public Question() {
         incrementalID++;
-        currentID=incrementalID;
+        currentID = incrementalID;
     }
 
-    public Question(Category category, String question, Integer[] correctAnswers, String...answers) {
+    public Question(Category category, String question, Integer[] correctAnswers, String... answers) {
         this.category = category;
         this.question = question;
         this.answers = answers;
         this.correctAnswers = correctAnswers;
         incrementalID++;
-        currentID=incrementalID;
+        currentID = incrementalID;
     }
 
     @Override
