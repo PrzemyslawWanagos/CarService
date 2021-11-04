@@ -6,7 +6,7 @@ public class Menu {
         System.out.println("Dostepne opcje to:");
         System.out.println("1. Szybka gra bez wyboru kategorii");
         System.out.println("0. wyjscie z programu");
-        List<Integer> menuSelection = QuizUtils.scanInput("wybierz opcje", 0, 1, true);
+        List<Integer> menuSelection = QuizUtils.scanForInt("wybierz opcje", 0, 1, true);
         switch (menuSelection.get(0)) {
             case 0:
                 break;

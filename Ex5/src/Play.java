@@ -35,7 +35,7 @@ public class Play {
 
     private Boolean checkAnswer(Question question) {
         boolean isAnswerCorrect = true;
-        List<Integer> providedAnswers = QuizUtils.scanInput("podaj nr odpowiedzi. W pzypadku wielu odpowiedzi rozdziel je przecinkiem", 1, question.getAnswers().length, false);
+        List<Integer> providedAnswers = QuizUtils.scanForInt("podaj nr odpowiedzi. W pzypadku wielu odpowiedzi rozdziel je przecinkiem", 1, question.getAnswers().length, false);
         Arrays.sort(question.getCorrectAnswers());
         Collections.sort(providedAnswers);
         //if(Arrays.equals(Arrays.asList(question.getCorrectAnswers()),providedAnswers ));

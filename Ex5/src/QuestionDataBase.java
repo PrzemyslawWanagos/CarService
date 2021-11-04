@@ -29,6 +29,8 @@ public class QuestionDataBase {
     public void addQuestion(Question question) {
         listOfQuestions.add(question);
     }
+    public class QuestionAdd {
 
+    }
 
 }

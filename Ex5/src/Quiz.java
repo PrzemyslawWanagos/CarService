@@ -8,6 +8,11 @@ public class Quiz {
 
 
     public static void main(String[] args) {
+        System.out.println(QuizUtils.scanForInt("podaj pojedyncze int 0-4",0,4,true));
+        System.out.println(QuizUtils.scanForInt("podaj wiele int 0-4",0,4,false));
+        System.out.println(QuizUtils.scanForString("podaj String"));
+        System.out.println(QuizUtils.scanForString("podaj a,b,c,d","a","b","c","d"));
+
         populateInitialQuestions();
         Menu.mainMenu();
     }
