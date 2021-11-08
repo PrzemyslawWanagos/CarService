@@ -22,7 +22,7 @@ public class Play {
                 System.out.println(msg);
             }
         }
-        System.out.println("Odpowiedziales poprawnie na " + countOfCorrectAnswers + " z " + Quiz.selectedQuestions.size() + " odpowiedzi.");
+        System.out.println("Odpowiedziales poprawnie na " + countOfCorrectAnswers + " z " + Quiz.selectedQuestions.size() + " odpowiedzi.\n\n");
         Menu.mainMenu();
     }
 
@@ -38,7 +38,6 @@ public class Play {
         List<Integer> providedAnswers = QuizUtils.scanForInt("podaj nr odpowiedzi. W pzypadku wielu odpowiedzi rozdziel je przecinkiem", 1, question.getAnswers().length, false);
         Arrays.sort(question.getCorrectAnswers());
         Collections.sort(providedAnswers);
-        //if(Arrays.equals(Arrays.asList(question.getCorrectAnswers()),providedAnswers ));
         if (question.getCorrectAnswers().length != providedAnswers.size()) {
             isAnswerCorrect = false;
         } else {

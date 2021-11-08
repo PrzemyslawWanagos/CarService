@@ -6,18 +6,12 @@ public class Quiz {
     public static QuestionDataBase questionDataBase = new QuestionDataBase();
     public static Set<Question> selectedQuestions = new HashSet<>();
 
-
     public static void main(String[] args) {
         questionDataBase.readProviderListFromFile();
-        Question newQuestion = new Question();
-        newQuestion.createQuestion();
-        questionDataBase.addQuestion(newQuestion);
         Menu.mainMenu();
         System.out.println(questionDataBase.getListOfQuestions().toString());
         questionDataBase.addQuestionsListToFile();
     }
-
-
 
     public static void questionSelection(Integer numberOfQuestionsToBeSelected) {
         selectedQuestions.clear();

@@ -40,4 +40,22 @@
   "question" : "Pytanie filmowe",
   "answers" : [ "odpa", "odpb", "odpc" ],
   "correctAnswers" : [ 1, 2 ]
+}, {
+  "currentID" : 8,
+  "category" : "MOVIES",
+  "question" : "reiowuroi",
+  "answers" : [ "eiruetoriew", "ewrtuiuert", "ldkjfiweu" ],
+  "correctAnswers" : [ 1, 2 ]
+}, {
+  "currentID" : 9,
+  "category" : "MOVIES",
+  "question" : "eqwer",
+  "answers" : [ "wtryr", "ewr", "tytry", "utyu" ],
+  "correctAnswers" : [ 3, 4 ]
+}, {
+  "currentID" : 10,
+  "category" : "GEOGRAPHY",
+  "question" : "What is the capital of Australia?",
+  "answers" : [ "Sydney", "Adelaide", "Melbourne" ],
+  "correctAnswers" : [ 3 ]
 } ]

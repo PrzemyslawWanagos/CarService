@@ -72,4 +72,28 @@ public class QuizUtils {
         return toReturn;
     }
 
+    public static <T> String arrayToString(T[] array, Boolean printNumbers) {
+        String toReturn = "";
+        for (int i = 0; i < array.length; i++) {
+            if (printNumbers) {
+                toReturn = toReturn + (i + 1) + "." + array[i] + "\n";
+            } else {
+                toReturn = toReturn + array[i] + "\n";
+            }
+        }
+        return toReturn;
+    }
+
+    public static <T> String listToString(List<T> list, Boolean printNumbers) {
+        String toReturn = "";
+        for (int i = 0; i < list.size(); i++) {
+            if (printNumbers) {
+                toReturn = toReturn + (i + 1) + "." + list.get(i) + "\n";
+            } else {
+                toReturn = toReturn + list.get(i) + "\n";
+            }
+        }
+        return toReturn;
+    }
 }
+
