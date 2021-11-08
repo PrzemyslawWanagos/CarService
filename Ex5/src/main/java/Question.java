@@ -10,7 +10,6 @@ public class Question {
     private String[] answers;
     private Integer[] correctAnswers;
 
-
     public Question() {
         incrementalID++;
         currentID = incrementalID;
@@ -81,32 +80,32 @@ public class Question {
             e.printStackTrace();
         }
         answers = listOfAnswers.toArray(new String[0]);
-        System.out.println(Arrays.toString(answers));
+        System.out.println("Mozliwe odpowiedzi to: ");
+        System.out.println(QuizUtils.arrayToString(answers, true));
     }
 
     public void createQuestion() {
         List<Category> listOfCategories = Arrays.asList(Category.values());
         System.out.println("Dostepne kategorie pytan to:");
-        for(int i=0;i<listOfCategories.size();i++){
-            System.out.println(i+1+"."+listOfCategories.get(i));
-        }
-        category=listOfCategories.get(QuizUtils.scanForInt("Wybiez kategorie od 1 do "+listOfCategories.size(),1,listOfCategories.size(),true).get(0)-1);
-
-        question=QuizUtils.scanForString("Podaj pytanie?");
+        System.out.println(QuizUtils.listToString(listOfCategories, true));
+        category = listOfCategories.get(QuizUtils.scanForInt("Wybiez kategorie od 1 do " + listOfCategories.size(), 1, listOfCategories.size(), true).get(0) - 1);
+        question = QuizUtils.scanForString("Podaj pytanie?");
         String answer = "";
         while (!answer.equals("q")) {
             answer = QuizUtils.scanForString("Podaj odpowiedz. Aby zakonczyc podaj 'q'");
             if (!answer.equals("q")) {
                 addAnswer(answer);
+            } else {
+                if (answers == null) {
+                    System.out.println("Musisz podac przynajmiej jedna odpowiedz");
+                    answer = "";
+                }
             }
         }
-        System.out.println("Nowe pytanie to:"+question);
+        System.out.println("Nowe pytanie to:" + question);
         System.out.println("Nowe odpowiedzi to:");
-        for(int i=0;i< answers.length;i++){
-            System.out.println((i+1)+"."+answers[i]);
-        }
-        correctAnswers=QuizUtils.scanForInt("Wybierz poprawna odpowiedz w zakresie :1 do "+answers.length+". W przypadku wielu odpowiedzi rozdziel je przecinkiem.",1,answers.length,false).toArray(new Integer[0]);
-        System.out.println(Arrays.toString(correctAnswers));
+        System.out.println(QuizUtils.arrayToString(answers, true));
+        correctAnswers = QuizUtils.scanForInt("Wskaz poprawna odpowiedz w zakresie :1 do " + answers.length + ". W przypadku wielu odpowiedzi rozdziel je przecinkiem.", 1, answers.length, false).toArray(new Integer[0]);
     }
 
     public Integer[] getCorrectAnswers() {
