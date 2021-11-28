@@ -31,4 +31,4 @@ Klikając poniższe linki, przejdziesz na stronę z podglądem instrukcji.
 
 ### [Zadanie 5 - Struktury danych w Java](./Ex5)
 
-### [Zadanie 6 - Spring - kontroler, endpoint](./Ex6)
+### [Zadanie 6 - Spring Boot - kontroler, endpoint](./Ex6)

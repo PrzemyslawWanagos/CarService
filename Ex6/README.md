@@ -1,4 +1,4 @@
-# Zadanie 6 - Spring - kontroler, endpoint
+# Zadanie 6 - Spring Boot - kontroler, endpoint
 #### Zakres: Spring Web, kontroler, endpoint, adnotacje, Dependency Injection
 
 ### Zadanie "Domowa biblioteczka" :books:
@@ -9,7 +9,7 @@
 4. Przeczytaj instrukcję, która wyświetli się na głównej stronie aplikacji (domyślnie ścieżka `http://localhost:8080/`).  
 5. Do przygotowanego szkieletu aplikacji dodaj odpowiednie komponenty (kontroler, endpoint, serwis).
 6. Ostateczne rozwiązanie powinno się dać skompilować, uruchomić i wyświetlić wszystkie wymagane elementy.  
-7. W razie pytań i problemów dajcie mi znać na Slacku. 
+7. W razie pytań i problemów piszcie do mnie na Slacku. 
 
 
 ## Forma oddania zadania
@@ -19,11 +19,10 @@ Wykonaj zadanie na podanym branchu.
 Utwórz Pull Request ze swojego brancha na branch main.  
 Dopiero tak zgłoszone zadanie podlega ocenie.
 
----
 
 ## Punktacja
 
-Do zdobycia jest :five: pkt.  
+Do zdobycia jest :five:  pkt.  
 Zadania oddane po terminie są oceniane na maksymalnie połowę punktów.
 
 #### Powodzenia!
