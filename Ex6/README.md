@@ -1,6 +1,7 @@
 # Zadanie 6 - Spring - kontroler, endpoint
+#### Zakres: Spring Web, kontroler, endpoint, adnotacje, Dependency Injection
 
-### Zadanie Domowa biblioteczka :books:
+### Zadanie "Domowa biblioteczka" :books:
 
 1. Otwórz projekt `Ex6` w IntelliJ IDEA.
 2. Oznacz projekt jako Mavenowy (np. poprzez opcję 'Add as a Maven Project' klikając prawym przyciskiem na plik pom.xml).
@@ -12,23 +13,20 @@
 
 
 ## Forma oddania zadania
-Utwórz nowy branch o nazwie wg konwencji `7_imieNazwisko`, np. `7_MariuszSzymanski`.<br/>
-Pamiętaj, żeby nowy branch, utworzyć wychodząc z aktualnego brancha master.
-Wykonaj zadanie na podanym branchu. <br/>
-:new: Utwórz Pull Request ze swojego brancha na master :heavy_exclamation_mark:
-
-
+Utwórz branch o nazwie wg konwencji `6_imieNazwisko`, np. `6_MariuszSzymanski`  
+:exclamation: Pamiętaj, aby nowy branch, utworzyć wychodząc z aktualnego brancha `main`.
+Wykonaj zadanie na podanym branchu.  
+Utwórz Pull Request ze swojego brancha na branch main.  
 Dopiero tak zgłoszone zadanie podlega ocenie.
 
 ---
 
 ## Punktacja
 
-Do zdobycia jest :five: pkt.
-Zadania oddane po terminie są oceniane na maksymalnie połowę pkt.
+Do zdobycia jest :five: pkt.  
+Zadania oddane po terminie są oceniane na maksymalnie połowę punktów.
 
 #### Powodzenia!
 
 ### :clock12: Termin oddania:
-## 23.12.2020 - dla osób które nie zgłosiły się do zadania bonusowego
-## 30.12.2020 - osoby, które robią zadanie bonusowe 'Serwis samochodowy'
+## Niedziela, 05.12.2021
