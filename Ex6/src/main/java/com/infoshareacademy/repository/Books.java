@@ -2,10 +2,11 @@ package com.infoshareacademy.repository;
 
 import com.infoshareacademy.domain.Book;
 import com.infoshareacademy.domain.Category;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Component
 public class Books {
 
     private final List<Book> books;
