@@ -1,5 +1,8 @@
 package com.infoshareacademy.domain;
 
+import org.springframework.stereotype.Component;
+
+//@Component
 public class Book {
 
     private final String author;

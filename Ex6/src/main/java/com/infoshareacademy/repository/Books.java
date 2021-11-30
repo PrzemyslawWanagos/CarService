@@ -9,7 +9,7 @@ import java.util.List;
 @Component
 public class Books {
 
-    private final List<Book> books;
+    private /*final */List<Book> books;
 
     public Books() {
         this.books = importBooks();
@@ -36,4 +36,9 @@ public class Books {
 
         return books;
     }
+
+   /* public Books findBook(String toFind) {
+        Books a=books;
+return a;
+    }*/
 }
