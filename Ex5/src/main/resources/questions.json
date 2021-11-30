@@ -1,0 +1,73 @@
+[ {
+  "currentID" : 1,
+  "category" : "MOVIES",
+  "question" : "What is the title of latest James Bond movie?",
+  "answers" : [ "Casino Royale", "Doctor No", "No time to die" ],
+  "correctAnswers" : [ 3 ]
+}, {
+  "currentID" : 2,
+  "category" : "MOVIES",
+  "question" : "How many trilogies are there in StarWars saga",
+  "answers" : [ "six", "three", "one" ],
+  "correctAnswers" : [ 2 ]
+}, {
+  "currentID" : 3,
+  "category" : "MOVIES",
+  "question" : "Which characters are present in Hobbit movies",
+  "answers" : [ "Bilbo", "Frodo", "Gandalf" ],
+  "correctAnswers" : [ 1, 3 ]
+}, {
+  "currentID" : 4,
+  "category" : "JAVA",
+  "question" : "Which statement is true for Java Arrays",
+  "answers" : [ "The elements of Array are always sorted", "Arrays have defined size, which cannot be changed", "You can expand Array using expand() method" ],
+  "correctAnswers" : [ 2 ]
+}, {
+  "currentID" : 5,
+  "category" : "GEOGRAPHY",
+  "question" : "Which city is the capital of France",
+  "answers" : [ "Paris", "Berlin", "Rome" ],
+  "correctAnswers" : [ 1 ]
+}, {
+  "currentID" : 6,
+  "category" : null,
+  "question" : "q",
+  "answers" : [ "e", "r", "t", "y" ],
+  "correctAnswers" : [ 1, 4 ]
+}, {
+  "currentID" : 7,
+  "category" : "MOVIES",
+  "question" : "Pytanie filmowe",
+  "answers" : [ "odpa", "odpb", "odpc" ],
+  "correctAnswers" : [ 1, 2 ]
+}, {
+  "currentID" : 8,
+  "category" : "MOVIES",
+  "question" : "reiowuroi",
+  "answers" : [ "eiruetoriew", "ewrtuiuert", "ldkjfiweu" ],
+  "correctAnswers" : [ 1, 2 ]
+}, {
+  "currentID" : 9,
+  "category" : "MOVIES",
+  "question" : "eqwer",
+  "answers" : [ "wtryr", "ewr", "tytry", "utyu" ],
+  "correctAnswers" : [ 3, 4 ]
+}, {
+  "currentID" : 10,
+  "category" : "GEOGRAPHY",
+  "question" : "What is the capital of Australia?",
+  "answers" : [ "Sydney", "Adelaide", "Melbourne" ],
+  "correctAnswers" : [ 3 ]
+}, {
+  "currentID" : 11,
+  "category" : "GEOGRAPHY",
+  "question" : "What is the highest mountain in Europe",
+  "answers" : [ "Mount Blanc", "Rysy", "Gerlach" ],
+  "correctAnswers" : [ 2 ]
+}, {
+  "currentID" : 12,
+  "category" : "MOVIES",
+  "question" : "WHICH MOVIE WAS BASED ON STEPHEN KING LITERATURE?",
+  "answers" : [ "1408", "Green Mile", "Shawshenk redemption" ],
+  "correctAnswers" : [ 1, 2, 3 ]
+} ]
