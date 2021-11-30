@@ -1,48 +1,63 @@
 package com.infoshareacademy.rest;
 
+
+
 import com.infoshareacademy.domain.Book;
 import com.infoshareacademy.domain.Category;
 import com.infoshareacademy.repository.Books;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 
+import static com.infoshareacademy.Utils.listToString;
 @org.springframework.web.bind.annotation.RestController
-@RequestMapping("books")
+
 public class RestController {
-    @Autowired
+
     Books books;
-//    @Autowired
-//    Book book;
 
-    @GetMapping("/test")
-    public Books getBookcase() {
+    @GetMapping("/books")
+    public String mainPage() {
+        return "main";
+    }
 
-        return books;
+    @GetMapping("/all-books")
+    public String getBookcase() {
+        return listToString(books.getBooks(), true);
+
     }
 
     @GetMapping("/book-for-today")
-    public Book getBook() {
+    public String getBook() {
         Random random = new Random();
 
         Integer bookPosition = random.nextInt(books.getBooks().size());
-        return books.getBooks().get(bookPosition);
+        return books.getBooks().get(bookPosition).toString();
     }
 
+    @GetMapping("book/{title}/search")
+    public String findBook(@PathVariable String title) {
+        List<Book> toReturn = new ArrayList<>();       //                      @RequestParam(required = false, name = ""text"", defaultValue = "cool t-shirt") String name) {
+        for (Book book : books.getBooks()) {
+            if (book.getTitle().toUpperCase(Locale.ROOT).contains(title.toUpperCase(Locale.ROOT))) {
+                toReturn.add(book);
+            }
+        }
+        return listToString(toReturn, true);
+    }
 
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("add")
-public Book addBook() {
-      Book duplicateBook;
-      duplicateBook=books.getBooks().get(3);
-      books.getBooks().add(new Book("Jan Brzechwa","Lokomotywa", Category.LITERATURA_PIEKNA,2,true));
+    public Book addBook() {
+        Book duplicateBook;
+        duplicateBook = books.getBooks().get(3);
+        books.getBooks().add(new Book("Jan Brzechwa", "Lokomotywa", Category.LITERATURA_PIEKNA, 2, true));
         return duplicateBook;
-      ////       books.toString();
-   }
+        ////       books.toString();
+    }
 }
