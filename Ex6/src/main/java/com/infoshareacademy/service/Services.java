@@ -29,6 +29,7 @@ public class Services {
             return listToString(toReturn, true)
                     + "<br> <br> <button onclick=\"window.location.href='http://localhost:8080/main';\">Main menu</button>";
         } else {
+
             return "There are no books meeting your title criteria"+
                      "<br> <br> <button onclick=\"window.location.href='http://localhost:8080/main';\">Main menu</button>";
         }

@@ -103,6 +103,7 @@ public abstract class Utils {
         return toReturn;
     }
     public static List<String> findStringInList(List<String> list, String stringToFind) {
+
         return list.stream()
                 .filter(s -> s
                         .toLowerCase(Locale.ROOT)
