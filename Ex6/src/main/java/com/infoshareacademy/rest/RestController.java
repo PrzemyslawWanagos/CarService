@@ -5,7 +5,9 @@ package com.infoshareacademy.rest;
 import com.infoshareacademy.domain.Book;
 import com.infoshareacademy.domain.Category;
 import com.infoshareacademy.repository.Books;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -14,13 +16,13 @@ import java.util.Locale;
 import java.util.Random;
 
 import static com.infoshareacademy.Utils.listToString;
-@org.springframework.web.bind.annotation.RestController
-
+//@org.springframework.web.bind.annotation.RestController
+@Controller
 public class RestController {
-
+@Autowired
     Books books;
 
-    @GetMapping("/books")
+    @GetMapping("/main")
     public String mainPage() {
         return "main";
     }
