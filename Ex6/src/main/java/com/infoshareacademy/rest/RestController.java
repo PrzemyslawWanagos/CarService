@@ -17,23 +17,26 @@ import java.util.Random;
 
 import static com.infoshareacademy.Utils.listToString;
 //@org.springframework.web.bind.annotation.RestController
-@org.springframework.web.bind.annotation.RestController
+//@org.springframework.web.bind.annotation.RestController
+@Controller
 public class RestController {
 @Autowired
     Books books;
 
-    @GetMapping("/main")
+    @RequestMapping(method = RequestMethod.GET, value = "/main")
     public String mainPage() {
         return "main";
     }
 
     @GetMapping("/all-books")
+    @ResponseBody
     public String getBookcase() {
         return listToString(books.getBooks(), true);
 
     }
 
     @GetMapping("/book-for-today")
+    @ResponseBody
     public String getBook() {
         Random random = new Random();
 
@@ -42,6 +45,7 @@ public class RestController {
     }
 
     @GetMapping("book/{title}/search")
+    @ResponseBody
     public String findBook(@PathVariable String title) {
         List<Book> toReturn = new ArrayList<>();       //                      @RequestParam(required = false, name = ""text"", defaultValue = "cool t-shirt") String name) {
         for (Book book : books.getBooks()) {
