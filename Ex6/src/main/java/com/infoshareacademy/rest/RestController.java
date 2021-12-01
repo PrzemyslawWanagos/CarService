@@ -17,7 +17,7 @@ import java.util.Random;
 
 import static com.infoshareacademy.Utils.listToString;
 //@org.springframework.web.bind.annotation.RestController
-@Controller
+@org.springframework.web.bind.annotation.RestController
 public class RestController {
 @Autowired
     Books books;
