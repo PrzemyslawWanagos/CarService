@@ -1,7 +1,5 @@
 package com.infoshareacademy.domain;
 
-import org.springframework.stereotype.Component;
-
 //@Component
 public class Book {
 
@@ -41,6 +39,6 @@ public class Book {
 
     @Override
     public String toString() {
-        return author + ", " + title + " (" + pages + "str.), " + ((forKids)?"for kids":"not for kids");
+        return author + ", " + title + " (" + pages + "str.), " + ((forKids) ? "for kids" : "definitely not for kids");
     }
 }

@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class BookcaseApp {
 
     public static void main(String[] args) {
+
         SpringApplication.run(BookcaseApp.class, args);
     }
 

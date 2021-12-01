@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+
 @Component
 public class Books {
 
@@ -37,8 +38,5 @@ public class Books {
         return books;
     }
 
-   /* public Books findBook(String toFind) {
-        Books a=books;
-return a;
-    }*/
+
 }
