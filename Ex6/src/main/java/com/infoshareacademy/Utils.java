@@ -1,6 +1,11 @@
 package com.infoshareacademy;
 
+import java.awt.*;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.*;
+import java.util.List;
 
 public abstract class Utils {
     public static List<Integer> scanForInt(String prompt, int min, int max, boolean singleSelection) {
@@ -98,6 +103,17 @@ public abstract class Utils {
             }
         }
         return toReturn;
+    }
+    public static void test(String toSearch) throws URISyntaxException, IOException {
+        //Desktop desk = Desktop.getDesktop();
+        Runtime.getRuntime().exec("rundll32 url.dll,FileProtocolHandler http://localhost:8080/book/"+toSearch+"/search");
+        //System.out.println("test works");
+        // now we enter our URL that we want to open in our
+        // default browser
+
+        //desk.browse(new URI("https://onet.pl"));
+
+
     }
 }
 

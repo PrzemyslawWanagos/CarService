@@ -17,8 +17,17 @@
     <br>
     <br>
     <button onclick="window.location.href='http://localhost:8080/book-for-today';">Book for today</button>
+    <br>
+    <br>
 
+    <form action="hello">
+        Search for book by title : <input type="text" name="name"
+                                          onsubmit="return false;"/>
+        <br>
+        <br>
+        <button onclick="window.location.href='http://localhost:8080/@{name}/search';">Search</button>
 
+    </form>
 
 </div>
 </body>
