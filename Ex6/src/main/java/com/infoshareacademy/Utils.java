@@ -1,11 +1,9 @@
 package com.infoshareacademy;
 
-import java.awt.*;
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
+import com.infoshareacademy.domain.Book;
+
 import java.util.*;
-import java.util.List;
+import java.util.stream.Collectors;
 
 public abstract class Utils {
     public static List<Integer> scanForInt(String prompt, int min, int max, boolean singleSelection) {
@@ -21,8 +19,8 @@ public abstract class Utils {
                 if (singleSelection && fromScannerDelimited.length > 1) {
                     throw new Exception("too many argumets entered");
                 }
-                for (int i = 0; i < fromScannerDelimited.length; i++) {
-                    Integer answerInt = Integer.parseInt(fromScannerDelimited[i]);
+                for (String s : fromScannerDelimited) {
+                    int answerInt = Integer.parseInt(s);
                     if (answerInt >= min && answerInt <= max) {
                         toReturn.add(answerInt);
                     } else {
@@ -53,7 +51,7 @@ public abstract class Utils {
     }
 
     public static String scanForString(String prompt, String... allowedAnswers) {
-        String toReturn = "";
+        String toReturn;
         do {
             System.out.println(prompt);
             System.out.println("Dopuszczalne wartosci to: ");
@@ -62,8 +60,8 @@ public abstract class Utils {
                 Scanner scanner = new Scanner(System.in);
                 toReturn = scanner.nextLine();
                 boolean isAnswerCorrect = false;
-                for (int i = 0; i < allowedAnswers.length; i++) {
-                    if (toReturn.equals(allowedAnswers[i])) {
+                for (String allowedAnswer : allowedAnswers) {
+                    if (toReturn.equals(allowedAnswer)) {
                         isAnswerCorrect = true;
                         break;
                     }
@@ -104,16 +102,12 @@ public abstract class Utils {
         }
         return toReturn;
     }
-    public static void test(String toSearch) throws URISyntaxException, IOException {
-        //Desktop desk = Desktop.getDesktop();
-        Runtime.getRuntime().exec("rundll32 url.dll,FileProtocolHandler http://localhost:8080/book/"+toSearch+"/search");
-        //System.out.println("test works");
-        // now we enter our URL that we want to open in our
-        // default browser
-
-        //desk.browse(new URI("https://onet.pl"));
-
-
+    public static List<String> findStringInList(List<String> list, String stringToFind) {
+        return list.stream()
+                .filter(s -> s
+                        .toLowerCase(Locale.ROOT)
+                        .contains(stringToFind.toLowerCase(Locale.ROOT)))
+                .collect(Collectors.toList());
     }
 }
 
