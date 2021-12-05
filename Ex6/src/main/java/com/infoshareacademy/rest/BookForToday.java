@@ -12,8 +12,14 @@ import static com.infoshareacademy.Utils.listToString;
 
 @Controller
 public class BookForToday {
-    Services services;
-    Books books;
+    private final Services services;
+    private final Books books;
+
+    @Autowired
+    public BookForToday(Services services, Books books) {
+        this.services = services;
+        this.books = books;
+    }
 
     @GetMapping("/book-for-today")
     @ResponseBody

@@ -10,8 +10,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class BookCaseController {
-    Services services;
-    Books books;
+
+    private final Books books;
+
+    @Autowired
+    public BookCaseController(Services services, Books books) {
+         this.books = books;
+    }
 
     @GetMapping("/main")
     public String mainPage() {

@@ -2,33 +2,26 @@
 <html lang=“en” xmlns:th=“http://www.thymeleaf.org” xmlns:layout=“http://www.ultraq.net.nz/thymeleaf/layout”
       layout:decorate=“~{layout}“>
 <head>
-
     <title>Welcome to BookCase App</title>
 </head>
 <body>
 <div style="text-align:center">
-
     <img src="../static/LOGO.jpg" height="300" th:src="@{LOGO.jpg}"/>
     <br>
     <br>
-
     <button onclick="window.location.href='http://localhost:8080/all-books';">List of books</button>
-
     <br>
     <br>
     <button onclick="window.location.href='http://localhost:8080/book-for-today';">Book for today</button>
     <br>
     <br>
-
     <form action="search">
         Search for book by title : <input type="text" name="title"
                                           onsubmit=""/>
         <br>
         <br>
         <button onclick="">Search</button>
-
     </form>
-
 </div>
 </body>
 </html>

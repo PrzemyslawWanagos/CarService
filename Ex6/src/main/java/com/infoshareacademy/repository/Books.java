@@ -13,7 +13,7 @@ import java.util.List;
 public class Books {
 
     private /*final */List<Book> books;
-    @Autowired
+    //@Autowired
     public Books() {
         this.books = importBooks();
     }
