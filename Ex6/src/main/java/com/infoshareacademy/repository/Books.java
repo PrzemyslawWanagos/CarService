@@ -2,16 +2,18 @@ package com.infoshareacademy.repository;
 
 import com.infoshareacademy.domain.Book;
 import com.infoshareacademy.domain.Category;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+@Repository
 public class Books {
 
     private /*final */List<Book> books;
-
+    @Autowired
     public Books() {
         this.books = importBooks();
     }

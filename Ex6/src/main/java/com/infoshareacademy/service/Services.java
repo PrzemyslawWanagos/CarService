@@ -2,6 +2,8 @@ package com.infoshareacademy.service;
 
 import com.infoshareacademy.domain.Book;
 import com.infoshareacademy.repository.Books;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +12,12 @@ import java.util.Random;
 
 import static com.infoshareacademy.Utils.listToString;
 
+@Service
 public class Services {
+
+    @Autowired
+    public Services() {
+    }
 
     public String getRandomBook(Books books) {
         Random random = new Random();
