@@ -12,12 +12,12 @@ import static com.infoshareacademy.Utils.listToString;
 
 
 @Controller
-public class BookSearch {
+public class BookSearchController {
     private final Services services;
     private final Books books;
 
     @Autowired
-    public BookSearch(Services services, Books books) {
+    public BookSearchController(Services services, Books books) {
         this.services = services;
         this.books = books;
     }

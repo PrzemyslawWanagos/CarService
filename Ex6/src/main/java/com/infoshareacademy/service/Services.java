@@ -22,7 +22,7 @@ public class Services {
     public String getRandomBook(Books books) {
         Random random = new Random();
         int bookPosition = random.nextInt(books.getBooks().size());
-        return books.getBooks().get(bookPosition).toString() + "<br> <br> <button onclick=\"window.location.href='http://localhost:8080/main';\">Main menu</button>";
+        return books.getBooks().get(bookPosition).toString();
     }
 
     public String browseThroughBooks(Books books, String title) {
