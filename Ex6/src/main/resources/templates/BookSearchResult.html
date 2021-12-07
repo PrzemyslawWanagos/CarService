@@ -4,15 +4,12 @@
 <body>
 <h1>Books which meet your search criteria</h1>
 <p>
-    <th:block th:utext="${bookForToday}"></th:block>
+    <th:block th:utext="${bookSearchResult}"></th:block>
 </p>
 <p>
     <br>
     <br>
     <button onclick="window.location.href='http://localhost:8080/main';">Main menu</button>
-    <br>
-    <br>
-    <button onclick="window.location.href='http://localhost:8080/book-for-today';">Select another book</button>
 </p>
 </body>
 </html>

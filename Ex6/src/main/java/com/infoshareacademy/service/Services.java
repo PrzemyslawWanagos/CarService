@@ -2,20 +2,16 @@ package com.infoshareacademy.service;
 
 import com.infoshareacademy.domain.Book;
 import com.infoshareacademy.repository.Books;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Random;
-
 import static com.infoshareacademy.Utils.listToString;
 
 @Service
 public class Services {
 
-  //  @Autowired
     public Services() {
     }
 
@@ -33,12 +29,9 @@ public class Services {
             }
         }
         if (toReturn.size() > 0) {
-            return listToString(toReturn, true)
-                    + "<br> <br> <button onclick=\"window.location.href='http://localhost:8080/main';\">Main menu</button>";
+            return listToString(toReturn, true);
         } else {
-
-            return "There are no books meeting your title criteria"+
-                     "<br> <br> <button onclick=\"window.location.href='http://localhost:8080/main';\">Main menu</button>";
+            return "There are no books meeting your title criteria";
         }
-        }
+    }
 }

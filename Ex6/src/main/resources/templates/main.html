@@ -9,18 +9,17 @@
     <img src="../static/LOGO.jpg" height="300" th:src="@{LOGO.jpg}"/>
     <br>
     <br>
-    <button onclick="window.location.href='http://localhost:8080/all-books';">List of books</button>
+    <button onclick="window.location.href='/all-books';">List of books</button>
     <br>
     <br>
-    <button onclick="window.location.href='http://localhost:8080/book-for-today';">Book for today</button>
+    <button onclick="window.location.href='/book-for-today';">Book for today</button>
     <br>
     <br>
-    <form action="search">
-        Search for book by title : <input type="text" name="title"
-                                          onsubmit=""/>
+    <form action="books/search">
+        Search for book by title : <input type="text" name="title"/>
         <br>
         <br>
-        <button onclick="">Search</button>
+        <button>Search</button>
     </form>
 </div>
 </body>
