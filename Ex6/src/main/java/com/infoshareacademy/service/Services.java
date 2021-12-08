@@ -1,8 +1,12 @@
 package com.infoshareacademy.service;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.infoshareacademy.domain.Book;
 import com.infoshareacademy.repository.Books;
 import org.springframework.stereotype.Service;
+
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -33,5 +37,16 @@ public class Services {
         } else {
             return "There are no books meeting your title criteria";
         }
+    }
+
+    public void saveBookCase(Books books) {
+        String PROVIDERS_PATH = System.getProperty("user.dir") + "/Ex6/src/main/resources/public/books.json";
+        ObjectMapper mapper=new ObjectMapper();
+        try {
+            mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PROVIDERS_PATH), books);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }

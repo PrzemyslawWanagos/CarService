@@ -2,10 +2,24 @@ package com.infoshareacademy.domain;
 
 public enum Category {
 
-    KRYMINAL_SENSACJA_THRILLER,
-    LITERATURA_PIEKNA,
-    HISTORYCZNA,
-    FANTASTYKA_SCIENCE_FICTION,
-    PUBLICYSTYKA_BIOGRAFIA,
-    OBYCZAJOWA_ROMANS
+    KRYMINAL_SENSACJA_THRILLER ("Crime, Thriller"),
+    LITERATURA_PIEKNA("Fiction"),
+    HISTORYCZNA("Historical"),
+    FANTASTYKA_SCIENCE_FICTION("Science Fiction"),
+    PUBLICYSTYKA_BIOGRAFIA("Biography"),
+    OBYCZAJOWA_ROMANS("Romance");
+
+    private String categoryName;
+
+    Category(String categoryName) {
+        this.categoryName = categoryName;
+    }
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+    }
 }

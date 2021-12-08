@@ -1,0 +1,93 @@
+{
+  "books" : [ {
+    "author" : "Hanya Yanagihara",
+    "title" : "Male zycie",
+    "category" : "LITERATURA_PIEKNA",
+    "pages" : 816,
+    "forKids" : false
+  }, {
+    "author" : "Maja Lunde",
+    "title" : "Historia Pszczol",
+    "category" : "LITERATURA_PIEKNA",
+    "pages" : 514,
+    "forKids" : false
+  }, {
+    "author" : "Leonie Swann",
+    "title" : "Kroczac w ciemnosci",
+    "category" : "LITERATURA_PIEKNA",
+    "pages" : 424,
+    "forKids" : false
+  }, {
+    "author" : "George R.R. Martin",
+    "title" : "Gra o tron",
+    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "pages" : 999,
+    "forKids" : false
+  }, {
+    "author" : "J. R. R. Tolkien",
+    "title" : "Hobbit",
+    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "pages" : 315,
+    "forKids" : false
+  }, {
+    "author" : "Simon Beckett",
+    "title" : "Chemia smierci",
+    "category" : "KRYMINAL_SENSACJA_THRILLER",
+    "pages" : 352,
+    "forKids" : false
+  }, {
+    "author" : "Marc Elsberg",
+    "title" : "Blackout",
+    "category" : "KRYMINAL_SENSACJA_THRILLER",
+    "pages" : 784,
+    "forKids" : false
+  }, {
+    "author" : "Jozef Ignacy Kraszewski",
+    "title" : "Stara basn",
+    "category" : "HISTORYCZNA",
+    "pages" : 304,
+    "forKids" : false
+  }, {
+    "author" : "J. K. Rowling",
+    "title" : "Harry Potter i Kamien Filozoficzny",
+    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "pages" : 328,
+    "forKids" : true
+  }, {
+    "author" : "Antoine de Saint-Exupery",
+    "title" : "Maly Ksiaze",
+    "category" : "LITERATURA_PIEKNA",
+    "pages" : 112,
+    "forKids" : true
+  }, {
+    "author" : "Jojo Moyes",
+    "title" : "Zanim się pojawiles",
+    "category" : "OBYCZAJOWA_ROMANS",
+    "pages" : 382,
+    "forKids" : false
+  }, {
+    "author" : "Elizabeth Gilbert",
+    "title" : "Jedz, modl sie, kochaj",
+    "category" : "PUBLICYSTYKA_BIOGRAFIA",
+    "pages" : 490,
+    "forKids" : false
+  }, {
+    "author" : "bla",
+    "title" : "werw",
+    "category" : "KRYMINAL_SENSACJA_THRILLER",
+    "pages" : 55,
+    "forKids" : false
+  }, {
+    "author" : "bla",
+    "title" : "werw",
+    "category" : "KRYMINAL_SENSACJA_THRILLER",
+    "pages" : 55,
+    "forKids" : false
+  }, {
+    "author" : "bla",
+    "title" : "werw",
+    "category" : "KRYMINAL_SENSACJA_THRILLER",
+    "pages" : 55,
+    "forKids" : false
+  } ]
+}

@@ -9,6 +9,8 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.infoshareacademy.Utils.listToString;
+
 @Repository
 public class Books {
 
@@ -18,9 +20,7 @@ public class Books {
         this.books = importBooks();
     }
 
-    public List<Book> getBooks() {
-        return books;
-    }
+
 
     private static List<Book> importBooks() {
         List<Book> books = new ArrayList<>();
@@ -39,6 +39,20 @@ public class Books {
 
         return books;
     }
+    public List<Book> getBooks() {
+        return books;
+    }
 
+    public void setBooks(List<Book> books) {
+        this.books = books;
+    }
 
+    @Override
+    public String toString() {
+        return listToString(books, true);
+    }
+
+    public void addBookToBookcase(Book book) {
+        books.add(book);
+    }
 }
