@@ -6,15 +6,19 @@ import com.infoshareacademy.dto.BookDto;
 import com.infoshareacademy.repository.Books;
 import com.infoshareacademy.service.Services;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.context.WebApplicationContext;
 
 import java.io.File;
 import java.io.IOException;
 
 @Controller
+@Scope(value = WebApplicationContext.SCOPE_REQUEST, proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class BookAddController {
     private final Services services;
     private final Books books;
