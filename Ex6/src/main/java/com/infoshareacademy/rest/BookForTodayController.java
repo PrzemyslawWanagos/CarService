@@ -10,6 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class BookForTodayController {
+
     private final Services services;
     private final Books books;
 
@@ -25,4 +26,5 @@ public class BookForTodayController {
         modelAndView.addObject("bookForToday", services.getRandomBook(books));
         return modelAndView;
     }
+
 }

@@ -1,5 +1,6 @@
 package com.infoshareacademy.service;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.infoshareacademy.domain.Book;
 import com.infoshareacademy.repository.Books;
@@ -11,12 +12,25 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Random;
+
+import static com.infoshareacademy.BookcaseApp.PROVIDERS_PATH;
 import static com.infoshareacademy.Utils.listToString;
 
 @Service
 public class Services {
 
-    public Services() {
+    public Services() {}
+
+    public static Books readBookCase() {
+        ObjectMapper mapper = new ObjectMapper();
+        Books booksFromFile = new Books();
+        try {
+            booksFromFile = mapper.readValue(new File(PROVIDERS_PATH), new TypeReference<>() {
+            });
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return booksFromFile;
     }
 
     public String getRandomBook(Books books) {
@@ -40,13 +54,12 @@ public class Services {
     }
 
     public void saveBookCase(Books books) {
-        String PROVIDERS_PATH = System.getProperty("user.dir") + "/Ex6/src/main/resources/public/books.json";
-        ObjectMapper mapper=new ObjectMapper();
+        ObjectMapper mapper = new ObjectMapper();
         try {
             mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PROVIDERS_PATH), books);
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
+
 }

@@ -73,14 +73,26 @@
     "forKids" : false
   }, {
     "author" : "autor",
-    "title" : "mal",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
-    "pages" : 123,
+    "title" : "l",
+    "category" : "HISTORYCZNA",
+    "pages" : 321,
     "forKids" : true
   }, {
-    "author" : "fsdfa",
-    "title" : "mal",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "author" : "dsa",
+    "title" : "asd",
+    "category" : "KRYMINAL_SENSACJA_THRILLER",
+    "pages" : 1232,
+    "forKids" : false
+  }, {
+    "author" : "4234",
+    "title" : "4234",
+    "category" : "KRYMINAL_SENSACJA_THRILLER",
+    "pages" : 423,
+    "forKids" : true
+  }, {
+    "author" : "autor",
+    "title" : "terq",
+    "category" : "KRYMINAL_SENSACJA_THRILLER",
     "pages" : 123,
     "forKids" : true
   } ]

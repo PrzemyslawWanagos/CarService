@@ -19,7 +19,4 @@ public enum Category {
         return categoryName;
     }
 
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
-    }
 }

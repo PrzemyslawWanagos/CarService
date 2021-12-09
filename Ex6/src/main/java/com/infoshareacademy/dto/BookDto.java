@@ -2,7 +2,6 @@ package com.infoshareacademy.dto;
 
 import com.infoshareacademy.domain.Category;
 
-
 public class BookDto {
 
     private final String author;
@@ -38,6 +37,5 @@ public class BookDto {
     public boolean isForKids() {
         return forKids;
     }
-
 
 }

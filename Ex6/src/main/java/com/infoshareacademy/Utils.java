@@ -1,11 +1,10 @@
 package com.infoshareacademy;
 
-import com.infoshareacademy.domain.Book;
-
 import java.util.*;
 import java.util.stream.Collectors;
 
 public abstract class Utils {
+
     public static List<Integer> scanForInt(String prompt, int min, int max, boolean singleSelection) {
         System.out.println(prompt);
         List<Integer> toReturn = new ArrayList<>();
@@ -110,5 +109,6 @@ public abstract class Utils {
                         .contains(stringToFind.toLowerCase(Locale.ROOT)))
                 .collect(Collectors.toList());
     }
+
 }
 

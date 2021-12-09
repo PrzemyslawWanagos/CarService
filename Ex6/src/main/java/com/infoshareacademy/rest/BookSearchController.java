@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class BookSearchController {
+
     private final Services services;
     private final Books books;
 
@@ -26,4 +27,5 @@ public class BookSearchController {
         modelAndView.addObject("bookSearchResult", services.browseThroughBooks(books, title));
         return modelAndView;
     }
+
 }

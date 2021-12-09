@@ -14,13 +14,9 @@ import static com.infoshareacademy.Utils.listToString;
 @Repository
 public class Books {
 
-    private /*final */List<Book> books;
-    //@Autowired
-    public Books() {
-        this.books = importBooks();
-    }
+    private List<Book> books;
 
-
+    public Books() {}
 
     private static List<Book> importBooks() {
         List<Book> books = new ArrayList<>();
@@ -36,9 +32,9 @@ public class Books {
         books.add(new Book("Antoine de Saint-Exupery", "Maly Ksiaze", Category.LITERATURA_PIEKNA, 112, true));
         books.add(new Book("Jojo Moyes", "Zanim się pojawiles", Category.OBYCZAJOWA_ROMANS, 382, false));
         books.add(new Book("Elizabeth Gilbert", "Jedz, modl sie, kochaj", Category.PUBLICYSTYKA_BIOGRAFIA, 490, false));
-
         return books;
     }
+
     public List<Book> getBooks() {
         return books;
     }
@@ -55,4 +51,5 @@ public class Books {
     public void addBookToBookcase(Book book) {
         books.add(book);
     }
+
 }

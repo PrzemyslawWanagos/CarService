@@ -1,11 +1,5 @@
 package com.infoshareacademy.domain;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
-
-
 public class Book {
 
     private String author;
@@ -14,7 +8,8 @@ public class Book {
     private int pages;
     private boolean forKids;
 
-    public Book(){};
+    public Book() {}
+
     public Book(String author, String title, Category category, int pages, boolean forKids) {
         this.author = author;
         this.title = title;
@@ -27,36 +22,36 @@ public class Book {
         return author;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public int getPages() {
-        return pages;
-    }
-
-    public boolean isForKids() {
-        return forKids;
-    }
-
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    public String getTitle() {
+        return title;
     }
 
     public void setTitle(String title) {
         this.title = title;
     }
 
+    public Category getCategory() {
+        return category;
+    }
+
     public void setCategory(Category category) {
         this.category = category;
     }
 
+    public int getPages() {
+        return pages;
+    }
+
     public void setPages(int pages) {
         this.pages = pages;
+    }
+
+    public boolean isForKids() {
+        return forKids;
     }
 
     public void setForKids(boolean forKids) {
@@ -65,6 +60,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return author + ", " + title + " (" + pages + "str.), category: "+ category.getCategoryName() +", " + ((forKids) ? "for kids" : "definitely not for kids");
+        return author + ", " + title + " (" + pages + "str.), category: " + category.getCategoryName() + ", " + ((forKids) ? "for kids" : "definitely not for kids");
     }
+
 }

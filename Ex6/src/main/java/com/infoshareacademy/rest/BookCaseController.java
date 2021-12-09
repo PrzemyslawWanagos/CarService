@@ -18,8 +18,8 @@ public class BookCaseController {
 
     @GetMapping("/main")
     public String mainPage() {
+        books.setBooks(Services.readBookCase().getBooks());
         return "main";
     }
-
 
 }
