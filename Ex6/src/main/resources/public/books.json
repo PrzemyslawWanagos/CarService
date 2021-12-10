@@ -71,5 +71,11 @@
     "category" : "PUBLICYSTYKA_BIOGRAFIA",
     "pages" : 490,
     "forKids" : false
+  }, {
+    "author" : "Andy Weir",
+    "title" : "Marsjanin",
+    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "pages" : 482,
+    "forKids" : true
   } ]
 }
