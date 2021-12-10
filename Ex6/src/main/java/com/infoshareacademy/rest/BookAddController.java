@@ -10,7 +10,6 @@ import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.WebApplicationContext;
 
 @Controller
@@ -47,7 +46,9 @@ public class BookAddController {
         }
         books.addBookToBookcase(book);
         services.saveBookCase(books);
-        return "AllBooks"; //books.toString();
+        String searchURL = "/all-books";
+        return "redirect:" + searchURL;
+
     }
 
 }

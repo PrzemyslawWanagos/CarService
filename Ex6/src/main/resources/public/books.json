@@ -71,29 +71,5 @@
     "category" : "PUBLICYSTYKA_BIOGRAFIA",
     "pages" : 490,
     "forKids" : false
-  }, {
-    "author" : "autor",
-    "title" : "l",
-    "category" : "HISTORYCZNA",
-    "pages" : 321,
-    "forKids" : true
-  }, {
-    "author" : "dsa",
-    "title" : "asd",
-    "category" : "KRYMINAL_SENSACJA_THRILLER",
-    "pages" : 1232,
-    "forKids" : false
-  }, {
-    "author" : "4234",
-    "title" : "4234",
-    "category" : "KRYMINAL_SENSACJA_THRILLER",
-    "pages" : 423,
-    "forKids" : true
-  }, {
-    "author" : "autor",
-    "title" : "terq",
-    "category" : "KRYMINAL_SENSACJA_THRILLER",
-    "pages" : 123,
-    "forKids" : true
   } ]
 }
