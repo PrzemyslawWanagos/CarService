@@ -77,5 +77,11 @@
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 482,
     "forKids" : true
+  }, {
+    "author" : "Test book",
+    "title" : "Test title",
+    "category" : "LITERATURA_PIEKNA",
+    "pages" : 345,
+    "forKids" : true
   } ]
 }
