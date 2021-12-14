@@ -2,7 +2,7 @@ package com.infoshareacademy.domain;
 
 public class Book {
 
-    private String author;
+    public String author;
     private String title;
     private Category category;
     private int pages;

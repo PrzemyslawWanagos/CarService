@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang=“en” xmlns:th=“http://www.thymeleaf.org” xmlns:layout=“http://www.ultraq.net.nz/thymeleaf/layout”
+      layout:decorate=“~{layout}“>
+<body>
+<h1>Full list of books</h1>
+<p>
+<!--<h1>Liczba książek: <th:block th:text="${bookToEdit.author}"></th:block></h1>-->
+<form action="edit2" method="post"> <!---->
+    Author:
+    <br>
+
+    <input type="text" name="author" required /> <!---->
+    <br>
+    <br>
+</form>
+
+
+</p>
+<p>
+    <br>
+    <br>
+    <button onclick="window.location.href='http://localhost:8080/main';">Main menu</button>
+</p>
+</body>
+</html>

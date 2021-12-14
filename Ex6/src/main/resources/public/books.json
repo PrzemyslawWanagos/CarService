@@ -83,5 +83,17 @@
     "category" : "LITERATURA_PIEKNA",
     "pages" : 345,
     "forKids" : true
+  }, {
+    "author" : "Test book",
+    "title" : "ewqr",
+    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "pages" : 23423,
+    "forKids" : false
+  }, {
+    "author" : "Test book3",
+    "title" : "ewqe",
+    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "pages" : 2312,
+    "forKids" : false
   } ]
 }
