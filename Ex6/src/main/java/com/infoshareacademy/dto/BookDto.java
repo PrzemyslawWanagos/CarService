@@ -38,4 +38,14 @@ public class BookDto {
         return forKids;
     }
 
+    @Override
+    public String toString() {
+        return "BookDto{" +
+                "author='" + author + '\'' +
+                ", title='" + title + '\'' +
+                ", category=" + category +
+                ", pages=" + pages +
+                ", forKids=" + forKids +
+                '}';
+    }
 }

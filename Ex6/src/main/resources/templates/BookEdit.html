@@ -5,13 +5,14 @@
 <h1>Full list of books</h1>
 <p>
 <!--<h1>Liczba książek: <th:block th:text="${bookToEdit.author}"></th:block></h1>-->
-<form action="edit2" method="post"> <!---->
+<form action="/edit2" method="post"> <!---->
     Author:
     <br>
 
-    <input type="text" name="author" required /> <!---->
+    <input type="text" name="author" required th:value="${author}"/>
     <br>
     <br>
+    <button>Add Book to Book Case</button>
 </form>
 
 
@@ -19,7 +20,7 @@
 <p>
     <br>
     <br>
-    <button onclick="window.location.href='http://localhost:8080/main';">Main menu</button>
+    <button onclick="window.location.href='/main';">Main menu</button>
 </p>
 </body>
 </html>

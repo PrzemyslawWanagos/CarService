@@ -10,6 +10,7 @@ import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.WebApplicationContext;
 
 @Controller
@@ -32,7 +33,7 @@ public class BookAddController {
     }
 
     @PostMapping(value = "books/add")
-    //@ResponseBody
+
     public String create(BookDto bookDto) {
         try {
             book.setAuthor(bookDto.getAuthor());
