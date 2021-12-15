@@ -2,9 +2,9 @@
   "books" : [ {
     "author" : "Hanya Yanagihara",
     "title" : "Male zycie",
-    "category" : "LITERATURA_PIEKNA",
+    "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 816,
-    "forKids" : false
+    "forKids" : true
   }, {
     "author" : "Maja Lunde",
     "title" : "Historia Pszczol",

@@ -1,6 +1,7 @@
 package com.infoshareacademy.rest;
 
 
+import com.infoshareacademy.domain.Book;
 import com.infoshareacademy.repository.Books;
 import com.infoshareacademy.service.Services;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
+
+import static com.infoshareacademy.Utils.listToString;
 
 @Controller
 public class SearchBookController {
@@ -23,8 +28,12 @@ public class SearchBookController {
 
     @GetMapping("/search-book")
     public ModelAndView displaySearchedBooks(@RequestParam("title") String title) {
+        List<Book> bookSearchResult= services.returnListOfBooks(books, title);
         ModelAndView modelAndView = new ModelAndView("SearchBook");
-        modelAndView.addObject("bookSearchResult", services.browseThroughBooks(books, title));
+//
+//        System.out.println(listToString(bookSearchResult,true));
+        modelAndView.addObject("bookSearchResult",bookSearchResult);
+
         return modelAndView;
     }
 

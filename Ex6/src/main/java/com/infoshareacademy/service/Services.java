@@ -53,6 +53,21 @@ public class Services {
         }
     }
 
+    public List<Book> returnListOfBooks(Books books, String title) {
+        List <Book> toReturn = new ArrayList<>();
+        try {
+            for (Book book : books.getBooks()) {
+                if (book.getTitle().toUpperCase(Locale.ROOT).contains(title.toUpperCase(Locale.ROOT))) {
+                    toReturn.add(book);
+                }
+            }
+        }catch (Exception e){
+            System.out.println(e.toString());
+        }
+            return toReturn;
+
+    }
+
     public void saveBookCase(Books books) {
         ObjectMapper mapper = new ObjectMapper();
         try {
@@ -60,6 +75,22 @@ public class Services {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public Integer findIFForTitle(Books books, String title) {
+        List <Book> toReturn = new ArrayList<>();
+        int i=0;
+        try {
+            for (i = 0; i < books.getBooks().size(); i++) {
+                if (books.getBooks().get(i).getTitle().equals(title)) {
+                   break;
+                }
+            }
+        }catch (Exception e){
+            System.out.println(e.toString());
+        }
+        return i;
+
     }
 
 }

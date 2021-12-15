@@ -4,7 +4,28 @@
 <body>
 <h1>Books which meet your search criteria</h1>
 <p>
-    <th:block th:utext="${bookSearchResult}"></th:block>
+
+<table border="2" width="70%" cellpadding="2">
+    <tr>
+        <th>#</th>
+        <th>Author</th>
+        <th>Title</th>
+        <th>Category</th>
+        <th>Number of pages</th>
+        <th>Is it suitable for the kids</th>
+        <th>Edit</th>
+    </tr>
+    <tr th:each="book, stat : ${bookSearchResult}">
+        <td th:text="${stat.index + 1}"></td>
+        <td th:text="${book.author}"></td>
+        <td th:text="${book.title}"></td>
+        <td th:text="${book.category}"></td>
+        <td th:text="${book.pages}"></td>
+        <td th:text="${book.forKids}"></td> <!--href="edit.html"-->
+        <td><a th:href="@{/edit/{EditTitle}(EditTitle=${book.title})}">Edit</a></td>
+    </tr>
+</table>
+</body>
 </p>
 <p>
     <br>

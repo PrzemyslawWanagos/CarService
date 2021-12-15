@@ -24,9 +24,9 @@ public class EditBookController {
         this.books = books;
     }
 
-    @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
-    public ModelAndView bookEditForm(@PathVariable Integer id) {
-        bookToEditID=id;
+    @RequestMapping(value = "/edit/{title}", method = RequestMethod.GET)
+    public ModelAndView bookEditForm(@PathVariable String title) {
+        bookToEditID= services.findIFForTitle(books, title);
         ModelAndView modelAndView=new ModelAndView("EditBook");
         Book bookToEdit = books.getBooks().get(bookToEditID);
         modelAndView.addObject("bookToEdit", bookToEdit);
