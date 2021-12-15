@@ -35,7 +35,7 @@ public class BookEditController {
         bookToEditID=id;
         ModelAndView modelAndView=new ModelAndView("BookEdit");
         Book bookToEdit = books.getBooks().get(bookToEditID);
-        modelAndView.addObject(bookToEdit);
+        modelAndView.addObject("bookToEdit", bookToEdit);
 
 //        String a=books.getBooks().get(bookToEditID).author;
 //        System.out.println(bookToEditID+" "+id);

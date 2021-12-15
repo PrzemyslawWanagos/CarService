@@ -13,12 +13,12 @@
     <br>
     Title:
     <br>
-    <input type="text" name="title" required/>
+    <input type="text" name="title" required th:value="${bookToEdit.title}"/>
     <br>
     <br>
     Category:
     <br>
-    <select name="category" id="Category" required>
+    <select name="category" id="Category" required th:value="${bookToEdit.category}">
         <option value="KRYMINAL_SENSACJA_THRILLER" >Crime, Thriller</option>
         <option value="LITERATURA_PIEKNA">Fiction</option>
         <option value="HISTORYCZNA">Historical</option>
@@ -30,7 +30,7 @@
     <br>
     Number of pages :
     <br>
-    <input type="number" step="1" pattern="\d+" min="1" name="pages" required/>
+    <input type="number" step="1" pattern="\d+" min="1" name="pages" required th:value="${bookToEdit.pages}"/>
     <br>
     <br>
     Is book suitable for kids?
