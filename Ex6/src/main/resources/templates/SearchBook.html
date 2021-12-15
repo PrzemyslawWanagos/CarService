@@ -3,8 +3,8 @@
       layout:decorate=“~{layout}“>
 <body>
 <h1>Books which meet your search criteria</h1>
+<p th:if="${bookSearchResult}">No books found</p>
 <p>
-
 <table border="2" width="70%" cellpadding="2">
     <tr>
         <th>#</th>
@@ -19,9 +19,9 @@
         <td th:text="${stat.index + 1}"></td>
         <td th:text="${book.author}"></td>
         <td th:text="${book.title}"></td>
-        <td th:text="${book.category}"></td>
+        <td th:text="${book.category.categoryName}"></td>
         <td th:text="${book.pages}"></td>
-        <td th:text="${book.forKids}"></td> <!--href="edit.html"-->
+        <td th:text="${book.forKids}"></td>
         <td><a th:href="@{/edit/{EditTitle}(EditTitle=${book.title})}">Edit</a></td>
     </tr>
 </table>
@@ -30,7 +30,7 @@
 <p>
     <br>
     <br>
-    <button onclick="window.location.href='http://localhost:8080/main';">Main menu</button>
+    <button onclick="window.location.href='/main';">Main menu</button>
 </p>
 </body>
 </html>
