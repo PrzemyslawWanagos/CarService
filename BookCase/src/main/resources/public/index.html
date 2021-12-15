@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Zadanie domowe Ex6: Domowa biblioteczka</title>
+</head>
+<body>
+
+<div class="container">
+    <h2>Zadanie domowe Ex6: Domowa biblioteczka</h2>
+    <p></p>
+    <p></p>
+    <ol type="1">
+        <li>Na potrzeby zadania jest już przygotowany zbiór książek (com.isa.bookcase.repository.Books).</li>
+        <li>Utwórz kontroler <b>Bookcase</b> z endpointem <b>/books</b> który wyświetli wszystkie książki z repozytorium na jedynym widoku:</li>
+        <ul>
+            <li>każda pozycja na liście powinna wyświetlać wszystkie dostępne informacje o danej książce.</li>
+            <li>format wyświetlenia danych do wyboru: zwykły tekst, prosty html, json.</li>
+        </ul>
+        <li>Dodaj kontroler <b>RandomBook</b>:</li>
+        <ul>
+            <li>endpoint <b>/book-for-today</b> powinien wyświetlić losową książkę z repozytorium.</li>
+        </ul>
+        <li>Dodaj kolejny kontroler <b>FindBook</b> z endpointem <b>/book/{title}/search</b>:</li>
+        <ul>
+            <li>zaimplementuj wyszukiwanie książki po zadanym w request parametrze <b>title</b>,</li>
+            <li>jeśli jako wartość parametru <b>title</b> została podana np. tylko litera "a", powinny się wyświetlić wszystkie książki zawierające w tytule literę <b>"a"</b> lub <b>"A"</b>,</li>
+        </ul>
+        <li>Do rozwiązania możesz wykorzystać klasy z pakietu domain i repository.</li>
+        <li>Twoja aplikacja powinna być zbudowana w oparciu o poznane na warsztatach mechanizmy Dependency Injection i Inversion of Control.</li>
+    </ol>
+    <p></p>
+    <p></p>
+    <p></p>
+    <h4>Wymagania i punktacja:</h4>
+    <ol>
+        <li>Aplikacja powinna być napisana obiektowo i z wykorzystaniem mechanizmów Springa - <b>1 pkt.</b></li>
+        <li>Prawidłowo działający endpoint <b>/books</b> - <b>1 pkt.</b></li>
+        <li>Prawidłowo działający endpoint <b>/book-for-today</b> - <b>1 pkt.</b></li>
+        <li>Prawidłowo działający endpoint <b>/book/{title}/search</b> - <b>2 pkt.</b></li>
+    </ol>
+    <p>Maksymalną ilość punktów za zadanie (5 pkt.) można otrzymać tylko wówczas, jeśli wszystkie powyższe polecenia zostały wykonane prawidłowo.</p>
+</div>
+
+
+</body>
+</html>

@@ -117,7 +117,7 @@
     "author" : "Test book20",
     "title" : "teafdasfkj",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
-    "pages" : 534535,
+    "pages" : 53453,
     "forKids" : false
   }, {
     "author" : "Test book21",
@@ -142,18 +142,6 @@
     "title" : "fgh",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 123,
-    "forKids" : true
-  }, {
-    "author" : "Test book1542341",
-    "title" : "rwr",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
-    "pages" : 12,
-    "forKids" : true
-  }, {
-    "author" : "euwrioqwue",
-    "title" : "ewrqw",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
-    "pages" : 767,
     "forKids" : true
   } ]
 }
