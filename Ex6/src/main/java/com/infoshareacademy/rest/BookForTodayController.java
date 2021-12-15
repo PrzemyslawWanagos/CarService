@@ -21,7 +21,7 @@ public class BookForTodayController {
     }
 
     @GetMapping("/book-for-today")
-    public ModelAndView displayBooks() {
+    public ModelAndView displayBookForToday() {
         ModelAndView modelAndView = new ModelAndView("BookForToday");
         modelAndView.addObject("bookForToday", services.getRandomBook(books));
         return modelAndView;

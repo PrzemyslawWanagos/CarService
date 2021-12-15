@@ -4,11 +4,11 @@
 <body>
 <h1>Full list of books</h1>
 <p>
-<form action="/save-edited-book" method="post"> <!---->
+<form action="/save-edited-book" method="post" onkeydown="return event.key !== 'Enter';"> <!---->
     Author:
     <br>
-
-    <input type="text" name="author" required th:value="${bookToEdit.author}"/>
+<!--    onsubmit="return false;"-->
+    <input type="text" name="author" required th:value="${bookToEdit.author}" />
     <br>
     <br>
     Title:
@@ -35,13 +35,13 @@
     <br>
     Is book suitable for kids?
     <br>
-    <input type="radio" name="forKids" value="true" id="suitable for kids" checked/>
+    <input type="radio" name="forKids"  value="true" id="suitable for kids"  th:checked="${bookToEdit.forKids} == true ? checked"/>
     <label for="suitable for kids">Yes</label>
-    <input type="radio" name="forKids" value="false" id="definitely not for kids"/>
+    <input type="radio" name="forKids" value="false" id="definitely not for kids" th:checked="${bookToEdit.forKids} == false ? checked "/>
     <label for="definitely not for kids">No</label>
     <br>
     <br>
-    <button>Save Edits</button>
+    <button >Save Edits</button>
 </form>
 
 

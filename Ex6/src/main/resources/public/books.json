@@ -84,14 +84,14 @@
     "pages" : 345,
     "forKids" : true
   }, {
-    "author" : "14",
+    "author" : "14v2",
     "title" : "kkkkk",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 999,
     "forKids" : true
   }, {
     "author" : "Test book15",
-    "title" : "ewqe",
+    "title" : "dlfkja",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 2312,
     "forKids" : false
@@ -136,6 +136,12 @@
     "title" : "dsa",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 6565,
+    "forKids" : true
+  }, {
+    "author" : "jfh",
+    "title" : "fgh",
+    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "pages" : 123,
     "forKids" : true
   } ]
 }

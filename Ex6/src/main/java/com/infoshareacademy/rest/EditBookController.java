@@ -30,17 +30,10 @@ public class EditBookController {
         ModelAndView modelAndView=new ModelAndView("EditBook");
         Book bookToEdit = books.getBooks().get(bookToEditID);
         modelAndView.addObject("bookToEdit", bookToEdit);
-
-//        String a=books.getBooks().get(bookToEditID).author;
-//        System.out.println(bookToEditID+" "+id);
-//        System.out.println(a);
-//        model.addAttribute("author",a);
-
-       // modelAndView.addObject("testAttribute", "This is test attribute");
         return modelAndView;
     }
-    @PostMapping(value = "/save-edited-book")
 
+    @PostMapping(value = "/save-edited-book")
     public String saveEditedBook(BookDto bookDto) {
         System.out.println(bookToEditID);
         System.out.println(bookDto);

@@ -22,7 +22,7 @@ public class SearchBookController {
     }
 
     @GetMapping("/search-book")
-    public ModelAndView displayBooks(@RequestParam("title") String title) {
+    public ModelAndView displaySearchedBooks(@RequestParam("title") String title) {
         ModelAndView modelAndView = new ModelAndView("SearchBook");
         modelAndView.addObject("bookSearchResult", services.browseThroughBooks(books, title));
         return modelAndView;

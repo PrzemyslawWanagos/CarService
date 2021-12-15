@@ -18,7 +18,7 @@ public class AllBooksController {
     }
 
     @GetMapping("all-books")
-    public ModelAndView displayBooks() {
+    public ModelAndView displayAllBooks() {
         ModelAndView modelAndView = new ModelAndView("AllBooks");
         modelAndView.addObject("allBooks", listToString(books.getBooks(), true));
         return modelAndView;

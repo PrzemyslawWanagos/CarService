@@ -34,7 +34,7 @@ public class AddBookController {
 
     @PostMapping(value = "save-added-book")
 
-    public String create(BookDto bookDto) {
+    public String saveAddedBook(BookDto bookDto) {
         try {
             book.setAuthor(bookDto.getAuthor());
             book.setTitle(bookDto.getTitle());
