@@ -11,12 +11,12 @@ import static com.infoshareacademy.BookcaseApp.exitApp;
 
 
 @Controller
-public class BookCaseController {
+public class MainController {
 
     private final Books books;
 
     @Autowired
-    public BookCaseController(Services services, Books books) {
+    public MainController(Services services, Books books) {
         this.books = books;
     }
 

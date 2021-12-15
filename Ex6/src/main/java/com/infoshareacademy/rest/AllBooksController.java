@@ -21,7 +21,6 @@ public class AllBooksController {
     public ModelAndView displayBooks() {
         ModelAndView modelAndView = new ModelAndView("AllBooks");
         modelAndView.addObject("allBooks", listToString(books.getBooks(), true));
-        modelAndView.addObject("testAttribute", "This is test attribute");
         return modelAndView;
     }
 

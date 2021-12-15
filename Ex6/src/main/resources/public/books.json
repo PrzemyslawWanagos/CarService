@@ -84,11 +84,11 @@
     "pages" : 345,
     "forKids" : true
   }, {
-    "author" : "kkkkknew",
+    "author" : "14",
     "title" : "kkkkk",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 999,
-    "forKids" : false
+    "forKids" : true
   }, {
     "author" : "Test book15",
     "title" : "ewqe",
@@ -106,6 +106,30 @@
     "title" : "fdsa",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 232,
+    "forKids" : true
+  }, {
+    "author" : "gsfs",
+    "title" : "fsdf",
+    "category" : "LITERATURA_PIEKNA",
+    "pages" : 34,
+    "forKids" : true
+  }, {
+    "author" : "Test book20",
+    "title" : "teafdasfkj",
+    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "pages" : 53453,
+    "forKids" : false
+  }, {
+    "author" : "Test book21",
+    "title" : "hsgf",
+    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "pages" : 4,
+    "forKids" : true
+  }, {
+    "author" : "adfd",
+    "title" : "fadsf",
+    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "pages" : 4,
     "forKids" : true
   } ]
 }

@@ -15,14 +15,14 @@ import org.springframework.web.context.WebApplicationContext;
 
 @Controller
 @Scope(value = WebApplicationContext.SCOPE_REQUEST, proxyMode = ScopedProxyMode.TARGET_CLASS)
-public class BookAddController {
+public class AddBookController {
 
     private final Services services;
     private final Books books;
     private Book book = new Book();
 
     @Autowired
-    public BookAddController(Services services, Books books) {
+    public AddBookController(Services services, Books books) {
         this.services = services;
         this.books = books;
     }
@@ -32,7 +32,7 @@ public class BookAddController {
         return "AddBook";
     }
 
-    @PostMapping(value = "books/add")
+    @PostMapping(value = "save-added-book")
 
     public String create(BookDto bookDto) {
         try {
