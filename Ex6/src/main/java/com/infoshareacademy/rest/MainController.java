@@ -23,7 +23,7 @@ public class MainController {
     @GetMapping("/main")
     public String mainPage() {
         books.setBooks(Services.readBookCase().getBooks());
-        return "main";
+        return "Main";
     }
 
     @GetMapping("/exit")
