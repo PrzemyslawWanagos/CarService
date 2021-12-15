@@ -43,7 +43,7 @@ public class AddBookController {
             Boolean temp = bookDto.isForKids();
             book.setForKids(temp);
         } catch (Exception e) {
-            System.out.println("cos nie tak");
+            return e.toString();
         }
         books.addBookToBookcase(book);
         services.saveBookCase(books);

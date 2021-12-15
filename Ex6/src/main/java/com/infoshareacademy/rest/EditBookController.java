@@ -35,9 +35,7 @@ public class EditBookController {
 
     @PostMapping(value = "/save-edited-book")
     public String saveEditedBook(BookDto bookDto) {
-        System.out.println(bookToEditID);
-        System.out.println(bookDto);
-        Book book=books.getBooks().get(bookToEditID);
+                Book book=books.getBooks().get(bookToEditID);
         try {
             book.setAuthor(bookDto.getAuthor());
 
@@ -49,7 +47,7 @@ public class EditBookController {
         } catch (Exception e) {
             return e.toString();
         }
-       // books.addBookToBookcase(book);
+
         services.saveBookCase(books);
         String searchURL = "/all-books";
         return "redirect:" + searchURL;
