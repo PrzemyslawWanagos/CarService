@@ -3,9 +3,9 @@
       layout:decorate=“~{layout}“>
 <body>
 <h1>Books which meet your search criteria</h1>
-<p th:if="${bookSearchResult}">No books found</p>
-<p>
-<table border="2" width="70%" cellpadding="2">
+<h2 th:if="${bookSearchResult.empty}">No books found</h2>
+
+<table border="2" width="70%" cellpadding="2" th:if="${!bookSearchResult.empty}">
     <tr>
         <th>#</th>
         <th>Author</th>
@@ -25,8 +25,9 @@
         <td><a th:href="@{/edit/{EditTitle}(EditTitle=${book.title})}">Edit</a></td>
     </tr>
 </table>
-</body>
 </p>
+</body>
+
 <p>
     <br>
     <br>
