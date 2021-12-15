@@ -18,11 +18,11 @@
     "pages" : 424,
     "forKids" : false
   }, {
-    "author" : "George R.R. Martin",
-    "title" : "Gra o tron",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
-    "pages" : 999,
-    "forKids" : false
+    "author" : "new test book",
+    "title" : "4312431",
+    "category" : "LITERATURA_PIEKNA",
+    "pages" : 43124123,
+    "forKids" : true
   }, {
     "author" : "J. R. R. Tolkien",
     "title" : "Hobbit",
@@ -84,10 +84,10 @@
     "pages" : 345,
     "forKids" : true
   }, {
-    "author" : "Test book14+",
-    "title" : "ewqr",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
-    "pages" : 23423,
+    "author" : "kkkkk",
+    "title" : "kkkkk",
+    "category" : "PUBLICYSTYKA_BIOGRAFIA",
+    "pages" : 999,
     "forKids" : false
   }, {
     "author" : "Test book15",

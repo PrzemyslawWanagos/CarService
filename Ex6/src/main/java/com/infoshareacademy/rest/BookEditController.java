@@ -31,15 +31,19 @@ public class BookEditController {
     }
 
     @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
-    public String bookEdit(Model model, @PathVariable Integer id) {
+    public ModelAndView bookEditForm(@PathVariable Integer id) {
         bookToEditID=id;
-        String a=books.getBooks().get(bookToEditID).author;
-        System.out.println(bookToEditID+" "+id);
-        System.out.println(a);
-        model.addAttribute("author",a);
+        ModelAndView modelAndView=new ModelAndView("BookEdit");
+        Book bookToEdit = books.getBooks().get(bookToEditID);
+        modelAndView.addObject(bookToEdit);
+
+//        String a=books.getBooks().get(bookToEditID).author;
+//        System.out.println(bookToEditID+" "+id);
+//        System.out.println(a);
+//        model.addAttribute("author",a);
 
        // modelAndView.addObject("testAttribute", "This is test attribute");
-        return "BookEdit";
+        return modelAndView;
     }
     @PostMapping(value = "/edit2")
 
@@ -49,14 +53,14 @@ public class BookEditController {
         Book book=books.getBooks().get(bookToEditID);
         try {
             book.setAuthor(bookDto.getAuthor());
-            //book.setAuthor(bookDto.getAuthor());
-//            book.setTitle(bookDto.getTitle());
-//            book.setPages(bookDto.getPages());
-//            book.setCategory(bookDto.getCategory());
-//            Boolean temp = bookDto.isForKids();
-//            book.setForKids(temp);
+
+            book.setTitle(bookDto.getTitle());
+            book.setPages(bookDto.getPages());
+            book.setCategory(bookDto.getCategory());
+            Boolean temp = bookDto.isForKids();
+           book.setForKids(temp);
         } catch (Exception e) {
-            System.out.println(e);
+            return e.toString();
         }
        // books.addBookToBookcase(book);
         services.saveBookCase(books);

@@ -4,12 +4,41 @@
 <body>
 <h1>Full list of books</h1>
 <p>
-<!--<h1>Liczba książek: <th:block th:text="${bookToEdit.author}"></th:block></h1>-->
 <form action="/edit2" method="post"> <!---->
     Author:
     <br>
 
-    <input type="text" name="author" required th:value="${author}"/>
+    <input type="text" name="author" required th:value="${bookToEdit.author}"/>
+    <br>
+    <br>
+    Title:
+    <br>
+    <input type="text" name="title" required/>
+    <br>
+    <br>
+    Category:
+    <br>
+    <select name="category" id="Category" required>
+        <option value="KRYMINAL_SENSACJA_THRILLER" >Crime, Thriller</option>
+        <option value="LITERATURA_PIEKNA">Fiction</option>
+        <option value="HISTORYCZNA">Historical</option>
+        <option value="FANTASTYKA_SCIENCE_FICTION" selected>Science Fiction</option>
+        <option value="PUBLICYSTYKA_BIOGRAFIA">Biography</option>
+        <option value="OBYCZAJOWA_ROMANS">Romance</option>
+    </select>
+    <br>
+    <br>
+    Number of pages :
+    <br>
+    <input type="number" step="1" pattern="\d+" min="1" name="pages" required/>
+    <br>
+    <br>
+    Is book suitable for kids?
+    <br>
+    <input type="radio" name="forKids" value="true" id="suitable for kids" checked/>
+    <label for="suitable for kids">Yes</label>
+    <input type="radio" name="forKids" value="false" id="definitely not for kids"/>
+    <label for="definitely not for kids">No</label>
     <br>
     <br>
     <button>Add Book to Book Case</button>
