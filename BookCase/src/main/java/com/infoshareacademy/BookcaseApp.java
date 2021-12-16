@@ -8,7 +8,7 @@ import java.io.IOException;
 
 @SpringBootApplication
 public class BookcaseApp {
-    public static final String PROVIDERS_PATH = System.getProperty("user.dir") + "/Ex6/src/main/resources/public/books.json";
+    public static final String PROVIDERS_PATH = System.getProperty("user.dir") + "/BookCase/src/main/resources/public/books.json";
     static ConfigurableApplicationContext ctx;
 
     public static void main(String[] args) throws IOException {

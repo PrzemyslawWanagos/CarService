@@ -3,7 +3,7 @@
     "author" : "Hanya Yanagihara",
     "title" : "Male zycie",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
-    "pages" : 816,
+    "pages" : 81677,
     "forKids" : false
   }, {
     "author" : "Maja Lunde",
@@ -142,6 +142,12 @@
     "title" : "fgh",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 123,
+    "forKids" : true
+  }, {
+    "author" : "Test book56",
+    "title" : "fsgf",
+    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "pages" : 434,
     "forKids" : true
   } ]
 }
