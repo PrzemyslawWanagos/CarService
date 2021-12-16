@@ -3,9 +3,9 @@
       layout:decorate=“~{layout}“>
 <body>
 <h1>Books which meet your search criteria</h1>
-<h2 th:if="${bookSearchResult.empty}">No books found</h2>
+<h2 th:if="${carSearchResult.empty}">No books found</h2>
 
-<table border="2" width="70%" cellpadding="2" th:if="${!bookSearchResult.empty}">
+<table border="2" width="70%" cellpadding="2" th:if="${!carSearchResult.empty}">
     <tr>
         <th>#</th>
         <th>Author</th>
@@ -15,7 +15,7 @@
         <th>Is it suitable for the kids</th>
         <th>Edit</th>
     </tr>
-    <tr th:each="book, stat : ${bookSearchResult}">
+    <tr th:each="book, stat : ${carSearchResult}">
         <td th:text="${stat.index + 1}"></td>
         <td th:text="${book.author}"></td>
         <td th:text="${book.title}"></td>

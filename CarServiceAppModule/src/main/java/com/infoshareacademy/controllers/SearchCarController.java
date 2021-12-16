@@ -13,24 +13,24 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 
 @Controller
-public class SearchBookController {
+public class SearchCarController {
 
     private final Services services;
     private final Books books;
 
     @Autowired
-    public SearchBookController(Services services, Books books) {
+    public SearchCarController(Services services, Books books) {
         this.services = services;
         this.books = books;
     }
 
-    @GetMapping("/search-book")
-    public ModelAndView displaySearchedBooks(@RequestParam("title") String title) {
+    @GetMapping("/search-car")
+    public ModelAndView displaySearchedCars(@RequestParam("title") String title) {
         List<Book> bookSearchResult= services.returnListOfBooks(books, title);
-        ModelAndView modelAndView = new ModelAndView("SearchBook");
+        ModelAndView modelAndView = new ModelAndView("SearchCar");
 //
 //        System.out.println(listToString(bookSearchResult,true));
-        modelAndView.addObject("bookSearchResult",bookSearchResult);
+        modelAndView.addObject("carSearchResult",bookSearchResult);
 
         return modelAndView;
     }
