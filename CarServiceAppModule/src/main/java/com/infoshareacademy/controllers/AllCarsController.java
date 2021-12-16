@@ -8,19 +8,19 @@ import org.springframework.web.servlet.ModelAndView;
 import static com.infoshareacademy.Utils.listToString;
 
 @Controller
-public class AllBooksController {
+public class AllCarsController {
 
     private final Books books;
 
     @Autowired
-    public AllBooksController(Books books) {
+    public AllCarsController(Books books) {
         this.books = books;
     }
 
-    @GetMapping("all-books")
+    @GetMapping("all-cars")
     public ModelAndView displayAllBooks() {
-        ModelAndView modelAndView = new ModelAndView("AllBooks");
-        modelAndView.addObject("allBooks", listToString(books.getBooks(), true));
+        ModelAndView modelAndView = new ModelAndView("AllCars");
+        modelAndView.addObject("allCars", listToString(books.getBooks(), true));
         return modelAndView;
     }
 

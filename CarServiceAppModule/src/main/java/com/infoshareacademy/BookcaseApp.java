@@ -1,14 +1,25 @@
 package com.infoshareacademy;
 
+//import org.springframework.boot.ExitCodeGenerator;
+//import org.springframework.boot.SpringApplication;
+//import org.springframework.boot.autoconfigure.SpringBootApplication;
+//import org.springframework.context.ConfigurableApplicationContext;
+
 import org.springframework.boot.ExitCodeGenerator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
+
+import static com.infoshareacademy.Utils.findFile;
 
 @SpringBootApplication
 public class BookcaseApp {
-    public static final String PROVIDERS_PATH = System.getProperty("user.dir") + "/BookCase/src/main/resources/public/books.json";
+
+    public static final String PROVIDERS_PATH = findFile(System.getProperty("user.dir"), "cars.json").getAbsolutePath();
     static ConfigurableApplicationContext ctx;
 
     public static void main(String[] args) throws IOException {

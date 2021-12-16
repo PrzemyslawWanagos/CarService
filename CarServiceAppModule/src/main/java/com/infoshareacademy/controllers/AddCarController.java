@@ -14,26 +14,26 @@ import org.springframework.web.context.WebApplicationContext;
 
 @Controller
 @Scope(value = WebApplicationContext.SCOPE_REQUEST, proxyMode = ScopedProxyMode.TARGET_CLASS)
-public class AddBookController {
+public class AddCarController {
 
     private final Services services;
     private final Books books;
     private Book book = new Book();
 
     @Autowired
-    public AddBookController(Services services, Books books) {
+    public AddCarController(Services services, Books books) {
         this.services = services;
         this.books = books;
     }
 
-    @GetMapping("add-book")
-    public String createBook() {
-        return "AddBook";
+    @GetMapping("add-car")
+    public String createCar() {
+        return "AddCar";
     }
 
-    @PostMapping(value = "save-added-book")
+    @PostMapping(value = "save-added-car")
 
-    public String saveAddedBook(BookDto bookDto) {
+    public String saveAddedCar(BookDto bookDto) {
         try {
             book.setAuthor(bookDto.getAuthor());
             book.setTitle(bookDto.getTitle());
@@ -46,7 +46,7 @@ public class AddBookController {
         }
         books.addBookToBookcase(book);
         services.saveBookCase(books);
-        String searchURL = "/all-books";
+        String searchURL = "/all-cars";
         return "redirect:" + searchURL;
 
     }

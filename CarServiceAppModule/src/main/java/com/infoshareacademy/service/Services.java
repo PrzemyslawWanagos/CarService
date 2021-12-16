@@ -8,12 +8,15 @@ import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Random;
 
+//import static com.infoshareacademy.BookcaseApp.PROVIDERS_PATH;
 import static com.infoshareacademy.BookcaseApp.PROVIDERS_PATH;
+import static com.infoshareacademy.Utils.findFile;
 import static com.infoshareacademy.Utils.listToString;
 
 @Service
@@ -24,6 +27,11 @@ public class Services {
     public static Books readBookCase() {
         ObjectMapper mapper = new ObjectMapper();
         Books booksFromFile = new Books();
+//
+//        File file=findFile(System.getProperty("user.dir"), "cars.json");
+//        //File file = Paths.get(".", "CarServiceAppModule", "cars.json").normalize().toFile();
+//        String test = file.getAbsolutePath();
+//        System.out.println(test);
         try {
             booksFromFile = mapper.readValue(new File(PROVIDERS_PATH), new TypeReference<>() {
             });
