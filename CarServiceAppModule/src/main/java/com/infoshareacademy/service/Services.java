@@ -2,13 +2,12 @@ package com.infoshareacademy.service;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.infoshareacademy.domain.Book;
-import com.infoshareacademy.repository.Books;
+import com.infoshareacademy.domain.Car;
+import com.infoshareacademy.repository.Cars;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -16,7 +15,6 @@ import java.util.Random;
 
 //import static com.infoshareacademy.BookcaseApp.PROVIDERS_PATH;
 import static com.infoshareacademy.BookcaseApp.PROVIDERS_PATH;
-import static com.infoshareacademy.Utils.findFile;
 import static com.infoshareacademy.Utils.listToString;
 
 @Service
@@ -24,9 +22,9 @@ public class Services {
 
     public Services() {}
 
-    public static Books readBookCase() {
+    public static Cars readBookCase() {
         ObjectMapper mapper = new ObjectMapper();
-        Books booksFromFile = new Books();
+        Cars booksFromFile = new Cars();
 //
 //        File file=findFile(System.getProperty("user.dir"), "cars.json");
 //        //File file = Paths.get(".", "CarServiceAppModule", "cars.json").normalize().toFile();
@@ -41,17 +39,17 @@ public class Services {
         return booksFromFile;
     }
 
-    public String getRandomBook(Books books) {
+    public String getRandomBook(Cars cars) {
         Random random = new Random();
-        int bookPosition = random.nextInt(books.getBooks().size());
-        return books.getBooks().get(bookPosition).toString();
+        int bookPosition = random.nextInt(cars.getBooks().size());
+        return cars.getBooks().get(bookPosition).toString();
     }
 
-    public String browseThroughBooks(Books books, String title) {
-        List<Book> toReturn = new ArrayList<>();
-        for (Book book : books.getBooks()) {
-            if (book.getTitle().toUpperCase(Locale.ROOT).contains(title.toUpperCase(Locale.ROOT))) {
-                toReturn.add(book);
+    public String browseThroughBooks(Cars cars, String title) {
+        List<Car> toReturn = new ArrayList<>();
+        for (Car car : cars.getBooks()) {
+            if (car.getTitle().toUpperCase(Locale.ROOT).contains(title.toUpperCase(Locale.ROOT))) {
+                toReturn.add(car);
             }
         }
         if (toReturn.size() > 0) {
@@ -61,12 +59,12 @@ public class Services {
         }
     }
 
-    public List<Book> returnListOfBooks(Books books, String title) {
-        List <Book> toReturn = new ArrayList<>();
+    public List<Car> returnListOfBooks(Cars cars, String title) {
+        List <Car> toReturn = new ArrayList<>();
         try {
-            for (Book book : books.getBooks()) {
-                if (book.getTitle().toUpperCase(Locale.ROOT).contains(title.toUpperCase(Locale.ROOT))) {
-                    toReturn.add(book);
+            for (Car car : cars.getBooks()) {
+                if (car.getTitle().toUpperCase(Locale.ROOT).contains(title.toUpperCase(Locale.ROOT))) {
+                    toReturn.add(car);
                 }
             }
         }catch (Exception e){
@@ -76,21 +74,21 @@ public class Services {
 
     }
 
-    public void saveBookCase(Books books) {
+    public void saveBookCase(Cars cars) {
         ObjectMapper mapper = new ObjectMapper();
         try {
-            mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PROVIDERS_PATH), books);
+            mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PROVIDERS_PATH), cars);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public Integer findIFForTitle(Books books, String title) {
-        List <Book> toReturn = new ArrayList<>();
+    public Integer findIFForTitle(Cars cars, String title) {
+        List <Car> toReturn = new ArrayList<>();
         int i=0;
         try {
-            for (i = 0; i < books.getBooks().size(); i++) {
-                if (books.getBooks().get(i).getTitle().equals(title)) {
+            for (i = 0; i < cars.getBooks().size(); i++) {
+                if (cars.getBooks().get(i).getTitle().equals(title)) {
                    break;
                 }
             }

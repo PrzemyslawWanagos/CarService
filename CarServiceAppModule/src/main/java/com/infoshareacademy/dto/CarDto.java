@@ -2,7 +2,7 @@ package com.infoshareacademy.dto;
 
 import com.infoshareacademy.domain.Category;
 
-public class BookDto {
+public class CarDto {
 
     private final String author;
     private final String title;
@@ -10,7 +10,7 @@ public class BookDto {
     private final Integer pages;
     private final Boolean forKids;
 
-    public BookDto(String author, String title, Category category, Integer pages, Boolean forKids) {
+    public CarDto(String author, String title, Category category, Integer pages, Boolean forKids) {
         this.author = author;
         this.title = title;
         this.category = category;
@@ -40,7 +40,7 @@ public class BookDto {
 
     @Override
     public String toString() {
-        return "BookDto{" +
+        return "CarDto{" +
                 "author='" + author + '\'' +
                 ", title='" + title + '\'' +
                 ", category=" + category +

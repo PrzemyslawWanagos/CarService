@@ -1,8 +1,8 @@
 package com.infoshareacademy.controllers;
 
-import com.infoshareacademy.domain.Book;
-import com.infoshareacademy.dto.BookDto;
-import com.infoshareacademy.repository.Books;
+import com.infoshareacademy.domain.Car;
+import com.infoshareacademy.dto.CarDto;
+import com.infoshareacademy.repository.Cars;
 import com.infoshareacademy.service.Services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -17,13 +17,13 @@ import org.springframework.web.context.WebApplicationContext;
 public class AddCarController {
 
     private final Services services;
-    private final Books books;
-    private Book book = new Book();
+    private final Cars cars;
+    private Car car = new Car();
 
     @Autowired
-    public AddCarController(Services services, Books books) {
+    public AddCarController(Services services, Cars cars) {
         this.services = services;
-        this.books = books;
+        this.cars = cars;
     }
 
     @GetMapping("add-car")
@@ -33,19 +33,19 @@ public class AddCarController {
 
     @PostMapping(value = "save-added-car")
 
-    public String saveAddedCar(BookDto bookDto) {
+    public String saveAddedCar(CarDto carDto) {
         try {
-            book.setAuthor(bookDto.getAuthor());
-            book.setTitle(bookDto.getTitle());
-            book.setPages(bookDto.getPages());
-            book.setCategory(bookDto.getCategory());
-            Boolean temp = bookDto.isForKids();
-            book.setForKids(temp);
+            car.setAuthor(carDto.getAuthor());
+            car.setTitle(carDto.getTitle());
+            car.setPages(carDto.getPages());
+            car.setCategory(carDto.getCategory());
+            Boolean temp = carDto.isForKids();
+            car.setForKids(temp);
         } catch (Exception e) {
             return e.toString();
         }
-        books.addBookToBookcase(book);
-        services.saveBookCase(books);
+        cars.addBookToBookcase(car);
+        services.saveBookCase(cars);
         String searchURL = "/all-cars";
         return "redirect:" + searchURL;
 

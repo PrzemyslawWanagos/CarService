@@ -2,7 +2,7 @@
 <html lang=“en” xmlns:th=“http://www.thymeleaf.org” xmlns:layout=“http://www.ultraq.net.nz/thymeleaf/layout”
       layout:decorate=“~{layout}“>
 <body>
-<h1>Full list of books</h1>
+<h1>Full list of cars</h1>
 <p>
 <form action="/save-edited-car" method="post" onkeydown="return event.key !== 'Enter';"> <!---->
     Author:
@@ -33,7 +33,7 @@
     <input type="number" step="1" pattern="\d+" min="1" name="pages" required th:value="${carToEdit.pages}"/>
     <br>
     <br>
-    Is book suitable for kids?
+    Is car suitable for kids?
     <br>
     <input type="radio" name="forKids"  value="true" id="suitable for kids"  th:checked="${carToEdit.forKids} == true ? checked"/>
     <label for="suitable for kids">Yes</label>

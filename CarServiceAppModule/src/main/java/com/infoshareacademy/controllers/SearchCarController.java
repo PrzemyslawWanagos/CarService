@@ -1,8 +1,8 @@
 package com.infoshareacademy.controllers;
 
 
-import com.infoshareacademy.domain.Book;
-import com.infoshareacademy.repository.Books;
+import com.infoshareacademy.domain.Car;
+import com.infoshareacademy.repository.Cars;
 import com.infoshareacademy.service.Services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,17 +16,17 @@ import java.util.List;
 public class SearchCarController {
 
     private final Services services;
-    private final Books books;
+    private final Cars cars;
 
     @Autowired
-    public SearchCarController(Services services, Books books) {
+    public SearchCarController(Services services, Cars cars) {
         this.services = services;
-        this.books = books;
+        this.cars = cars;
     }
 
     @GetMapping("/search-car")
     public ModelAndView displaySearchedCars(@RequestParam("title") String title) {
-        List<Book> bookSearchResult= services.returnListOfBooks(books, title);
+        List<Car> bookSearchResult= services.returnListOfBooks(cars, title);
         ModelAndView modelAndView = new ModelAndView("SearchCar");
 //
 //        System.out.println(listToString(bookSearchResult,true));

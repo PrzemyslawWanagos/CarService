@@ -2,24 +2,24 @@
 <html lang=“en” xmlns:th=“http://www.thymeleaf.org” xmlns:layout=“http://www.ultraq.net.nz/thymeleaf/layout”
       layout:decorate=“~{layout}“>
 <head>
-    <title>Welcome to BookCase App</title>
+    <title>Welcome to Car Service App</title>
 </head>
 <body>
 <div style="text-align:center">
     <img src="../static/LOGO.jpg" height="300" th:src="@{LOGO.jpg}"/>
     <br>
     <br>
-    <button onclick="window.location.href='/all-cars';">List of books</button>
+    <button onclick="window.location.href='/all-cars';">List of cars</button>
     <br>
     <br>
-    <button onclick="window.location.href='/book-for-today';">Book for today</button>
+    <button onclick="window.location.href='/car-for-today';">Book for today</button>
     <br>
     <br>
-    <button onclick="window.location.href='/add-car';">Add book</button>
+    <button onclick="window.location.href='/add-car';">Add car</button>
     <br>
     <br>
     <form action="/search-car">
-        Search for book by title : <input type="text" name="title"/>
+        Search for car : <input type="text" name="title"/>
         <br>
         <br>
         <button>Search</button>

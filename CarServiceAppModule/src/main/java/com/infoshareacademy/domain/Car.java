@@ -1,6 +1,6 @@
 package com.infoshareacademy.domain;
 
-public class Book {
+public class Car {
 
     public String author;
     private String title;
@@ -8,9 +8,9 @@ public class Book {
     private int pages;
     private boolean forKids;
 
-    public Book() {}
+    public Car() {}
 
-    public Book(String author, String title, Category category, int pages, boolean forKids) {
+    public Car(String author, String title, Category category, int pages, boolean forKids) {
         this.author = author;
         this.title = title;
         this.category = category;

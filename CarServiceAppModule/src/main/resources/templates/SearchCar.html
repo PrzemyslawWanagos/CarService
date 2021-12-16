@@ -15,14 +15,14 @@
         <th>Is it suitable for the kids</th>
         <th>Edit</th>
     </tr>
-    <tr th:each="book, stat : ${carSearchResult}">
+    <tr th:each="car, stat : ${carSearchResult}">
         <td th:text="${stat.index + 1}"></td>
-        <td th:text="${book.author}"></td>
-        <td th:text="${book.title}"></td>
-        <td th:text="${book.category.categoryName}"></td>
-        <td th:text="${book.pages}"></td>
-        <td th:text="${book.forKids}"></td>
-        <td><a th:href="@{/edit/{EditTitle}(EditTitle=${book.title})}">Edit</a></td>
+        <td th:text="${car.author}"></td>
+        <td th:text="${car.title}"></td>
+        <td th:text="${car.category.categoryName}"></td>
+        <td th:text="${car.pages}"></td>
+        <td th:text="${car.forKids}"></td>
+        <td><a th:href="@{/edit/{EditTitle}(EditTitle=${car.title})}">Edit</a></td>
     </tr>
 </table>
 </p>

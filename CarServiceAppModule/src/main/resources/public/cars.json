@@ -4,7 +4,7 @@
     "title" : "Male zycie2",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 81677,
-    "forKids" : false
+    "forKids" : true
   }, {
     "author" : "Maja Lunde",
     "title" : "Historia Pszczol",
@@ -200,6 +200,18 @@
   }, {
     "author" : "fkjdsfjalksdjflksdajfl",
     "title" : "dfksjfksajdlfkj",
+    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "pages" : 123,
+    "forKids" : true
+  }, {
+    "author" : "ewrw",
+    "title" : "rerwe",
+    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "pages" : 123,
+    "forKids" : false
+  }, {
+    "author" : "mazda",
+    "title" : "rewrwe",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 123,
     "forKids" : true

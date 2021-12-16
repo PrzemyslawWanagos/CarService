@@ -1,8 +1,8 @@
 package com.infoshareacademy.controllers;
 
-import com.infoshareacademy.domain.Book;
-import com.infoshareacademy.dto.BookDto;
-import com.infoshareacademy.repository.Books;
+import com.infoshareacademy.domain.Car;
+import com.infoshareacademy.dto.CarDto;
+import com.infoshareacademy.repository.Cars;
 import com.infoshareacademy.service.Services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,41 +14,41 @@ import org.springframework.web.servlet.ModelAndView;
 public class EditCarController {
 
     private final Services services;
-    private Books books;
+    private Cars cars;
     private Integer bookToEditID;
 
 
     @Autowired
-    public EditCarController(Services services, Books books) {
+    public EditCarController(Services services, Cars cars) {
        this.services = services;
-        this.books = books;
+        this.cars = cars;
     }
 
     @RequestMapping(value = "/edit/{title}", method = RequestMethod.GET)
     public ModelAndView carEditForm(@PathVariable String title) {
-        bookToEditID= services.findIFForTitle(books, title);
+        bookToEditID= services.findIFForTitle(cars, title);
         ModelAndView modelAndView=new ModelAndView("EditCar");
-        Book bookToEdit = books.getBooks().get(bookToEditID);
+        Car bookToEdit = cars.getBooks().get(bookToEditID);
         modelAndView.addObject("carToEdit", bookToEdit);
         return modelAndView;
     }
 
     @PostMapping(value = "/save-edited-car")
-    public String saveEditedCar(BookDto bookDto) {
-                Book book=books.getBooks().get(bookToEditID);
+    public String saveEditedCar(CarDto carDto) {
+                Car car = cars.getBooks().get(bookToEditID);
         try {
-            book.setAuthor(bookDto.getAuthor());
+            car.setAuthor(carDto.getAuthor());
 
-            book.setTitle(bookDto.getTitle());
-            book.setPages(bookDto.getPages());
-            book.setCategory(bookDto.getCategory());
-            Boolean temp = bookDto.isForKids();
-           book.setForKids(temp);
+            car.setTitle(carDto.getTitle());
+            car.setPages(carDto.getPages());
+            car.setCategory(carDto.getCategory());
+            Boolean temp = carDto.isForKids();
+           car.setForKids(temp);
         } catch (Exception e) {
             return e.toString();
         }
 
-        services.saveBookCase(books);
+        services.saveBookCase(cars);
         String searchURL = "/all-cars";
         return "redirect:" + searchURL;
     }
