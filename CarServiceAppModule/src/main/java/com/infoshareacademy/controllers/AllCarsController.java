@@ -20,7 +20,7 @@ public class AllCarsController {
     @GetMapping("all-cars")
     public ModelAndView displayAllBooks() {
         ModelAndView modelAndView = new ModelAndView("AllCars");
-        modelAndView.addObject("allCars", listToString(cars.getBooks(), true));
+        modelAndView.addObject("allCars", listToString(cars.getCars(), true));
         return modelAndView;
     }
 

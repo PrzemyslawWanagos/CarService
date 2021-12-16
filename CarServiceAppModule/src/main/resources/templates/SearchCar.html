@@ -3,7 +3,7 @@
       layout:decorate=“~{layout}“>
 <body>
 <h1>Books which meet your search criteria</h1>
-<h2 th:if="${carSearchResult.empty}">No books found</h2>
+<h2 th:if="${carSearchResult.empty}">No cars found</h2>
 
 <table border="2" width="70%" cellpadding="2" th:if="${!carSearchResult.empty}">
     <tr>

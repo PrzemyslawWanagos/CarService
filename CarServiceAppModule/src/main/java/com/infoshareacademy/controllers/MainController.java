@@ -22,7 +22,7 @@ public class MainController {
 
     @GetMapping("/main")
     public String mainPage() {
-        cars.setBooks(Services.readBookCase().getBooks());
+        cars.setCars(Services.readBookCase().getCars());
         return "Main";
     }
 

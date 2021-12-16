@@ -41,13 +41,13 @@ public class Services {
 
     public String getRandomBook(Cars cars) {
         Random random = new Random();
-        int bookPosition = random.nextInt(cars.getBooks().size());
-        return cars.getBooks().get(bookPosition).toString();
+        int bookPosition = random.nextInt(cars.getCars().size());
+        return cars.getCars().get(bookPosition).toString();
     }
 
     public String browseThroughBooks(Cars cars, String title) {
         List<Car> toReturn = new ArrayList<>();
-        for (Car car : cars.getBooks()) {
+        for (Car car : cars.getCars()) {
             if (car.getLicencePlate().toUpperCase(Locale.ROOT).contains(title.toUpperCase(Locale.ROOT))) {
                 toReturn.add(car);
             }
@@ -62,7 +62,7 @@ public class Services {
     public List<Car> returnListOfBooks(Cars cars, String title) {
         List <Car> toReturn = new ArrayList<>();
         try {
-            for (Car car : cars.getBooks()) {
+            for (Car car : cars.getCars()) {
                 if (car.getLicencePlate().toUpperCase(Locale.ROOT).contains(title.toUpperCase(Locale.ROOT))) {
                     toReturn.add(car);
                 }
@@ -87,8 +87,8 @@ public class Services {
         List <Car> toReturn = new ArrayList<>();
         int i=0;
         try {
-            for (i = 0; i < cars.getBooks().size(); i++) {
-                if (cars.getBooks().get(i).getLicencePlate().equals(title)) {
+            for (i = 0; i < cars.getCars().size(); i++) {
+                if (cars.getCars().get(i).getLicencePlate().equals(title)) {
                    break;
                 }
             }

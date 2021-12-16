@@ -5,9 +5,9 @@ public enum Category {
     SEATS ("Problems with seats"),
     BRAKES("Problems with brakes"),
     MAINTENANCE("General maintenance"),
-    OTHER("Other problems"),
-    DRIVE("Problems with drive"),
-    ENGINE("Problems with engine");
+    OTHER("Science Problems with brakes"),
+    DRIVE("Biography"),
+    ENGINE("Romance");
 
     private String categoryName;
 

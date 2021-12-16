@@ -1,7 +1,7 @@
 {
-  "books" : [ {
+  "cars" : [ {
     "make" : "Hanya Yanagihara",
-    "licencePlate" : "Male zycie3",
+    "licencePlate" : "Male zycie",
     "category" : "OTHER",
     "pages" : 100,
     "forKids" : true
@@ -18,7 +18,7 @@
     "pages" : 424,
     "forKids" : false
   }, {
-    "make" : "new test book",
+    "make" : "new test car",
     "licencePlate" : "4312431",
     "category" : "BRAKES",
     "pages" : 43124123,
@@ -78,7 +78,7 @@
     "pages" : 482,
     "forKids" : true
   }, {
-    "make" : "Test book",
+    "make" : "Test car",
     "licencePlate" : "Test title",
     "category" : "BRAKES",
     "pages" : 345,
@@ -90,19 +90,19 @@
     "pages" : 999,
     "forKids" : true
   }, {
-    "make" : "Test book15",
+    "make" : "Test car15",
     "licencePlate" : "dlfkja",
     "category" : "OTHER",
     "pages" : 2312,
     "forKids" : false
   }, {
-    "make" : "test book 16",
+    "make" : "test car 16",
     "licencePlate" : "fasd",
     "category" : "OTHER",
     "pages" : 123,
     "forKids" : true
   }, {
-    "make" : "Test book",
+    "make" : "Test car",
     "licencePlate" : "fdsa",
     "category" : "OTHER",
     "pages" : 232,
@@ -114,7 +114,7 @@
     "pages" : 34,
     "forKids" : true
   }, {
-    "make" : "Test book20",
+    "make" : "Test car20",
     "licencePlate" : "teafdasfkj",
     "category" : "OTHER",
     "pages" : 53453,
@@ -244,6 +244,18 @@
     "licencePlate" : "1",
     "category" : "OTHER",
     "pages" : 1,
+    "forKids" : true
+  }, {
+    "make" : "gadsfasd",
+    "licencePlate" : "fadsfa",
+    "category" : "OTHER",
+    "pages" : 3213123,
+    "forKids" : true
+  }, {
+    "make" : "32131",
+    "licencePlate" : "32131",
+    "category" : "OTHER",
+    "pages" : 3123,
     "forKids" : true
   } ]
 }

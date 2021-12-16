@@ -28,14 +28,14 @@ public class EditCarController {
     public ModelAndView carEditForm(@PathVariable String title) {
         bookToEditID= services.findIFForTitle(cars, title);
         ModelAndView modelAndView=new ModelAndView("EditCar");
-        Car bookToEdit = cars.getBooks().get(bookToEditID);
+        Car bookToEdit = cars.getCars().get(bookToEditID);
         modelAndView.addObject("carToEdit", bookToEdit);
         return modelAndView;
     }
 
     @PostMapping(value = "/save-edited-car")
     public String saveEditedCar(CarDto carDto) {
-                Car car = cars.getBooks().get(bookToEditID);
+                Car car = cars.getCars().get(bookToEditID);
         try {
             car.setMake(carDto.getMake());
 
