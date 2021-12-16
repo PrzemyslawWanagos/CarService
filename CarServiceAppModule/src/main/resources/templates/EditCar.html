@@ -4,21 +4,21 @@
 <body>
 <h1>Full list of books</h1>
 <p>
-<form action="/save-edited-book" method="post" onkeydown="return event.key !== 'Enter';"> <!---->
+<form action="/save-edited-car" method="post" onkeydown="return event.key !== 'Enter';"> <!---->
     Author:
     <br>
 <!--    onsubmit="return false;"-->
-    <input type="text" name="author" required th:value="${bookToEdit.author}" />
+    <input type="text" name="author" required th:value="${carToEdit.author}" />
     <br>
     <br>
     Title:
     <br>
-    <input type="text" name="title" required th:value="${bookToEdit.title}"/>
+    <input type="text" name="title" required th:value="${carToEdit.title}"/>
     <br>
     <br>
     Category:
     <br>
-    <select name="category" id="Category" required th:value="${bookToEdit.category}">
+    <select name="category" id="Category" required th:value="${carToEdit.category}">
         <option value="KRYMINAL_SENSACJA_THRILLER" >Crime, Thriller</option>
         <option value="LITERATURA_PIEKNA">Fiction</option>
         <option value="HISTORYCZNA">Historical</option>
@@ -30,14 +30,14 @@
     <br>
     Number of pages :
     <br>
-    <input type="number" step="1" pattern="\d+" min="1" name="pages" required th:value="${bookToEdit.pages}"/>
+    <input type="number" step="1" pattern="\d+" min="1" name="pages" required th:value="${carToEdit.pages}"/>
     <br>
     <br>
     Is book suitable for kids?
     <br>
-    <input type="radio" name="forKids"  value="true" id="suitable for kids"  th:checked="${bookToEdit.forKids} == true ? checked"/>
+    <input type="radio" name="forKids"  value="true" id="suitable for kids"  th:checked="${carToEdit.forKids} == true ? checked"/>
     <label for="suitable for kids">Yes</label>
-    <input type="radio" name="forKids" value="false" id="definitely not for kids" th:checked="${bookToEdit.forKids} == false ? checked "/>
+    <input type="radio" name="forKids" value="false" id="definitely not for kids" th:checked="${carToEdit.forKids} == false ? checked "/>
     <label for="definitely not for kids">No</label>
     <br>
     <br>

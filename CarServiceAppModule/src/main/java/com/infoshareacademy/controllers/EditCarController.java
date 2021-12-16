@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 //@Scope(value = WebApplicationContext.SCOPE_REQUEST, proxyMode = ScopedProxyMode.TARGET_CLASS)
-public class EditBookController {
+public class EditCarController {
 
     private final Services services;
     private Books books;
@@ -19,22 +19,22 @@ public class EditBookController {
 
 
     @Autowired
-    public EditBookController(Services services, Books books) {
+    public EditCarController(Services services, Books books) {
        this.services = services;
         this.books = books;
     }
 
     @RequestMapping(value = "/edit/{title}", method = RequestMethod.GET)
-    public ModelAndView bookEditForm(@PathVariable String title) {
+    public ModelAndView carEditForm(@PathVariable String title) {
         bookToEditID= services.findIFForTitle(books, title);
-        ModelAndView modelAndView=new ModelAndView("EditBook");
+        ModelAndView modelAndView=new ModelAndView("EditCar");
         Book bookToEdit = books.getBooks().get(bookToEditID);
-        modelAndView.addObject("bookToEdit", bookToEdit);
+        modelAndView.addObject("carToEdit", bookToEdit);
         return modelAndView;
     }
 
-    @PostMapping(value = "/save-edited-book")
-    public String saveEditedBook(BookDto bookDto) {
+    @PostMapping(value = "/save-edited-car")
+    public String saveEditedCar(BookDto bookDto) {
                 Book book=books.getBooks().get(bookToEditID);
         try {
             book.setAuthor(bookDto.getAuthor());
@@ -49,7 +49,7 @@ public class EditBookController {
         }
 
         services.saveBookCase(books);
-        String searchURL = "/all-books";
+        String searchURL = "/all-cars";
         return "redirect:" + searchURL;
     }
 

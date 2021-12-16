@@ -1,7 +1,7 @@
 {
   "books" : [ {
     "author" : "Hanya Yanagihara",
-    "title" : "Male zycie",
+    "title" : "Male zycie2",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 81677,
     "forKids" : false
@@ -190,6 +190,12 @@
     "title" : "rwer",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 4,
+    "forKids" : true
+  }, {
+    "author" : "rewqr",
+    "title" : "reqwr",
+    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "pages" : 42343,
     "forKids" : true
   } ]
 }
