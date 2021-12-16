@@ -48,7 +48,7 @@ public class Services {
     public String browseThroughBooks(Cars cars, String title) {
         List<Car> toReturn = new ArrayList<>();
         for (Car car : cars.getBooks()) {
-            if (car.getTitle().toUpperCase(Locale.ROOT).contains(title.toUpperCase(Locale.ROOT))) {
+            if (car.getLicencePlate().toUpperCase(Locale.ROOT).contains(title.toUpperCase(Locale.ROOT))) {
                 toReturn.add(car);
             }
         }
@@ -63,7 +63,7 @@ public class Services {
         List <Car> toReturn = new ArrayList<>();
         try {
             for (Car car : cars.getBooks()) {
-                if (car.getTitle().toUpperCase(Locale.ROOT).contains(title.toUpperCase(Locale.ROOT))) {
+                if (car.getLicencePlate().toUpperCase(Locale.ROOT).contains(title.toUpperCase(Locale.ROOT))) {
                     toReturn.add(car);
                 }
             }
@@ -88,7 +88,7 @@ public class Services {
         int i=0;
         try {
             for (i = 0; i < cars.getBooks().size(); i++) {
-                if (cars.getBooks().get(i).getTitle().equals(title)) {
+                if (cars.getBooks().get(i).getLicencePlate().equals(title)) {
                    break;
                 }
             }

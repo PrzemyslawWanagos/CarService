@@ -2,36 +2,36 @@ package com.infoshareacademy.domain;
 
 public class Car {
 
-    public String author;
-    private String title;
+    public String make;
+    private String licencePlate;
     private Category category;
     private int pages;
     private boolean forKids;
 
     public Car() {}
 
-    public Car(String author, String title, Category category, int pages, boolean forKids) {
-        this.author = author;
-        this.title = title;
+    public Car(String make, String licencePlate, Category category, int pages, boolean forKids) {
+        this.make = make;
+        this.licencePlate = licencePlate;
         this.category = category;
         this.pages = pages;
         this.forKids = forKids;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getMake() {
+        return make;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setMake(String make) {
+        this.make = make;
     }
 
-    public String getTitle() {
-        return title;
+    public String getLicencePlate() {
+        return licencePlate;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setLicencePlate(String licencePlate) {
+        this.licencePlate = licencePlate;
     }
 
     public Category getCategory() {
@@ -60,7 +60,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return author + ", " + title + " (" + pages + "str.), category: " + category.getCategoryName() + ", " + ((forKids) ? "for kids" : "definitely not for kids");
+        return make + ", " + licencePlate + " (" + pages + "str.), category: " + category.getCategoryName() + ", " + ((forKids) ? "for kids" : "definitely not for kids");
     }
 
 }

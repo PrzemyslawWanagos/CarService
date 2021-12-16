@@ -35,8 +35,8 @@ public class AddCarController {
 
     public String saveAddedCar(CarDto carDto) {
         try {
-            car.setAuthor(carDto.getAuthor());
-            car.setTitle(carDto.getTitle());
+            car.setMake(carDto.getAuthor());
+            car.setLicencePlate(carDto.getTitle());
             car.setPages(carDto.getPages());
             car.setCategory(carDto.getCategory());
             Boolean temp = carDto.isForKids();

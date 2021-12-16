@@ -8,7 +8,7 @@
    1. load predefined list of books 
    2. display the full list of books (endpoint: all-books)
    3. display one randomly selected car (endpoint: car-for-today)
-   4. find car by its title or part of the title (endpoint: search)
+   4. find car by its licencePlate or part of the licencePlate (endpoint: search)
    5. each endpoint should be addressed via entering url in browser - no hyperlinks between endpoints required
 ####2. Additional scope as part of my self learing:
    1. each endpoint on separate html with hyperlinks to other endpoints

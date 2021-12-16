@@ -37,9 +37,9 @@ public class EditCarController {
     public String saveEditedCar(CarDto carDto) {
                 Car car = cars.getBooks().get(bookToEditID);
         try {
-            car.setAuthor(carDto.getAuthor());
+            car.setMake(carDto.getAuthor());
 
-            car.setTitle(carDto.getTitle());
+            car.setLicencePlate(carDto.getTitle());
             car.setPages(carDto.getPages());
             car.setCategory(carDto.getCategory());
             Boolean temp = carDto.isForKids();
