@@ -2,12 +2,12 @@ package com.infoshareacademy.domain;
 
 public enum Category {
 
-    KRYMINAL_SENSACJA_THRILLER ("Crime, Thriller"),
-    LITERATURA_PIEKNA("Fiction"),
-    HISTORYCZNA("Historical"),
-    FANTASTYKA_SCIENCE_FICTION("Science Fiction"),
-    PUBLICYSTYKA_BIOGRAFIA("Biography"),
-    OBYCZAJOWA_ROMANS("Romance");
+    SEATS ("Crime, Thriller"),
+    BRAKES("Fiction"),
+    MAINTENANCE("Historical"),
+    OTHER("Science Fiction"),
+    DRIVE("Biography"),
+    ENGINE("Romance");
 
     private String categoryName;
 

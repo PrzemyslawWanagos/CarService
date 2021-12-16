@@ -1,231 +1,243 @@
 {
   "books" : [ {
     "make" : "Hanya Yanagihara",
-    "licencePlate" : "Male zycie2",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "licencePlate" : "Male zycie3",
+    "category" : "OTHER",
     "pages" : 100,
     "forKids" : true
   }, {
     "make" : "Maja Lunde",
     "licencePlate" : "Historia Pszczol",
-    "category" : "LITERATURA_PIEKNA",
+    "category" : "BRAKES",
     "pages" : 514,
     "forKids" : false
   }, {
     "make" : "Leonie Swann",
     "licencePlate" : "Kroczac w ciemnosci",
-    "category" : "LITERATURA_PIEKNA",
+    "category" : "BRAKES",
     "pages" : 424,
     "forKids" : false
   }, {
     "make" : "new test book",
     "licencePlate" : "4312431",
-    "category" : "LITERATURA_PIEKNA",
+    "category" : "BRAKES",
     "pages" : 43124123,
     "forKids" : true
   }, {
     "make" : "J. R. R. Tolkien",
     "licencePlate" : "Hobbit",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "category" : "OTHER",
     "pages" : 315,
     "forKids" : false
   }, {
     "make" : "Simon Beckett",
     "licencePlate" : "Chemia smierci",
-    "category" : "KRYMINAL_SENSACJA_THRILLER",
+    "category" : "SEATS",
     "pages" : 352,
     "forKids" : false
   }, {
     "make" : "Marc Elsberg",
     "licencePlate" : "Blackout",
-    "category" : "KRYMINAL_SENSACJA_THRILLER",
+    "category" : "SEATS",
     "pages" : 784,
     "forKids" : false
   }, {
     "make" : "Jozef Ignacy Kraszewski",
     "licencePlate" : "Stara basn",
-    "category" : "HISTORYCZNA",
+    "category" : "MAINTENANCE",
     "pages" : 304,
     "forKids" : false
   }, {
     "make" : "J. K. Rowling",
     "licencePlate" : "Harry Potter i Kamien Filozoficzny",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "category" : "OTHER",
     "pages" : 328,
     "forKids" : true
   }, {
     "make" : "Antoine de Saint-Exupery",
-    "licencePlate" : "Maly Ksiaze",
-    "category" : "LITERATURA_PIEKNA",
+    "licencePlate" : "Maly Ksiaze2",
+    "category" : "OTHER",
     "pages" : 112,
     "forKids" : true
   }, {
     "make" : "Jojo Moyes",
     "licencePlate" : "Zanim się pojawiles",
-    "category" : "OBYCZAJOWA_ROMANS",
+    "category" : "ENGINE",
     "pages" : 382,
     "forKids" : false
   }, {
     "make" : "Elizabeth Gilbert",
     "licencePlate" : "Jedz, modl sie, kochaj",
-    "category" : "PUBLICYSTYKA_BIOGRAFIA",
+    "category" : "DRIVE",
     "pages" : 490,
     "forKids" : false
   }, {
     "make" : "Andy Weir",
     "licencePlate" : "Marsjanin",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "category" : "OTHER",
     "pages" : 482,
     "forKids" : true
   }, {
     "make" : "Test book",
     "licencePlate" : "Test title",
-    "category" : "LITERATURA_PIEKNA",
+    "category" : "BRAKES",
     "pages" : 345,
     "forKids" : true
   }, {
     "make" : "14v2",
     "licencePlate" : "kkkkk",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "category" : "OTHER",
     "pages" : 999,
     "forKids" : true
   }, {
     "make" : "Test book15",
     "licencePlate" : "dlfkja",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "category" : "OTHER",
     "pages" : 2312,
     "forKids" : false
   }, {
     "make" : "test book 16",
     "licencePlate" : "fasd",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "category" : "OTHER",
     "pages" : 123,
     "forKids" : true
   }, {
     "make" : "Test book",
     "licencePlate" : "fdsa",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "category" : "OTHER",
     "pages" : 232,
     "forKids" : true
   }, {
     "make" : "gsfs",
     "licencePlate" : "fsdf",
-    "category" : "LITERATURA_PIEKNA",
+    "category" : "BRAKES",
     "pages" : 34,
     "forKids" : true
   }, {
     "make" : "Test book20",
     "licencePlate" : "teafdasfkj",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "category" : "OTHER",
     "pages" : 53453,
     "forKids" : false
   }, {
     "make" : "Test book21",
     "licencePlate" : "hsgf",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "category" : "OTHER",
     "pages" : 4,
     "forKids" : true
   }, {
     "make" : "adfd",
     "licencePlate" : "fadsf",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "category" : "OTHER",
     "pages" : 4,
     "forKids" : true
   }, {
     "make" : "dSDas",
     "licencePlate" : "dsa",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "category" : "OTHER",
     "pages" : 6565,
     "forKids" : true
   }, {
     "make" : "jfh",
     "licencePlate" : "fgh",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "category" : "OTHER",
     "pages" : 123,
     "forKids" : true
   }, {
     "make" : "Test book56",
     "licencePlate" : "fsgf",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "category" : "OTHER",
     "pages" : 434,
     "forKids" : true
   }, {
     "make" : "kfjdsflkajs",
     "licencePlate" : "fadsfa",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "category" : "OTHER",
     "pages" : 534,
     "forKids" : true
   }, {
     "make" : "fkdsajlfkj",
     "licencePlate" : "fasdf",
-    "category" : "LITERATURA_PIEKNA",
+    "category" : "BRAKES",
     "pages" : 123,
     "forKids" : true
   }, {
     "make" : "32412",
     "licencePlate" : "41324",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "category" : "OTHER",
     "pages" : 42314,
     "forKids" : true
   }, {
     "make" : "fdsa",
     "licencePlate" : "fasd",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "category" : "OTHER",
     "pages" : 1213,
     "forKids" : true
   }, {
     "make" : "rweq",
     "licencePlate" : "reqwr",
-    "category" : "LITERATURA_PIEKNA",
+    "category" : "BRAKES",
     "pages" : 123,
     "forKids" : true
   }, {
     "make" : "43214",
     "licencePlate" : "43214",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "category" : "OTHER",
     "pages" : 1234,
     "forKids" : true
   }, {
     "make" : "rewr",
     "licencePlate" : "rwer",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "category" : "OTHER",
     "pages" : 4,
     "forKids" : true
   }, {
     "make" : "rewqr",
     "licencePlate" : "reqwr",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "category" : "OTHER",
     "pages" : 42343,
     "forKids" : true
   }, {
     "make" : "fkjdsfjalksdjflksdajfl",
     "licencePlate" : "dfksjfksajdlfkj",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "category" : "OTHER",
     "pages" : 123,
     "forKids" : true
   }, {
     "make" : "ewrw",
     "licencePlate" : "rerwe",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "category" : "OTHER",
     "pages" : 123,
     "forKids" : false
   }, {
     "make" : "mazda",
     "licencePlate" : "rewrwe",
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "category" : "OTHER",
     "pages" : 123,
     "forKids" : true
   }, {
     "make" : "dsafsd",
     "licencePlate" : null,
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "category" : "OTHER",
     "pages" : 123,
     "forKids" : false
   }, {
     "make" : "testse",
     "licencePlate" : null,
-    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "category" : "OTHER",
     "pages" : 123,
+    "forKids" : true
+  }, {
+    "make" : "mazda",
+    "licencePlate" : "rewrq",
+    "category" : "OTHER",
+    "pages" : 12,
+    "forKids" : true
+  }, {
+    "make" : "REW",
+    "licencePlate" : "RWEQ",
+    "category" : "OTHER",
+    "pages" : 1,
     "forKids" : true
   } ]
 }
