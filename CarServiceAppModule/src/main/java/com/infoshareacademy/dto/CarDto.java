@@ -4,26 +4,26 @@ import com.infoshareacademy.domain.Category;
 
 public class CarDto {
 
-    private final String author;
-    private final String title;
+    private final String make;
+    private final String licencePlate;
     private final Category category;
     private final Integer pages;
     private final Boolean forKids;
 
-    public CarDto(String author, String title, Category category, Integer pages, Boolean forKids) {
-        this.author = author;
-        this.title = title;
+    public CarDto(String make, String licencePlate, Category category, Integer pages, Boolean forKids) {
+        this.make = make;
+        this.licencePlate = licencePlate;
         this.category = category;
         this.pages = pages;
         this.forKids = forKids;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getMake() {
+        return make;
     }
 
-    public String getTitle() {
-        return title;
+    public String getLicencePlate() {
+        return licencePlate;
     }
 
     public Category getCategory() {
@@ -41,8 +41,8 @@ public class CarDto {
     @Override
     public String toString() {
         return "CarDto{" +
-                "author='" + author + '\'' +
-                ", title='" + title + '\'' +
+                "make='" + make + '\'' +
+                ", licencePlate='" + licencePlate + '\'' +
                 ", category=" + category +
                 ", pages=" + pages +
                 ", forKids=" + forKids +

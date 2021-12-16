@@ -1,217 +1,229 @@
 {
   "books" : [ {
-    "author" : "Hanya Yanagihara",
-    "title" : "Male zycie2",
+    "make" : "Hanya Yanagihara",
+    "licencePlate" : "Male zycie2",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
-    "pages" : 81677,
+    "pages" : 100,
     "forKids" : true
   }, {
-    "author" : "Maja Lunde",
-    "title" : "Historia Pszczol",
+    "make" : "Maja Lunde",
+    "licencePlate" : "Historia Pszczol",
     "category" : "LITERATURA_PIEKNA",
     "pages" : 514,
     "forKids" : false
   }, {
-    "author" : "Leonie Swann",
-    "title" : "Kroczac w ciemnosci",
+    "make" : "Leonie Swann",
+    "licencePlate" : "Kroczac w ciemnosci",
     "category" : "LITERATURA_PIEKNA",
     "pages" : 424,
     "forKids" : false
   }, {
-    "author" : "new test book",
-    "title" : "4312431",
+    "make" : "new test book",
+    "licencePlate" : "4312431",
     "category" : "LITERATURA_PIEKNA",
     "pages" : 43124123,
     "forKids" : true
   }, {
-    "author" : "J. R. R. Tolkien",
-    "title" : "Hobbit",
+    "make" : "J. R. R. Tolkien",
+    "licencePlate" : "Hobbit",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 315,
     "forKids" : false
   }, {
-    "author" : "Simon Beckett",
-    "title" : "Chemia smierci",
+    "make" : "Simon Beckett",
+    "licencePlate" : "Chemia smierci",
     "category" : "KRYMINAL_SENSACJA_THRILLER",
     "pages" : 352,
     "forKids" : false
   }, {
-    "author" : "Marc Elsberg",
-    "title" : "Blackout",
+    "make" : "Marc Elsberg",
+    "licencePlate" : "Blackout",
     "category" : "KRYMINAL_SENSACJA_THRILLER",
     "pages" : 784,
     "forKids" : false
   }, {
-    "author" : "Jozef Ignacy Kraszewski",
-    "title" : "Stara basn",
+    "make" : "Jozef Ignacy Kraszewski",
+    "licencePlate" : "Stara basn",
     "category" : "HISTORYCZNA",
     "pages" : 304,
     "forKids" : false
   }, {
-    "author" : "J. K. Rowling",
-    "title" : "Harry Potter i Kamien Filozoficzny",
+    "make" : "J. K. Rowling",
+    "licencePlate" : "Harry Potter i Kamien Filozoficzny",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 328,
     "forKids" : true
   }, {
-    "author" : "Antoine de Saint-Exupery",
-    "title" : "Maly Ksiaze",
+    "make" : "Antoine de Saint-Exupery",
+    "licencePlate" : "Maly Ksiaze",
     "category" : "LITERATURA_PIEKNA",
     "pages" : 112,
     "forKids" : true
   }, {
-    "author" : "Jojo Moyes",
-    "title" : "Zanim się pojawiles",
+    "make" : "Jojo Moyes",
+    "licencePlate" : "Zanim się pojawiles",
     "category" : "OBYCZAJOWA_ROMANS",
     "pages" : 382,
     "forKids" : false
   }, {
-    "author" : "Elizabeth Gilbert",
-    "title" : "Jedz, modl sie, kochaj",
+    "make" : "Elizabeth Gilbert",
+    "licencePlate" : "Jedz, modl sie, kochaj",
     "category" : "PUBLICYSTYKA_BIOGRAFIA",
     "pages" : 490,
     "forKids" : false
   }, {
-    "author" : "Andy Weir",
-    "title" : "Marsjanin",
+    "make" : "Andy Weir",
+    "licencePlate" : "Marsjanin",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 482,
     "forKids" : true
   }, {
-    "author" : "Test book",
-    "title" : "Test title",
+    "make" : "Test book",
+    "licencePlate" : "Test title",
     "category" : "LITERATURA_PIEKNA",
     "pages" : 345,
     "forKids" : true
   }, {
-    "author" : "14v2",
-    "title" : "kkkkk",
+    "make" : "14v2",
+    "licencePlate" : "kkkkk",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 999,
     "forKids" : true
   }, {
-    "author" : "Test book15",
-    "title" : "dlfkja",
+    "make" : "Test book15",
+    "licencePlate" : "dlfkja",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 2312,
     "forKids" : false
   }, {
-    "author" : "test book 16",
-    "title" : "fasd",
+    "make" : "test book 16",
+    "licencePlate" : "fasd",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 123,
     "forKids" : true
   }, {
-    "author" : "Test book",
-    "title" : "fdsa",
+    "make" : "Test book",
+    "licencePlate" : "fdsa",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 232,
     "forKids" : true
   }, {
-    "author" : "gsfs",
-    "title" : "fsdf",
+    "make" : "gsfs",
+    "licencePlate" : "fsdf",
     "category" : "LITERATURA_PIEKNA",
     "pages" : 34,
     "forKids" : true
   }, {
-    "author" : "Test book20",
-    "title" : "teafdasfkj",
+    "make" : "Test book20",
+    "licencePlate" : "teafdasfkj",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 53453,
     "forKids" : false
   }, {
-    "author" : "Test book21",
-    "title" : "hsgf",
+    "make" : "Test book21",
+    "licencePlate" : "hsgf",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 4,
     "forKids" : true
   }, {
-    "author" : "adfd",
-    "title" : "fadsf",
+    "make" : "adfd",
+    "licencePlate" : "fadsf",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 4,
     "forKids" : true
   }, {
-    "author" : "dSDas",
-    "title" : "dsa",
+    "make" : "dSDas",
+    "licencePlate" : "dsa",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 6565,
     "forKids" : true
   }, {
-    "author" : "jfh",
-    "title" : "fgh",
+    "make" : "jfh",
+    "licencePlate" : "fgh",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 123,
     "forKids" : true
   }, {
-    "author" : "Test book56",
-    "title" : "fsgf",
+    "make" : "Test book56",
+    "licencePlate" : "fsgf",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 434,
     "forKids" : true
   }, {
-    "author" : "kfjdsflkajs",
-    "title" : "fadsfa",
+    "make" : "kfjdsflkajs",
+    "licencePlate" : "fadsfa",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 534,
     "forKids" : true
   }, {
-    "author" : "fkdsajlfkj",
-    "title" : "fasdf",
+    "make" : "fkdsajlfkj",
+    "licencePlate" : "fasdf",
     "category" : "LITERATURA_PIEKNA",
     "pages" : 123,
     "forKids" : true
   }, {
-    "author" : "32412",
-    "title" : "41324",
+    "make" : "32412",
+    "licencePlate" : "41324",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 42314,
     "forKids" : true
   }, {
-    "author" : "fdsa",
-    "title" : "fasd",
+    "make" : "fdsa",
+    "licencePlate" : "fasd",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 1213,
     "forKids" : true
   }, {
-    "author" : "rweq",
-    "title" : "reqwr",
+    "make" : "rweq",
+    "licencePlate" : "reqwr",
     "category" : "LITERATURA_PIEKNA",
     "pages" : 123,
     "forKids" : true
   }, {
-    "author" : "43214",
-    "title" : "43214",
+    "make" : "43214",
+    "licencePlate" : "43214",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 1234,
     "forKids" : true
   }, {
-    "author" : "rewr",
-    "title" : "rwer",
+    "make" : "rewr",
+    "licencePlate" : "rwer",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 4,
     "forKids" : true
   }, {
-    "author" : "rewqr",
-    "title" : "reqwr",
+    "make" : "rewqr",
+    "licencePlate" : "reqwr",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 42343,
     "forKids" : true
   }, {
-    "author" : "fkjdsfjalksdjflksdajfl",
-    "title" : "dfksjfksajdlfkj",
+    "make" : "fkjdsfjalksdjflksdajfl",
+    "licencePlate" : "dfksjfksajdlfkj",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 123,
     "forKids" : true
   }, {
-    "author" : "ewrw",
-    "title" : "rerwe",
+    "make" : "ewrw",
+    "licencePlate" : "rerwe",
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 123,
     "forKids" : false
   }, {
-    "author" : "mazda",
-    "title" : "rewrwe",
+    "make" : "mazda",
+    "licencePlate" : "rewrwe",
+    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "pages" : 123,
+    "forKids" : true
+  }, {
+    "make" : "dsafsd",
+    "licencePlate" : null,
+    "category" : "FANTASTYKA_SCIENCE_FICTION",
+    "pages" : 123,
+    "forKids" : false
+  }, {
+    "make" : "testse",
+    "licencePlate" : null,
     "category" : "FANTASTYKA_SCIENCE_FICTION",
     "pages" : 123,
     "forKids" : true

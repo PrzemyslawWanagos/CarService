@@ -25,7 +25,7 @@ public class SearchCarController {
     }
 
     @GetMapping("/search-car")
-    public ModelAndView displaySearchedCars(@RequestParam("title") String title) {
+    public ModelAndView displaySearchedCars(@RequestParam("licencePlate") String title) {
         List<Car> bookSearchResult= services.returnListOfBooks(cars, title);
         ModelAndView modelAndView = new ModelAndView("SearchCar");
 //

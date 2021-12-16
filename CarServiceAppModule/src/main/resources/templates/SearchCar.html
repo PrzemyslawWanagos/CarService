@@ -17,7 +17,7 @@
     </tr>
     <tr th:each="car, stat : ${carSearchResult}">
         <td th:text="${stat.index + 1}"></td>
-        <td th:text="${car.author}"></td>
+        <td th:text="${car.make}"></td>
         <td th:text="${car.licencePlate}"></td>
         <td th:text="${car.category.categoryName}"></td>
         <td th:text="${car.pages}"></td>
