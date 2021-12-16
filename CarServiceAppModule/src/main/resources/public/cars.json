@@ -181,7 +181,7 @@
     "forKids" : true
   }, {
     "make" : "43214",
-    "licencePlate" : "43214",
+    "licencePlate" : "faldksflkasdjflkjsadljfklasjdfkljs",
     "category" : "OTHER",
     "pages" : 1234,
     "forKids" : true
@@ -236,6 +236,12 @@
   }, {
     "make" : "REW",
     "licencePlate" : "RWEQ",
+    "category" : "OTHER",
+    "pages" : 1,
+    "forKids" : true
+  }, {
+    "make" : "mazda",
+    "licencePlate" : "1",
     "category" : "OTHER",
     "pages" : 1,
     "forKids" : true
