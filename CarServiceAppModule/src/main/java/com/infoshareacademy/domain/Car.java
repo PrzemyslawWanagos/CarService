@@ -5,16 +5,16 @@ public class Car {
     public String make;
     private String licencePlate;
     private Category category;
-    private int pages;
+    private int costOfService;
     private boolean repaired;
 
     public Car() {}
 
-    public Car(String make, String licencePlate, Category category, int pages, boolean repaired) {
+    public Car(String make, String licencePlate, Category category, int costOfService, boolean repaired) {
         this.make = make;
         this.licencePlate = licencePlate;
         this.category = category;
-        this.pages = pages;
+        this.costOfService = costOfService;
         this.repaired = repaired;
     }
 
@@ -42,12 +42,12 @@ public class Car {
         this.category = category;
     }
 
-    public int getPages() {
-        return pages;
+    public int getCostOfService() {
+        return costOfService;
     }
 
-    public void setPages(int pages) {
-        this.pages = pages;
+    public void setCostOfService(int costOfService) {
+        this.costOfService = costOfService;
     }
 
     public boolean isRepaired() {
@@ -60,7 +60,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return make + ", " + licencePlate + " (" + pages + "str.), category: " + category.getCategoryName() + ", " + ((repaired) ? "service completed" : "awaiting for service");
+        return make + ", " + licencePlate + " (" + costOfService + "str.), category: " + category.getCategoryName() + ", " + ((repaired) ? "service completed" : "awaiting for service");
     }
 
 }

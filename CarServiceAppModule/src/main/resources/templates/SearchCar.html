@@ -11,7 +11,7 @@
         <th>Author</th>
         <th>Title</th>
         <th>Category</th>
-        <th>Number of pages</th>
+        <th>Number of costOfService</th>
         <th>Is it suitable for the kids</th>
         <th>Edit</th>
     </tr>
@@ -20,7 +20,7 @@
         <td th:text="${car.make}"></td>
         <td th:text="${car.licencePlate}"></td>
         <td th:text="${car.category.categoryName}"></td>
-        <td th:text="${car.pages}"></td>
+        <td th:text="${car.costOfService}"></td>
         <td th:text="${car.repaired}"></td>
         <td><a th:href="@{/edit/{EditTitle}(EditTitle=${car.licencePlate})}">Edit</a></td>
     </tr>

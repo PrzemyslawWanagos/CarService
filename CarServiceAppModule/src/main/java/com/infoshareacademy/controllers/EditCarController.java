@@ -40,7 +40,7 @@ public class EditCarController {
             car.setMake(carDto.getMake());
 
             car.setLicencePlate(carDto.getLicencePlate());
-            car.setPages(carDto.getPages());
+            car.setCostOfService(carDto.getCostOfService());
             car.setCategory(carDto.getCategory());
             Boolean temp = carDto.getRepaired();
            car.setRepaired(temp);

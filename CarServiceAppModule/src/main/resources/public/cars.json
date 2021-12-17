@@ -3,325 +3,331 @@
     "make" : "Hanya Yanagihara",
     "licencePlate" : "Male zycie2",
     "category" : "OTHER",
-    "pages" : 1000,
+    "costOfService" : 10001,
     "repaired" : false
   }, {
     "make" : "Maja Lunde",
     "licencePlate" : "Historia Pszczol",
     "category" : "BRAKES",
-    "pages" : 514,
+    "costOfService" : 514,
     "repaired" : false
   }, {
     "make" : "Leonie Swann",
     "licencePlate" : "Kroczac w ciemnosci",
     "category" : "BRAKES",
-    "pages" : 424,
+    "costOfService" : 424,
     "repaired" : false
   }, {
     "make" : "new test car",
     "licencePlate" : "4312431",
     "category" : "BRAKES",
-    "pages" : 43124123,
+    "costOfService" : 43124123,
     "repaired" : true
   }, {
     "make" : "J. R. R. Tolkien",
     "licencePlate" : "Hobbit",
     "category" : "OTHER",
-    "pages" : 315,
+    "costOfService" : 315,
     "repaired" : false
   }, {
     "make" : "Simon Beckett",
     "licencePlate" : "Chemia smierci",
     "category" : "SEATS",
-    "pages" : 352,
+    "costOfService" : 352,
     "repaired" : false
   }, {
     "make" : "Marc Elsberg",
     "licencePlate" : "Blackout",
     "category" : "SEATS",
-    "pages" : 784,
+    "costOfService" : 784,
     "repaired" : false
   }, {
     "make" : "Jozef Ignacy Kraszewski",
     "licencePlate" : "Stara basn",
     "category" : "MAINTENANCE",
-    "pages" : 304,
+    "costOfService" : 304,
     "repaired" : false
   }, {
     "make" : "J. K. Rowling",
     "licencePlate" : "Harry Potter i Kamien Filozoficzny",
     "category" : "OTHER",
-    "pages" : 328,
+    "costOfService" : 328,
     "repaired" : true
   }, {
     "make" : "Antoine de Saint-Exupery",
     "licencePlate" : "Maly Ksiaze2",
     "category" : "OTHER",
-    "pages" : 112,
+    "costOfService" : 112,
     "repaired" : true
   }, {
     "make" : "Jojo Moyes",
     "licencePlate" : "Zanim się pojawiles",
     "category" : "ENGINE",
-    "pages" : 382,
+    "costOfService" : 382,
     "repaired" : false
   }, {
     "make" : "Elizabeth Gilbert",
     "licencePlate" : "Jedz, modl sie, kochaj",
     "category" : "DRIVE",
-    "pages" : 490,
+    "costOfService" : 490,
     "repaired" : false
   }, {
     "make" : "Andy Weir",
     "licencePlate" : "Marsjanin",
     "category" : "OTHER",
-    "pages" : 482,
+    "costOfService" : 482,
     "repaired" : true
   }, {
     "make" : "Test car",
     "licencePlate" : "Test title",
     "category" : "BRAKES",
-    "pages" : 345,
+    "costOfService" : 345,
     "repaired" : true
   }, {
     "make" : "14v2",
     "licencePlate" : "kkkkk",
     "category" : "OTHER",
-    "pages" : 999,
+    "costOfService" : 999,
     "repaired" : true
   }, {
     "make" : "Test car15",
     "licencePlate" : "dlfkja",
     "category" : "OTHER",
-    "pages" : 2312,
+    "costOfService" : 2312,
     "repaired" : false
   }, {
     "make" : "test car 16",
     "licencePlate" : "fasd",
     "category" : "OTHER",
-    "pages" : 123,
+    "costOfService" : 123,
     "repaired" : true
   }, {
     "make" : "Test car",
     "licencePlate" : "fdsa",
     "category" : "OTHER",
-    "pages" : 232,
+    "costOfService" : 232,
     "repaired" : true
   }, {
     "make" : "gsfs",
     "licencePlate" : "fsdf",
     "category" : "BRAKES",
-    "pages" : 34,
+    "costOfService" : 34,
     "repaired" : true
   }, {
     "make" : "Test car20",
     "licencePlate" : "teafdasfkj",
     "category" : "OTHER",
-    "pages" : 53453,
+    "costOfService" : 53453,
     "repaired" : false
   }, {
     "make" : "Test Car21",
     "licencePlate" : "hsgf",
     "category" : "OTHER",
-    "pages" : 4,
+    "costOfService" : 4,
     "repaired" : true
   }, {
     "make" : "adfd",
     "licencePlate" : "fadsf",
     "category" : "OTHER",
-    "pages" : 4,
+    "costOfService" : 4,
     "repaired" : true
   }, {
     "make" : "dSDas",
     "licencePlate" : "dsa",
     "category" : "OTHER",
-    "pages" : 6565,
+    "costOfService" : 6565,
     "repaired" : true
   }, {
     "make" : "jfh",
     "licencePlate" : "fgh",
     "category" : "OTHER",
-    "pages" : 123,
+    "costOfService" : 123,
     "repaired" : true
   }, {
     "make" : "Test Car56",
     "licencePlate" : "fsgf",
     "category" : "OTHER",
-    "pages" : 434,
+    "costOfService" : 434,
     "repaired" : true
   }, {
     "make" : "kfjdsflkajs",
     "licencePlate" : "fadsfa",
     "category" : "OTHER",
-    "pages" : 534,
+    "costOfService" : 534,
     "repaired" : true
   }, {
     "make" : "fkdsajlfkj",
     "licencePlate" : "fasdf",
     "category" : "BRAKES",
-    "pages" : 123,
+    "costOfService" : 123,
     "repaired" : true
   }, {
     "make" : "32412",
     "licencePlate" : "41324",
     "category" : "OTHER",
-    "pages" : 42314,
+    "costOfService" : 42314,
     "repaired" : true
   }, {
     "make" : "fdsa",
     "licencePlate" : "fasd",
     "category" : "OTHER",
-    "pages" : 1213,
+    "costOfService" : 1213,
     "repaired" : true
   }, {
     "make" : "rweq",
     "licencePlate" : "reqwr",
     "category" : "BRAKES",
-    "pages" : 123,
+    "costOfService" : 123,
     "repaired" : true
   }, {
     "make" : "43214",
     "licencePlate" : "faldksflkasdjflkjsadljfklasjdfkljs",
     "category" : "OTHER",
-    "pages" : 1234,
+    "costOfService" : 1234,
     "repaired" : true
   }, {
     "make" : "rewr",
     "licencePlate" : "rwer",
     "category" : "OTHER",
-    "pages" : 4,
+    "costOfService" : 4,
     "repaired" : true
   }, {
     "make" : "rewqr",
     "licencePlate" : "reqwr",
     "category" : "OTHER",
-    "pages" : 42343,
+    "costOfService" : 42343,
     "repaired" : true
   }, {
     "make" : "fkjdsfjalksdjflksdajfl",
     "licencePlate" : "dfksjfksajdlfkj",
     "category" : "OTHER",
-    "pages" : 123,
+    "costOfService" : 123,
     "repaired" : true
   }, {
     "make" : "ewrw",
     "licencePlate" : "rerwe",
     "category" : "OTHER",
-    "pages" : 123,
+    "costOfService" : 123,
     "repaired" : false
   }, {
     "make" : "mazda",
     "licencePlate" : "rewrwe",
     "category" : "OTHER",
-    "pages" : 123,
+    "costOfService" : 123,
     "repaired" : false
   }, {
     "make" : "dsafsd",
     "licencePlate" : null,
     "category" : "OTHER",
-    "pages" : 123,
+    "costOfService" : 123,
     "repaired" : false
   }, {
     "make" : "testse",
     "licencePlate" : null,
     "category" : "OTHER",
-    "pages" : 123,
+    "costOfService" : 123,
     "repaired" : true
   }, {
     "make" : "mazda",
     "licencePlate" : "rewrq",
     "category" : "OTHER",
-    "pages" : 12,
+    "costOfService" : 12,
     "repaired" : true
   }, {
     "make" : "REW",
     "licencePlate" : "RWEQ",
     "category" : "OTHER",
-    "pages" : 1,
+    "costOfService" : 1,
     "repaired" : true
   }, {
     "make" : "mazda",
     "licencePlate" : "1",
     "category" : "OTHER",
-    "pages" : 1,
+    "costOfService" : 1,
     "repaired" : true
   }, {
     "make" : "gadsfasd",
     "licencePlate" : "fadsfa",
     "category" : "OTHER",
-    "pages" : 3213123,
+    "costOfService" : 3213123,
     "repaired" : true
   }, {
     "make" : "32131",
     "licencePlate" : "32131",
     "category" : "OTHER",
-    "pages" : 3123,
+    "costOfService" : 3123,
     "repaired" : true
   }, {
     "make" : "fdafds",
     "licencePlate" : "fsdaf",
     "category" : "OTHER",
-    "pages" : 132312,
+    "costOfService" : 132312,
     "repaired" : true
   }, {
     "make" : "mazda",
     "licencePlate" : "rtt",
     "category" : "OTHER",
-    "pages" : 564,
+    "costOfService" : 564,
     "repaired" : true
   }, {
     "make" : "fasdfa",
     "licencePlate" : "fadsf",
     "category" : "BRAKES",
-    "pages" : 123,
+    "costOfService" : 123,
     "repaired" : true
   }, {
     "make" : "fdsjalfk",
     "licencePlate" : "fdjsfkj",
     "category" : "OTHER",
-    "pages" : 123,
+    "costOfService" : 123,
     "repaired" : true
   }, {
     "make" : "fkjlskdfjlakj",
     "licencePlate" : "fjsdaklfjl",
     "category" : "OTHER",
-    "pages" : 832179,
+    "costOfService" : 832179,
     "repaired" : true
   }, {
     "make" : "dsasdf",
     "licencePlate" : "fdsfa",
     "category" : "OTHER",
-    "pages" : 123,
+    "costOfService" : 123,
     "repaired" : true
   }, {
     "make" : "fasdf",
     "licencePlate" : "fasdfas",
     "category" : "DRIVE",
-    "pages" : 123,
+    "costOfService" : 123,
     "repaired" : false
   }, {
     "make" : "fasdf",
     "licencePlate" : "fasdfas",
     "category" : "DRIVE",
-    "pages" : 12333,
+    "costOfService" : 12333,
     "repaired" : false
   }, {
     "make" : "Mazda",
     "licencePlate" : "csdfksdjklf",
     "category" : "MAINTENANCE",
-    "pages" : 1,
+    "costOfService" : 1,
     "repaired" : false
   }, {
     "make" : "toyota",
     "licencePlate" : "urewoiq",
     "category" : "OTHER",
-    "pages" : 123123,
+    "costOfService" : 123123,
     "repaired" : false
   }, {
     "make" : "new car",
     "licencePlate" : "301298",
     "category" : "OTHER",
-    "pages" : 291,
+    "costOfService" : 291,
+    "repaired" : false
+  }, {
+    "make" : "fdklsa",
+    "licencePlate" : "132",
+    "category" : "OTHER",
+    "costOfService" : 1,
     "repaired" : false
   } ]
 }

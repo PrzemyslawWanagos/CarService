@@ -7,14 +7,14 @@ public class CarDto {
     private final String make;
     private final String licencePlate;
     private final Category category;
-    private final Integer pages;
+    private final Integer costOfService;
     private final Boolean repaired;
 
-    public CarDto(String make, String licencePlate, Category category, Integer pages, Boolean repaired) {
+    public CarDto(String make, String licencePlate, Category category, Integer costOfService, Boolean repaired) {
         this.make = make;
         this.licencePlate = licencePlate;
         this.category = category;
-        this.pages = pages;
+        this.costOfService = costOfService;
         this.repaired = repaired;
     }
 
@@ -30,8 +30,8 @@ public class CarDto {
         return category;
     }
 
-    public int getPages() {
-        return pages;
+    public int getCostOfService() {
+        return costOfService;
     }
 
     public boolean getRepaired() {
@@ -44,7 +44,7 @@ public class CarDto {
                 "make='" + make + '\'' +
                 ", licencePlate='" + licencePlate + '\'' +
                 ", category=" + category +
-                ", pages=" + pages +
+                ", costOfService=" + costOfService +
                 ", repaired=" + repaired +
                 '}';
     }
