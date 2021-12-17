@@ -321,7 +321,7 @@
     "make" : "new car",
     "licencePlate" : "301298",
     "category" : "OTHER",
-    "costOfService" : 291,
+    "costOfService" : 290,
     "repaired" : false
   }, {
     "make" : "fdklsa",
@@ -340,6 +340,36 @@
     "licencePlate" : "aaa",
     "category" : "OTHER",
     "costOfService" : 100,
+    "repaired" : false
+  }, {
+    "make" : "fasdf",
+    "licencePlate" : "rqewr",
+    "category" : "OTHER",
+    "costOfService" : 0,
+    "repaired" : false
+  }, {
+    "make" : "fasdf",
+    "licencePlate" : "rqewr",
+    "category" : "OTHER",
+    "costOfService" : 0,
+    "repaired" : false
+  }, {
+    "make" : "fasdf",
+    "licencePlate" : "rqewr",
+    "category" : "OTHER",
+    "costOfService" : 0,
+    "repaired" : false
+  }, {
+    "make" : "fjklkdsa",
+    "licencePlate" : "49831289473",
+    "category" : "OTHER",
+    "costOfService" : 0,
+    "repaired" : false
+  }, {
+    "make" : "fasdf",
+    "licencePlate" : "rqewr",
+    "category" : "OTHER",
+    "costOfService" : 0,
     "repaired" : false
   } ]
 }

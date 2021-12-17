@@ -37,7 +37,7 @@ public class AddCarController {
         try {
             car.setMake(carDto.getMake());
             car.setLicencePlate(carDto.getLicencePlate());
-            car.setCostOfService(carDto.getCostOfService());
+            car.setCostOfService(0);
             car.setCategory(carDto.getCategory());
             car.setRepaired(false);
         } catch (Exception e) {
