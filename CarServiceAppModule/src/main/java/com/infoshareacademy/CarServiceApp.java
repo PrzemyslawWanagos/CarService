@@ -10,20 +10,18 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
-import java.io.File;
 import java.io.IOException;
-import java.nio.file.Paths;
 
 import static com.infoshareacademy.Utils.findFile;
 
 @SpringBootApplication
-public class BookcaseApp {
+public class CarServiceApp {
 
     public static final String PROVIDERS_PATH = findFile(System.getProperty("user.dir"), "cars.json").getAbsolutePath();
     static ConfigurableApplicationContext ctx;
 
     public static void main(String[] args) throws IOException {
-        ctx = SpringApplication.run(BookcaseApp.class, args);
+        ctx = SpringApplication.run(CarServiceApp.class, args);
 //        Runtime rt = Runtime.getRuntime();
 //        rt.exec(new String[]{"cmd", "/c", "start http://localhost:8080/main"});
     }

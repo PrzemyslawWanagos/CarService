@@ -13,8 +13,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Random;
 
-//import static com.infoshareacademy.BookcaseApp.PROVIDERS_PATH;
-import static com.infoshareacademy.BookcaseApp.PROVIDERS_PATH;
+//import static com.infoshareacademy.CarServiceApp.PROVIDERS_PATH;
+import static com.infoshareacademy.CarServiceApp.PROVIDERS_PATH;
 import static com.infoshareacademy.Utils.listToString;
 
 @Service

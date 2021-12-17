@@ -1,7 +1,7 @@
 {
   "cars" : [ {
     "make" : "Hanya Yanagihara",
-    "licencePlate" : "Male zycie",
+    "licencePlate" : "Male zycie2",
     "category" : "OTHER",
     "pages" : 100,
     "forKids" : true
@@ -256,6 +256,36 @@
     "licencePlate" : "32131",
     "category" : "OTHER",
     "pages" : 3123,
+    "forKids" : true
+  }, {
+    "make" : "fdafds",
+    "licencePlate" : "fsdaf",
+    "category" : "OTHER",
+    "pages" : 132312,
+    "forKids" : true
+  }, {
+    "make" : "mazda",
+    "licencePlate" : "rtt",
+    "category" : "OTHER",
+    "pages" : 564,
+    "forKids" : true
+  }, {
+    "make" : "fasdfa",
+    "licencePlate" : "fadsf",
+    "category" : "BRAKES",
+    "pages" : 123,
+    "forKids" : true
+  }, {
+    "make" : "fdsjalfk",
+    "licencePlate" : "fdjsfkj",
+    "category" : "OTHER",
+    "pages" : 123,
+    "forKids" : true
+  }, {
+    "make" : "fkjlskdfjlakj",
+    "licencePlate" : "fjsdaklfjl",
+    "category" : "OTHER",
+    "pages" : 832179,
     "forKids" : true
   } ]
 }
