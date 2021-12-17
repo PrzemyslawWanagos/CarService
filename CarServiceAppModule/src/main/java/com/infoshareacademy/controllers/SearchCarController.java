@@ -26,11 +26,11 @@ public class SearchCarController {
 
     @GetMapping("/search-car")
     public ModelAndView displaySearchedCars(@RequestParam("licencePlate") String title) {
-        List<Car> bookSearchResult= services.returnListOfBooks(cars, title);
+        List<Car> CarSearchResult= services.returnListOfCars(cars, title);
         ModelAndView modelAndView = new ModelAndView("SearchCar");
 //
-//        System.out.println(listToString(bookSearchResult,true));
-        modelAndView.addObject("carSearchResult",bookSearchResult);
+//        System.out.println(listToString(CarSearchResult,true));
+        modelAndView.addObject("carSearchResult",CarSearchResult);
 
         return modelAndView;
     }

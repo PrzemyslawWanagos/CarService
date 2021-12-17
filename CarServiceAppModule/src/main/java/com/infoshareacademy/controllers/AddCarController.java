@@ -44,8 +44,8 @@ public class AddCarController {
         } catch (Exception e) {
             return e.toString();
         }
-        cars.addBookToBookcase(car);
-        services.saveBookCase(cars);
+        cars.addCarToCarService(car);
+        services.saveCarService(cars);
         String searchURL = "/all-cars";
         return "redirect:" + searchURL;
 

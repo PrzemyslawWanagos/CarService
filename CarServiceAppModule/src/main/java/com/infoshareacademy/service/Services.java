@@ -22,30 +22,30 @@ public class Services {
 
     public Services() {}
 
-    public static Cars readBookCase() {
+    public static Cars readCarService() {
         ObjectMapper mapper = new ObjectMapper();
-        Cars booksFromFile = new Cars();
+        Cars CarsFromFile = new Cars();
 //
 //        File file=findFile(System.getProperty("user.dir"), "cars.json");
 //        //File file = Paths.get(".", "CarServiceAppModule", "cars.json").normalize().toFile();
 //        String test = file.getAbsolutePath();
 //        System.out.println(test);
         try {
-            booksFromFile = mapper.readValue(new File(PROVIDERS_PATH), new TypeReference<>() {
+            CarsFromFile = mapper.readValue(new File(PROVIDERS_PATH), new TypeReference<>() {
             });
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return booksFromFile;
+        return CarsFromFile;
     }
 
-    public String getRandomBook(Cars cars) {
+    public String getRandomCar(Cars cars) {
         Random random = new Random();
-        int bookPosition = random.nextInt(cars.getCars().size());
-        return cars.getCars().get(bookPosition).toString();
+        int CarPosition = random.nextInt(cars.getCars().size());
+        return cars.getCars().get(CarPosition).toString();
     }
 
-    public String browseThroughBooks(Cars cars, String title) {
+    public String browseThroughCars(Cars cars, String title) {
         List<Car> toReturn = new ArrayList<>();
         for (Car car : cars.getCars()) {
             if (car.getLicencePlate().toUpperCase(Locale.ROOT).contains(title.toUpperCase(Locale.ROOT))) {
@@ -55,11 +55,11 @@ public class Services {
         if (toReturn.size() > 0) {
             return listToString(toReturn, true);
         } else {
-            return "There are no books meeting your title criteria";
+            return "There are no Cars meeting your title criteria";
         }
     }
 
-    public List<Car> returnListOfBooks(Cars cars, String title) {
+    public List<Car> returnListOfCars(Cars cars, String title) {
         List <Car> toReturn = new ArrayList<>();
         try {
             for (Car car : cars.getCars()) {
@@ -74,7 +74,7 @@ public class Services {
 
     }
 
-    public void saveBookCase(Cars cars) {
+    public void saveCarService(Cars cars) {
         ObjectMapper mapper = new ObjectMapper();
         try {
             mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PROVIDERS_PATH), cars);

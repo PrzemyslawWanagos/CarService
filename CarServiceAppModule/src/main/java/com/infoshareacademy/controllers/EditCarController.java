@@ -15,7 +15,7 @@ public class EditCarController {
 
     private final Services services;
     private Cars cars;
-    private Integer bookToEditID;
+    private Integer CarToEditID;
 
 
     @Autowired
@@ -26,16 +26,16 @@ public class EditCarController {
 
     @RequestMapping(value = "/edit/{title}", method = RequestMethod.GET)
     public ModelAndView carEditForm(@PathVariable String title) {
-        bookToEditID= services.findIFForTitle(cars, title);
+        CarToEditID= services.findIFForTitle(cars, title);
         ModelAndView modelAndView=new ModelAndView("EditCar");
-        Car bookToEdit = cars.getCars().get(bookToEditID);
-        modelAndView.addObject("carToEdit", bookToEdit);
+        Car CarToEdit = cars.getCars().get(CarToEditID);
+        modelAndView.addObject("carToEdit", CarToEdit);
         return modelAndView;
     }
 
     @PostMapping(value = "/save-edited-car")
     public String saveEditedCar(CarDto carDto) {
-                Car car = cars.getCars().get(bookToEditID);
+                Car car = cars.getCars().get(CarToEditID);
         try {
             car.setMake(carDto.getMake());
 
@@ -48,7 +48,7 @@ public class EditCarController {
             return e.toString();
         }
 
-        services.saveBookCase(cars);
+        services.saveCarService(cars);
         String searchURL = "/all-cars";
         return "redirect:" + searchURL;
     }

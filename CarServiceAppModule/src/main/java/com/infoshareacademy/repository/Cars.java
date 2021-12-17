@@ -29,7 +29,7 @@ public class Cars {
         return listToString(cars, true);
     }
 
-    public void addBookToBookcase(Car car) {
+    public void addCarToCarService(Car car) {
         cars.add(car);
     }
 

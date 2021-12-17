@@ -3,7 +3,7 @@
     "make" : "Hanya Yanagihara",
     "licencePlate" : "Male zycie2",
     "category" : "OTHER",
-    "pages" : 100,
+    "pages" : 1000,
     "forKids" : true
   }, {
     "make" : "Maja Lunde",
@@ -120,7 +120,7 @@
     "pages" : 53453,
     "forKids" : false
   }, {
-    "make" : "Test book21",
+    "make" : "Test Car21",
     "licencePlate" : "hsgf",
     "category" : "OTHER",
     "pages" : 4,
@@ -144,7 +144,7 @@
     "pages" : 123,
     "forKids" : true
   }, {
-    "make" : "Test book56",
+    "make" : "Test Car56",
     "licencePlate" : "fsgf",
     "category" : "OTHER",
     "pages" : 434,
@@ -287,5 +287,23 @@
     "category" : "OTHER",
     "pages" : 832179,
     "forKids" : true
+  }, {
+    "make" : "dsasdf",
+    "licencePlate" : "fdsfa",
+    "category" : "OTHER",
+    "pages" : 123,
+    "forKids" : true
+  }, {
+    "make" : "fasdf",
+    "licencePlate" : "fasdfas",
+    "category" : "DRIVE",
+    "pages" : 123,
+    "forKids" : false
+  }, {
+    "make" : "fasdf",
+    "licencePlate" : "fasdfas",
+    "category" : "DRIVE",
+    "pages" : 12333,
+    "forKids" : false
   } ]
 }
