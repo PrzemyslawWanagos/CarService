@@ -8,11 +8,11 @@
 <table border="2" width="70%" cellpadding="2" th:if="${!carSearchResult.empty}">
     <tr>
         <th>#</th>
-        <th>Author</th>
-        <th>Title</th>
-        <th>Category</th>
-        <th>Number of costOfService</th>
-        <th>Is it suitable for the kids</th>
+        <th>Make</th>
+        <th>Licence plate</th>
+        <th>Reason for service</th>
+        <th>Cost of service</th>
+        <th>Repaired</th>
         <th>Edit</th>
     </tr>
     <tr th:each="car, stat : ${carSearchResult}">

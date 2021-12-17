@@ -217,13 +217,13 @@
     "repaired" : false
   }, {
     "make" : "dsafsd",
-    "licencePlate" : null,
+    "licencePlate" : "abc",
     "category" : "OTHER",
     "costOfService" : 123,
     "repaired" : false
   }, {
     "make" : "testse",
-    "licencePlate" : null,
+    "licencePlate" : "abc",
     "category" : "OTHER",
     "costOfService" : 123,
     "repaired" : true
@@ -328,6 +328,18 @@
     "licencePlate" : "132",
     "category" : "OTHER",
     "costOfService" : 1,
+    "repaired" : false
+  }, {
+    "make" : "12321",
+    "licencePlate" : "123",
+    "category" : "OTHER",
+    "costOfService" : 1,
+    "repaired" : true
+  }, {
+    "make" : "flkjdsa",
+    "licencePlate" : "aaa",
+    "category" : "OTHER",
+    "costOfService" : 100,
     "repaired" : false
   } ]
 }

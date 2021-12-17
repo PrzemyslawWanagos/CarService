@@ -59,17 +59,20 @@ public class Services {
         }
     }
 
-    public List<Car> returnListOfCars(Cars cars, String title) {
+    public List<Car> returnListOfCars(Cars cars, String licencePlate) {
         List <Car> toReturn = new ArrayList<>();
-        try {
+       //try {
             for (Car car : cars.getCars()) {
-                if (car.getLicencePlate().toUpperCase(Locale.ROOT).contains(title.toUpperCase(Locale.ROOT))) {
+                String lp=car.getLicencePlate();
+                System.out.println(lp+" "+licencePlate);
+                if (car.getLicencePlate().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT))) {
                     toReturn.add(car);
+                    System.out.println(toReturn.toString());
                 }
             }
-        }catch (Exception e){
-            System.out.println(e.toString());
-        }
+//        }catch (Exception e){
+//            System.out.println(e.toString());
+//        }
             return toReturn;
 
     }
