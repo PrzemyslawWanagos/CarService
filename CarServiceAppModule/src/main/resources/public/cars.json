@@ -4,306 +4,324 @@
     "licencePlate" : "Male zycie2",
     "category" : "OTHER",
     "pages" : 1000,
-    "forKids" : true
+    "repaired" : false
   }, {
     "make" : "Maja Lunde",
     "licencePlate" : "Historia Pszczol",
     "category" : "BRAKES",
     "pages" : 514,
-    "forKids" : false
+    "repaired" : false
   }, {
     "make" : "Leonie Swann",
     "licencePlate" : "Kroczac w ciemnosci",
     "category" : "BRAKES",
     "pages" : 424,
-    "forKids" : false
+    "repaired" : false
   }, {
     "make" : "new test car",
     "licencePlate" : "4312431",
     "category" : "BRAKES",
     "pages" : 43124123,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "J. R. R. Tolkien",
     "licencePlate" : "Hobbit",
     "category" : "OTHER",
     "pages" : 315,
-    "forKids" : false
+    "repaired" : false
   }, {
     "make" : "Simon Beckett",
     "licencePlate" : "Chemia smierci",
     "category" : "SEATS",
     "pages" : 352,
-    "forKids" : false
+    "repaired" : false
   }, {
     "make" : "Marc Elsberg",
     "licencePlate" : "Blackout",
     "category" : "SEATS",
     "pages" : 784,
-    "forKids" : false
+    "repaired" : false
   }, {
     "make" : "Jozef Ignacy Kraszewski",
     "licencePlate" : "Stara basn",
     "category" : "MAINTENANCE",
     "pages" : 304,
-    "forKids" : false
+    "repaired" : false
   }, {
     "make" : "J. K. Rowling",
     "licencePlate" : "Harry Potter i Kamien Filozoficzny",
     "category" : "OTHER",
     "pages" : 328,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "Antoine de Saint-Exupery",
     "licencePlate" : "Maly Ksiaze2",
     "category" : "OTHER",
     "pages" : 112,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "Jojo Moyes",
     "licencePlate" : "Zanim się pojawiles",
     "category" : "ENGINE",
     "pages" : 382,
-    "forKids" : false
+    "repaired" : false
   }, {
     "make" : "Elizabeth Gilbert",
     "licencePlate" : "Jedz, modl sie, kochaj",
     "category" : "DRIVE",
     "pages" : 490,
-    "forKids" : false
+    "repaired" : false
   }, {
     "make" : "Andy Weir",
     "licencePlate" : "Marsjanin",
     "category" : "OTHER",
     "pages" : 482,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "Test car",
     "licencePlate" : "Test title",
     "category" : "BRAKES",
     "pages" : 345,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "14v2",
     "licencePlate" : "kkkkk",
     "category" : "OTHER",
     "pages" : 999,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "Test car15",
     "licencePlate" : "dlfkja",
     "category" : "OTHER",
     "pages" : 2312,
-    "forKids" : false
+    "repaired" : false
   }, {
     "make" : "test car 16",
     "licencePlate" : "fasd",
     "category" : "OTHER",
     "pages" : 123,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "Test car",
     "licencePlate" : "fdsa",
     "category" : "OTHER",
     "pages" : 232,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "gsfs",
     "licencePlate" : "fsdf",
     "category" : "BRAKES",
     "pages" : 34,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "Test car20",
     "licencePlate" : "teafdasfkj",
     "category" : "OTHER",
     "pages" : 53453,
-    "forKids" : false
+    "repaired" : false
   }, {
     "make" : "Test Car21",
     "licencePlate" : "hsgf",
     "category" : "OTHER",
     "pages" : 4,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "adfd",
     "licencePlate" : "fadsf",
     "category" : "OTHER",
     "pages" : 4,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "dSDas",
     "licencePlate" : "dsa",
     "category" : "OTHER",
     "pages" : 6565,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "jfh",
     "licencePlate" : "fgh",
     "category" : "OTHER",
     "pages" : 123,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "Test Car56",
     "licencePlate" : "fsgf",
     "category" : "OTHER",
     "pages" : 434,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "kfjdsflkajs",
     "licencePlate" : "fadsfa",
     "category" : "OTHER",
     "pages" : 534,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "fkdsajlfkj",
     "licencePlate" : "fasdf",
     "category" : "BRAKES",
     "pages" : 123,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "32412",
     "licencePlate" : "41324",
     "category" : "OTHER",
     "pages" : 42314,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "fdsa",
     "licencePlate" : "fasd",
     "category" : "OTHER",
     "pages" : 1213,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "rweq",
     "licencePlate" : "reqwr",
     "category" : "BRAKES",
     "pages" : 123,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "43214",
     "licencePlate" : "faldksflkasdjflkjsadljfklasjdfkljs",
     "category" : "OTHER",
     "pages" : 1234,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "rewr",
     "licencePlate" : "rwer",
     "category" : "OTHER",
     "pages" : 4,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "rewqr",
     "licencePlate" : "reqwr",
     "category" : "OTHER",
     "pages" : 42343,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "fkjdsfjalksdjflksdajfl",
     "licencePlate" : "dfksjfksajdlfkj",
     "category" : "OTHER",
     "pages" : 123,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "ewrw",
     "licencePlate" : "rerwe",
     "category" : "OTHER",
     "pages" : 123,
-    "forKids" : false
+    "repaired" : false
   }, {
     "make" : "mazda",
     "licencePlate" : "rewrwe",
     "category" : "OTHER",
     "pages" : 123,
-    "forKids" : true
+    "repaired" : false
   }, {
     "make" : "dsafsd",
     "licencePlate" : null,
     "category" : "OTHER",
     "pages" : 123,
-    "forKids" : false
+    "repaired" : false
   }, {
     "make" : "testse",
     "licencePlate" : null,
     "category" : "OTHER",
     "pages" : 123,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "mazda",
     "licencePlate" : "rewrq",
     "category" : "OTHER",
     "pages" : 12,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "REW",
     "licencePlate" : "RWEQ",
     "category" : "OTHER",
     "pages" : 1,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "mazda",
     "licencePlate" : "1",
     "category" : "OTHER",
     "pages" : 1,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "gadsfasd",
     "licencePlate" : "fadsfa",
     "category" : "OTHER",
     "pages" : 3213123,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "32131",
     "licencePlate" : "32131",
     "category" : "OTHER",
     "pages" : 3123,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "fdafds",
     "licencePlate" : "fsdaf",
     "category" : "OTHER",
     "pages" : 132312,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "mazda",
     "licencePlate" : "rtt",
     "category" : "OTHER",
     "pages" : 564,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "fasdfa",
     "licencePlate" : "fadsf",
     "category" : "BRAKES",
     "pages" : 123,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "fdsjalfk",
     "licencePlate" : "fdjsfkj",
     "category" : "OTHER",
     "pages" : 123,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "fkjlskdfjlakj",
     "licencePlate" : "fjsdaklfjl",
     "category" : "OTHER",
     "pages" : 832179,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "dsasdf",
     "licencePlate" : "fdsfa",
     "category" : "OTHER",
     "pages" : 123,
-    "forKids" : true
+    "repaired" : true
   }, {
     "make" : "fasdf",
     "licencePlate" : "fasdfas",
     "category" : "DRIVE",
     "pages" : 123,
-    "forKids" : false
+    "repaired" : false
   }, {
     "make" : "fasdf",
     "licencePlate" : "fasdfas",
     "category" : "DRIVE",
     "pages" : 12333,
-    "forKids" : false
+    "repaired" : false
+  }, {
+    "make" : "Mazda",
+    "licencePlate" : "csdfksdjklf",
+    "category" : "MAINTENANCE",
+    "pages" : 1,
+    "repaired" : false
+  }, {
+    "make" : "toyota",
+    "licencePlate" : "urewoiq",
+    "category" : "OTHER",
+    "pages" : 123123,
+    "repaired" : false
+  }, {
+    "make" : "new car",
+    "licencePlate" : "301298",
+    "category" : "OTHER",
+    "pages" : 291,
+    "repaired" : false
   } ]
 }

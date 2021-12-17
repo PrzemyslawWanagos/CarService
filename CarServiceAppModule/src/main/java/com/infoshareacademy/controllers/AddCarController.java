@@ -39,8 +39,7 @@ public class AddCarController {
             car.setLicencePlate(carDto.getLicencePlate());
             car.setPages(carDto.getPages());
             car.setCategory(carDto.getCategory());
-            Boolean temp = carDto.isForKids();
-            car.setForKids(temp);
+            car.setRepaired(false);
         } catch (Exception e) {
             return e.toString();
         }

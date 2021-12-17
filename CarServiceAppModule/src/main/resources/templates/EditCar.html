@@ -5,18 +5,18 @@
 <h1>Full list of cars</h1>
 <p>
 <form action="/save-edited-car" method="post" onkeydown="return event.key !== 'Enter';"> <!---->
-    Author:
+    Make:
     <br>
 <!--    onsubmit="return false;"-->
     <input type="text" name="make" required th:value="${carToEdit.make}" />
     <br>
     <br>
-    Title:
+    Licence plate:
     <br>
     <input type="text" name="licencePlate" required th:value="${carToEdit.licencePlate}"/>
     <br>
     <br>
-    Category:
+    Reason for service:
     <br>
     <select name="category" id="Category" required th:value="${carToEdit.category}">
         <option value="SEATS" >Problems with seats</option>
@@ -28,16 +28,16 @@
     </select>
     <br>
     <br>
-    Number of pages :
+    Cost of service (PLN):
     <br>
     <input type="number" step="1" pattern="\d+" min="1" name="pages" required th:value="${carToEdit.pages}"/>
     <br>
     <br>
-    Is car suitable for kids?
+    Repaired?
     <br>
-    <input type="radio" name="forKids"  value="true" id="suitable for kids"  th:checked="${carToEdit.forKids} == true ? checked"/>
+    <input type="radio" name="repaired"  value="true" id="suitable for kids"  th:checked="${carToEdit.repaired} == true ? checked"/>
     <label for="suitable for kids">Yes</label>
-    <input type="radio" name="forKids" value="false" id="definitely not for kids" th:checked="${carToEdit.forKids} == false ? checked "/>
+    <input type="radio" name="repaired" value="false" id="definitely not for kids" th:checked="${carToEdit.repaired} == false ? checked "/>
     <label for="definitely not for kids">No</label>
     <br>
     <br>

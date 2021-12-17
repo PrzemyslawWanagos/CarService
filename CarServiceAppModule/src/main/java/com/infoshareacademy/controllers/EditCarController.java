@@ -42,8 +42,8 @@ public class EditCarController {
             car.setLicencePlate(carDto.getLicencePlate());
             car.setPages(carDto.getPages());
             car.setCategory(carDto.getCategory());
-            Boolean temp = carDto.isForKids();
-           car.setForKids(temp);
+            Boolean temp = carDto.getRepaired();
+           car.setRepaired(temp);
         } catch (Exception e) {
             return e.toString();
         }

@@ -8,14 +8,14 @@ public class CarDto {
     private final String licencePlate;
     private final Category category;
     private final Integer pages;
-    private final Boolean forKids;
+    private final Boolean repaired;
 
-    public CarDto(String make, String licencePlate, Category category, Integer pages, Boolean forKids) {
+    public CarDto(String make, String licencePlate, Category category, Integer pages, Boolean repaired) {
         this.make = make;
         this.licencePlate = licencePlate;
         this.category = category;
         this.pages = pages;
-        this.forKids = forKids;
+        this.repaired = repaired;
     }
 
     public String getMake() {
@@ -34,8 +34,8 @@ public class CarDto {
         return pages;
     }
 
-    public boolean isForKids() {
-        return forKids;
+    public boolean getRepaired() {
+        return repaired;
     }
 
     @Override
@@ -45,7 +45,7 @@ public class CarDto {
                 ", licencePlate='" + licencePlate + '\'' +
                 ", category=" + category +
                 ", pages=" + pages +
-                ", forKids=" + forKids +
+                ", repaired=" + repaired +
                 '}';
     }
 }

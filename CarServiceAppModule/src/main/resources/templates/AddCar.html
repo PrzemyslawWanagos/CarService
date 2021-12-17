@@ -5,17 +5,17 @@
 <h1>Add new car</h1>
 <p>
 <form action="save-added-car" method="post">
-    Author:
+    Make:
     <br>
     <input type="text" name="make" required/>
     <br>
     <br>
-    Title:
+    Licence Plate:
     <br>
     <input type="text" name="licencePlate" required/>
     <br>
     <br>
-    Category:
+   Reason for service:
     <br>
     <select name="category" id="Category" required>
         <option value="SEATS" >Problems with seats</option>
@@ -27,19 +27,19 @@
     </select>
     <br>
     <br>
-    Number of pages :
+   Service cost (PLN) :
     <br>
     <input type="number" step="1" pattern="\d+" min="1" name="pages" required/>
     <br>
     <br>
-    Is car suitable for kids?
-    <br>
-    <input type="radio" name="forKids" value="true" id="suitable for kids" checked/>
-    <label for="suitable for kids">Yes</label>
-    <input type="radio" name="forKids" value="false" id="definitely not for kids"/>
-    <label for="definitely not for kids">No</label>
-    <br>
-    <br>
+<!--    Is car fixed?-->
+<!--    <br>-->
+<!--    <input type="radio" name="repaired" value="true" id="suitable for kids" checked/>-->
+<!--    <label for="suitable for kids">Yes</label>-->
+<!--    <input type="radio" name="repaired" value="false" id="definitely not for kids"/>-->
+<!--    <label for="definitely not for kids">No</label>-->
+<!--    <br>-->
+<!--    <br>-->
     <button>Add Car to Service que</button>
 </form>
     <br>

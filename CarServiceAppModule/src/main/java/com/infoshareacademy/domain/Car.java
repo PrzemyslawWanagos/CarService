@@ -6,16 +6,16 @@ public class Car {
     private String licencePlate;
     private Category category;
     private int pages;
-    private boolean forKids;
+    private boolean repaired;
 
     public Car() {}
 
-    public Car(String make, String licencePlate, Category category, int pages, boolean forKids) {
+    public Car(String make, String licencePlate, Category category, int pages, boolean repaired) {
         this.make = make;
         this.licencePlate = licencePlate;
         this.category = category;
         this.pages = pages;
-        this.forKids = forKids;
+        this.repaired = repaired;
     }
 
     public String getMake() {
@@ -50,17 +50,17 @@ public class Car {
         this.pages = pages;
     }
 
-    public boolean isForKids() {
-        return forKids;
+    public boolean isRepaired() {
+        return repaired;
     }
 
-    public void setForKids(boolean forKids) {
-        this.forKids = forKids;
+    public void setRepaired(boolean repaired) {
+        this.repaired = repaired;
     }
 
     @Override
     public String toString() {
-        return make + ", " + licencePlate + " (" + pages + "str.), category: " + category.getCategoryName() + ", " + ((forKids) ? "for kids" : "definitely not for kids");
+        return make + ", " + licencePlate + " (" + pages + "str.), category: " + category.getCategoryName() + ", " + ((repaired) ? "service completed" : "awaiting for service");
     }
 
 }
