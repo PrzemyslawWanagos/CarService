@@ -10,10 +10,8 @@
   }, {
     "make" : "Fiat",
     "licencePlate" : "GA12121",
-    "category" : "SEATS",
-    "costOfService" : 0,
+    "category" : "OTHER",
+    "costOfService" : 5,
     "repaired" : false,
     "description" : "Yellow",
-    "dateOfRepair" : null
-  } ]
-}
+    "dateOfRepair"

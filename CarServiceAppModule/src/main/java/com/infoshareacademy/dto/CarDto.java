@@ -12,9 +12,9 @@ public class CarDto {
     private final Integer costOfService;
     private final Boolean repaired;
     private String description;
-    private LocalDate dateOfRepair;
+    private String dateOfRepair;
 
-    public CarDto(String make, String licencePlate, Category category, Integer costOfService, Boolean repaired, String description, LocalDate dateOfRepair) {
+    public CarDto(String make, String licencePlate, Category category, Integer costOfService, Boolean repaired, String description, String dateOfRepair) {
         this.make = make;
         this.licencePlate = licencePlate;
         this.category = category;
@@ -52,11 +52,11 @@ public class CarDto {
         this.description = description;
     }
 
-    public LocalDate getDateOfRepair() {
+    public String getDateOfRepair() {
         return dateOfRepair;
     }
 
-    public void setDateOfRepair(LocalDate dateOfRepair) {
+    public void setDateOfRepair(String dateOfRepair) {
         this.dateOfRepair = dateOfRepair;
     }
 

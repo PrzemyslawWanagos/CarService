@@ -9,7 +9,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.util.Date;
 
 @Controller
 //@Scope(value = WebApplicationContext.SCOPE_REQUEST, proxyMode = ScopedProxyMode.TARGET_CLASS)
@@ -46,8 +48,11 @@ public class EditCarController {
             car.setCategory(carDto.getCategory());
 
            car.setRepaired(carDto.getRepaired());
-            System.out.println(carDto.getDateOfRepair());
-           //car.setDateOfRepair(carDto.getDateOfRepair());
+//            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+//            Date parsed = format.parse();
+//            System.out.println(carDto.getDateOfRepair());
+//            LocalDate date = LocalDate.parse("2018-09-16");
+           car.setDateOfRepair(LocalDate.parse(carDto.getDateOfRepair()));
         } catch (Exception e) {
             return e.toString();
         }
