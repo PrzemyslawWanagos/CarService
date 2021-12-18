@@ -8,7 +8,7 @@
   }, {
     "make" : "Maja Lunde",
     "licencePlate" : "Historia Pszczol",
-    "category" : "BRAKES",
+    "category" : "SEATS",
     "costOfService" : 514,
     "repaired" : false
   }, {
@@ -55,7 +55,7 @@
     "repaired" : true
   }, {
     "make" : "Antoine de Saint-Exupery",
-    "licencePlate" : "Maly Ksiaze2",
+    "licencePlate" : "Maly Ksiaze255",
     "category" : "OTHER",
     "costOfService" : 112,
     "repaired" : true
@@ -135,8 +135,8 @@
     "make" : "dSDas",
     "licencePlate" : "dsa",
     "category" : "OTHER",
-    "costOfService" : 6565,
-    "repaired" : true
+    "costOfService" : 1,
+    "repaired" : false
   }, {
     "make" : "jfh",
     "licencePlate" : "fgh",
@@ -267,7 +267,7 @@
     "make" : "mazda",
     "licencePlate" : "rtt",
     "category" : "OTHER",
-    "costOfService" : 564,
+    "costOfService" : 56467,
     "repaired" : true
   }, {
     "make" : "fasdfa",
@@ -368,6 +368,18 @@
   }, {
     "make" : "fasdf",
     "licencePlate" : "rqewr",
+    "category" : "OTHER",
+    "costOfService" : 0,
+    "repaired" : false
+  }, {
+    "make" : "jhjhgh",
+    "licencePlate" : "trtr",
+    "category" : "OTHER",
+    "costOfService" : 0,
+    "repaired" : false
+  }, {
+    "make" : "JLJKJ",
+    "licencePlate" : "IEWRIU",
     "category" : "OTHER",
     "costOfService" : 0,
     "repaired" : false

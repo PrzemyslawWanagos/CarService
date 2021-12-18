@@ -26,7 +26,7 @@ public class EditCarController {
 
     @RequestMapping(value = "/edit/{title}", method = RequestMethod.GET)
     public ModelAndView carEditForm(@PathVariable String title) {
-        CarToEditID= services.findIFForTitle(cars, title);
+        CarToEditID= services.FindByLicencePlate(cars, title);
         ModelAndView modelAndView=new ModelAndView("EditCar");
         Car CarToEdit = cars.getCars().get(CarToEditID);
         modelAndView.addObject("carToEdit", CarToEdit);

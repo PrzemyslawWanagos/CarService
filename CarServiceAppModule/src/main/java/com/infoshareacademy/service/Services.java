@@ -61,21 +61,39 @@ public class Services {
 
     public List<Car> returnListOfCars(Cars cars, String licencePlate) {
         List <Car> toReturn = new ArrayList<>();
-       //try {
+       try {
             for (Car car : cars.getCars()) {
-                String lp=car.getLicencePlate();
-                System.out.println(lp+" "+licencePlate);
+
                 if (car.getLicencePlate().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT))) {
                     toReturn.add(car);
                     System.out.println(toReturn.toString());
                 }
             }
-//        }catch (Exception e){
-//            System.out.println(e.toString());
-//        }
+        }catch (Exception e){
+            System.out.println(e.toString());
+        }
             return toReturn;
 
     }
+    public List<Car> returnListOfCarsToRepair(Cars cars, String licencePlate) {
+        List <Car> toReturn = new ArrayList<>();
+        //try {
+        for (Car car : cars.getCars()) {
+            String lp=car.getLicencePlate();
+            System.out.println(lp+" "+licencePlate);
+            if (car.getLicencePlate().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT))
+            &&!(car.isRepaired())) {
+                toReturn.add(car);
+                System.out.println(toReturn.toString());
+            }
+        }
+//        }catch (Exception e){
+//            System.out.println(e.toString());
+//        }
+        return toReturn;
+
+    }
+
 
     public void saveCarService(Cars cars) {
         ObjectMapper mapper = new ObjectMapper();
@@ -86,12 +104,12 @@ public class Services {
         }
     }
 
-    public Integer findIFForTitle(Cars cars, String title) {
+    public Integer FindByLicencePlate(Cars cars, String LicencePlate) {
         List <Car> toReturn = new ArrayList<>();
         int i=0;
         try {
             for (i = 0; i < cars.getCars().size(); i++) {
-                if (cars.getCars().get(i).getLicencePlate().equals(title)) {
+                if (cars.getCars().get(i).getLicencePlate().equals(LicencePlate)) {
                    break;
                 }
             }
