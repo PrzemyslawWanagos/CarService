@@ -28,9 +28,9 @@ public class EditCarController {
         this.cars = cars;
     }
 
-    @RequestMapping(value = "/edit/{title}", method = RequestMethod.GET)
-    public ModelAndView carEditForm(@PathVariable String title) {
-        CarToEditID= services.FindByLicencePlate(cars, title);
+    @RequestMapping(value = "/edit/{licencePlate}", method = RequestMethod.GET)
+    public ModelAndView carEditForm(@PathVariable String licencePlate) {
+        CarToEditID= services.FindByLicencePlate(cars, licencePlate);
         ModelAndView modelAndView=new ModelAndView("EditCar");
         Car CarToEdit = cars.getCars().get(CarToEditID);
         modelAndView.addObject("carToEdit", CarToEdit);

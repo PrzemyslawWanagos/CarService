@@ -25,8 +25,8 @@ public class SearchCarController {
     }
 
     @GetMapping("/search-car")
-    public ModelAndView displaySearchedCars(@RequestParam("licencePlate") String title) {
-        List<Car> CarSearchResult= services.returnListOfCarsToRepair(cars, title);
+    public ModelAndView displaySearchedCars(@RequestParam("licencePlate") String licencePlate) {
+        List<Car> CarSearchResult= services.returnListOfCarsToRepair(cars, licencePlate);
         ModelAndView modelAndView = new ModelAndView("SearchCar");
 //
 //        System.out.println(listToString(CarSearchResult,true));

@@ -15,5 +15,21 @@
     "repaired" : true,
     "description" : "Yello:)",
     "dateOfRepair" : "2021-12-25"
+  }, {
+    "make" : "Ford Mondeo",
+    "licencePlate" : "GS23123",
+    "category" : "SEATS",
+    "costOfService" : 123,
+    "repaired" : true,
+    "description" : "Black",
+    "dateOfRepair" : "2021-12-15"
+  }, {
+    "make" : "Toyota",
+    "licencePlate" : "GD342SA",
+    "category" : "DRIVE",
+    "costOfService" : 124,
+    "repaired" : true,
+    "description" : "Yaris",
+    "dateOfRepair" : "2021-12-16"
   } ]
 }

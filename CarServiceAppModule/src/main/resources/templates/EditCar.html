@@ -44,12 +44,12 @@
     <br>
     Repaired?
     <br>
-    <input type="radio" name="repaired" value="true" id="suitable for kids"
+    <input type="radio" name="repaired" value="true" id="repaired"
            th:checked="${carToEdit.repaired} == true ? checked"/>
-    <label for="suitable for kids">Yes</label>
-    <input type="radio" name="repaired" value="false" id="definitely not for kids"
+    <label for="repaired">Yes</label>
+    <input type="radio" name="repaired" value="false" id="not repaired"
            th:checked="${carToEdit.repaired} == false ? checked "/>
-    <label for="definitely not for kids">No</label>
+    <label for="not repaired">No</label>
     <br>
     Date of repair:
     <br>
