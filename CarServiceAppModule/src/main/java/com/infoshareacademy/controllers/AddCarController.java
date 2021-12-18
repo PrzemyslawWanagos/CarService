@@ -40,6 +40,7 @@ public class AddCarController {
             car.setCostOfService(0);
             car.setCategory(carDto.getCategory());
             car.setRepaired(false);
+            car.setDescription(carDto.getDescription());
         } catch (Exception e) {
             return e.toString();
         }

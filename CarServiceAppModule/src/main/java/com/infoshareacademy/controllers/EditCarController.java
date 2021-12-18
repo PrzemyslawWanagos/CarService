@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.time.LocalDate;
+
 @Controller
 //@Scope(value = WebApplicationContext.SCOPE_REQUEST, proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class EditCarController {
@@ -42,8 +44,10 @@ public class EditCarController {
             car.setLicencePlate(carDto.getLicencePlate());
             car.setCostOfService(carDto.getCostOfService());
             car.setCategory(carDto.getCategory());
-            Boolean temp = carDto.getRepaired();
-           car.setRepaired(temp);
+
+           car.setRepaired(carDto.getRepaired());
+            System.out.println(carDto.getDateOfRepair());
+           //car.setDateOfRepair(carDto.getDateOfRepair());
         } catch (Exception e) {
             return e.toString();
         }

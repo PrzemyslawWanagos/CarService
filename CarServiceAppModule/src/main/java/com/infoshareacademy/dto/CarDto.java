@@ -2,6 +2,8 @@ package com.infoshareacademy.dto;
 
 import com.infoshareacademy.domain.Category;
 
+import java.time.LocalDate;
+
 public class CarDto {
 
     private final String make;
@@ -9,13 +11,17 @@ public class CarDto {
     private final Category category;
     private final Integer costOfService;
     private final Boolean repaired;
+    private String description;
+    private LocalDate dateOfRepair;
 
-    public CarDto(String make, String licencePlate, Category category, Integer costOfService, Boolean repaired) {
+    public CarDto(String make, String licencePlate, Category category, Integer costOfService, Boolean repaired, String description, LocalDate dateOfRepair) {
         this.make = make;
         this.licencePlate = licencePlate;
         this.category = category;
         this.costOfService = costOfService;
         this.repaired = repaired;
+        this.description = description;
+        this.dateOfRepair = dateOfRepair;
     }
 
     public String getMake() {
@@ -36,6 +42,22 @@ public class CarDto {
 
     public boolean getRepaired() {
         return repaired;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public LocalDate getDateOfRepair() {
+        return dateOfRepair;
+    }
+
+    public void setDateOfRepair(LocalDate dateOfRepair) {
+        this.dateOfRepair = dateOfRepair;
     }
 
     @Override

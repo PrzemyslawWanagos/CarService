@@ -1,15 +1,41 @@
 <!DOCTYPE html>
 <html lang=“en” xmlns:th=“http://www.thymeleaf.org” xmlns:layout=“http://www.ultraq.net.nz/thymeleaf/layout”
       layout:decorate=“~{layout}“>
-<body>
-<h1>Full list of cars</h1>
-<p>
-    <th:block th:utext="${allCars}"></th:block>
+<<body>
+<h1>Cars which meet your search criteria</h1>
+<h2 th:if="${allCars.empty}">No cars found</h2>
+
+<table border="2" width="70%" cellpadding="2" th:if="${!allCars.empty}">
+    <tr>
+        <th>#</th>
+        <th>Make
+        <th>Description</th>
+        <th>Licence plate</th>
+        <th>Reason for service</th>
+        <th>Cost of service</th>
+        <th>Repaired</th>
+        <th>Date of repair</th>
+<!--        <th>Edit</th>-->
+    </tr>
+    <tr th:each="car, stat : ${allCars}">
+        <td th:text="${stat.index + 1}"></td>
+        <td th:text="${car.make}"></td>
+        <td th:text="${car.Description}"></td>
+        <td th:text="${car.licencePlate}"></td>
+        <td th:text="${car.category.categoryName}"></td>
+        <td th:text="${car.costOfService}"></td>
+        <td th:text="${car.repaired}"></td>
+        <td th:text="${car.DateOfRepair}"></td>
+<!--        <td><a th:href="@{/edit/{EditTitle}(EditTitle=${car.licencePlate})}">Edit</a></td>-->
+    </tr>
+</table>
 </p>
+</body>
+
 <p>
     <br>
     <br>
-    <button onclick="window.location.href='http://localhost:8080/main';">Main menu</button>
+    <button onclick="window.location.href='/main';">Main menu</button>
 </p>
 </body>
 </html>

@@ -1,21 +1,28 @@
 package com.infoshareacademy.domain;
 
+import java.time.LocalDate;
+
 public class Car {
 
-    public String make;
+    private String make;
     private String licencePlate;
     private Category category;
     private int costOfService;
     private boolean repaired;
+    private String description;
+    private LocalDate dateOfRepair;
 
-    public Car() {}
+    public Car() {
+    }
 
-    public Car(String make, String licencePlate, Category category, int costOfService, boolean repaired) {
+    public Car(String make, String licencePlate, Category category, int costOfService, boolean repaired, String description, LocalDate dateOfRepair) {
         this.make = make;
         this.licencePlate = licencePlate;
         this.category = category;
         this.costOfService = costOfService;
         this.repaired = repaired;
+        this.description = description;
+        this.dateOfRepair = dateOfRepair;
     }
 
     public String getMake() {
@@ -56,6 +63,22 @@ public class Car {
 
     public void setRepaired(boolean repaired) {
         this.repaired = repaired;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public LocalDate getDateOfRepair() {
+        return dateOfRepair;
+    }
+
+    public void setDateOfRepair(LocalDate dateOfRepair) {
+        this.dateOfRepair = dateOfRepair;
     }
 
     @Override
