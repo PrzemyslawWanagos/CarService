@@ -11,11 +11,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-import java.util.Random;
 
-//import static com.infoshareacademy.CarServiceApp.PROVIDERS_PATH;
-import static com.infoshareacademy.CarServiceApp.PROVIDERS_PATH;
-import static com.infoshareacademy.Utils.listToString;
+
+import static com.infoshareacademy.CarServiceApp.PATH_TO_FULL_LIST_OF_CARS;
 
 @Service
 public class Services {
@@ -25,13 +23,9 @@ public class Services {
     public static Cars readCarService() {
         ObjectMapper mapper = new ObjectMapper();
         Cars CarsFromFile = new Cars();
-//
-//        File file=findFile(System.getProperty("user.dir"), "cars.json");
-//        //File file = Paths.get(".", "CarServiceAppModule", "cars.json").normalize().toFile();
-//        String test = file.getAbsolutePath();
-//        System.out.println(test);
+
         try {
-            CarsFromFile = mapper.readValue(new File(PROVIDERS_PATH), new TypeReference<>() {
+            CarsFromFile = mapper.readValue(new File(PATH_TO_FULL_LIST_OF_CARS), new TypeReference<>() {
             });
         } catch (IOException e) {
             e.printStackTrace();
@@ -39,25 +33,19 @@ public class Services {
         return CarsFromFile;
     }
 
-    public String getRandomCar(Cars cars) {
-        Random random = new Random();
-        int CarPosition = random.nextInt(cars.getCars().size());
-        return cars.getCars().get(CarPosition).toString();
-    }
-
-    public String browseThroughCars(Cars cars, String title) {
-        List<Car> toReturn = new ArrayList<>();
-        for (Car car : cars.getCars()) {
-            if (car.getLicencePlate().toUpperCase(Locale.ROOT).contains(title.toUpperCase(Locale.ROOT))) {
-                toReturn.add(car);
-            }
-        }
-        if (toReturn.size() > 0) {
-            return listToString(toReturn, true);
-        } else {
-            return "There are no Cars meeting your title criteria";
-        }
-    }
+//        public String browseThroughCars(Cars cars, String title) {
+//        List<Car> toReturn = new ArrayList<>();
+//        for (Car car : cars.getCars()) {
+//            if (car.getLicencePlate().toUpperCase(Locale.ROOT).contains(title.toUpperCase(Locale.ROOT))) {
+//                toReturn.add(car);
+//            }
+//        }
+//        if (toReturn.size() > 0) {
+//            return listToString(toReturn, true);
+//        } else {
+//            return "There are no Cars meeting your title criteria";
+//        }
+//    }
 
     public List<Car> returnListOfCars(Cars cars, String licencePlate) {
         List <Car> toReturn = new ArrayList<>();
@@ -66,7 +54,7 @@ public class Services {
 
                 if (car.getLicencePlate().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT))) {
                     toReturn.add(car);
-                    System.out.println(toReturn.toString());
+
                 }
             }
         }catch (Exception e){
@@ -77,19 +65,18 @@ public class Services {
     }
     public List<Car> returnListOfCarsToRepair(Cars cars, String licencePlate) {
         List <Car> toReturn = new ArrayList<>();
-        //try {
+        try {
         for (Car car : cars.getCars()) {
-            String lp=car.getLicencePlate();
-            System.out.println(lp+" "+licencePlate);
+
             if (car.getLicencePlate().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT))
             &&!(car.isRepaired())) {
                 toReturn.add(car);
-                System.out.println(toReturn.toString());
+
             }
         }
-//        }catch (Exception e){
-//            System.out.println(e.toString());
-//        }
+        }catch (Exception e){
+            System.out.println(e.toString());
+        }
         return toReturn;
 
     }
@@ -98,7 +85,7 @@ public class Services {
     public void saveCarService(Cars cars) {
         ObjectMapper mapper = new ObjectMapper();
         try {
-            mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PROVIDERS_PATH), cars);
+            mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PATH_TO_FULL_LIST_OF_CARS), cars);
         } catch (IOException e) {
             e.printStackTrace();
         }

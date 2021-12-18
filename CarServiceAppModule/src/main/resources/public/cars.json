@@ -8,9 +8,9 @@
   }, {
     "make" : "Maja Lunde",
     "licencePlate" : "Historia Pszczol",
-    "category" : "SEATS",
-    "costOfService" : 514,
-    "repaired" : false
+    "category" : "OTHER",
+    "costOfService" : 516,
+    "repaired" : true
   }, {
     "make" : "Leonie Swann",
     "licencePlate" : "Kroczac w ciemnosci",
@@ -380,6 +380,12 @@
   }, {
     "make" : "JLJKJ",
     "licencePlate" : "IEWRIU",
+    "category" : "OTHER",
+    "costOfService" : 0,
+    "repaired" : false
+  }, {
+    "make" : "FLKJFKJ",
+    "licencePlate" : "FDSJK",
     "category" : "OTHER",
     "costOfService" : 0,
     "repaired" : false

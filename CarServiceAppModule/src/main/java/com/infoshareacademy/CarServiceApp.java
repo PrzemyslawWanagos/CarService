@@ -17,7 +17,7 @@ import static com.infoshareacademy.Utils.findFile;
 @SpringBootApplication
 public class CarServiceApp {
 
-    public static final String PROVIDERS_PATH = findFile(System.getProperty("user.dir"), "cars.json").getAbsolutePath();
+    public static final String PATH_TO_FULL_LIST_OF_CARS = findFile(System.getProperty("user.dir"), "cars.json").getAbsolutePath();
     static ConfigurableApplicationContext ctx;
 
     public static void main(String[] args) throws IOException {
