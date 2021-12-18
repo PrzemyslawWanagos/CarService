@@ -4,14 +4,16 @@
     "licencePlate" : "GD12312",
     "category" : "OTHER",
     "costOfService" : 1,
-    "repaired" : false,
+    "repaired" : true,
     "description" : null,
-    "dateOfRepair" : null
+    "dateOfRepair" : "2021-12-24"
   }, {
     "make" : "Fiat",
-    "licencePlate" : "GA12121",
+    "licencePlate" : "GA43523",
     "category" : "OTHER",
-    "costOfService" : 5,
-    "repaired" : false,
-    "description" : "Yellow",
-    "dateOfRepair"
+    "costOfService" : 321,
+    "repaired" : true,
+    "description" : "Yello:)",
+    "dateOfRepair" : "2021-12-25"
+  } ]
+}

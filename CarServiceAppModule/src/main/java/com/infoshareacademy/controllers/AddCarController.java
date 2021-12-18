@@ -45,6 +45,7 @@ public class AddCarController {
             return e.toString();
         }
         cars.addCarToCarService(car);
+        System.out.println(cars.toString()); //remove
         services.saveCarService(cars);
         String searchURL = "/all-cars";
         return "redirect:" + searchURL;

@@ -52,7 +52,7 @@ public class EditCarController {
 //            Date parsed = format.parse();
 //            System.out.println(carDto.getDateOfRepair());
 //            LocalDate date = LocalDate.parse("2018-09-16");
-           car.setDateOfRepair(LocalDate.parse(carDto.getDateOfRepair()));
+           car.setDateOfRepair(carDto.getDateOfRepair());
         } catch (Exception e) {
             return e.toString();
         }

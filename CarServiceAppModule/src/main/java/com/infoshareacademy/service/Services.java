@@ -87,8 +87,9 @@ public class Services {
         try {
             mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PATH_TO_FULL_LIST_OF_CARS), cars);
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println(e.toString());
         }
+
     }
 
     public Integer FindByLicencePlate(Cars cars, String LicencePlate) {
