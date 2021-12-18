@@ -2,11 +2,12 @@
 <html lang=“en” xmlns:th=“http://www.thymeleaf.org” xmlns:layout=“http://www.ultraq.net.nz/thymeleaf/layout”
       layout:decorate=“~{layout}“>
 <head>
-    <licencePlate>Welcome to Car Service App</licencePlate>
+
 </head>
 <body>
 <div style="text-align:center">
-    <img src="../static/LOGO.jpg" height="300" th:src="@{LOGO.jpg}"/>
+    <h1>Welcome to Car Service App</h1>
+    <img src="../static/LOGO-CarService.jpg" height="300" th:src="@{LOGO.jpg}"/>
     <br>
     <br>
     <button onclick="window.location.href='/all-cars';">List of cars</button>
