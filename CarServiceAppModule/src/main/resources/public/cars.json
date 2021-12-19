@@ -31,5 +31,21 @@
     "repaired" : true,
     "description" : "Yaris",
     "dateOfRepair" : "2021-12-16"
+  }, {
+    "make" : "jhgjh",
+    "licencePlate" : "jkjhjkhj",
+    "category" : "BRAKES",
+    "costOfService" : 123,
+    "repaired" : true,
+    "description" : "jjkjk",
+    "dateOfRepair" : "2021-12-08"
+  }, {
+    "make" : "fdsfasd",
+    "licencePlate" : "fdsfasd",
+    "category" : "BRAKES",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "fdsafas",
+    "dateOfRepair" : null
   } ]
 }

@@ -5,27 +5,30 @@
 <h1>Full list of cars</h1>
 <p>
 <form action="/save-edited-car" method="post" onkeydown="return event.key !== 'Enter';"> <!---->
-    Make:
+
+    <div> <!--/* STYLE="color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #72A4D2;" size="10" maxlength="30">
+    */--> Make:
     <br>
     <!--    onsubmit="return false;"-->
-    <input type="text" name="make" required th:value="${carToEdit.make} " readonly="readonly"/>
+    <input class="readonlyInput" type="text" name="make" required th:value="${carToEdit.make} " readonly="readonly"/>
     <br>
     <br>
     Description:
     <br>
-    <input type="text" name="description" required th:value="${carToEdit.description}" readonly="readonly"/>
+    <input class="readonlyInput" type="text" name="description" required th:value="${carToEdit.description}" readonly="readonly"/>
     <br>
     <br>
     Licence plate:
     <br>
-    <input type="text" name="licencePlate" required th:value="${carToEdit.licencePlate}" readonly="readonly"/>
+    <input class="readonlyInput" type="text" name="licencePlate" required th:value="${carToEdit.licencePlate}" readonly="readonly"/>
     <br>
     <br>
     Reason for service:
     <br>
-    <input type="text" name="category" id="Category" required th:value="${carToEdit.category}" readonly="readonly"/>
+    <input class="readonlyInput" type="text" name="category" id="Category" required th:value="${carToEdit.category}" readonly="readonly"/>
     <br>
     <br>
+    </div>
 <!--    <select name="category" id="Category" required th:value="${carToEdit.category}" readonly="readonly">-->
 <!--        <option value="SEATS">Problems with seats</option>-->
 <!--        <option value="BRAKES">Problems with brakes</option>-->
@@ -34,8 +37,7 @@
 <!--        <option value="DRIVE">Problems with drive</option>-->
 <!--        <option value="ENGINE">Problems with engine</option>-->
 <!--    </select>-->
-    <br>
-    <br>
+
     Cost of service (PLN):
     <br>
     <input type="number" step="1" pattern="\d+" min="1" name="costOfService" required
@@ -51,6 +53,7 @@
            th:checked="${carToEdit.repaired} == false ? checked "/>
     <label for="not repaired">No</label>
     <br>
+    <br>
     Date of repair:
     <br>
     <input type="date" name="dateOfRepair" required/>
@@ -62,7 +65,7 @@
 
 </p>
 <p>
-    <br>
+
     <br>
     <button onclick="window.location.href='/main';">Main menu</button>
 </p>

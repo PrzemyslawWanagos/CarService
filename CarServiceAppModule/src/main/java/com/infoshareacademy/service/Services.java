@@ -28,24 +28,12 @@ public class Services {
             CarsFromFile = mapper.readValue(new File(PATH_TO_FULL_LIST_OF_CARS), new TypeReference<>() {
             });
         } catch (IOException e) {
-            e.printStackTrace();
+           System.out.println(e.toString());
         }
         return CarsFromFile;
     }
 
-//        public String browseThroughCars(Cars cars, String title) {
-//        List<Car> toReturn = new ArrayList<>();
-//        for (Car car : cars.getCars()) {
-//            if (car.getLicencePlate().toUpperCase(Locale.ROOT).contains(title.toUpperCase(Locale.ROOT))) {
-//                toReturn.add(car);
-//            }
-//        }
-//        if (toReturn.size() > 0) {
-//            return listToString(toReturn, true);
-//        } else {
-//            return "There are no Cars meeting your title criteria";
-//        }
-//    }
+
 
     public List<Car> returnListOfCars(Cars cars, String licencePlate) {
         List <Car> toReturn = new ArrayList<>();
