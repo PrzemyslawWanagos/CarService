@@ -37,7 +37,7 @@ public class EditCarController {
         return modelAndView;
     }
 
-    @PostMapping(value = "/save-edited-car")
+    @PostMapping(value = "/edit/{licencePlate}")
     public String saveEditedCar(CarDto carDto) {
                 Car car = cars.getCars().get(CarToEditID);
         try {

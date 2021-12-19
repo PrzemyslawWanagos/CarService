@@ -31,7 +31,7 @@ public class AddCarController {
         return "AddCar";
     }
 
-    @PostMapping(value = "save-added-car")
+    @PostMapping(value = "add-car")
 
     public String saveAddedCar(CarDto carDto) {
         try {
