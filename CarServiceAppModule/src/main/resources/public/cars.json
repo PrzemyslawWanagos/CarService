@@ -43,9 +43,17 @@
     "make" : "fdsfasd",
     "licencePlate" : "fdsfasd",
     "category" : "BRAKES",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 123,
+    "repaired" : true,
     "description" : "fdsafas",
-    "dateOfRepair" : null
+    "dateOfRepair" : "2021-12-16"
+  }, {
+    "make" : "Buggati",
+    "licencePlate" : "GS23231",
+    "category" : "OTHER",
+    "costOfService" : 300,
+    "repaired" : true,
+    "description" : "nice:)",
+    "dateOfRepair" : "2021-12-16"
   } ]
 }
