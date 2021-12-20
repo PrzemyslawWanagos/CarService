@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang=“en” xmlns:layout=“http://www.ultraq.net.nz/thymeleaf/layout”
-      layout:decorate=“~{layout}“>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <body>
 <h1>Add new car</h1>
 <p>
@@ -26,13 +25,17 @@
    Reason for service:
     <br>
     <select name="category" id="Category" required>
-        <option value="SEATS" >Problems with seats</option>
-        <option value="BRAKES">Problems with brakes</option>
-        <option value="MAINTENANCE">General maintenance</option>
-        <option value="OTHER" selected>Other problems</option>
-        <option value="DRIVE">Problems with drive</option>
-        <option value="ENGINE">Problems with engine</option>
+        <option th:each="categoryOpt : ${T(com.infoshareacademy.domain.Category).values()}"
+                th:value="${categoryOpt}" th:text="${categoryOpt.getCategoryName()}"></option>
     </select>
+    <!--/* <select name="category" id="Category" required>
+         <option value="SEATS" >Problems with seats</option>
+         <option value="BRAKES">Problems with brakes</option>
+         <option value="MAINTENANCE">General maintenance</option>
+         <option value="OTHER" selected>Other problems</option>
+         <option value="DRIVE">Problems with drive</option>
+         <option value="ENGINE">Problems with engine</option>
+     </select> */-->
     <br>
     <br>
     <!--/*   Service cost (PLN) :-->

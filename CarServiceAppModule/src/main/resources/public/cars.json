@@ -135,5 +135,13 @@
     "repaired" : false,
     "description" : "l",
     "dateOfRepair" : "2021-12-07"
+  }, {
+    "make" : "mazda",
+    "licencePlate" : "rew",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "ewqr",
+    "dateOfRepair" : null
   } ]
 }
