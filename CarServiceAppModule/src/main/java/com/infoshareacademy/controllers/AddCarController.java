@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -31,16 +32,17 @@ public class AddCarController {
     }
 
     @GetMapping("add-car")
-    public String createCar() {
+    public String createCar(Model model) {
+        model.addAttribute("carDto", new CarDto());
         return "add-car";
     }
 
     @PostMapping(value = "add-car")
 
-    public String saveAddedCar(@Valid @ModelAttribute("add-car") CarDto carDto,
+    public String saveAddedCar(@Valid @ModelAttribute("carDto") CarDto carDto,
                                BindingResult bindingResult) {
         if(bindingResult.hasErrors()){
-            return "main";
+            return "add-car";
         }
         try {
             car.setMake(carDto.getMake());

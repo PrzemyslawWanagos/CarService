@@ -132,16 +132,56 @@
     "licencePlate" : "kkljk",
     "category" : "OTHER",
     "costOfService" : 4,
-    "repaired" : false,
+    "repaired" : true,
     "description" : "l",
-    "dateOfRepair" : "2021-12-07"
+    "dateOfRepair" : "2021-12-17"
   }, {
     "make" : "mazda",
     "licencePlate" : "rew",
     "category" : "SEATS",
+    "costOfService" : 56576,
+    "repaired" : true,
+    "description" : "ewqr",
+    "dateOfRepair" : "2021-12-24"
+  }, {
+    "make" : "",
+    "licencePlate" : "p",
+    "category" : "OTHER",
+    "costOfService" : 343,
+    "repaired" : true,
+    "description" : "ytry",
+    "dateOfRepair" : "2021-12-22"
+  }, {
+    "make" : null,
+    "licencePlate" : "o",
+    "category" : "OTHER",
     "costOfService" : 0,
     "repaired" : false,
-    "description" : "ewqr",
+    "description" : "dfsldkf,fsdsd",
+    "dateOfRepair" : null
+  }, {
+    "make" : "mazda1",
+    "licencePlate" : "fsdfad",
+    "category" : "OTHER",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "fdsfsa",
+    "dateOfRepair" : null
+  }, {
+    "make" : "fdska;lfk",
+    "licencePlate" : "fdslk",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "fdsfl;ksd",
+    "dateOfRepair" : null
+  }, {
+    "make" : "fiat55",
+    "licencePlate" : "fdsfasd",
+    "category" : "OTHER",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "fdasf",
     "dateOfRepair" : null
   } ]
 }

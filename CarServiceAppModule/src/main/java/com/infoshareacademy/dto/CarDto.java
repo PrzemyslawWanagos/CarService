@@ -7,41 +7,55 @@ import javax.validation.constraints.Size;
 public class CarDto {
     @Size(min = 5, max = 10)
     private String make;
-    private final String licencePlate;
-    private final Category category;
-    private final Integer costOfService;
-    private final Boolean repaired;
+    private  String licencePlate;
+    private  Category category;
+    private  Integer costOfService;
+    private  Boolean repaired;
     private String description;
     private String dateOfRepair;
 
-    public CarDto(String make, String licencePlate, Category category, Integer costOfService, Boolean repaired, String description, String dateOfRepair) {
-        this.make = make;
-        this.licencePlate = licencePlate;
-        this.category = category;
-        this.costOfService = costOfService;
-        this.repaired = repaired;
-        this.description = description;
-        this.dateOfRepair = dateOfRepair;
+    public CarDto() {
+       // this.category=Category.OTHER;
     }
 
     public String getMake() {
         return make;
     }
 
+    public void setMake(String make) {
+        this.make = make;
+    }
+
     public String getLicencePlate() {
         return licencePlate;
+    }
+
+    public void setLicencePlate(String licencePlate) {
+        this.licencePlate = licencePlate;
     }
 
     public Category getCategory() {
         return category;
     }
 
-    public int getCostOfService() {
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public Integer getCostOfService() {
         return costOfService;
     }
 
-    public boolean getRepaired() {
+    public void setCostOfService(Integer costOfService) {
+        this.costOfService = costOfService;
+    }
+
+    public Boolean getRepaired() {
         return repaired;
+    }
+
+    public void setRepaired(Boolean repaired) {
+        this.repaired = repaired;
     }
 
     public String getDescription() {

@@ -9,7 +9,7 @@ public enum Category {
     DRIVE("Problems with drive"),
     ENGINE("Problems with engine");
 
-    private String categoryName;
+    private final String categoryName;
 
     Category(String categoryName) {
         this.categoryName = categoryName;

@@ -3,7 +3,7 @@
 <body>
 <h1>Add new car</h1>
 <p>
-<form action="add-car" method="post">
+<form th:object="${carDto}" th:action="@{/add-car}" method="post" >
     Make:
     <br>
     <input type="text" name="make" required/>
@@ -13,20 +13,20 @@
 
     Description:
     <br>
-    <input type="text" name="description" required/>
+    <input type="text" th:field="*{description}" required/>
     <br>
     <br>
     Licence Plate:
 
     <br>
-    <input type="text" name="licencePlate" required/>
+    <input type="text" th:field="*{licencePlate}" required/>
     <br>
     <br>
    Reason for service:
     <br>
-    <select name="category" id="Category" required>
+    <select th:field="*{category}" id="Category" required>
         <option th:each="categoryOpt : ${T(com.infoshareacademy.domain.Category).values()}"
-                th:value="${categoryOpt}" th:text="${categoryOpt.getCategoryName()}"></option>
+                th:value="${categoryOpt.name()}" th:text="${categoryOpt.categoryName}"></option>
     </select>
     <!--/* <select name="category" id="Category" required>
          <option value="SEATS" >Problems with seats</option>
@@ -51,7 +51,7 @@
     <!--    <label for="definitely not for kids">No</label>-->
     <!--    <br>-->
     <!--    <br> */-->
-    <button>Add Car to Service que</button>
+    <button>Add Car to Service queue</button>
 </form>
     <br>
     <br>
