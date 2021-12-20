@@ -67,10 +67,10 @@
     "make" : "n",
     "licencePlate" : "fsadfasdf",
     "category" : "OTHER",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 1231321,
+    "repaired" : true,
     "description" : "fsfdsfasd",
-    "dateOfRepair" : null
+    "dateOfRepair" : "2222-01-31"
   }, {
     "make" : "g",
     "licencePlate" : "fadsfasdf",
@@ -79,5 +79,29 @@
     "repaired" : true,
     "description" : "fsdfasd",
     "dateOfRepair" : "2021-12-15"
+  }, {
+    "make" : "fsd",
+    "licencePlate" : "fasdf",
+    "category" : "BRAKES",
+    "costOfService" : 4,
+    "repaired" : true,
+    "description" : "fsad",
+    "dateOfRepair" : "2021-12-07"
+  }, {
+    "make" : "a",
+    "licencePlate" : "fsdfasdf",
+    "category" : "OTHER",
+    "costOfService" : 123123123,
+    "repaired" : true,
+    "description" : "fsdfasd",
+    "dateOfRepair" : "2021-12-22"
+  }, {
+    "make" : "rwerwqer",
+    "licencePlate" : "rweqrq",
+    "category" : "OTHER",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "rwerqw",
+    "dateOfRepair" : null
   } ]
 }

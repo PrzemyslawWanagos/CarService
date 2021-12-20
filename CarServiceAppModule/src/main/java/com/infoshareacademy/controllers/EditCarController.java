@@ -9,10 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.util.Date;
-
 @Controller
 //@Scope(value = WebApplicationContext.SCOPE_REQUEST, proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class EditCarController {
@@ -31,7 +27,7 @@ public class EditCarController {
     @RequestMapping(value = "/edit/{licencePlate}", method = RequestMethod.GET)
     public ModelAndView carEditForm(@PathVariable String licencePlate) {
         CarToEditID= services.FindByLicencePlate(cars, licencePlate);
-        ModelAndView modelAndView=new ModelAndView("EditCar");
+        ModelAndView modelAndView=new ModelAndView("edit-cars");
         Car CarToEdit = cars.getCars().get(CarToEditID);
         modelAndView.addObject("carToEdit", CarToEdit);
         return modelAndView;
