@@ -23,7 +23,7 @@ public class MainController {
     @GetMapping("/main")
     public String mainPage() {
         cars.setCars(Services.readCarService().getCars());
-        return "Main";
+        return "main";
     }
 
     @GetMapping("/exit")

@@ -10,22 +10,22 @@
     */--> Make:
     <br>
     <!--    onsubmit="return false;"-->
-    <input class="readonlyInput" type="text" name="make" required th:value="${carToEdit.make} " readonly="readonly"/>
+    <input class="readonlyInput" type="hidden" th:name="make" th:value="${carToEdit.make} " th:text="${carToEdit.make} "/>
     <br>
     <br>
     Description:
     <br>
-    <input class="readonlyInput" type="text" name="description" required th:value="${carToEdit.description}" readonly="readonly"/>
+    <input class="readonlyInput" type="hidden" th:name="description" th:value="${carToEdit.description}" th:text="${carToEdit.description}"/>
     <br>
     <br>
     Licence plate:
     <br>
-    <input class="readonlyInput" type="text" name="licencePlate" required th:value="${carToEdit.licencePlate}" readonly="readonly"/>
+    <input class="readonlyInput" type="hidden" th:name="licencePlate" th:value="${carToEdit.licencePlate}" th:text="${carToEdit.licencePlate}"/>
     <br>
     <br>
     Reason for service:
     <br>
-    <input class="readonlyInput" type="text" name="category" id="Category" required th:value="${carToEdit.category}" readonly="readonly"/>
+    <input class="readonlyInput" type="hidden" th:name="category"  th:value="${carToEdit.category}" th:text="${carToEdit.category.categoryName}" />
     <br>
     <br>
     </div>

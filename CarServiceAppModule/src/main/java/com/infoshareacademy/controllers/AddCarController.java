@@ -40,7 +40,7 @@ public class AddCarController {
     public String saveAddedCar(@Valid @ModelAttribute("add-car") CarDto carDto,
                                BindingResult bindingResult) {
         if(bindingResult.hasErrors()){
-            return "Main";
+            return "main";
         }
         try {
             car.setMake(carDto.getMake());

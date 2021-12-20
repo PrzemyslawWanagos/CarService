@@ -99,9 +99,41 @@
     "make" : "rwerwqer",
     "licencePlate" : "rweqrq",
     "category" : "OTHER",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 4545,
+    "repaired" : true,
     "description" : "rwerqw",
-    "dateOfRepair" : null
+    "dateOfRepair" : "2021-12-24"
+  }, {
+    "make" : "OIUTY",
+    "licencePlate" : "FREQ",
+    "category" : "OTHER",
+    "costOfService" : 354,
+    "repaired" : true,
+    "description" : "dasf",
+    "dateOfRepair" : "2022-01-09"
+  }, {
+    "make" : "test",
+    "licencePlate" : "poipoipoi",
+    "category" : "OTHER",
+    "costOfService" : 1,
+    "repaired" : true,
+    "description" : "poip",
+    "dateOfRepair" : "2021-12-21"
+  }, {
+    "make" : "jdafklj",
+    "licencePlate" : "flkdjs",
+    "category" : "OTHER",
+    "costOfService" : 123120,
+    "repaired" : true,
+    "description" : "ksjdflk",
+    "dateOfRepair" : "2021-12-04"
+  }, {
+    "make" : "yuigjh",
+    "licencePlate" : "kkljk",
+    "category" : "OTHER",
+    "costOfService" : 4,
+    "repaired" : false,
+    "description" : "l",
+    "dateOfRepair" : "2021-12-07"
   } ]
 }
