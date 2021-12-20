@@ -55,5 +55,29 @@
     "repaired" : true,
     "description" : "nice:)",
     "dateOfRepair" : "2021-12-16"
+  }, {
+    "make" : "ffasdfasdf",
+    "licencePlate" : "fasdfsdfas",
+    "category" : "OTHER",
+    "costOfService" : 1322,
+    "repaired" : true,
+    "description" : "fsdfas",
+    "dateOfRepair" : "2021-12-07"
+  }, {
+    "make" : "n",
+    "licencePlate" : "fsadfasdf",
+    "category" : "OTHER",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "fsfdsfasd",
+    "dateOfRepair" : null
+  }, {
+    "make" : "g",
+    "licencePlate" : "fadsfasdf",
+    "category" : "OTHER",
+    "costOfService" : 123,
+    "repaired" : true,
+    "description" : "fsdfasd",
+    "dateOfRepair" : "2021-12-15"
   } ]
 }

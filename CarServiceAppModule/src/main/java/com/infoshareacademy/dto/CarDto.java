@@ -2,11 +2,12 @@ package com.infoshareacademy.dto;
 
 import com.infoshareacademy.domain.Category;
 
+import javax.validation.constraints.Size;
 import java.time.LocalDate;
 
 public class CarDto {
-
-    private final String make;
+    @Size(min = 5, max = 10)
+    private String make;
     private final String licencePlate;
     private final Category category;
     private final Integer costOfService;

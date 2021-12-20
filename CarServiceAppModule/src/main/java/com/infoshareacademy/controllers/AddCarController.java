@@ -8,9 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.context.WebApplicationContext;
+
+import javax.validation.Valid;
 
 @Controller
 @Scope(value = WebApplicationContext.SCOPE_REQUEST, proxyMode = ScopedProxyMode.TARGET_CLASS)
@@ -28,12 +32,16 @@ public class AddCarController {
 
     @GetMapping("add-car")
     public String createCar() {
-        return "AddCar";
+        return "add-car";
     }
 
     @PostMapping(value = "add-car")
 
-    public String saveAddedCar(CarDto carDto) {
+    public String saveAddedCar(@Valid @ModelAttribute("add-car") CarDto carDto,
+                               BindingResult bindingResult) {
+        if(bindingResult.hasErrors()){
+            return "Main";
+        }
         try {
             car.setMake(carDto.getMake());
             car.setLicencePlate(carDto.getLicencePlate());
