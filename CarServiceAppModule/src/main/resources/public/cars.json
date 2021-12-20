@@ -3,10 +3,10 @@
     "make" : "Mazda",
     "licencePlate" : "GD12312",
     "category" : "OTHER",
-    "costOfService" : 1,
+    "costOfService" : 100,
     "repaired" : true,
     "description" : null,
-    "dateOfRepair" : "2021-12-24"
+    "dateOfRepair" : "2021-12-31"
   }, {
     "make" : "Fiat",
     "licencePlate" : "GA43523",
@@ -14,13 +14,13 @@
     "costOfService" : 321,
     "repaired" : true,
     "description" : "Yello:)",
-    "dateOfRepair" : "2021-12-25"
+    "dateOfRepair" : "2021-12-21"
   }, {
     "make" : "Ford Mondeo",
     "licencePlate" : "GS23123",
     "category" : "SEATS",
     "costOfService" : 123,
-    "repaired" : true,
+    "repaired" : false,
     "description" : "Black",
     "dateOfRepair" : "2021-12-15"
   }, {
@@ -28,7 +28,7 @@
     "licencePlate" : "GD342SA",
     "category" : "DRIVE",
     "costOfService" : 124,
-    "repaired" : true,
+    "repaired" : false,
     "description" : "Yaris",
     "dateOfRepair" : "2021-12-16"
   }, {
@@ -36,23 +36,23 @@
     "licencePlate" : "jkjhjkhj",
     "category" : "BRAKES",
     "costOfService" : 123,
-    "repaired" : true,
+    "repaired" : false,
     "description" : "jjkjk",
     "dateOfRepair" : "2021-12-08"
   }, {
     "make" : "fdsfasd",
-    "licencePlate" : "fdsfasd",
+    "licencePlate" : "fdsfasd1",
     "category" : "BRAKES",
-    "costOfService" : 123,
-    "repaired" : true,
+    "costOfService" : 5656,
+    "repaired" : false,
     "description" : "fdsafas",
-    "dateOfRepair" : "2021-12-16"
+    "dateOfRepair" : "2021-12-07"
   }, {
     "make" : "Buggati",
     "licencePlate" : "GS23231",
     "category" : "OTHER",
     "costOfService" : 300,
-    "repaired" : true,
+    "repaired" : false,
     "description" : "nice:)",
     "dateOfRepair" : "2021-12-16"
   }, {
@@ -60,23 +60,23 @@
     "licencePlate" : "fasdfsdfas",
     "category" : "OTHER",
     "costOfService" : 1322,
-    "repaired" : true,
+    "repaired" : false,
     "description" : "fsdfas",
     "dateOfRepair" : "2021-12-07"
   }, {
     "make" : "n",
     "licencePlate" : "fsadfasdf",
     "category" : "OTHER",
-    "costOfService" : 1231321,
+    "costOfService" : 12,
     "repaired" : true,
     "description" : "fsfdsfasd",
-    "dateOfRepair" : "2222-01-31"
+    "dateOfRepair" : "2021-12-14"
   }, {
     "make" : "g",
     "licencePlate" : "fadsfasdf",
     "category" : "OTHER",
     "costOfService" : 123,
-    "repaired" : true,
+    "repaired" : false,
     "description" : "fsdfasd",
     "dateOfRepair" : "2021-12-15"
   }, {
@@ -152,29 +152,29 @@
     "description" : "ytry",
     "dateOfRepair" : "2021-12-22"
   }, {
-    "make" : null,
+    "make" : "",
     "licencePlate" : "o",
     "category" : "OTHER",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 8768,
+    "repaired" : true,
     "description" : "dfsldkf,fsdsd",
-    "dateOfRepair" : null
+    "dateOfRepair" : "2021-12-31"
   }, {
     "make" : "mazda1",
     "licencePlate" : "fsdfad",
     "category" : "OTHER",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 576,
+    "repaired" : true,
     "description" : "fdsfsa",
-    "dateOfRepair" : null
+    "dateOfRepair" : "2021-12-22"
   }, {
     "make" : "fdska;lfk",
     "licencePlate" : "fdslk",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 45,
+    "repaired" : true,
     "description" : "fdsfl;ksd",
-    "dateOfRepair" : null
+    "dateOfRepair" : "2021-12-07"
   }, {
     "make" : "fiat55",
     "licencePlate" : "fdsfasd",
@@ -182,6 +182,30 @@
     "costOfService" : 0,
     "repaired" : false,
     "description" : "fdasf",
+    "dateOfRepair" : null
+  }, {
+    "make" : "mazda",
+    "licencePlate" : "fdsfsdfasd",
+    "category" : "OTHER",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "sfadsff",
+    "dateOfRepair" : null
+  }, {
+    "make" : "mazda",
+    "licencePlate" : "WW121212",
+    "category" : "ENGINE",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "rewrqrwe",
+    "dateOfRepair" : null
+  }, {
+    "make" : "jeep",
+    "licencePlate" : "fsdffasd",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "Wrangler",
     "dateOfRepair" : null
   } ]
 }

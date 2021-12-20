@@ -5,7 +5,7 @@ import com.infoshareacademy.domain.Category;
 import javax.validation.constraints.Size;
 
 public class CarDto {
-    @Size(min = 5, max = 10)
+    @Size(min = 2, max = 10)
     private String make;
     private  String licencePlate;
     private  Category category;

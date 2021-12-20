@@ -5,8 +5,11 @@ import com.infoshareacademy.dto.CarDto;
 import com.infoshareacademy.repository.Cars;
 import com.infoshareacademy.service.Services;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -29,7 +32,7 @@ public class EditCarController {
         CarToEditID= services.FindByLicencePlate(cars, licencePlate);
         ModelAndView modelAndView=new ModelAndView("edit-cars");
         Car CarToEdit = cars.getCars().get(CarToEditID);
-        modelAndView.addObject("carToEdit", CarToEdit);
+        modelAndView.addObject("carDto", CarToEdit);
         return modelAndView;
     }
 
@@ -43,7 +46,7 @@ public class EditCarController {
             car.setCostOfService(carDto.getCostOfService());
             car.setCategory(carDto.getCategory());
 
-           car.setRepaired(carDto.getRepaired());
+           car.setRepaired(true);
 //            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 //            Date parsed = format.parse();
 //            System.out.println(carDto.getDateOfRepair());

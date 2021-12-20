@@ -1,31 +1,30 @@
 <!DOCTYPE html>
-<html lang=“en” xmlns:th=“http://www.thymeleaf.org” xmlns:layout=“http://www.ultraq.net.nz/thymeleaf/layout”
-      layout:decorate=“~{layout}“>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <body>
 <h1>Full list of cars</h1>
 <p>
-<form action="/edit/{licencePlate}(licencePlate=${car.licencePlate})}" method="post" onkeydown="return event.key !== 'Enter';"> <!---->
+<form th:object="${carDto}" th:action="@{/edit/{licencePlate}(licencePlate=${carDto.licencePlate})}" method="post" onkeydown="return event.key !== 'Enter';"> <!---->
 
     <div> <!--/* STYLE="color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #72A4D2;" size="10" maxlength="30">
     */--> Make:
     <br>
     <!--    onsubmit="return false;"-->
-    <input class="readonlyInput" type="hidden" th:name="make" th:value="${carToEdit.make} " th:text="${carToEdit.make} "/>
+    <input class="readonlyInput" type="hidden" th:name="make" th:value="${carDto.make} " th:text="${carDto.make} "/>
     <br>
     <br>
     Description:
     <br>
-    <input class="readonlyInput" type="hidden" th:name="description" th:value="${carToEdit.description}" th:text="${carToEdit.description}"/>
+    <input class="readonlyInput" type="hidden" th:name="description" th:value="${carDto.description}" th:text="${carDto.description}"/>
     <br>
     <br>
     Licence plate:
     <br>
-    <input class="readonlyInput" type="hidden" th:name="licencePlate" th:value="${carToEdit.licencePlate}" th:text="${carToEdit.licencePlate}"/>
+    <input class="readonlyInput" type="hidden" th:name="licencePlate" th:value="${carDto.licencePlate}" th:text="${carDto.licencePlate}"/>
     <br>
     <br>
     Reason for service:
     <br>
-    <input class="readonlyInput" type="hidden" th:name="category"  th:value="${carToEdit.category}" th:text="${carToEdit.category.categoryName}" />
+    <input class="readonlyInput" type="hidden" th:name="category"  th:value="${carDto.category}" th:text="${carDto.category.categoryName}" />
     <br>
     <br>
     </div>
@@ -41,17 +40,17 @@
     Cost of service (PLN):
     <br>
     <input type="number" step="1" pattern="\d+" min="1" name="costOfService" required
-           th:value="${carToEdit.costOfService}"/>
+           th:value="${carDto.costOfService}"/>
     <br>
     <br>
-    Repaired?
-    <br>
-    <input type="radio" name="repaired" value="true" id="repaired"
-           th:checked="${carToEdit.repaired} == true ? checked"/>
-    <label for="repaired">Yes</label>
-    <input type="radio" name="repaired" value="false" id="not repaired"
-           th:checked="${carToEdit.repaired} == false ? checked "/>
-    <label for="not repaired">No</label>
+
+
+<!--    <input type="radio" name="repaired" value="true" id="repaired"-->
+<!--           th:checked="${carDto.repaired} == true ? checked"/>-->
+<!--    <label for="repaired">Yes</label>-->
+<!--    <input type="radio" name="repaired" value="false" id="not repaired"-->
+<!--           th:checked="${carDto.repaired} == false ? checked"/>-->
+<!--    <label for="not repaired">No</label>-->
     <br>
     <br>
     Date of repair:
