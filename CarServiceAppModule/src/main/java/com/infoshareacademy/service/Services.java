@@ -3,6 +3,7 @@ package com.infoshareacademy.service;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.infoshareacademy.domain.Car;
+import com.infoshareacademy.dto.CarDto;
 import com.infoshareacademy.repository.Cars;
 import org.springframework.stereotype.Service;
 
@@ -94,6 +95,12 @@ public class Services {
         }
         return i;
 
+    }
+    public void fromDtoToEntity(CarDto carDto, Car car) {
+        car.setMake(carDto.getMake());
+        car.setLicencePlate(carDto.getLicencePlate());
+        car.setDescription(carDto.getDescription());
+        car.setCategory(carDto.getCategory());
     }
 
 }

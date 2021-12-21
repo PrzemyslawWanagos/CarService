@@ -195,10 +195,10 @@
     "make" : "mazda",
     "licencePlate" : "WW121212",
     "category" : "ENGINE",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 123,
+    "repaired" : true,
     "description" : "rewrqrwe",
-    "dateOfRepair" : null
+    "dateOfRepair" : "2021-12-08"
   }, {
     "make" : "jeep",
     "licencePlate" : "fsdffasd",
@@ -206,6 +206,38 @@
     "costOfService" : 0,
     "repaired" : false,
     "description" : "Wrangler",
+    "dateOfRepair" : null
+  }, {
+    "make" : "fasfsdf",
+    "licencePlate" : "fasdf",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "fasdf",
+    "dateOfRepair" : null
+  }, {
+    "make" : "mazda2",
+    "licencePlate" : "trhjhjjh",
+    "category" : "SEATS",
+    "costOfService" : 123123,
+    "repaired" : true,
+    "description" : "my mazda",
+    "dateOfRepair" : "2021-12-26"
+  }, {
+    "make" : "Mazda4",
+    "licencePlate" : "reqwrqw",
+    "category" : "OTHER",
+    "costOfService" : 1,
+    "repaired" : true,
+    "description" : "ewqrewrq",
+    "dateOfRepair" : "2021-12-31"
+  }, {
+    "make" : "fdsfasdf",
+    "licencePlate" : "fasdf",
+    "category" : "DRIVE",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "fdsafs",
     "dateOfRepair" : null
   } ]
 }

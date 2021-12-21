@@ -10,7 +10,7 @@ public class CarDto {
     private  String licencePlate;
     private  Category category;
     private  Integer costOfService;
-    private  Boolean repaired;
+    private  boolean repaired;
     private String description;
     private String dateOfRepair;
 
@@ -50,11 +50,11 @@ public class CarDto {
         this.costOfService = costOfService;
     }
 
-    public Boolean getRepaired() {
+    public boolean getRepaired() {
         return repaired;
     }
 
-    public void setRepaired(Boolean repaired) {
+    public void setRepaired(boolean repaired) {
         this.repaired = repaired;
     }
 

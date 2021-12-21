@@ -41,25 +41,21 @@ public class AddCarController {
 
     public String saveAddedCar(@Valid @ModelAttribute("carDto") CarDto carDto,
                                BindingResult bindingResult) {
-        if(bindingResult.hasErrors()){
+        if (bindingResult.hasErrors()) {
             return "add-car";
         }
         try {
-            car.setMake(carDto.getMake());
-            car.setLicencePlate(carDto.getLicencePlate());
-            car.setCostOfService(0);
-            car.setCategory(carDto.getCategory());
-            car.setRepaired(false);
-            car.setDescription(carDto.getDescription());
+            services.fromDtoToEntity(carDto, car);
         } catch (Exception e) {
             return e.toString();
         }
         cars.addCarToCarService(car);
-        System.out.println(cars.toString()); //remove
+
         services.saveCarService(cars);
         String searchURL = "/all-cars";
         return "redirect:" + searchURL;
 
     }
+
 
 }
