@@ -47,6 +47,7 @@ public class EditCarController {
             car.setCategory(carDto.getCategory());
 
            car.setRepaired(true);
+
            car.setDateOfRepair(carDto.getDateOfRepair());
         } catch (Exception e) {
             return e.toString();

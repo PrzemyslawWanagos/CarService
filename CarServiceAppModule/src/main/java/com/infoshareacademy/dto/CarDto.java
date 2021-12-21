@@ -8,10 +8,10 @@ public class CarDto {
     @Size(min = 2, max = 10)
     private String make;
     private  String licencePlate;
+    private String description;
     private  Category category;
     private  Integer costOfService;
     private  boolean repaired;
-    private String description;
     private String dateOfRepair;
 
     public CarDto() {

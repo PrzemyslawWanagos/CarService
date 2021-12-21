@@ -51,8 +51,8 @@
     "make" : "Buggati",
     "licencePlate" : "GS23231",
     "category" : "OTHER",
-    "costOfService" : 300,
-    "repaired" : false,
+    "costOfService" : 125,
+    "repaired" : true,
     "description" : "nice:)",
     "dateOfRepair" : "2021-12-16"
   }, {
@@ -238,6 +238,14 @@
     "costOfService" : 0,
     "repaired" : false,
     "description" : "fdsafs",
+    "dateOfRepair" : null
+  }, {
+    "make" : "Porsche",
+    "licencePlate" : "WA123321",
+    "category" : "ENGINE",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "Blue",
     "dateOfRepair" : null
   } ]
 }

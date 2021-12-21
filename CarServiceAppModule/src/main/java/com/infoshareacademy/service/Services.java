@@ -102,5 +102,15 @@ public class Services {
         car.setDescription(carDto.getDescription());
         car.setCategory(carDto.getCategory());
     }
+    public void fromEntityToDto(Car car, CarDto carDto) {
+        carDto.setMake(car.getMake());
+        carDto.setLicencePlate(car.getLicencePlate());
+        carDto.setDescription(car.getDescription());
+        carDto.setCategory(car.getCategory());
+        carDto.setCostOfService(car.getCostOfService());
+        carDto.setRepaired(car.isRepaired());
+        carDto.setDateOfRepair(car.getDateOfRepair());
+
+    }
 
 }
