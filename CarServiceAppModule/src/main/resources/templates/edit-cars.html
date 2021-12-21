@@ -5,8 +5,8 @@
 <p>
 <form th:object="${carDto}" th:action="@{/edit/{licencePlate}(licencePlate=${carDto.licencePlate})}" method="post" onkeydown="return event.key !== 'Enter';"> <!---->
 
-    <div> <!--/* STYLE="color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #72A4D2;" size="10" maxlength="30">
-    */--> Make:
+    <div>
+     Make:
     <br>
     <!--    onsubmit="return false;"-->
     <input class="readonlyInput" type="hidden" th:name="make" th:value="${carDto.make} " th:text="${carDto.make} "/>
@@ -28,29 +28,11 @@
     <br>
     <br>
     </div>
-<!--    <select name="category" id="Category" required th:value="${carToEdit.category}" readonly="readonly">-->
-<!--        <option value="SEATS">Problems with seats</option>-->
-<!--        <option value="BRAKES">Problems with brakes</option>-->
-<!--        <option value="MAINTENANCE">General maintenance</option>-->
-<!--        <option value="OTHER" selected>Other problems</option>-->
-<!--        <option value="DRIVE">Problems with drive</option>-->
-<!--        <option value="ENGINE">Problems with engine</option>-->
-<!--    </select>-->
 
     Cost of service (PLN):
     <br>
     <input type="number" step="1" pattern="\d+" min="1" name="costOfService" required
            th:value="${carDto.costOfService}"/>
-    <br>
-    <br>
-
-
-<!--    <input type="radio" name="repaired" value="true" id="repaired"-->
-<!--           th:checked="${carDto.repaired} == true ? checked"/>-->
-<!--    <label for="repaired">Yes</label>-->
-<!--    <input type="radio" name="repaired" value="false" id="not repaired"-->
-<!--           th:checked="${carDto.repaired} == false ? checked"/>-->
-<!--    <label for="not repaired">No</label>-->
     <br>
     <br>
     Date of repair:

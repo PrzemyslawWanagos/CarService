@@ -247,5 +247,21 @@
     "repaired" : false,
     "description" : "Blue",
     "dateOfRepair" : null
+  }, {
+    "make" : "bmw",
+    "licencePlate" : "asds45",
+    "category" : "SEATS",
+    "costOfService" : 100,
+    "repaired" : true,
+    "description" : "fldsjflk",
+    "dateOfRepair" : "2021-12-31"
+  }, {
+    "make" : "hyundai",
+    "licencePlate" : "GA989898",
+    "category" : "SEATS",
+    "costOfService" : 65,
+    "repaired" : true,
+    "description" : "Blue",
+    "dateOfRepair" : "2022-01-09"
   } ]
 }
