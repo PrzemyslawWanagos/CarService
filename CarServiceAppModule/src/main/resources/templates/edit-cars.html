@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="'Thymeleaf'"></title>
+</head>
 <body>
 <h1>Full list of cars</h1>
 <p>
 <form th:object="${carDto}" th:action="@{/edit/{licencePlate}(licencePlate=${carDto.licencePlate})}" method="post" onkeydown="return event.key !== 'Enter';"> <!---->
-
+  <!--  <div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
+        <p th:text="#{form.error}"></p>
+    </div>-->
     <div>
      Make:
     <br>
@@ -31,8 +37,16 @@
 
     Cost of service (PLN):
     <br>
-    <input type="number" step="1" pattern="\d+" min="1" name="costOfService" required
+
+    <input type="number" step="1" pattern="\d+" min="1" th:field="*{costOfService}" required
            th:value="${carDto.costOfService}"/>
+    <div th:if="${#fields.hasErrors('costOfService')}" th:class="'alert alert-danger'">
+        <br>
+        <ul>
+            <li th:each="err : ${#fields.errors('costOfService')}" th:text="${err}"></li>
+        </ul>
+        <br>
+    </div>
     <br>
     <br>
     Date of repair:

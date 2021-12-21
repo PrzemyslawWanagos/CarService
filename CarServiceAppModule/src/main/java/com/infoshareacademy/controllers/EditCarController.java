@@ -6,8 +6,11 @@ import com.infoshareacademy.repository.Cars;
 import com.infoshareacademy.service.Services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+
+import javax.validation.Valid;
 
 @Controller
 //@Scope(value = WebApplicationContext.SCOPE_REQUEST, proxyMode = ScopedProxyMode.TARGET_CLASS)
@@ -36,7 +39,11 @@ public class EditCarController {
     }
 
     @PostMapping(value = "/edit/{licencePlate}")
-    public String saveEditedCar(CarDto carDto) {
+    public String saveEditedCar(@Valid @ModelAttribute("carDto") CarDto carDto,
+                                BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            return "edit-cars";
+        }
                 Car car = cars.getCars().get(carToEditID);
         try {
             services.fromDtoToEntity(carDto,car);

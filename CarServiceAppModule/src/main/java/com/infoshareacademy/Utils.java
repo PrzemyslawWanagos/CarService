@@ -17,6 +17,7 @@ public abstract class Utils {
         }
         return null;
     }
+
     public static List<Integer> scanForInt(String prompt, int min, int max, boolean singleSelection) {
         System.out.println(prompt);
         List<Integer> toReturn = new ArrayList<>();

@@ -2,14 +2,19 @@ package com.infoshareacademy.dto;
 
 import com.infoshareacademy.domain.Category;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.Size;
 
 public class CarDto {
     @Size(min = 2, max = 10)
     private String make;
+    @Size(min = 2, max = 10)
     private  String licencePlate;
     private String description;
     private  Category category;
+    @Min(50)
+    @Max(10000)
     private  Integer costOfService;
     private  boolean repaired;
     private String dateOfRepair;

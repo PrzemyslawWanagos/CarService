@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import static com.infoshareacademy.CarServiceApp.exitApp;
+
 
 
 @Controller
@@ -30,7 +30,7 @@ public class MainController {
     @ResponseBody
     public void exit() {
         try {
-            exitApp();
+            //xxx
         } catch (Exception e) {
         }
     }

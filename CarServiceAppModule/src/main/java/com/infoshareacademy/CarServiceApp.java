@@ -26,17 +26,7 @@ public class CarServiceApp {
 //        rt.exec(new String[]{"cmd", "/c", "start http://localhost:8080/main"});
     }
 
-    public static void exitApp() throws IOException {
-//        Runtime rt = Runtime.getRuntime();
-//        rt.exec(new String[]{"cmd", "/c", "exit http://localhost:8080/exit"});
 
-        SpringApplication.exit(ctx, new ExitCodeGenerator() {
-            @Override
-            public int getExitCode() {
-                return 0;
-            }
-        });
-    }
 
 
 }

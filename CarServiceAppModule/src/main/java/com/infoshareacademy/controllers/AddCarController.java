@@ -23,7 +23,7 @@ public class AddCarController {
 
     private final Services services;
     private final Cars cars;
-    private Car car = new Car();
+
 
     @Autowired
     public AddCarController(Services services, Cars cars) {
@@ -38,9 +38,9 @@ public class AddCarController {
     }
 
     @PostMapping(value = "add-car")
-
     public String saveAddedCar(@Valid @ModelAttribute("carDto") CarDto carDto,
                                BindingResult bindingResult) {
+        Car car = new Car();
         if (bindingResult.hasErrors()) {
             return "add-car";
         }
@@ -50,7 +50,6 @@ public class AddCarController {
             return e.toString();
         }
         cars.addCarToCarService(car);
-
         services.saveCarService(cars);
         String searchURL = "/all-cars";
         return "redirect:" + searchURL;
