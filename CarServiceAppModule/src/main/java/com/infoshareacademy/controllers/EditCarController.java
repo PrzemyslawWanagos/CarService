@@ -42,6 +42,7 @@ public class EditCarController {
     public String saveEditedCar(@Valid @ModelAttribute("carDto") CarDto carDto,
                                 BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
+
             return "edit-cars";
         }
                 Car car = cars.getCars().get(carToEditID);

@@ -36,15 +36,15 @@
     "licencePlate" : "jkjhjkhj",
     "category" : "BRAKES",
     "costOfService" : 123,
-    "repaired" : false,
+    "repaired" : true,
     "description" : "jjkjk",
-    "dateOfRepair" : "2021-12-08"
+    "dateOfRepair" : "2021-12-14"
   }, {
     "make" : "fdsfasd",
     "licencePlate" : "fdsfasd1",
     "category" : "BRAKES",
     "costOfService" : 5656,
-    "repaired" : false,
+    "repaired" : true,
     "description" : "fdsafas",
     "dateOfRepair" : "2021-12-07"
   }, {
@@ -83,10 +83,10 @@
     "make" : "fsd",
     "licencePlate" : "fasdf",
     "category" : "BRAKES",
-    "costOfService" : 4,
+    "costOfService" : 120,
     "repaired" : true,
     "description" : "fsad",
-    "dateOfRepair" : "2021-12-07"
+    "dateOfRepair" : "2021-12-14"
   }, {
     "make" : "a",
     "licencePlate" : "fsdfasdf",
@@ -203,10 +203,10 @@
     "make" : "jeep",
     "licencePlate" : "fsdffasd",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 1500,
+    "repaired" : true,
     "description" : "Wrangler",
-    "dateOfRepair" : null
+    "dateOfRepair" : "2021-12-15"
   }, {
     "make" : "fasfsdf",
     "licencePlate" : "fasdf",
@@ -251,17 +251,17 @@
     "make" : "bmw",
     "licencePlate" : "asds45",
     "category" : "SEATS",
-    "costOfService" : 100,
+    "costOfService" : 1050,
     "repaired" : true,
     "description" : "fldsjflk",
-    "dateOfRepair" : "2021-12-31"
+    "dateOfRepair" : "2021-12-23"
   }, {
     "make" : "hyundai",
     "licencePlate" : "GA989898",
     "category" : "SEATS",
-    "costOfService" : 65,
+    "costOfService" : 100,
     "repaired" : true,
     "description" : "Blue",
-    "dateOfRepair" : "2022-01-09"
+    "dateOfRepair" : "2021-12-22"
   } ]
 }
