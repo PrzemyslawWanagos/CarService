@@ -8,9 +8,7 @@
 <h1>Full list of cars</h1>
 <p>
 <form th:object="${carDto}" th:action="@{/edit/{licencePlate}(licencePlate=${carDto.licencePlate})}" method="post" onkeydown="return event.key !== 'Enter';"> <!---->
-  <!--  <div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
-        <p th:text="#{form.error}"></p>
-    </div>-->
+
     <div>
      Make:
     <br>
@@ -57,6 +55,12 @@
 <!--    th:value="${carDto.dateOfRepair}"-->
     <br>
     <br>
+      <div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
+      <p th:text="#{form.error}">
+      <br>
+      <br>
+      </p>
+  </div>
     <button>Save Edits</button>
 </form>
 

@@ -111,5 +111,13 @@
     "repaired" : true,
     "description" : "Brava",
     "dateOfRepair" : "2021-12-07"
+  }, {
+    "make" : "aw",
+    "licencePlate" : "wa",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "fdasf",
+    "dateOfRepair" : null
   } ]
 }

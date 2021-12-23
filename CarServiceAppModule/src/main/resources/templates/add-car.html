@@ -6,7 +6,14 @@
 <form th:object="${carDto}" th:action="@{/add-car}" method="post" >
     Make:
     <br>
-    <input type="text" name="make" required/>
+    <input type="text" th:field="*{make}" required/>
+    <div th:if="${#fields.hasErrors('make')}" th:class="'alert alert-danger'">
+
+        <ul>
+            <li th:each="err : ${#fields.errors('make')}" th:text="${err}"></li>
+        </ul>
+
+    </div>
     <br>
     <br>
 
@@ -20,6 +27,13 @@
 
     <br>
     <input type="text" th:field="*{licencePlate}" required/>
+    <div th:if="${#fields.hasErrors('licencePlate')}" th:class="'alert alert-danger'">
+
+        <ul>
+            <li th:each="err : ${#fields.errors('licencePlate')}" th:text="${err}"></li>
+        </ul>
+
+    </div>
     <br>
     <br>
    Reason for service:
@@ -28,30 +42,15 @@
         <option th:each="categoryOpt : ${T(com.infoshareacademy.domain.Category).values()}"
                 th:value="${categoryOpt.name()}" th:text="${categoryOpt.categoryName}"></option>
     </select>
-    <!--/* <select name="category" id="Category" required>
-         <option value="SEATS" >Problems with seats</option>
-         <option value="BRAKES">Problems with brakes</option>
-         <option value="MAINTENANCE">General maintenance</option>
-         <option value="OTHER" selected>Other problems</option>
-         <option value="DRIVE">Problems with drive</option>
-         <option value="ENGINE">Problems with engine</option>
-     </select> */-->
     <br>
     <br>
-    <!--/*   Service cost (PLN) :-->
-    <!--    <br>-->
-    <!--    <input type="number" step="1" pattern="\d+" min="1" name="costOfService" required/>-->
-    <!--    <br>-->
-    <!--    <br>-->
-    <!--    Is car fixed?-->
-    <!--    <br>-->
-    <!--    <input type="radio" name="repaired" value="true" id="suitable for kids" checked/>-->
-    <!--    <label for="suitable for kids">Yes</label>-->
-    <!--    <input type="radio" name="repaired" value="false" id="definitely not for kids"/>-->
-    <!--    <label for="definitely not for kids">No</label>-->
-    <!--    <br>-->
-    <!--    <br> */-->
-    <button>Add Car to Service queue</button>
+    <div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
+        <p th:text="#{form.error}">
+            <br>
+            <br>
+        </p>
+    </div>
+        <button>Add Car to Service queue</button>
 </form>
     <br>
     <br>
