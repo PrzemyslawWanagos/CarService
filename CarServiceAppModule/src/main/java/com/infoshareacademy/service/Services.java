@@ -92,6 +92,6 @@ public class Services {
         carDto.setCategory(car.getCategory());
         carDto.setCostOfService(car.getCostOfService());
         carDto.setRepaired(car.isRepaired());
-        carDto.setDateOfRepair(car.getDateOfRepair());
+        //carDto.setDateOfRepair(car.getDateOfRepair());
     }
 }

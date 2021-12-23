@@ -51,7 +51,8 @@
     <br>
     Date of repair:
     <br>
-    <input type="date"  name="dateOfRepair" required/>
+    <input type="date"  th:field="*{dateOfRepair}" required
+           th:value="${carDto.dateOfRepair}"/>
     <!---->
 <!--    th:value="${carDto.dateOfRepair}"-->
     <br>

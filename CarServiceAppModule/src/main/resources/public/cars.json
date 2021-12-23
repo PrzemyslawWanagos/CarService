@@ -5,63 +5,63 @@
     "category" : "OTHER",
     "costOfService" : 100,
     "repaired" : true,
-    "description" : "",
-    "dateOfRepair" : "2021-12-31"
+    "description" : "test2",
+    "dateOfRepair" : "2021-12-23"
   }, {
     "make" : "Fiat",
     "licencePlate" : "GA43523",
     "category" : "OTHER",
-    "costOfService" : 321,
-    "repaired" : false,
-    "description" : "Yello:)",
-    "dateOfRepair" : "2021-12-21"
+    "costOfService" : 200,
+    "repaired" : true,
+    "description" : "test2",
+    "dateOfRepair" : "2021-12-24"
   }, {
     "make" : "Ford Mondeo",
     "licencePlate" : "GS23123",
     "category" : "SEATS",
-    "costOfService" : 123,
-    "repaired" : false,
-    "description" : "Black",
-    "dateOfRepair" : "2021-12-15"
+    "costOfService" : 234,
+    "repaired" : true,
+    "description" : "test2",
+    "dateOfRepair" : "2021-12-29"
   }, {
     "make" : "Toyota",
     "licencePlate" : "GD342SA",
     "category" : "DRIVE",
-    "costOfService" : 124,
+    "costOfService" : 0,
     "repaired" : false,
-    "description" : "Yaris",
-    "dateOfRepair" : "2021-12-16"
+    "description" : "test2",
+    "dateOfRepair" : null
   }, {
     "make" : "Porsche",
     "licencePlate" : "WA123321",
     "category" : "ENGINE",
-    "costOfService" : 200,
+    "costOfService" : 0,
     "repaired" : false,
-    "description" : "Blue",
-    "dateOfRepair" : "2021-12-14"
+    "description" : "test2",
+    "dateOfRepair" : null
   }, {
     "make" : "bmw",
     "licencePlate" : "asds45",
     "category" : "SEATS",
-    "costOfService" : 100,
-    "repaired" : true,
-    "description" : "fldsjflk",
-    "dateOfRepair" : "2021-12-24"
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "test2",
+    "dateOfRepair" : null
   }, {
     "make" : "hyundai",
     "licencePlate" : "GA989898",
     "category" : "SEATS",
-    "costOfService" : 200,
+    "costOfService" : 0,
     "repaired" : false,
-    "description" : "Blue",
+    "description" : "test2",
     "dateOfRepair" : null
   }, {
     "make" : "Gia",
     "licencePlate" : "Giaaaa",
     "category" : "BRAKES",
-    "costOfService" : 120,
+    "costOfService" : 0,
     "repaired" : false,
-    "description" : "Gia",
+    "description" : "test2",
     "dateOfRepair" : null
   }, {
     "make" : "TEST2",
