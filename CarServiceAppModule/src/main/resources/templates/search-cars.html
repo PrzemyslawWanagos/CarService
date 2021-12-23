@@ -22,7 +22,11 @@
         <td th:text="${car.category.categoryName}"></td>
         <!--/* <td th:text="${car.costOfService}"></td>
          <td th:text="${car.repaired}"></td> */-->
-        <td><a th:href="@{/edit/{EditlicencePlate}(EditlicencePlate=${car.licencePlate})}">Edit</a></td>
+        <td>
+            <a th:href="@{/edit/{EditlicencePlate}(EditlicencePlate=${car.licencePlate})}">
+                <button type="button" th:text="#{Car.link}"></button>
+            </a>
+        </td>
     </tr>
 </table>
 </p>

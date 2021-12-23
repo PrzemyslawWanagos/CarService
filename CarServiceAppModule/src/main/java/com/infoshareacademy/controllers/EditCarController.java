@@ -36,14 +36,14 @@ public class EditCarController {
         CarDto carDto = new CarDto();
         services.fromEntityToDto(carToEdit, carDto);
         model.addAttribute("carDto", carDto);
-        return "edit-cars";
+        return "edit-car";
     }
 
     @PostMapping(value = "/edit/{licencePlate}")
     public String saveEditedCar(@Valid @ModelAttribute("carDto") CarDto carDto,
                                 BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
-            return "edit-cars";
+            return "edit-car";
         }
         Car car = cars.getCars().get(carToEditID);
         try {
@@ -56,7 +56,7 @@ public class EditCarController {
         }
         services.saveCarService(cars);
         String searchURL = "/all-cars";
-        return "redirect:" + searchURL;
+        return "edit-car-success";
     }
 
 }

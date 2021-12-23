@@ -52,7 +52,7 @@ public class AddCarController {
         cars.addCarToCarService(car);
         services.saveCarService(cars);
         String searchURL = "/all-cars";
-        return "redirect:" + searchURL;
+        return "add-car-success";
 
     }
 
