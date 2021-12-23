@@ -54,7 +54,16 @@
 </form>
     <br>
     <br>
-    <button onclick="window.location.href='/main';">Main menu</button>
+    <a th:href="@{/main}">
+    <button>Main menu</button>
+    </a>
 </p>
+<nav>
+    <div>
+        <a th:href="@{/}">
+            <button type="button" th:text="#{project.return}"></button>
+        </a>
+    </div>
+</nav>
 </body>
 </html>
