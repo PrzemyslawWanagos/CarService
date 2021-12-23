@@ -38,19 +38,25 @@ public class EditCarController {
     @RequestMapping(value = "/edit/{licencePlate}", method = RequestMethod.GET)
     public ModelAndView carEditForm(@PathVariable String licencePlate) {
         carToEditID = services.FindByLicencePlate(cars, licencePlate);
+        System.out.println(carToEditID);
         Car carToEdit = cars.getCars().get(carToEditID);
         CarDto carDto=new CarDto();
         services.fromEntityToDto(carToEdit,carDto);
-       if(tempDate!=null) {carDto.setDateOfRepair(tempDate);
+        System.out.println("date of repair in Dto: "+carDto.getDateOfRepair());
+       if(carDto.getDateOfRepair()==null) {carDto.setDateOfRepair(tempDate);
         tempDate=null;}
         carDto.setCostOfService(0);
        carDto.setRepaired(false);
         ModelAndView modelAndView=new ModelAndView("edit-cars");
         modelAndView.addObject("carDto", carDto);
+        System.out.println(carDto.getDateOfRepair());
+        System.out.println(carDto.getCostOfService());
+
         return modelAndView;
     }
 
     @PostMapping(value = "/edit/{licencePlate}")
+  //  @Scope(value = WebApplicationContext.SCOPE_REQUEST, proxyMode = ScopedProxyMode.TARGET_CLASS)
     public String saveEditedCar(@Valid @ModelAttribute("carDto") CarDto carDto,
                                 BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {

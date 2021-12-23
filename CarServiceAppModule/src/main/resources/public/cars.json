@@ -43,15 +43,15 @@
     "make" : "bmw",
     "licencePlate" : "asds45",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 100,
+    "repaired" : true,
     "description" : "fldsjflk",
-    "dateOfRepair" : null
+    "dateOfRepair" : "2021-12-24"
   }, {
     "make" : "hyundai",
     "licencePlate" : "GA989898",
     "category" : "SEATS",
-    "costOfService" : 0,
+    "costOfService" : 200,
     "repaired" : false,
     "description" : "Blue",
     "dateOfRepair" : null
@@ -59,7 +59,7 @@
     "make" : "Gia",
     "licencePlate" : "Giaaaa",
     "category" : "BRAKES",
-    "costOfService" : 0,
+    "costOfService" : 120,
     "repaired" : false,
     "description" : "Gia",
     "dateOfRepair" : null
