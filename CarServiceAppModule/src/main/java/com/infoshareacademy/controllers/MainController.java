@@ -8,9 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.Collection;
-import java.util.Map;
-
 import static com.infoshareacademy.CarServiceApp.exception;
 
 
@@ -28,8 +25,7 @@ public class MainController {
     public String mainPage(Model model) {
         cars.setCars(Services.readCarService().getCars());
         if(exception!=null){
-          model.addAttribute("exception",exception.toString());
-          return "file-error";
+            return "redirect:/error/Error while reading the file";
         }
         return "main";
     }

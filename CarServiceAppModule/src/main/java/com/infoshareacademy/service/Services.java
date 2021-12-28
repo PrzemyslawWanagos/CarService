@@ -28,17 +28,6 @@ public class Services {
                 .stream()
                 .filter(c ->c.getLicencePlate().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT))&&!(c.isRepaired()))
                 .collect(Collectors.toList());
-//        List <Car> toReturn = new ArrayList<>();
-//        try {
-//        for (Car car : cars.getCars()) {
-//            if (car.getLicencePlate().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT))
-//            &&!(car.isRepaired())) {
-//                toReturn.add(car);
-//            }
-//        }
-//        }catch (Exception e){
-//            System.out.println(e.toString());
-//        }
         return toReturn;
     }
 
@@ -60,6 +49,7 @@ public class Services {
         try {
             mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PATH_TO_FULL_LIST_OF_CARS), cars);
         } catch (IOException e) {
+            exception=e;
             System.out.println(e.toString());
         }
     }
@@ -72,6 +62,7 @@ public class Services {
             File carsRepairedToday=new File(PATH_TO_FOLDER_WITH_REPAIRED_CARS,dateOfRepair+".json");
             mapper.writerWithDefaultPrettyPrinter().writeValue(carsRepairedToday, listOfRepairedCars);
         } catch (IOException e) {
+            exception=e;
             System.out.println(e.toString());
         }
     }
@@ -98,17 +89,6 @@ public class Services {
                 .filter(c ->Objects.nonNull(c.getDateOfRepair()))
                 .filter(c ->c.getDateOfRepair().equals(dateOfRepair))
                 .collect(Collectors.toList());
-//        List <Car> toReturn = new ArrayList<>();
-//        try {
-//        for (Car car : cars.getCars()) {
-//            if (car.getDateOfRepair().equals(dateOfRepair))
-//             {
-//                toReturn.add(car);
-//            }
-//        }
-//        }catch (Exception e){
-//            System.out.println(e.toString());
-//        }
         return toReturn;
     }
 

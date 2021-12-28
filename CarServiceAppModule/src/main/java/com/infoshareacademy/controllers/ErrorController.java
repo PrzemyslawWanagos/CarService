@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.context.WebApplicationContext;
 
@@ -20,45 +21,24 @@ import javax.validation.Valid;
 import static com.infoshareacademy.CarServiceApp.exception;
 
 @Controller
-@Scope(value = WebApplicationContext.SCOPE_REQUEST, proxyMode = ScopedProxyMode.TARGET_CLASS)
-public class AddCarController {
+
+public class ErrorController {
 
     private final Services services;
     private final Cars cars;
 
 
     @Autowired
-    public AddCarController(Services services, Cars cars) {
+    public ErrorController(Services services, Cars cars) {
         this.services = services;
         this.cars = cars;
     }
 
-    @GetMapping("add-car")
-    public String createCar(Model model) {
-        model.addAttribute("carDto", new CarDto());
-        return "add-car";
+    @GetMapping("error/{errorName}")
+    public String displayError (@PathVariable String errorName, Model model) {
+        model.addAttribute("exception",exception.toString());
+        model.addAttribute("errorName",errorName);
+        exception=null;
+        return "error";
     }
-
-    @PostMapping(value = "add-car")
-    public String saveAddedCar(@Valid @ModelAttribute("carDto") CarDto carDto,
-                               BindingResult bindingResult) {
-        Car car = new Car();
-        if (bindingResult.hasErrors()) {
-            return "add-car";
-        }
-        try {
-            services.fromDtoToEntity(carDto, car);
-        } catch (Exception e) {
-            return e.toString();
-        }
-        cars.addCarToCarService(car);
-        services.saveCarService(cars);
-        if(exception!=null){
-        return "redirect:/error/Error while adding the car";
-        }
-        return "add-car-success";
-
-    }
-
-
 }

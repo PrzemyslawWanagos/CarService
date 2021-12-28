@@ -1,0 +1,131 @@
+{
+  "cars" : [ {
+    "make" : "Mazda",
+    "licencePlate" : "GD12312",
+    "category" : "OTHER",
+    "costOfService" : 100,
+    "repaired" : true,
+    "description" : "test2",
+    "dateOfRepair" : "2021-12-25"
+  }, {
+    "make" : "Fiat",
+    "licencePlate" : "GA43523",
+    "category" : "OTHER",
+    "costOfService" : 200,
+    "repaired" : true,
+    "description" : "test2",
+    "dateOfRepair" : "2021-12-24"
+  }, {
+    "make" : "Ford Mondeo",
+    "licencePlate" : "GS23123",
+    "category" : "SEATS",
+    "costOfService" : 234,
+    "repaired" : true,
+    "description" : "test2",
+    "dateOfRepair" : "2021-12-29"
+  }, {
+    "make" : "Toyota",
+    "licencePlate" : "GD342SA",
+    "category" : "DRIVE",
+    "costOfService" : 100,
+    "repaired" : true,
+    "description" : "test2",
+    "dateOfRepair" : "2021-12-22"
+  }, {
+    "make" : "Porsche",
+    "licencePlate" : "WA123321",
+    "category" : "ENGINE",
+    "costOfService" : 200,
+    "repaired" : true,
+    "description" : "test2",
+    "dateOfRepair" : "2021-12-25"
+  }, {
+    "make" : "bmw",
+    "licencePlate" : "asds45",
+    "category" : "SEATS",
+    "costOfService" : 100,
+    "repaired" : true,
+    "description" : "test2",
+    "dateOfRepair" : "2021-12-25"
+  }, {
+    "make" : "hyundai",
+    "licencePlate" : "GA989898",
+    "category" : "SEATS",
+    "costOfService" : 100,
+    "repaired" : true,
+    "description" : "test2",
+    "dateOfRepair" : "2012-12-25"
+  }, {
+    "make" : "Gia",
+    "licencePlate" : "Giaaaa",
+    "category" : "BRAKES",
+    "costOfService" : 50,
+    "repaired" : true,
+    "description" : "77",
+    "dateOfRepair" : "2021-12-25"
+  }, {
+    "make" : "TEST2",
+    "licencePlate" : "test222",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "77",
+    "dateOfRepair" : null
+  }, {
+    "make" : "fiat",
+    "licencePlate" : "GSP0101",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "77",
+    "dateOfRepair" : null
+  }, {
+    "make" : "ford",
+    "licencePlate" : "GS45342",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "77",
+    "dateOfRepair" : null
+  }, {
+    "make" : "Toyota",
+    "licencePlate" : "WW89764",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "77",
+    "dateOfRepair" : null
+  }, {
+    "make" : "Skoda",
+    "licencePlate" : "GWE2323",
+    "category" : "DRIVE",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "77",
+    "dateOfRepair" : null
+  }, {
+    "make" : "Fiat",
+    "licencePlate" : "GD23345",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "77",
+    "dateOfRepair" : null
+  }, {
+    "make" : "aw",
+    "licencePlate" : "wa",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "77",
+    "dateOfRepair" : null
+  }, {
+    "make" : "Lotus",
+    "licencePlate" : "GSP9999",
+    "category" : "BRAKES",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "77",
+    "dateOfRepair" : null
+  } ]
+}

@@ -1,0 +1,33 @@
+[ {
+  "make" : "Mazda",
+  "licencePlate" : "GD12312",
+  "category" : "OTHER",
+  "costOfService" : 100,
+  "repaired" : true,
+  "description" : "test2",
+  "dateOfRepair" : "2021-12-25"
+}, {
+  "make" : "Porsche",
+  "licencePlate" : "WA123321",
+  "category" : "ENGINE",
+  "costOfService" : 200,
+  "repaired" : true,
+  "description" : "test2",
+  "dateOfRepair" : "2021-12-25"
+}, {
+  "make" : "bmw",
+  "licencePlate" : "asds45",
+  "category" : "SEATS",
+  "costOfService" : 100,
+  "repaired" : true,
+  "description" : "test2",
+  "dateOfRepair" : "2021-12-25"
+}, {
+  "make" : "Gia",
+  "licencePlate" : "Giaaaa",
+  "category" : "BRAKES",
+  "costOfService" : 50,
+  "repaired" : true,
+  "description" : "77",
+  "dateOfRepair" : "2021-12-25"
+} ]
