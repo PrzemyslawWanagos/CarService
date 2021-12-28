@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div th:fragment="custom (customPath, customLabel)" >
+            <a th:href="@{/{path}(path=${customPath})}">
+                <button type="button" th:text="${customLabel}"></button>
+            </a>
+</div>
+
+<div th:fragment="main">
+                <a th:href="@{/{path}(path=#{main.path})}">
+                <button type="button" th:text="#{main.label}"></button>
+            </a>
+
+</div>
+
+<div th:fragment="printGreetings (name)" th:with="title=${title} ?: 'Mr.', greeting=${greeting} ?: 'Hello'">
+    <span th:text="${greeting}">Hello</span>
+    <span th:text="${title}">Mr.</span>
+    <span th:text="${name}">John Doe</span>
+</div>
+
+</body>
+</html>

@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Full list of cars</h1>
-<p>
+
 <form th:object="${carDto}" th:action="@{/edit/{licencePlate}(licencePlate=${carDto.licencePlate})}" method="post" onkeydown="return event.key !== 'Enter';"> <!---->
 
     <div>
@@ -65,11 +65,10 @@
 </form>
 
 
-</p>
-<p>
-
+<nav>
     <br>
-    <button onclick="window.location.href='/main';">Main menu</button>
-</p>
+    <br>
+    <div th:insert="fragments/commonButtons :: main"></div>
+</nav>
 </body>
 </html>

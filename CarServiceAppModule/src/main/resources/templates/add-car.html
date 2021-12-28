@@ -3,7 +3,7 @@
 <body>
 <h1>Add new car</h1>
 <p>
-<form th:object="${carDto}" th:action="@{/add-car}" method="post" >
+<form th:object="${carDto}" th:action="@{/add-car}" method="post">
     Make:
     <br>
     <input type="text" th:field="*{make}" required/>
@@ -36,7 +36,7 @@
     </div>
     <br>
     <br>
-   Reason for service:
+    Reason for service:
     <br>
     <select th:field="*{category}" id="Category" required>
         <option th:each="categoryOpt : ${T(com.infoshareacademy.domain.Category).values()}"
@@ -50,20 +50,14 @@
             <br>
         </p>
     </div>
-        <button>Add Car to Service queue</button>
+    <button>Add Car to Service queue</button>
 </form>
-    <br>
-    <br>
-    <a th:href="@{/main}">
-    <button>Main menu</button>
-    </a>
-</p>
 <nav>
-    <div>
-        <a th:href="@{/}">
-            <button type="button" th:text="#{project.return}"></button>
-        </a>
-    </div>
+    <br>
+    <br>
+    <div th:insert="fragments/commonButtons :: main"></div>
 </nav>
+
+
 </body>
 </html>

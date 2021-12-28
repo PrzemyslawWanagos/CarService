@@ -14,6 +14,7 @@ import java.util.Locale;
 import java.util.stream.*;
 import java.util.stream.Collectors;
 
+import static com.infoshareacademy.CarServiceApp.PATH_TO_FOLDER_WITH_REPAIRED_CARS;
 import static com.infoshareacademy.CarServiceApp.PATH_TO_FULL_LIST_OF_CARS;
 
 @Service
@@ -62,6 +63,18 @@ public class Services {
         }
     }
 
+    public void saveRepairedCarList(Cars cars, String dateOfRepair) {
+         List <Car> listOfRepairedCars = returnListOfRepairedCars(cars, dateOfRepair);
+
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            File carsRepairedToday=new File(PATH_TO_FOLDER_WITH_REPAIRED_CARS,"today.json");
+            mapper.writerWithDefaultPrettyPrinter().writeValue(carsRepairedToday, listOfRepairedCars);
+        } catch (IOException e) {
+            System.out.println(e.toString());
+        }
+    }
+
     public Integer FindByLicencePlate(Cars cars, String LicencePlate) {
         List <Car> toReturn = new ArrayList<>();
         int i=0;
@@ -76,6 +89,25 @@ public class Services {
         }
         return i;
 
+    }
+
+    public List<Car> returnListOfRepairedCars(Cars cars, String dateOfRepair) {
+        List<Car> toReturn = cars.getCars()
+                .stream()
+                .filter(c ->c.getDateOfRepair().equals(dateOfRepair))
+                .collect(Collectors.toList());
+//        List <Car> toReturn = new ArrayList<>();
+//        try {
+//        for (Car car : cars.getCars()) {
+//            if (car.getLicencePlate().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT))
+//            &&!(car.isRepaired())) {
+//                toReturn.add(car);
+//            }
+//        }
+//        }catch (Exception e){
+//            System.out.println(e.toString());
+//        }
+        return toReturn;
     }
 
     public void fromDtoToEntity(CarDto carDto, Car car) {

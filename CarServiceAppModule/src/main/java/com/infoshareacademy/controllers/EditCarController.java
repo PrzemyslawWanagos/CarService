@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.validation.Valid;
+import java.util.Collection;
+import java.util.Map;
 
 @Controller
 //@Scope(value = WebApplicationContext.SCOPE_REQUEST, proxyMode = ScopedProxyMode.TARGET_CLASS)
@@ -55,7 +57,8 @@ public class EditCarController {
             return e.toString();
         }
         services.saveCarService(cars);
-        String searchURL = "/all-cars";
+        services.saveRepairedCarList(cars,"2021-12-29");
+//
         return "edit-car-success";
     }
 
