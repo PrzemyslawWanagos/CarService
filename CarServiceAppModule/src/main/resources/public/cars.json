@@ -12,41 +12,41 @@
     "licencePlate" : "GA43523",
     "category" : "OTHER",
     "costOfService" : 200,
-    "repaired" : true,
+    "repaired" : false,
     "description" : "test2",
-    "dateOfRepair" : "2021-12-24"
+    "dateOfRepair" : null
   }, {
     "make" : "Ford Mondeo",
     "licencePlate" : "GS23123",
     "category" : "SEATS",
     "costOfService" : 234,
-    "repaired" : true,
+    "repaired" : false,
     "description" : "test2",
-    "dateOfRepair" : "2021-12-29"
+    "dateOfRepair" : null
   }, {
     "make" : "Toyota",
     "licencePlate" : "GD342SA",
     "category" : "DRIVE",
     "costOfService" : 100,
-    "repaired" : true,
+    "repaired" : false,
     "description" : "test2",
-    "dateOfRepair" : "2021-12-22"
+    "dateOfRepair" : null
   }, {
     "make" : "Porsche",
     "licencePlate" : "WA123321",
     "category" : "ENGINE",
     "costOfService" : 200,
-    "repaired" : true,
+    "repaired" : false,
     "description" : "test2",
-    "dateOfRepair" : "2021-12-25"
+    "dateOfRepair" : null
   }, {
     "make" : "bmw",
     "licencePlate" : "asds45",
     "category" : "SEATS",
     "costOfService" : 100,
-    "repaired" : true,
+    "repaired" : false,
     "description" : "test2",
-    "dateOfRepair" : "2021-12-25"
+    "dateOfRepair" : null
   }, {
     "make" : "hyundai",
     "licencePlate" : "GA989898",
@@ -54,7 +54,7 @@
     "costOfService" : 100,
     "repaired" : true,
     "description" : "test2",
-    "dateOfRepair" : "2012-12-25"
+    "dateOfRepair" : "2021-12-26"
   }, {
     "make" : "Gia",
     "licencePlate" : "Giaaaa",
@@ -62,7 +62,7 @@
     "costOfService" : 100,
     "repaired" : true,
     "description" : "test2",
-    "dateOfRepair" : "2021-02-21"
+    "dateOfRepair" : "2021-12-26"
   }, {
     "make" : "TEST2",
     "licencePlate" : "test222",
@@ -77,55 +77,55 @@
     "category" : "SEATS",
     "costOfService" : 200,
     "repaired" : true,
-    "description" : "Duplo",
-    "dateOfRepair" : "2021-12-13"
+    "description" : "test2",
+    "dateOfRepair" : "2021-12-25"
   }, {
     "make" : "ford",
     "licencePlate" : "GS45342",
     "category" : "SEATS",
     "costOfService" : 200,
     "repaired" : true,
-    "description" : "Sierra",
-    "dateOfRepair" : "2021-12-27"
+    "description" : "test2",
+    "dateOfRepair" : "2021-12-25"
   }, {
     "make" : "Toyota",
     "licencePlate" : "WW89764",
     "category" : "SEATS",
     "costOfService" : 150,
     "repaired" : true,
-    "description" : "Yaris",
-    "dateOfRepair" : "2021-12-29"
+    "description" : "test2",
+    "dateOfRepair" : "2021-12-25"
   }, {
     "make" : "Skoda",
     "licencePlate" : "GWE2323",
     "category" : "DRIVE",
     "costOfService" : 200,
     "repaired" : true,
-    "description" : "Fabia",
-    "dateOfRepair" : "2021-12-29"
+    "description" : "test2",
+    "dateOfRepair" : "2021-12-25"
   }, {
     "make" : "Fiat",
     "licencePlate" : "GD23345",
     "category" : "SEATS",
     "costOfService" : 130,
     "repaired" : true,
-    "description" : "Brava",
-    "dateOfRepair" : "2021-12-07"
+    "description" : "test2",
+    "dateOfRepair" : "2021-12-25"
   }, {
     "make" : "aw",
     "licencePlate" : "wa",
     "category" : "SEATS",
     "costOfService" : 200,
     "repaired" : true,
-    "description" : "fdasf",
-    "dateOfRepair" : "2021-12-29"
+    "description" : "test2",
+    "dateOfRepair" : "2021-12-25"
   }, {
     "make" : "Lotus",
     "licencePlate" : "GSP9999",
     "category" : "BRAKES",
     "costOfService" : 100,
     "repaired" : true,
-    "description" : "77",
-    "dateOfRepair" : "2021-12-22"
+    "description" : "test2",
+    "dateOfRepair" : "2021-12-25"
   } ]
 }

@@ -14,11 +14,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.validation.Valid;
-import java.util.Collection;
-import java.util.Map;
 
 @Controller
-//@Scope(value = WebApplicationContext.SCOPE_REQUEST, proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class EditCarController {
 
     private final Services services;
@@ -53,13 +50,11 @@ public class EditCarController {
             car.setCostOfService(carDto.getCostOfService());
             car.setRepaired(true);
             car.setDateOfRepair(carDto.getDateOfRepair());
+            services.saveCarService(cars);
+            services.saveRepairedCarList(cars, car.getDateOfRepair());
         } catch (Exception e) {
             return e.toString();
         }
-        services.saveCarService(cars);
-        services.saveRepairedCarList(cars,"2021-12-29");
-//
         return "edit-car-success";
     }
-
 }

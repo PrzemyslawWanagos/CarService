@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 import java.util.stream.*;
 import java.util.stream.Collectors;
 
@@ -68,7 +69,7 @@ public class Services {
 
         ObjectMapper mapper = new ObjectMapper();
         try {
-            File carsRepairedToday=new File(PATH_TO_FOLDER_WITH_REPAIRED_CARS,"today.json");
+            File carsRepairedToday=new File(PATH_TO_FOLDER_WITH_REPAIRED_CARS,dateOfRepair+".json");
             mapper.writerWithDefaultPrettyPrinter().writeValue(carsRepairedToday, listOfRepairedCars);
         } catch (IOException e) {
             System.out.println(e.toString());
@@ -94,13 +95,14 @@ public class Services {
     public List<Car> returnListOfRepairedCars(Cars cars, String dateOfRepair) {
         List<Car> toReturn = cars.getCars()
                 .stream()
+                .filter(c ->Objects.nonNull(c.getDateOfRepair()))
                 .filter(c ->c.getDateOfRepair().equals(dateOfRepair))
                 .collect(Collectors.toList());
 //        List <Car> toReturn = new ArrayList<>();
 //        try {
 //        for (Car car : cars.getCars()) {
-//            if (car.getLicencePlate().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT))
-//            &&!(car.isRepaired())) {
+//            if (car.getDateOfRepair().equals(dateOfRepair))
+//             {
 //                toReturn.add(car);
 //            }
 //        }
