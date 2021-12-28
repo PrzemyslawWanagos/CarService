@@ -2,15 +2,18 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title th:text="#{editCar.title}"></title>
+    <title th:text="#{fileError.title}"></title>
 </head>
 <body>
-<h2 th:text="#{editCar.caption}"></h2>
+<h2 th:text="#{fileError.caption}"></h2>
+<br>
+<h3 th:text="#{fileError.explanation}"></h3>
+<br>
 <h3 th:text="${exception}"></h3>
 <nav>
     <br>
     <br>
-    <div th:replace="fragments/commonButtons :: custom ('all-cars','OK')">
+    <div th:replace="fragments/commonButtons :: main">
 
     </div>
 <!--    <div th:insert="fragments/commonButtons :: custom"></div>-->
