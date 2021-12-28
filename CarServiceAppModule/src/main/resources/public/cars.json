@@ -119,5 +119,13 @@
     "repaired" : false,
     "description" : "fdasf",
     "dateOfRepair" : null
+  }, {
+    "make" : "Lotus",
+    "licencePlate" : "GSP9999",
+    "category" : "BRAKES",
+    "costOfService" : 100,
+    "repaired" : true,
+    "description" : "77",
+    "dateOfRepair" : "2021-12-22"
   } ]
 }
