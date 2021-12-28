@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.validation.Valid;
 
+import static com.infoshareacademy.CarServiceApp.exception;
+
 @Controller
 public class EditCarController {
 
@@ -51,7 +53,13 @@ public class EditCarController {
             car.setRepaired(true);
             car.setDateOfRepair(carDto.getDateOfRepair());
             services.saveCarService(cars);
+            if(exception!=null){
+                return "redirect:/error/Error while updating the list of cars";
+            }
             services.saveRepairedCarList(cars, car.getDateOfRepair());
+            if(exception!=null){
+                return "redirect:/error/Error while updating the list of repaired cars";
+            }
         } catch (Exception e) {
             return e.toString();
         }
