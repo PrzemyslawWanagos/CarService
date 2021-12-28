@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{editCar.title}"></title>
+</head>
+<body>
+<h2 th:text="#{editCar.caption}"></h2>
+<h3 th:text="${exception}"></h3>
+<nav>
+    <br>
+    <br>
+    <div th:replace="fragments/commonButtons :: custom ('all-cars','OK')">
+
+    </div>
+<!--    <div th:insert="fragments/commonButtons :: custom"></div>-->
+</nav>
+<!--<h1 th:text="Car added"></h1>-->
+</body>
+</html>

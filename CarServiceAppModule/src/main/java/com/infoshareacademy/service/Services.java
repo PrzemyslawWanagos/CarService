@@ -15,8 +15,7 @@ import java.util.Objects;
 import java.util.stream.*;
 import java.util.stream.Collectors;
 
-import static com.infoshareacademy.CarServiceApp.PATH_TO_FOLDER_WITH_REPAIRED_CARS;
-import static com.infoshareacademy.CarServiceApp.PATH_TO_FULL_LIST_OF_CARS;
+import static com.infoshareacademy.CarServiceApp.*;
 
 @Service
 public class Services {
@@ -50,6 +49,7 @@ public class Services {
             CarsFromFile = mapper.readValue(new File(PATH_TO_FULL_LIST_OF_CARS), new TypeReference<>() {
             });
         } catch (IOException e) {
+            exception=e;
             System.out.println(e.toString());
         }
         return CarsFromFile;
