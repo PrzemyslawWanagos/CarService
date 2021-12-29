@@ -2,36 +2,33 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title th:text="#{edit-car.title}"></title>
+    <title th:text="'Thymeleaf'"></title>
 </head>
 <body>
-<h1 th:text="#{edit-car.header}"></h1>
+<h1>Full list of cars</h1>
 
 <form th:object="${carDto}" th:action="@{/edit/{licencePlate}(licencePlate=${carDto.licencePlate})}" method="post" onkeydown="return event.key !== 'Enter';"> <!---->
 
-    <label th:for="make" th:text="#{Make.label}"></label>
+    <div>
+     Make:
+    <br>
+    <!--    onsubmit="return false;"-->
+    <input class="readonlyInput" type="hidden" th:name="make" th:value="${carDto.make} " th:text="${carDto.make} "/>
     <br>
     <br>
-
-    <input th:id="make" th:class="readonlyInput" th:type="hidden" th:name="make" th:value="${carDto.make} " th:text="${carDto.make} "/>
+    Description:
+    <br>
+    <input class="readonlyInput" type="hidden" th:name="description" th:value="${carDto.description}" th:text="${carDto.description}"/>
     <br>
     <br>
-    <label th:for="description" th:text="#{Description.label}"></label>
+    Licence plate:
+    <br>
+    <input class="readonlyInput" type="hidden" th:name="licencePlate" th:value="${carDto.licencePlate}" th:text="${carDto.licencePlate}"/>
     <br>
     <br>
-    <input th:id="desciption" th:class="readonlyInput" type="hidden" th:name="description" th:value="${carDto.description}" th:text="${carDto.description}"/>
+    Reason for service:
     <br>
-    <br>
-    <label th:for="licencePlate" th:text="#{LicencePlate.label}"></label>
-    <br>
-    <br>
-    <input th:id="licencePlate" th:class="readonlyInput" type="hidden" th:name="licencePlate" th:value="${carDto.licencePlate}" th:text="${carDto.licencePlate}"/>
-    <br>
-    <br>
-    <label th:for="reasonForService" th:text="#{ReasonForService.label}"></label>
-    <br>
-    <br>
-    <input th:id="reasonForService" th:class="readonlyInput" th:type="hidden" th:name="category"  th:value="${carDto.category}" th:text="${carDto.category.categoryName}" />
+    <input class="readonlyInput" type="hidden" th:name="category"  th:value="${carDto.category}" th:text="${carDto.category.categoryName}" />
     <br>
     <br>
     </div>
@@ -39,7 +36,7 @@
     Cost of service (PLN):
     <br>
 
-    <input th:type="number" th:step="1" th:pattern="d+" th:min="1" th:field="*{costOfService}" required
+    <input type="number" step="1" pattern="\d+" min="1" th:field="*{costOfService}" required
            th:value="${carDto.costOfService}"/>
     <div th:if="${#fields.hasErrors('costOfService')}" th:class="'alert alert-danger'">
         <br>

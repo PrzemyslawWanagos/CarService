@@ -30,4 +30,12 @@
   "repaired" : true,
   "description" : "77",
   "dateOfRepair" : "2021-12-25"
+}, {
+  "make" : "TEST2",
+  "licencePlate" : "test222",
+  "category" : "SEATS",
+  "costOfService" : 200,
+  "repaired" : true,
+  "description" : "77",
+  "dateOfRepair" : "2021-12-25"
 } ]
