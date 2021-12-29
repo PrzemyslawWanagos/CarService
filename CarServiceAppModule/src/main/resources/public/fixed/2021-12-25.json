@@ -86,4 +86,44 @@
   "repaired" : true,
   "description" : "hhh",
   "dateOfRepair" : "2021-12-25"
+}, {
+  "make" : "Skoda",
+  "licencePlate" : "GST2323A",
+  "category" : "OTHER",
+  "costOfService" : 100,
+  "repaired" : true,
+  "description" : "Fabia",
+  "dateOfRepair" : "2021-12-25"
+}, {
+  "make" : "Ford",
+  "licencePlate" : "KR01000",
+  "category" : "SEATS",
+  "costOfService" : 100,
+  "repaired" : true,
+  "description" : "fkjdslkfj",
+  "dateOfRepair" : "2021-12-25"
+}, {
+  "make" : "fads",
+  "licencePlate" : "fads",
+  "category" : "SEATS",
+  "costOfService" : 120,
+  "repaired" : true,
+  "description" : "fdas",
+  "dateOfRepair" : "2021-12-25"
+}, {
+  "make" : "fldkasj",
+  "licencePlate" : "flkdsjflk",
+  "category" : "SEATS",
+  "costOfService" : 100,
+  "repaired" : true,
+  "description" : "fkldasjflka",
+  "dateOfRepair" : "2021-12-25"
+}, {
+  "make" : "fsdafasd",
+  "licencePlate" : "fasdfasd",
+  "category" : "SEATS",
+  "costOfService" : 1000,
+  "repaired" : true,
+  "description" : "fdsafasd",
+  "dateOfRepair" : "2021-12-25"
 } ]

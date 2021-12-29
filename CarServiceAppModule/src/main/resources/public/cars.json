@@ -166,7 +166,7 @@
     "costOfService" : 100,
     "repaired" : true,
     "description" : "QW",
-    "dateOfRepair" : null
+    "dateOfRepair" : "2021-12-25"
   }, {
     "make" : "Ford",
     "licencePlate" : "GA76762",
@@ -230,6 +230,14 @@
     "costOfService" : 100,
     "repaired" : true,
     "description" : "fdslkajrioewum",
-    "dateOfRepair" : ""
+    "dateOfRepair" : "2021-12-15"
+  }, {
+    "make" : "fsdafasd",
+    "licencePlate" : "fasdfasd",
+    "category" : "SEATS",
+    "costOfService" : 1000,
+    "repaired" : true,
+    "description" : "fdsafasd",
+    "dateOfRepair" : "2021-12-25"
   } ]
 }
