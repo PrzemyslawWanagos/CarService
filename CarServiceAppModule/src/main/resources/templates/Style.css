@@ -1,1 +1,7 @@
-h1{background-color: black}
+h1{background-color: blue;
+}
+
+.dark-button {
+    background-color: black;
+    font-family: "Arial Black";
+}
