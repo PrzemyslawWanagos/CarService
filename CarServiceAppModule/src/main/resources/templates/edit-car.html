@@ -9,37 +9,37 @@
 
 <form th:object="${carDto}" th:action="@{/edit/{licencePlate}(licencePlate=${carDto.licencePlate})}" method="post" onkeydown="return event.key !== 'Enter';"> <!---->
 
-    <label th:for="make" th:text="#{Make.label}"></label>
-    <br>
-    <br>
+    <div>
+        <label th:for="make" th:text="#{Make.label}"></label>
+        <br>
 
     <input th:id="make" th:class="readonlyInput" th:type="hidden" th:name="make" th:value="${carDto.make} " th:text="${carDto.make} "/>
     <br>
     <br>
-    <label th:for="description" th:text="#{Description.label}"></label>
+        <label th:for="description" th:text="#{Description.label}"></label>
+        <br>
+        <br>
+    <input th:id="description" th:class="readonlyInput" th:type="hidden" th:name="description" th:value="${carDto.description}" th:text="${carDto.description}"/>
     <br>
     <br>
-    <input th:id="desciption" th:class="readonlyInput" type="hidden" th:name="description" th:value="${carDto.description}" th:text="${carDto.description}"/>
+        <label th:for="licencePlate" th:text="#{LicencePlate.label}"></label>
+        <br>
+        <br>
+    <input th:id="licencePlate" th:class="readonlyInput" th:type="hidden" th:name="licencePlate" th:value="${carDto.licencePlate}" th:text="${carDto.licencePlate}"/>
     <br>
     <br>
-    <label th:for="licencePlate" th:text="#{LicencePlate.label}"></label>
-    <br>
-    <br>
-    <input th:id="licencePlate" th:class="readonlyInput" type="hidden" th:name="licencePlate" th:value="${carDto.licencePlate}" th:text="${carDto.licencePlate}"/>
-    <br>
-    <br>
-    <label th:for="reasonForService" th:text="#{ReasonForService.label}"></label>
-    <br>
-    <br>
+        <label th:for="reasonForService" th:text="#{ReasonForService.label}"></label>
+        <br>
+        <br>
     <input th:id="reasonForService" th:class="readonlyInput" th:type="hidden" th:name="category"  th:value="${carDto.category}" th:text="${carDto.category.categoryName}" />
     <br>
     <br>
     </div>
-
-    Cost of service (PLN):
+    <label th:for="costOfService" th:text="#{CostOfService.label}"></label>
+    <br>
     <br>
 
-    <input th:type="number" th:step="1" th:pattern="d+" th:min="1" th:field="*{costOfService}" required
+    <input th:id="costOfService" th:type="number" th:step="1" pattern="\d+" th:min="1" th:field="*{costOfService}" th:required
            th:value="${carDto.costOfService}"/>
     <div th:if="${#fields.hasErrors('costOfService')}" th:class="'alert alert-danger'">
         <br>
@@ -50,21 +50,22 @@
     </div>
     <br>
     <br>
-    Date of repair:
+    <label th:for="dateOfRepair" th:text="#{DateOfRepair.label}"></label>
     <br>
-    <input type="date"  th:field="*{dateOfRepair}" required
+    <br>
+    <input th:id="dateOfRepair" th:type="date"  th:field="*{dateOfRepair}" th:required
            th:value="${carDto.dateOfRepair}"/>
     <!---->
 <!--    th:value="${carDto.dateOfRepair}"-->
     <br>
     <br>
-      <div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
+      <div th:if="${#fields.hasErrors('*')}" th:class="alert alert-danger">
       <p th:text="#{form.error}">
       <br>
       <br>
       </p>
   </div>
-    <button>Save Edits</button>
+    <button th:text="#{SaveEdits.caption}"></button>
 </form>
 
 

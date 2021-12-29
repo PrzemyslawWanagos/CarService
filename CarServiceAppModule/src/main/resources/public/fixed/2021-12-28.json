@@ -1,0 +1,9 @@
+[ {
+  "make" : "Toyota",
+  "licencePlate" : "WW89764",
+  "category" : "SEATS",
+  "costOfService" : 145,
+  "repaired" : true,
+  "description" : "77",
+  "dateOfRepair" : "2021-12-28"
+} ]

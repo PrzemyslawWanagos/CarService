@@ -75,10 +75,10 @@
     "make" : "fiat",
     "licencePlate" : "GSP0101",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 211,
+    "repaired" : true,
     "description" : "77",
-    "dateOfRepair" : null
+    "dateOfRepair" : "2021-12-24"
   }, {
     "make" : "ford",
     "licencePlate" : "GS45342",
@@ -91,10 +91,10 @@
     "make" : "Toyota",
     "licencePlate" : "WW89764",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 145,
+    "repaired" : true,
     "description" : "77",
-    "dateOfRepair" : null
+    "dateOfRepair" : "2021-12-28"
   }, {
     "make" : "Skoda",
     "licencePlate" : "GWE2323",
