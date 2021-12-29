@@ -52,12 +52,20 @@
     </select>
     <br>
     <br>
+    <label th:for="serviceStartDate" th:text="#{serviceStartDate.label}"></label>
+    <br>
+    <input th:type="date" th:field="*{serviceStartDate}" th:required="required"
+           th:value="${carDto.serviceStartDate}"/>
+
     <div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
         <p th:text="#{form.error}">
             <br>
             <br>
         </p>
     </div>
+    <br>
+    <br>
+
     <button th:text="#{addCarToServiceQueue.caption}"></button>
 </form>
 <nav>

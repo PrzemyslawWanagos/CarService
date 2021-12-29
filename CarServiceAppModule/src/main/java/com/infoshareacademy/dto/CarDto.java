@@ -19,9 +19,23 @@ public class CarDto {
     private  boolean repaired;
 
     private String dateOfRepair;
+    private String serviceStartDate;
+
 
     public CarDto() {
        // this.category=Category.OTHER;
+    }
+
+    public boolean isRepaired() {
+        return repaired;
+    }
+
+    public String getServiceStartDate() {
+        return serviceStartDate;
+    }
+
+    public void setServiceStartDate(String serviceStartDate) {
+        this.serviceStartDate = serviceStartDate;
     }
 
     public String getMake() {

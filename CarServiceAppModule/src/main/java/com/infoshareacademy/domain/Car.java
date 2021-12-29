@@ -11,11 +11,12 @@ public class Car {
     private boolean repaired;
     private String description;
     private String dateOfRepair;
+    private String serviceStartDate;
 
     public Car() {
     }
 
-    public Car(String make, String licencePlate, Category category, int costOfService, boolean repaired, String description, String dateOfRepair) {
+    public Car(String make, String licencePlate, Category category, int costOfService, boolean repaired, String description, String dateOfRepair, String serviceStartDate) {
         this.make = make;
         this.licencePlate = licencePlate;
         this.category = category;
@@ -23,6 +24,8 @@ public class Car {
         this.repaired = repaired;
         this.description = description;
         this.dateOfRepair = dateOfRepair;
+        this.serviceStartDate=serviceStartDate;
+
     }
 
     public String getMake() {
@@ -79,6 +82,14 @@ public class Car {
 
     public void setDateOfRepair(String dateOfRepair) {
         this.dateOfRepair = dateOfRepair;
+    }
+
+    public String getServiceStartDate() {
+        return serviceStartDate;
+    }
+
+    public void setServiceStartDate(String serviceStartDate) {
+        this.serviceStartDate = serviceStartDate;
     }
 
     @Override

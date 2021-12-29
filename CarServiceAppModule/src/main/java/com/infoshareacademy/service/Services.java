@@ -96,6 +96,7 @@ public class Services {
                 .stream()
                 .filter(c ->Objects.nonNull(c.isRepaired()))
                 .filter(c ->c.isRepaired()==true)
+                .sorted((c1, c2)->c2.getDateOfRepair().compareTo(c1.getDateOfRepair()))
                 .collect(Collectors.toList());
         return toReturn;
     }
@@ -105,6 +106,7 @@ public class Services {
                 .stream()
                 .filter(c ->Objects.nonNull(c.isRepaired()))
                 .filter(c ->c.isRepaired()==false)
+                .sorted((c1, c2)->c1.getServiceStartDate().compareTo(c2.getServiceStartDate()))
                 .collect(Collectors.toList());
         return toReturn;
     }
@@ -114,6 +116,7 @@ public class Services {
         car.setLicencePlate(carDto.getLicencePlate());
         car.setDescription(carDto.getDescription());
         car.setCategory(carDto.getCategory());
+        car.setServiceStartDate(carDto.getServiceStartDate());
     }
 
     public void fromEntityToDto(Car car, CarDto carDto) {
@@ -123,6 +126,7 @@ public class Services {
         carDto.setCategory(car.getCategory());
         carDto.setCostOfService(car.getCostOfService());
         carDto.setRepaired(car.isRepaired());
+        carDto.setServiceStartDate(car.getServiceStartDate());
         //carDto.setDateOfRepair(car.getDateOfRepair());
     }
 }
