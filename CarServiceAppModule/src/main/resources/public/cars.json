@@ -127,5 +127,13 @@
     "repaired" : false,
     "description" : "77",
     "dateOfRepair" : null
+  }, {
+    "make" : "aa",
+    "licencePlate" : "adf",
+    "category" : "MAINTENANCE",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "a",
+    "dateOfRepair" : null
   } ]
 }
