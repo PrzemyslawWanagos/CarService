@@ -155,18 +155,18 @@
     "make" : "hhh",
     "licencePlate" : "hhh",
     "category" : "OTHER",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 200,
+    "repaired" : true,
     "description" : "hhh",
-    "dateOfRepair" : null
+    "dateOfRepair" : "2021-12-25"
   }, {
     "make" : "QW",
     "licencePlate" : "QW",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 100,
+    "repaired" : true,
     "description" : "QW",
-    "dateOfRepair" : null
+    "dateOfRepair" : ""
   }, {
     "make" : "Ford",
     "licencePlate" : "GA76762",
@@ -182,6 +182,14 @@
     "costOfService" : 0,
     "repaired" : false,
     "description" : "Fabia",
+    "dateOfRepair" : null
+  }, {
+    "make" : "Ford",
+    "licencePlate" : "KR01000",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "fkjdslkfj",
     "dateOfRepair" : null
   } ]
 }

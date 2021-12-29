@@ -78,4 +78,12 @@
   "repaired" : true,
   "description" : "gdgsdf",
   "dateOfRepair" : "2021-12-25"
+}, {
+  "make" : "hhh",
+  "licencePlate" : "hhh",
+  "category" : "OTHER",
+  "costOfService" : 200,
+  "repaired" : true,
+  "description" : "hhh",
+  "dateOfRepair" : "2021-12-25"
 } ]

@@ -31,7 +31,7 @@ public class EditCarController {
     }
 
     @GetMapping(value = "/edit/{licencePlate}")
-    public String carEditForm(@PathVariable String licencePlate, Model model) {
+    public String editCarForm(@PathVariable String licencePlate, Model model) {
         carToEditID = services.FindByLicencePlate(cars, licencePlate);
         Car carToEdit = cars.getCars().get(carToEditID);
         CarDto carDto = new CarDto();
@@ -53,13 +53,13 @@ public class EditCarController {
             car.setRepaired(true);
             car.setDateOfRepair(carDto.getDateOfRepair());
             services.saveCarService(cars);
-            if(exception!=null){
-                return "redirect:/error/Error while updating the list of cars";
-            }
-            services.saveRepairedCarList(cars, car.getDateOfRepair());
-            if(exception!=null){
-                return "redirect:/error/Error while updating the list of repaired cars";
-            }
+//            if(exception!=null){
+//                return "redirect:/error/Error while updating the list of cars";
+//            }
+//            services.saveRepairedCarList(cars, car.getDateOfRepair());
+//            if(exception!=null){
+//                return "redirect:/error/Error while updating the list of repaired cars";
+//            }
         } catch (Exception e) {
             return e.toString();
         }

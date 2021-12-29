@@ -22,7 +22,7 @@ public class FixedCarsController {
     }
 
     @GetMapping("fixed-cars")
-    public String displayAllCars(Model model) {
+    public String displayFixedCars(Model model) {
         List <Car> fixedCars = services.returnListOfRepairedCars(cars);
         model.addAttribute("fixedCars", fixedCars);
         return "fixed-cars";

@@ -35,7 +35,7 @@ public class SearchCarController {
         return modelAndView;
     }
     @GetMapping("/show-cars-to-repair")
-    public ModelAndView displayCarstoFix() {
+    public ModelAndView displayCarsToFix() {
         List<Car> CarSearchResult= services.returnListCarsToRepair(cars);
         ModelAndView modelAndView = new ModelAndView("search-cars");
 //

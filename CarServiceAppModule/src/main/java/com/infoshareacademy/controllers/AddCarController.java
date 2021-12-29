@@ -34,13 +34,13 @@ public class AddCarController {
     }
 
     @GetMapping("add-car")
-    public String createCar(Model model) {
+    public String createCarForm(Model model) {
         model.addAttribute("carDto", new CarDto());
         return "add-car";
     }
 
     @PostMapping(value = "add-car")
-    public String saveAddedCar(@Valid @ModelAttribute("carDto") CarDto carDto,
+    public String saveCreatedCar(@Valid @ModelAttribute("carDto") CarDto carDto,
                                BindingResult bindingResult) {
         Car car = new Car();
         if (bindingResult.hasErrors()) {
