@@ -83,10 +83,10 @@
     "make" : "ford",
     "licencePlate" : "GS45342",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 4500,
+    "repaired" : true,
     "description" : "77",
-    "dateOfRepair" : null
+    "dateOfRepair" : "2021-12-25"
   }, {
     "make" : "Toyota",
     "licencePlate" : "WW89764",
@@ -99,34 +99,34 @@
     "make" : "Skoda",
     "licencePlate" : "GWE2323",
     "category" : "DRIVE",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 333,
+    "repaired" : true,
     "description" : "77",
-    "dateOfRepair" : null
+    "dateOfRepair" : "2021-12-25"
   }, {
     "make" : "Fiat",
     "licencePlate" : "GD23345",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 120,
+    "repaired" : true,
     "description" : "77",
-    "dateOfRepair" : null
+    "dateOfRepair" : "2021-12-25"
   }, {
     "make" : "aw",
     "licencePlate" : "wa",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 100,
+    "repaired" : true,
     "description" : "77",
-    "dateOfRepair" : null
+    "dateOfRepair" : "2021-02-04"
   }, {
     "make" : "Lotus",
     "licencePlate" : "GSP9999",
     "category" : "BRAKES",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 121,
+    "repaired" : true,
     "description" : "77",
-    "dateOfRepair" : null
+    "dateOfRepair" : "2021-12-25"
   }, {
     "make" : "aa",
     "licencePlate" : "adf",

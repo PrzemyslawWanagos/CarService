@@ -38,4 +38,36 @@
   "repaired" : true,
   "description" : "77",
   "dateOfRepair" : "2021-12-25"
+}, {
+  "make" : "ford",
+  "licencePlate" : "GS45342",
+  "category" : "SEATS",
+  "costOfService" : 4500,
+  "repaired" : true,
+  "description" : "77",
+  "dateOfRepair" : "2021-12-25"
+}, {
+  "make" : "Skoda",
+  "licencePlate" : "GWE2323",
+  "category" : "DRIVE",
+  "costOfService" : 333,
+  "repaired" : true,
+  "description" : "77",
+  "dateOfRepair" : "2021-12-25"
+}, {
+  "make" : "Fiat",
+  "licencePlate" : "GD23345",
+  "category" : "SEATS",
+  "costOfService" : 120,
+  "repaired" : true,
+  "description" : "77",
+  "dateOfRepair" : "2021-12-25"
+}, {
+  "make" : "Lotus",
+  "licencePlate" : "GSP9999",
+  "category" : "BRAKES",
+  "costOfService" : 121,
+  "repaired" : true,
+  "description" : "77",
+  "dateOfRepair" : "2021-12-25"
 } ]
