@@ -1,0 +1,9 @@
+[ {
+  "make" : "aa",
+  "licencePlate" : "adf",
+  "category" : "MAINTENANCE",
+  "costOfService" : 9999,
+  "repaired" : true,
+  "description" : "a",
+  "dateOfRepair" : "2021-12-31"
+} ]

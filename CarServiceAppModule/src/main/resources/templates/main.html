@@ -2,44 +2,19 @@
 <html lang=“en” xmlns:th=“http://www.thymeleaf.org” xmlns:layout=“http://www.ultraq.net.nz/thymeleaf/layout”
       layout:decorate=“~{layout}“>
 <head>
-
+    <meta charset="UTF-8">
+    <title th:text="#{main.title}"></title>
 </head>
 <body>
 <div style="text-align:center">
-    <h1>Welcome to Car Service App</h1>
+    <h1 th:text="#{main.header}"></h1>
     <img src="../static/LOGO-CarService.jpg" height="300" th:src="@{LOGO.jpg}"/>
-    <br>
-    <br>
-    <button onclick="window.location.href='/all-cars';">Full list of cars</button>
-     <br>
-    <br>
-    <br>
-    <br>
-    <button onclick="window.location.href='/add-car';">Add car</button>
-    <br>
-    <br>
-<!--    <form action="/search-car">-->
-<!--        Search for car (enter licence number or its part as a search parameter)  : <input type="text" name="licencePlate"/>-->
-<!--        <br>-->
-<!--        <br>-->
-<!--        <button>Search</button>-->
-<!--    </form>-->
-<!--    <br>-->
-<!--    <br>-->
-<!--    <br>-->
-    <br>
-    <br>
-    <div th:replace="fragments/commonButtons :: custom ('show-cars-to-repair','Show cars to fix')">
-    </div>
-
-    <button onclick="window.location.href='/exit';">Exit App</button>
+    <nav>
+        <div th:replace="fragments/commonButtons :: custom ('all-cars','Full list of cars')"></div>
+        <div th:replace="fragments/commonButtons :: custom ('add-car','Add car')"></div>
+        <div th:replace="fragments/commonButtons :: custom ('show-cars-to-repair','Show cars to fix')"></div>
+        <div th:replace="fragments/commonButtons :: custom ('fixed-cars','Show fixed Cars')"></div>
+    </nav>
 </div>
-
-<nav>
-    <br>
-    <br>
-    <div th:replace="fragments/commonButtons :: custom ('fixed-cars','Show fixed Cars')">
-    </div>
-</nav>
 </body>
 </html>

@@ -131,18 +131,18 @@
     "make" : "aa",
     "licencePlate" : "adf",
     "category" : "MAINTENANCE",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 9999,
+    "repaired" : true,
     "description" : "a",
-    "dateOfRepair" : null
+    "dateOfRepair" : "2021-12-31"
   }, {
     "make" : "rqew",
     "licencePlate" : "rqwerwe",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 123,
+    "repaired" : true,
     "description" : "rqwerq",
-    "dateOfRepair" : null
+    "dateOfRepair" : "2020-12-25"
   }, {
     "make" : "fgd",
     "licencePlate" : "gsdfsg",
@@ -166,6 +166,14 @@
     "costOfService" : 0,
     "repaired" : false,
     "description" : "QW",
+    "dateOfRepair" : null
+  }, {
+    "make" : "Ford",
+    "licencePlate" : "GA76762",
+    "category" : "BRAKES",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "fkdjsafklj",
     "dateOfRepair" : null
   } ]
 }

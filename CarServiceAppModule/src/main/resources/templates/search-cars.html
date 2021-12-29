@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang=“en” xmlns:th=“http://www.thymeleaf.org” xmlns:layout=“http://www.ultraq.net.nz/thymeleaf/layout”
       layout:decorate=“~{layout}“>
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{search-cars.title}"></title>
+</head>
 <body>
-<h1>Cars which meet your search criteria</h1>
-<h2 th:if="${carSearchResult.empty}">No cars found</h2>
+<h1 th:text="#{search-cars.header}"></h1>
 
+<div th:if="${carSearchResult.empty}">
+    <h2 th:text="#{search-cars.empty}"></h2>
+</div>
 <table border="2" width="70%" cellpadding="2" th:if="${!carSearchResult.empty}">
     <form action="/search-car">
-        Search for car (enter licence number or its part as a search parameter)  : <input type="text" name="licencePlate"/>
+        <label th:for="licencePlate"></label>
+        <input th:id="licencePlate" th:type="text" th:name="licencePlate"/>
         <br>
         <br>
-        <button>Search</button>
+        <button th:text="#{searchButton.caption}"></button>
     </form>
+    <br>
+    <br>
     <tr>
-        <th>#</th>
-        <th>Make</th>
-        <th>Licence plate</th>
-        <th>Reason for service</th>
-        <th>Cost of service</th>
-        <!--/* <th>Repaired</th>
-         <th>Edit</th> */-->
+        <th th:text="'#'"></th>
+        <th th:text="#{Make.label}"></th>
+        <th th:text="#{LicencePlate.label}"></th>
+        <th th:text="#{ReasonForService.label}"></th>
+        <th th:text="#{ConfirmCarRepair.label}"></th>
     </tr>
     <tr th:each="car, stat : ${carSearchResult}">
         <td th:text="${stat.index + 1}"></td>
@@ -30,7 +37,7 @@
          <td th:text="${car.repaired}"></td> */-->
         <td>
             <a th:href="@{/edit/{EditlicencePlate}(EditlicencePlate=${car.licencePlate})}">
-                <button type="button" th:text="#{Car.link}"></button>
+                <button type="button" th:text="#{ConfirmCarRepair.caption}"></button>
             </a>
         </td>
     </tr>
