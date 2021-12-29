@@ -70,4 +70,12 @@
   "repaired" : true,
   "description" : "77",
   "dateOfRepair" : "2021-12-25"
+}, {
+  "make" : "fgd",
+  "licencePlate" : "gsdfsg",
+  "category" : "BRAKES",
+  "costOfService" : 123,
+  "repaired" : true,
+  "description" : "gdgsdf",
+  "dateOfRepair" : "2021-12-25"
 } ]

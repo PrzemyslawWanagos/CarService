@@ -13,7 +13,9 @@
 </div>
 <table border="2" width="70%" cellpadding="2" th:if="${!carSearchResult.empty}">
     <form action="/search-car">
-        <label th:for="licencePlate"></label>
+        <label th:for="licencePlate" th:text="#{searchCriteria.label}"></label>
+        <br>
+        <br>
         <input th:id="licencePlate" th:type="text" th:name="licencePlate"/>
         <br>
         <br>
