@@ -91,6 +91,23 @@ public class Services {
                 .collect(Collectors.toList());
         return toReturn;
     }
+    public List<Car> returnListOfRepairedCars(Cars cars) {
+        List<Car> toReturn = cars.getCars()
+                .stream()
+                .filter(c ->Objects.nonNull(c.isRepaired()))
+                .filter(c ->c.isRepaired()==true)
+                .collect(Collectors.toList());
+        return toReturn;
+    }
+
+    public List<Car> returnListCarsToRepair(Cars cars) {
+        List<Car> toReturn = cars.getCars()
+                .stream()
+                .filter(c ->Objects.nonNull(c.isRepaired()))
+                .filter(c ->c.isRepaired()==false)
+                .collect(Collectors.toList());
+        return toReturn;
+    }
 
     public void fromDtoToEntity(CarDto carDto, Car car) {
         car.setMake(carDto.getMake());

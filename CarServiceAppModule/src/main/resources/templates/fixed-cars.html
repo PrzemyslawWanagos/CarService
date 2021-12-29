@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang=“en” xmlns:th=“http://www.thymeleaf.org” xmlns:layout=“http://www.ultraq.net.nz/thymeleaf/layout”
+      layout:decorate=“~{layout}“>
+<body>
+<h1>Fixed Cars</h1>
+<h2 th:if="${fixedCars.empty}">No cars found</h2>
+
+<table border="2" width="70%" cellpadding="2" th:if="${!fixedCars.empty}">
+    <tr>
+        <th>#</th>
+        <th>Make
+        <th>Description</th>
+        <th>Licence plate</th>
+        <th>Reason for service</th>
+        <th>Cost of service</th>
+        <th>Repaired</th>
+        <th>Date of repair</th>
+<!--        <th>Edit</th>-->
+    </tr>
+    <tr th:each="car, stat : ${fixedCars}">
+        <td th:text="${stat.index + 1}"></td>
+        <td th:text="${car.make}"></td>
+        <td th:text="${car.Description}"></td>
+        <td th:text="${car.licencePlate}"></td>
+        <td th:text="${car.category.categoryName}"></td>
+        <td th:text="${car.costOfService}"></td>
+        <td th:text="${car.repaired}"></td>
+        <td th:text="${car.DateOfRepair}"></td>
+
+    </tr>
+</table>
+
+<nav>
+    <br>
+    <br>
+    <div th:insert="fragments/commonButtons :: main"></div>
+</nav>
+
+
+</body>
+</html>

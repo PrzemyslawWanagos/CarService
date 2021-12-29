@@ -34,5 +34,14 @@ public class SearchCarController {
 
         return modelAndView;
     }
+    @GetMapping("/show-cars-to-repair")
+    public ModelAndView displayCarstoFix() {
+        List<Car> CarSearchResult= services.returnListCarsToRepair(cars);
+        ModelAndView modelAndView = new ModelAndView("search-cars");
+//
+//        System.out.println(listToString(CarSearchResult,true));
+        modelAndView.addObject("carSearchResult",CarSearchResult);
 
+        return modelAndView;
+    }
 }

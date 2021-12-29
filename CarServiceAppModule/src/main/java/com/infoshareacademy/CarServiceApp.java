@@ -18,7 +18,7 @@ import static com.infoshareacademy.Utils.findFile;
 public class CarServiceApp {
 
     public static final String PATH_TO_FULL_LIST_OF_CARS = findFile(System.getProperty("user.dir"), "cars.json").getAbsolutePath();
-    public static final String PATH_TO_FOLDER_WITH_REPAIRED_CARS = findFile(System.getProperty("user.dir"), "repairedCars").getAbsolutePath();
+    public static final String PATH_TO_FOLDER_WITH_REPAIRED_CARS = findFile(System.getProperty("user.dir"), "fixed").getAbsolutePath();
     public static Exception exception;
     static ConfigurableApplicationContext ctx;
 

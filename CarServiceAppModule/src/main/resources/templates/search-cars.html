@@ -6,6 +6,12 @@
 <h2 th:if="${carSearchResult.empty}">No cars found</h2>
 
 <table border="2" width="70%" cellpadding="2" th:if="${!carSearchResult.empty}">
+    <form action="/search-car">
+        Search for car (enter licence number or its part as a search parameter)  : <input type="text" name="licencePlate"/>
+        <br>
+        <br>
+        <button>Search</button>
+    </form>
     <tr>
         <th>#</th>
         <th>Make</th>
