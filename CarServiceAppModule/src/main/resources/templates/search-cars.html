@@ -24,10 +24,10 @@
     <br>
     <tr>
         <th th:text="'#'"></th>
-        <th th:text="#{Make.label}"></th>
-        <th th:text="#{LicencePlate.label}"></th>
-        <th th:text="#{ReasonForService.label}"></th>
-        <th th:text="#{ConfirmCarRepair.label}"></th>
+        <th th:text="#{make.label}"></th>
+        <th th:text="#{licencePlate.label}"></th>
+        <th th:text="#{reasonForService.label}"></th>
+        <th th:text="#{confirmCarRepair.label}"></th>
     </tr>
     <tr th:each="car, stat : ${carSearchResult}">
         <td th:text="${stat.index + 1}"></td>
@@ -38,7 +38,7 @@
          <td th:text="${car.repaired}"></td> */-->
         <td>
             <a th:href="@{/edit/{EditlicencePlate}(EditlicencePlate=${car.licencePlate})}">
-                <button type="button" th:text="#{ConfirmCarRepair.caption}"></button>
+                <button type="button" th:text="#{confirmCarRepair.caption}"></button>
             </a>
         </td>
     </tr>

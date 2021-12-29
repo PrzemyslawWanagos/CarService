@@ -9,7 +9,7 @@
 
 <p>
 <form th:object="${carDto}" th:action="@{/add-car}" method="post">
-    <label th:for="make" th:text="#{Make.label}"></label>
+    <label th:for="make" th:text="#{make.label}"></label>
     <br>
     <input th:id="make" th:type="text" th:field="*{make}" th:required="required"/>
     <div th:if="${#fields.hasErrors('make')}" th:class="'alert alert-danger'">
@@ -22,14 +22,14 @@
     <br>
     <br>
 
-    <label th:for="description" th:text="#{Description.label}"></label>
+    <label th:for="description" th:text="#{description.label}"></label>
     <br>
     <br>
     <input th:id="description" th:type="text" th:field="*{description}" th:required="required"/>
     <br>
     <br>
 
-    <label th:for="licencePlate" th:text="#{LicencePlate.label}"></label>
+    <label th:for="licencePlate" th:text="#{licencePlate.label}"></label>
     <br>
     <br>
     <input th:id="licencePlate" th:type="text" th:field="*{licencePlate}" th:required="required"/>
@@ -43,7 +43,7 @@
     <br>
     <br>
 
-    <label th:for="reasonForService" th:text="#{ReasonForService.label}"></label>
+    <label th:for="reasonForService" th:text="#{reasonForService.label}"></label>
     <br>
     <br>
     <select th:id="reasonForService" th:field="*{category}" id="Category" th:required="required">
@@ -58,7 +58,7 @@
             <br>
         </p>
     </div>
-    <button th:text="#{AddCarToServiceQueue.caption}"></button>
+    <button th:text="#{addCarToServiceQueue.caption}"></button>
 </form>
 <nav>
     <div th:insert="fragments/commonButtons :: main"></div>

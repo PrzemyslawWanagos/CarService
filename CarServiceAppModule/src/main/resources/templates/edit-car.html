@@ -10,32 +10,32 @@
 <form th:object="${carDto}" th:action="@{/edit/{licencePlate}(licencePlate=${carDto.licencePlate})}" method="post" onkeydown="return event.key !== 'Enter';"> <!---->
 
     <div>
-        <label th:for="make" th:text="#{Make.label}"></label>
+        <label th:for="make" th:text="#{make.label}"></label>
         <br>
 
     <input th:id="make" th:class="readonlyInput" th:type="hidden" th:name="make" th:value="${carDto.make} " th:text="${carDto.make} "/>
     <br>
     <br>
-        <label th:for="description" th:text="#{Description.label}"></label>
+        <label th:for="description" th:text="#{description.label}"></label>
         <br>
         <br>
     <input th:id="description" th:class="readonlyInput" th:type="hidden" th:name="description" th:value="${carDto.description}" th:text="${carDto.description}"/>
     <br>
     <br>
-        <label th:for="licencePlate" th:text="#{LicencePlate.label}"></label>
+        <label th:for="licencePlate" th:text="#{licencePlate.label}"></label>
         <br>
         <br>
     <input th:id="licencePlate" th:class="readonlyInput" th:type="hidden" th:name="licencePlate" th:value="${carDto.licencePlate}" th:text="${carDto.licencePlate}"/>
     <br>
     <br>
-        <label th:for="reasonForService" th:text="#{ReasonForService.label}"></label>
+        <label th:for="reasonForService" th:text="#{reasonForService.label}"></label>
         <br>
         <br>
     <input th:id="reasonForService" th:class="readonlyInput" th:type="hidden" th:name="category"  th:value="${carDto.category}" th:text="${carDto.category.categoryName}" />
     <br>
     <br>
     </div>
-    <label th:for="costOfService" th:text="#{CostOfService.label}"></label>
+    <label th:for="costOfService" th:text="#{costOfService.label}"></label>
     <br>
     <br>
 
@@ -50,7 +50,7 @@
     </div>
     <br>
     <br>
-    <label th:for="dateOfRepair" th:text="#{DateOfRepair.label}"></label>
+    <label th:for="dateOfRepair" th:text="#{dateOfRepair.label}"></label>
     <br>
     <input  th:type="date"  th:field="*{dateOfRepair}" th:required="required"
            th:value="${carDto.dateOfRepair}" />
@@ -64,7 +64,7 @@
       <br>
       </p>
   </div>
-    <button th:text="#{SaveEdits.caption}"></button>
+    <button th:text="#{saveEdits.caption}"></button>
 </form>
 
 
