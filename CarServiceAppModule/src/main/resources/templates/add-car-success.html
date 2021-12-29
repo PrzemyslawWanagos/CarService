@@ -2,17 +2,12 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title th:text="#{newCar.title}"></title>
+    <title th:text="#{add-car-success.title}"></title>
 </head>
 <body>
-<h2 th:text="#{newCar.caption}"></h2>
+<h2 th:text="#{add-car-success.header}"></h2>
 <nav>
-    <div>
-        <a th:href="@{/all-cars}">
-            <button type="button" th:text="OK"></button>
-        </a>
-    </div>
+    <div th:replace="fragments/commonButtons :: custom ('all-cars','OK')"></div>
 </nav>
-<!--<h1 th:text="Car added"></h1>-->
 </body>
 </html>

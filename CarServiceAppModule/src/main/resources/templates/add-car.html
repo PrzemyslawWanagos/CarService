@@ -6,11 +6,7 @@
 </head>
 <body>
 <h1 th:text="#{add-car.header}"></h1>
-<nav>
-    <br>
-    <br>
-    <div th:insert="fragments/commonButtons :: main"></div>
-</nav>
+
 <p>
 <form th:object="${carDto}" th:action="@{/add-car}" method="post">
     <label th:for="make" th:text="#{Make.label}"></label>
@@ -65,8 +61,6 @@
     <button th:text="#{AddCarToServiceQueue.label}"></button>
 </form>
 <nav>
-    <br>
-    <br>
     <div th:insert="fragments/commonButtons :: main"></div>
 </nav>
 

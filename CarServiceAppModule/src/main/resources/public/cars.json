@@ -135,5 +135,37 @@
     "repaired" : false,
     "description" : "a",
     "dateOfRepair" : null
+  }, {
+    "make" : "rqew",
+    "licencePlate" : "rqwerwe",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "rqwerq",
+    "dateOfRepair" : null
+  }, {
+    "make" : "fgd",
+    "licencePlate" : "gsdfsg",
+    "category" : "BRAKES",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "gdgsdf",
+    "dateOfRepair" : null
+  }, {
+    "make" : "hhh",
+    "licencePlate" : "hhh",
+    "category" : "OTHER",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "hhh",
+    "dateOfRepair" : null
+  }, {
+    "make" : "QW",
+    "licencePlate" : "QW",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "QW",
+    "dateOfRepair" : null
   } ]
 }
