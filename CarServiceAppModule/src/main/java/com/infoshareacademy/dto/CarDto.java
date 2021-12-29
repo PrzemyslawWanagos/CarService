@@ -17,6 +17,7 @@ public class CarDto {
     @Max(10000)
     private  Integer costOfService;
     private  boolean repaired;
+
     private String dateOfRepair;
 
     public CarDto() {

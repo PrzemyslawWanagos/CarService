@@ -11,7 +11,7 @@
 <form th:object="${carDto}" th:action="@{/add-car}" method="post">
     <label th:for="make" th:text="#{Make.label}"></label>
     <br>
-    <input th:id="make" th:type="text" th:field="*{make}" required/>
+    <input th:id="make" th:type="text" th:field="*{make}" th:required="required"/>
     <div th:if="${#fields.hasErrors('make')}" th:class="'alert alert-danger'">
 
         <ul>
@@ -25,14 +25,14 @@
     <label th:for="description" th:text="#{Description.label}"></label>
     <br>
     <br>
-    <input th:id="description" th:type="text" th:field="*{description}" required/>
+    <input th:id="description" th:type="text" th:field="*{description}" th:required="required"/>
     <br>
     <br>
 
     <label th:for="licencePlate" th:text="#{LicencePlate.label}"></label>
     <br>
     <br>
-    <input th:id="licencePlate" th:type="text" th:field="*{licencePlate}" required/>
+    <input th:id="licencePlate" th:type="text" th:field="*{licencePlate}" th:required="required"/>
     <div th:if="${#fields.hasErrors('licencePlate')}" th:class="'alert alert-danger'">
 
         <ul>
@@ -46,7 +46,7 @@
     <label th:for="reasonForService" th:text="#{ReasonForService.label}"></label>
     <br>
     <br>
-    <select th:id="reasonForService" th:field="*{category}" id="Category" required>
+    <select th:id="reasonForService" th:field="*{category}" id="Category" th:required="required">
         <option th:each="categoryOpt : ${T(com.infoshareacademy.domain.Category).values()}"
                 th:value="${categoryOpt.name()}" th:text="${categoryOpt.categoryName}"></option>
     </select>

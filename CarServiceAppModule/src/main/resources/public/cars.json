@@ -166,30 +166,70 @@
     "costOfService" : 100,
     "repaired" : true,
     "description" : "QW",
-    "dateOfRepair" : ""
+    "dateOfRepair" : null
   }, {
     "make" : "Ford",
     "licencePlate" : "GA76762",
     "category" : "BRAKES",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 100,
+    "repaired" : true,
     "description" : "fkdjsafklj",
-    "dateOfRepair" : null
+    "dateOfRepair" : "2012-12-25"
   }, {
     "make" : "Skoda",
     "licencePlate" : "GST2323A",
     "category" : "OTHER",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 100,
+    "repaired" : true,
     "description" : "Fabia",
-    "dateOfRepair" : null
+    "dateOfRepair" : "2021-12-25"
   }, {
     "make" : "Ford",
     "licencePlate" : "KR01000",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 100,
+    "repaired" : true,
     "description" : "fkjdslkfj",
-    "dateOfRepair" : null
+    "dateOfRepair" : "2021-12-25"
+  }, {
+    "make" : "arewq",
+    "licencePlate" : "afeasf",
+    "category" : "SEATS",
+    "costOfService" : 100,
+    "repaired" : true,
+    "description" : "a",
+    "dateOfRepair" : "2012-12-25"
+  }, {
+    "make" : "fads",
+    "licencePlate" : "fads",
+    "category" : "SEATS",
+    "costOfService" : 120,
+    "repaired" : true,
+    "description" : "fdas",
+    "dateOfRepair" : "2021-12-25"
+  }, {
+    "make" : "Test",
+    "licencePlate" : "fadsfa",
+    "category" : "BRAKES",
+    "costOfService" : 100,
+    "repaired" : true,
+    "description" : "fdasf",
+    "dateOfRepair" : "2021-12-23"
+  }, {
+    "make" : "fldkasj",
+    "licencePlate" : "flkdsjflk",
+    "category" : "SEATS",
+    "costOfService" : 100,
+    "repaired" : true,
+    "description" : "fkldasjflka",
+    "dateOfRepair" : "2021-12-25"
+  }, {
+    "make" : "ldksjflkj",
+    "licencePlate" : "fqweewrqfdsg",
+    "category" : "SEATS",
+    "costOfService" : 100,
+    "repaired" : true,
+    "description" : "fdslkajrioewum",
+    "dateOfRepair" : ""
   } ]
 }

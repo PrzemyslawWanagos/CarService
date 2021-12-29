@@ -1,0 +1,9 @@
+[ {
+  "make" : "Test",
+  "licencePlate" : "fadsfa",
+  "category" : "BRAKES",
+  "costOfService" : 100,
+  "repaired" : true,
+  "description" : "fdasf",
+  "dateOfRepair" : "2021-12-23"
+} ]
