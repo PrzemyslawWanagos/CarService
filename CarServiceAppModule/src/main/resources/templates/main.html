@@ -3,17 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title th:text="#{main.title}"></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="CV%20Styles.css">
 </head>
 <body>
-<div style="text-align:center">
-    <h1 th:text="#{main.header}"></h1>
-    <img src="../static/LOGO-CarService.jpg" height="300" th:src="@{LOGO.jpg}"/>
-    <nav>
-        <div th:replace="fragments/commonButtons :: custom ('all-cars','Full list of cars')"></div>
-        <div th:replace="fragments/commonButtons :: custom ('add-car','Add car')"></div>
-        <div th:replace="fragments/commonButtons :: custom ('show-cars-to-repair','Show cars to fix')"></div>
-        <div th:replace="fragments/commonButtons :: custom ('fixed-cars','Show fixed Cars')"></div>
-    </nav>
-</div>
+<!--<div style="text-align:center">-->
+    <div class="top-logo">
+
+        <img src="../static/LOGO-CarService.jpg" height="200" th:src="@{LOGO.jpg}"/>
+    </div>
+
+    <div class="container">
+        <div class="col-2">
+<!--        <div class="row justify-content-start">-->
+
+
+                <nav>
+                    <div th:replace="fragments/commonButtons :: custom ('all-cars','Full list of cars')"></div>
+                    <div th:replace="fragments/commonButtons :: custom ('add-car','Add car')"></div>
+                    <div th:replace="fragments/commonButtons :: custom ('show-cars-to-repair','Show cars to fix')"></div>
+                    <div th:replace="fragments/commonButtons :: custom ('fixed-cars','Show fixed Cars')"></div>
+                </nav>
+<!--            </div>-->
+        </div>
+
+    </div>
+<!--</div>-->
 </body>
 </html>

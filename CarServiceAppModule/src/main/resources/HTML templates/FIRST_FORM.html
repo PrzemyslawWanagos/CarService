@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SIMPLE FORM</title>
+</head>
+<body>
+<h1 style="color: crimson">INFO SHARE PARTICIPANT FORM</h1>
+<p>
+<h2 style="color: blue">USER INFO</h2>
+<form id="IS training"> <!--JEDEN FORM NA CAL STRONE-->
+    User Name <input type="text" id="UserName" name="UserName">
+    <br>
+    <br>
+    User Password <input type="password" id="UserPssword" name=UserPassword">
+    <br>
+    <br>
+    Date of birth <input type="date" id="DateOfBirth" name="DateOfBirth">
+    <br>
+    <br>
+
+<hr>
+</p>
+<p>
+<h2 style="color: blue">COURSE INFO</h2>
+
+    Which course do you attend to <input type="text" id="CourseName">
+    <br>
+    <br>
+
+        What is the type of course?
+        <br>
+        <br>
+        <input type="radio" id="Online" name="CourseType">
+    <!--W PRZYPADKU RADIO WSZYSTKIE PRZYCISKI MUSZA MIEC TO SAMO NAME-->
+        <label for="Online">On line</label>
+    <!--DODAJEMY LABEL ABY KLIKAJAC NA LABEL ZMIENIAC WYBOR. W PRZECIWNYM RAZIE TYLKO KLIKNIECIE NA KROPKE BY ZMIANIALO-->
+        <br>
+        <br>
+        <input type="radio" id="ClassRoom" name="CourseType">
+        <label for="ClassRoom">Classroom</label>
+        <br>
+        <br>
+
+        What are the systems you want to learn?
+        <br>
+        <br>
+        <input type="checkbox" id="Java" name="Java">
+        <label for="Java">JAVA</label>
+        <br>
+        <br>
+        <input type="checkbox" id="HTML" name="ClassRoom">
+        <label for="HTML">HTML</label>
+        <br>
+        <br>
+
+<hr>
+</p>
+
+<p>
+<h2 style="color: blue">COURSE RATING</h2>
+
+    How do you rate the course <input type="range" value="java" min="1" max="100" oninput="this.nextElementSibling.value = this.value">
+    <output>50</output>
+    <br>
+    <br>
+    Who is your favorite trainer <input type="text" id="FavoriteTrainer" name="FavoriteTrainer" value="Pawel Dobrzanski&#128540;">
+    <br>
+    <br>
+</form>
+<hr>
+</p>
+</body>

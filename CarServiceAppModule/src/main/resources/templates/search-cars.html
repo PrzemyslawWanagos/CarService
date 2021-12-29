@@ -5,8 +5,9 @@
     <title th:text="#{search-cars.title}"></title>
 </head>
 <body>
+<div class="jumbotron text-center">
 <h1 th:text="#{search-cars.header}"></h1>
-
+</div>
 <div th:if="${carSearchResult.isEmpty()}">
     <h2 th:text="#{search-cars.empty}"></h2>
 </div>
