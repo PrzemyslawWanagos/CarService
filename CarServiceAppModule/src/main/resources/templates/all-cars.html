@@ -1,127 +1,136 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="keywords" content="htmlcss bootstrap aside menu, vertical, sidebar nav menu CSS examples" />
-<meta name="description" content="Bootstrap 5 sidebar navigation menu example" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="htmlcss bootstrap aside menu, vertical, sidebar nav menu CSS examples"/>
+    <meta name="description" content="Bootstrap 5 sidebar navigation menu example"/>
 
-	<title th:text="#{all-cars.title}"></title>
+    <title th:text="#{all-cars.title}" ></title>
 
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"></script>
 
-<!-- ======= Icons used for dropdown (you can use your own) ======== -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <!-- ======= Icons used for dropdown (you can use your own) ======== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
     <style>
         .tableFixHead {
             overflow-y: scroll;
-            height: 400px;
+            height: 500px;
         }
-        .tableFixHead thead th {
+
+        .tableFixHead thead {
             position: sticky;
             top: 0;
         }
 
-        .tableFixHead tfoot tf {
+        .tableFixHead tfoot {
             position: sticky;
             bottom: 0;
         }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        th,
+
+        /*table {*/
+        /*    border-collapse: collapse;*/
+        /*    width: 100%;*/
+        /*}*/
+
+        thead,
         td {
             padding: 8px 16px;
             border: 1px solid #ccc;
         }
-        th {
-            background: #eee;
-        }
+
+        /*thead, tfoot {*/
+        /*    background: #eee;*/
+        /*}*/
     </style>
 
 </head>
 <body class="bg-light">
 
 <header class="section-header py-3">
-<div class="container">
-	<h2>Car Service </h2>
-</div>
+    <div class="container">
+        <h2>Car Service </h2>
+    </div>
 </header> <!-- section-header.// -->
 
 <div class="container">
 
-<section class="section-content py-3">
-	<div class="row">
-		<aside class="col-lg-3">
-			<div th:insert="fragments/frame :: menu"></div>
+    <section class="section-content py-3">
+        <div class="row">
+            <aside class="col-lg-3">
+                <div th:insert="fragments/frame :: menu"></div>
 
 
-<!-- ============= COMPONENT END// ============== -->	
-		</aside>
+                <!-- ============= COMPONENT END// ============== -->
+            </aside>
 
 
-		<main class="col-lg-9">
+            <main class="col-lg-9">
 
-<h6 th:text="#{all-cars.header}" class=""></h6>
+                <h6 class="text-center" th:text="#{all-cars.header}"></h6>
 
-			<div th:if="${allCars.isEmpty()}">
-				<h2  th:text="#{allCars.empty}"></h2>
-			</div>
-
-
-<div th:if="${!allCars.isEmpty()}">
-    <div class="tableFixHead">
-	<table  class="table table-striped table-bordered table-hover table-sm">
-	   <thead class="bg-secondary text-white">
-	    <tr >
-	        <th th:text="'#'"></th>
-	        <th th:text="#{make.label}"></th>
-	        <th th:text="#{description.label}"></th>
-	        <th th:text="#{licencePlate.label}"></th>
-	        <th th:text="#{reasonForService.label}"></th>
-	        <th th:text="#{costOfService.label}"></th>
-	        <th th:text="#{repaired.label}"></th>
-	        <th th:text="#{dateOfRepair.label}"></th>
-
-	    </tr>
-       </thead>
-        <tbody>
-	    <tr th:each="car, stat : ${allCars}" class="odd-row-color">
-	        <td th:text="${stat.index + 1}"></td>
-	        <td th:text="${car.make}"></td>
-	        <td th:text="${car.description}"></td>
-	        <td th:text="${car.licencePlate}"></td>
-	        <td th:text="${car.category.categoryName}"></td>
-	        <td th:text="${car.costOfService}"></td>
-	        <td th:text="${car.repaired}"></td>
-	        <td th:text="${car.dateOfRepair}"></td>
-
-	    </tr>
-        </tbody>
-        <tfoot>
-        <tr class="bg-secondary text-white">
-            <th th:text="'#'"></th>
-            <th th:text="#{make.label}"></th>
-            <th th:text="#{description.label}"></th>
-            <th th:text="#{licencePlate.label}"></th>
-            <th th:text="#{reasonForService.label}"></th>
-            <th th:text="#{costOfService.label}"></th>
-            <th th:text="#{repaired.label}"></th>
-            <th th:text="#{dateOfRepair.label}"></th>
-
-        </tr>
-        </tfoot>
-	</table>
-</div>
-</div>
+                <div th:if="${allCars.isEmpty()}">
+                    <h2 th:text="#{allCars.empty}"></h2>
+                </div>
 
 
-		</main>
-	</div>
-</section>
+                <div th:if="${!allCars.isEmpty()}">
+                    <div class="tableFixHead">
+                        <table class="table table-striped table-bordered table-hover" >
+<!--                            class="table table-striped table-bordered table-hover table-sm"-->
+                            <thead class="bg-secondary text-white"> <!--class="bg-secondary text-white"-->
+                            <tr>
+                                <th th:text="'#'"></th>
+                                <th th:text="#{make.label}"></th>
+                                <th th:text="#{description.label}"></th>
+                                <th th:text="#{licencePlate.label}"></th>
+                                <th th:text="#{reasonForService.label}"></th>
+                                <th th:text="#{costOfService.label}"></th>
+                                <th th:text="#{repaired.label}"></th>
+                                <th th:text="#{dateOfRepair.label}"></th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="car, stat : ${allCars}" class="odd-row-color">
+                                <td th:text="${stat.index + 1}"></td>
+                                <td th:text="${car.make}"></td>
+                                <td th:text="${car.description}"></td>
+                                <td th:text="${car.licencePlate}"></td>
+                                <td th:text="${car.category.categoryName}"></td>
+                                <td th:text="${car.costOfService}"></td>
+                                <td th:text="${car.repaired}"></td>
+                                <td th:text="${car.dateOfRepair}"></td>
+
+                            </tr>
+                            </tbody>
+                            <tfoot class="bg-secondary text-white">
+                            <tr >
+                                <th th:text="'#'"></th>
+                                <th th:text="#{make.label}"></th>
+                                <th th:text="#{description.label}"></th>
+                                <th th:text="#{licencePlate.label}"></th>
+                                <th th:text="#{reasonForService.label}"></th>
+                                <th th:text="#{costOfService.label}"></th>
+                                <th th:text="#{repaired.label}"></th>
+                                <th th:text="#{dateOfRepair.label}"></th>
+
+                            </tr>
+                            </tfoot>
+
+                        </table>
+                    </div>
+                </div>
+
+
+            </main>
+        </div>
+
+    </section>
 
 </div>
 
