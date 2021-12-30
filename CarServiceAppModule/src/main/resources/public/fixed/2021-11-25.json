@@ -1,0 +1,10 @@
+[ {
+  "make" : "av",
+  "licencePlate" : "afdsfadf",
+  "category" : "SEATS",
+  "costOfService" : 100,
+  "repaired" : true,
+  "description" : "a",
+  "dateOfRepair" : "2021-11-25",
+  "serviceStartDate" : null
+} ]
