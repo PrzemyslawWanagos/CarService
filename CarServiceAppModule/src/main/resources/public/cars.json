@@ -305,5 +305,14 @@
     "description" : "hgsh",
     "dateOfRepair" : null,
     "serviceStartDate" : "2021-12-27"
+  }, {
+    "make" : "av",
+    "licencePlate" : "afdsfadf",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "a",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2022-12-25"
   } ]
 }
