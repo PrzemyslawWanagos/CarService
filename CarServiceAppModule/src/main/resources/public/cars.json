@@ -237,10 +237,10 @@
     "make" : "Test",
     "licencePlate" : "fadsfa",
     "category" : "BRAKES",
-    "costOfService" : 100,
+    "costOfService" : 200,
     "repaired" : true,
     "description" : "fdasf",
-    "dateOfRepair" : "2021-12-23",
+    "dateOfRepair" : "2012-12-12",
     "serviceStartDate" : null
   }, {
     "make" : "fldkasj",
@@ -421,6 +421,33 @@
     "repaired" : true,
     "description" : "test3",
     "dateOfRepair" : "0001-01-01",
+    "serviceStartDate" : null
+  }, {
+    "make" : "yyy",
+    "licencePlate" : "yyy",
+    "category" : "SEATS",
+    "costOfService" : 100,
+    "repaired" : true,
+    "description" : "yyy",
+    "dateOfRepair" : "0005-05-05",
+    "serviceStartDate" : null
+  }, {
+    "make" : "oo",
+    "licencePlate" : "oo",
+    "category" : "MAINTENANCE",
+    "costOfService" : 5000,
+    "repaired" : true,
+    "description" : "oo",
+    "dateOfRepair" : "0006-06-06",
+    "serviceStartDate" : null
+  }, {
+    "make" : "fsdaf",
+    "licencePlate" : "fhkdsfa",
+    "category" : "OTHER",
+    "costOfService" : 100,
+    "repaired" : true,
+    "description" : "fasdf",
+    "dateOfRepair" : "0012-12-31",
     "serviceStartDate" : null
   } ]
 }

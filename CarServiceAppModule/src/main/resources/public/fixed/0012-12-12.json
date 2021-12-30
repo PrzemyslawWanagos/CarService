@@ -1,4 +1,13 @@
 [ {
+  "make" : "Test",
+  "licencePlate" : "fadsfa",
+  "category" : "BRAKES",
+  "costOfService" : 200,
+  "repaired" : true,
+  "description" : "fdasf",
+  "dateOfRepair" : "0012-12-12",
+  "serviceStartDate" : null
+}, {
   "make" : "bvcxb",
   "licencePlate" : "bxcvb",
   "category" : "SEATS",

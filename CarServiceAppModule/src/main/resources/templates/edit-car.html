@@ -51,36 +51,37 @@
         <main class="col-lg-3">
             <h6 class="text-center" th:text="#{edit-car.header}"></h6>
             <form th:object="${carDto}" th:action="@{/edit/{licencePlate}(licencePlate=${carDto.licencePlate})}"
-                  method="post" > <!--onkeydown="return key !== 'Enter';"-->
+                  method="post"> <!--onkeydown="return key !== 'Enter';"-->
 
                 <label th:for="make" th:text="#{make.label}"></label>
                 <br>
-                <input id="make" class="form-control"  readonly th:field="*{make} "/>
+                <input id="make" class="form-control" readonly th:field="*{make}"/>
                 <br>
                 <br>
 
                 <label th:for="description" th:text="#{description.label}"></label>
                 <br>
-                <input id="description" class="form-control"  readonly th:field="*{description}"/>
+                <input id="description" class="form-control" readonly th:field="*{description}"/>
                 <br>
                 <br>
 
                 <label th:for="licencePlate" th:text="#{licencePlate.label}"></label>
                 <br>
-                <input id="licencePlate" class="form-control"  readonly th:field="*{licencePlate}" />
+                <input id="licencePlate" class="form-control" readonly th:field="*{licencePlate}"/>
                 <br>
                 <br>
 
                 <label th:for="reasonForService" th:text="#{reasonForService.label}"></label>
                 <br>
-                <input id="reasonForService" hidden th:field="*{category}" />
-                <label class="form-control"  readonly th:text="${carDto.getCategory().getCategoryName()}"></label>
+                <input id="reasonForService" hidden th:field="*{category}"/>
+                <label class="form-control" readonly th:text="${carDto.getCategory().getCategoryName()}"></label>
                 <br>
                 <br>
 
                 <label th:for="costOfService" th:text="#{costOfService.label}"></label>
                 <br>
-                <input id="costOfService" class="form-control" th:width="100pc" th:type="number" th:step="1" pattern="\d+"
+                <input id="costOfService" class="form-control" th:width="100pc" th:type="number" th:step="1"
+                       pattern="\d+"
                        th:field="*{costOfService}" th:required="required"
                        th:value="${carDto.costOfService}"/>
                 <div th:if="${#fields.hasErrors('costOfService')}" class="alert alert-danger">
@@ -92,16 +93,17 @@
 
                 <label th:for="dateOfRepair" th:text="#{dateOfRepair.label}"></label>
                 <br>
-                <input id="dateOfRepair" class="form-control" th:type="date" th:field="*{dateOfRepair}" th:required="required"
+                <input id="dateOfRepair" class="form-control" th:type="date" name="dateOfRepair"
+                       th:required="required"
                        th:value="${carDto.dateOfRepair}"/>
-
-
+                <br>
+                <br>
                 <div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
+
                     <p th:text="#{form.error}">
                     </p>
                 </div>
-                <br>
-                <br>
+
                 <button class="btn btn-secondary" th:text="#{saveEdits.caption}"></button>
             </form>
         </main>

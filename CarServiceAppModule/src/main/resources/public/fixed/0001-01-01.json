@@ -1,0 +1,10 @@
+[ {
+  "make" : "test3",
+  "licencePlate" : "test3",
+  "category" : "SEATS",
+  "costOfService" : 100,
+  "repaired" : true,
+  "description" : "test3",
+  "dateOfRepair" : "0001-01-01",
+  "serviceStartDate" : null
+} ]

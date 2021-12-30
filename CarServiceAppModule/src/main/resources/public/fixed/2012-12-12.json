@@ -1,4 +1,13 @@
 [ {
+  "make" : "Test",
+  "licencePlate" : "fadsfa",
+  "category" : "BRAKES",
+  "costOfService" : 200,
+  "repaired" : true,
+  "description" : "fdasf",
+  "dateOfRepair" : "2012-12-12",
+  "serviceStartDate" : null
+}, {
   "make" : "kfhuty",
   "licencePlate" : "rtyytr",
   "category" : "SEATS",
