@@ -5,16 +5,14 @@
 </head>
 <body>
 <div th:fragment="custom (customPath, customLabel)">
-    <br>
-    <br>
+
     <a th:href="@{/{path}(path=${customPath})}">
-        <button class="btn btn-primary" type="button" th:text="${customLabel}"></button>
+        <button class="btn type-name-link" type="button" th:text="${customLabel}"></button>
     </a>
 </div>
 
 <div th:fragment="main">
-    <br>
-    <br>
+
     <a th:href="@{/{path}(path=#{main.path})}">
         <button type="button" th:text="#{main.label}"></button>
     </a>
