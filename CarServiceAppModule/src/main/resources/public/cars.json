@@ -291,11 +291,11 @@
     "make" : "fadsf",
     "licencePlate" : "fdsafas",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 120,
+    "repaired" : true,
     "description" : "fasdfa",
-    "dateOfRepair" : null,
-    "serviceStartDate" : "2023-12-25"
+    "dateOfRepair" : "2022-11-22",
+    "serviceStartDate" : null
   }, {
     "make" : "fdsaf",
     "licencePlate" : "gsfdgdf",
@@ -314,5 +314,32 @@
     "description" : "a",
     "dateOfRepair" : "2021-11-25",
     "serviceStartDate" : null
+  }, {
+    "make" : "ksdfhfkja",
+    "licencePlate" : "dksjflk",
+    "category" : "OTHER",
+    "costOfService" : 100,
+    "repaired" : true,
+    "description" : "fdlskjfal",
+    "dateOfRepair" : "2222-02-13",
+    "serviceStartDate" : null
+  }, {
+    "make" : "hgsh",
+    "licencePlate" : "gfhd",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "gfdgs",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "1212-03-04"
+  }, {
+    "make" : "4234",
+    "licencePlate" : "4324",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "4324",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "4432-04-22"
   } ]
 }

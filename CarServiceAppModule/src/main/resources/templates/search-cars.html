@@ -22,11 +22,16 @@
             position: sticky;
             bottom: 0;
         }
-
+        #licencePlate{
+            width: 30%;
+        }
         thead,
         td {
             padding: 8px 16px;
             border: 1px solid #ccc;
+        }
+        label {
+            font-weight: bold;
         }
     </style>
 </head>
@@ -56,10 +61,10 @@
         <label th:for="licencePlate" th:text="#{searchCriteria.label}"></label>
         <br>
         <br>
-        <input th:id="licencePlate" th:type="text" th:name="licencePlate"/>
+        <input class="form-control" id="licencePlate" th:type="text" th:name="licencePlate"/>
         <br>
         <br>
-        <button th:text="#{searchButton.caption}"></button>
+        <button class="btn btn-secondary" th:text="#{searchButton.caption}"></button>
     </form>
     <br>
     <br>
@@ -86,7 +91,7 @@
          <td th:text="${car.repaired}"></td> */-->
         <td>
             <a th:href="@{/edit/{EditlicencePlate}(EditlicencePlate=${car.licencePlate})}">
-                <button type="button" th:text="#{confirmCarRepair.caption}"></button>
+                <button button weight="100%" class="btn btn-secondary" type="button" th:text="#{confirmCarRepair.caption}"></button>
             </a>
         </td>
     </tr>

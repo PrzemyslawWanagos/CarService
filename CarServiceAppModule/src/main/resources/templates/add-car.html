@@ -3,75 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <title th:text="#{add-car.title}"></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"></script>
+    <style>
+
+        label {
+            font-weight: bold;
+        }
+
+        .tableFixHead thead {
+            position: sticky;
+            top: 0;
+        }
+
+        .tableFixHead tfoot {
+            position: sticky;
+            bottom: 0;
+        }
+
+        thead,
+        td {
+            padding: 8px 16px;
+            border: 1px solid #ccc;
+        }
+    </style>
 </head>
-<body>
-<h1 th:text="#{add-car.header}"></h1>
 
-<p>
-<form th:object="${carDto}" th:action="@{/add-car}" method="post">
-    <label th:for="make" th:text="#{make.label}"></label>
-    <br>
-    <input th:id="make" th:type="text" th:field="*{make}" th:required="required"/>
-    <div th:if="${#fields.hasErrors('make')}" th:class="'alert alert-danger'">
+<body class="bg-light">
 
-        <ul>
-            <li th:each="err : ${#fields.errors('make')}" th:text="${err}"></li>
-        </ul>
-
+<header class="section-header py-3">
+    <div class="container">
+        <h2>Car Service </h2>
     </div>
-    <br>
-    <br>
+</header>
+<section class="section-content py-3">
+    <div class="row">
+        <aside class="col-lg-3">
+            <div th:insert="fragments/frame :: menu"></div>
+        </aside>
+        <main class="col-lg-3">
+            <h6 class="text-center" th:text="#{add-car.header}"></h6>
+            <p>
+            <form th:object="${carDto}" th:action="@{/add-car}" method="post">
+                <label for="make" th:text="#{make.label}"></label>
+                <br>
+                <input class="form-control" id="make" th:type="text" th:field="*{make}" th:required="required"/>
+                <div th:if="${#fields.hasErrors('make')}" th:class="'alert alert-danger'">
+                    <ul>
+                        <li th:each="err : ${#fields.errors('make')}" th:text="${err}"></li>
+                    </ul>
+                </div>
+                <br>
 
-    <label th:for="description" th:text="#{description.label}"></label>
-    <br>
-    <br>
-    <input th:id="description" th:type="text" th:field="*{description}" th:required="required"/>
-    <br>
-    <br>
 
-    <label th:for="licencePlate" th:text="#{licencePlate.label}"></label>
-    <br>
-    <br>
-    <input th:id="licencePlate" th:type="text" th:field="*{licencePlate}" th:required="required"/>
-    <div th:if="${#fields.hasErrors('licencePlate')}" th:class="'alert alert-danger'">
+                <label for="description" th:text="#{description.label}"></label>
+                <br>
 
-        <ul>
-            <li th:each="err : ${#fields.errors('licencePlate')}" th:text="${err}"></li>
-        </ul>
+                <input class="form-control" id="description" th:type="text" th:field="*{description}"
+                       th:required="required"/>
+                <br>
 
+
+                <label for="licencePlate" th:text="#{licencePlate.label}"></label>
+                <br>
+
+                <input class="form-control" id="licencePlate" th:type="text" th:field="*{licencePlate}"
+                       th:required="required"/>
+                <div th:if="${#fields.hasErrors('licencePlate')}" th:class="'alert alert-danger'">
+
+                    <ul>
+                        <li th:each="err : ${#fields.errors('licencePlate')}" th:text="${err}"></li>
+                    </ul>
+
+                </div>
+                <br>
+
+
+                <label for="reasonForService" th:text="#{reasonForService.label}"></label>
+                <br>
+
+                <select class="form-control" id="reasonForService" th:field="*{category}"
+                        th:required="required">
+                    <option th:each="categoryOpt : ${T(com.infoshareacademy.domain.Category).values()}"
+                            th:value="${categoryOpt.name()}" th:text="${categoryOpt.categoryName}"></option>
+                </select>
+                <br>
+
+                <label for="serviceStartDate" th:text="#{serviceStartDate.label}"></label>
+                <br>
+                <input id="serviceStartDate" class="form-control" th:type="date" th:field="*{serviceStartDate}" th:required="required"
+                       th:value="${carDto.serviceStartDate}"/>
+
+                <div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
+                    <p th:text="#{form.error}">
+                        <br>
+
+                    </p>
+                </div>
+                <br>
+
+
+                <button class="btn btn-secondary" th:text="#{addCarToServiceQueue.caption}"></button>
+            </form>
+
+        </main>
     </div>
-    <br>
-    <br>
-
-    <label th:for="reasonForService" th:text="#{reasonForService.label}"></label>
-    <br>
-    <br>
-    <select th:id="reasonForService" th:field="*{category}" id="Category" th:required="required">
-        <option th:each="categoryOpt : ${T(com.infoshareacademy.domain.Category).values()}"
-                th:value="${categoryOpt.name()}" th:text="${categoryOpt.categoryName}"></option>
-    </select>
-    <br>
-    <br>
-    <label th:for="serviceStartDate" th:text="#{serviceStartDate.label}"></label>
-    <br>
-    <input th:type="date" th:field="*{serviceStartDate}" th:required="required"
-           th:value="${carDto.serviceStartDate}"/>
-
-    <div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
-        <p th:text="#{form.error}">
-            <br>
-            <br>
-        </p>
-    </div>
-    <br>
-    <br>
-
-    <button th:text="#{addCarToServiceQueue.caption}"></button>
-</form>
-<nav>
-    <div th:insert="fragments/commonButtons :: main"></div>
-</nav>
-
-
+</section>
 </body>
 </html>

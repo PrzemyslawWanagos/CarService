@@ -1,0 +1,10 @@
+[ {
+  "make" : "fadsf",
+  "licencePlate" : "fdsafas",
+  "category" : "SEATS",
+  "costOfService" : 120,
+  "repaired" : true,
+  "description" : "fasdfa",
+  "dateOfRepair" : "2022-11-22",
+  "serviceStartDate" : null
+} ]
