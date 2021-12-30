@@ -14,6 +14,33 @@
 
 <!-- ======= Icons used for dropdown (you can use your own) ======== -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <style>
+        .tableFixHead {
+            overflow-y: scroll;
+            height: 400px;
+        }
+        .tableFixHead thead th {
+            position: sticky;
+            top: 0;
+        }
+
+        .tableFixHead tfoot tf {
+            position: sticky;
+            bottom: 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th,
+        td {
+            padding: 8px 16px;
+            border: 1px solid #ccc;
+        }
+        th {
+            background: #eee;
+        }
+    </style>
 
 </head>
 <body class="bg-light">
@@ -45,9 +72,11 @@
 			</div>
 
 
-
-	<table th:if="${!allCars.isEmpty()}" class="table table-striped table-bordered table-hover table-sm">
-	    <tr class="bg-secondary text-white">
+<div th:if="${!allCars.isEmpty()}">
+    <div class="tableFixHead">
+	<table  class="table table-striped table-bordered table-hover table-sm">
+	   <thead class="bg-secondary text-white">
+	    <tr >
 	        <th th:text="'#'"></th>
 	        <th th:text="#{make.label}"></th>
 	        <th th:text="#{description.label}"></th>
@@ -58,6 +87,8 @@
 	        <th th:text="#{dateOfRepair.label}"></th>
 
 	    </tr>
+       </thead>
+        <tbody>
 	    <tr th:each="car, stat : ${allCars}" class="odd-row-color">
 	        <td th:text="${stat.index + 1}"></td>
 	        <td th:text="${car.make}"></td>
@@ -69,7 +100,23 @@
 	        <td th:text="${car.dateOfRepair}"></td>
 
 	    </tr>
+        </tbody>
+        <tfoot>
+        <tr class="bg-secondary text-white">
+            <th th:text="'#'"></th>
+            <th th:text="#{make.label}"></th>
+            <th th:text="#{description.label}"></th>
+            <th th:text="#{licencePlate.label}"></th>
+            <th th:text="#{reasonForService.label}"></th>
+            <th th:text="#{costOfService.label}"></th>
+            <th th:text="#{repaired.label}"></th>
+            <th th:text="#{dateOfRepair.label}"></th>
+
+        </tr>
+        </tfoot>
 	</table>
+</div>
+</div>
 
 
 		</main>
