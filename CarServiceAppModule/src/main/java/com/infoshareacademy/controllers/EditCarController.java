@@ -32,8 +32,7 @@ public class EditCarController {
 
     @GetMapping(value = "/edit/{licencePlate}")
     public String editCarForm(@PathVariable String licencePlate, Model model) {
-        carToEditID = services.FindByLicencePlate(cars, licencePlate);
-        Car carToEdit = cars.getCars().get(carToEditID);
+        Car carToEdit = services.FindByLicencePlate(cars, licencePlate);
         CarDto carDto = new CarDto();
         services.fromEntityToDto(carToEdit, carDto);
         model.addAttribute("carDto", carDto);

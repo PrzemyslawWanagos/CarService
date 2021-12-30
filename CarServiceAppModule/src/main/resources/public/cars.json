@@ -449,5 +449,32 @@
     "description" : "fasdf",
     "dateOfRepair" : "0012-12-31",
     "serviceStartDate" : null
+  }, {
+    "make" : "aaa",
+    "licencePlate" : "AAA",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "AAA",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "1212-12-12"
+  }, {
+    "make" : "AAA",
+    "licencePlate" : "aaa",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "AAA",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "0012-12-31"
+  }, {
+    "make" : "aaa",
+    "licencePlate" : "aaav",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "aaa",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "0012-12-12"
   } ]
 }

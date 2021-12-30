@@ -68,19 +68,19 @@ public class Services {
         }
     }
 
-    public Integer FindByLicencePlate(Cars cars, String LicencePlate) {
-        List <Car> toReturn = new ArrayList<>();
-        int i=0;
-        try {
-            for (i = 0; i < cars.getCars().size(); i++) {
-                if (cars.getCars().get(i).getLicencePlate().equals(LicencePlate)) {
-                   break;
-                }
-            }
-        }catch (Exception e){
-            System.out.println(e.toString());
+    public Car FindByLicencePlate(Cars cars, String LicencePlate) {
+
+        List<Car> toReturn = cars.getCars()
+                .stream()
+                .filter(c ->Objects.nonNull(c.getLicencePlate()))
+                .filter(c ->c.getLicencePlate().equals(LicencePlate))
+                .filter(c->Objects.isNull(c.getDateOfRepair()))
+                .collect(Collectors.toList());
+        if (toReturn.size() > 0) {
+            return toReturn.get(0);
+        } else {
+            return null;
         }
-        return i;
 
     }
 

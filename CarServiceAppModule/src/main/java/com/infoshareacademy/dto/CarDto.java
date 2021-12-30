@@ -20,10 +20,11 @@ public class CarDto {
 
     private String dateOfRepair;
     private String serviceStartDate;
+    private boolean duplicateLicencePlatedto;
 
 
     public CarDto() {
-       // this.category=Category.OTHER;
+       duplicateLicencePlatedto=false;
     }
 
     public boolean isRepaired() {
@@ -92,6 +93,14 @@ public class CarDto {
 
     public void setDateOfRepair(String dateOfRepair) {
         this.dateOfRepair = dateOfRepair;
+    }
+
+    public boolean isDuplicateLicencePlatedto() {
+        return duplicateLicencePlatedto;
+    }
+
+    public void setDuplicateLicencePlatedto(boolean duplicateLicencePlatedto) {
+        this.duplicateLicencePlatedto = duplicateLicencePlatedto;
     }
 
     @Override

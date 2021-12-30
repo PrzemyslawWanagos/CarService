@@ -1,0 +1,10 @@
+[ {
+  "make" : "oo",
+  "licencePlate" : "oo",
+  "category" : "MAINTENANCE",
+  "costOfService" : 5000,
+  "repaired" : true,
+  "description" : "oo",
+  "dateOfRepair" : "0006-06-06",
+  "serviceStartDate" : null
+} ]

@@ -25,17 +25,20 @@ public class AddCarController {
 
     private final Services services;
     private final Cars cars;
-
+    private boolean duplicateLicencePlate;
 
     @Autowired
     public AddCarController(Services services, Cars cars) {
         this.services = services;
         this.cars = cars;
+        duplicateLicencePlate=false;
     }
 
     @GetMapping("add-car")
     public String createCarForm(Model model) {
         model.addAttribute("carDto", new CarDto());
+       // model.addAttribute("duplicateLicencePlate", duplicateLicencePlate);
+
         return "add-car";
     }
 
@@ -46,6 +49,13 @@ public class AddCarController {
         if (bindingResult.hasErrors()) {
             return "add-car";
         }
+        if (services.FindByLicencePlate(cars, carDto.getLicencePlate()) != null) {
+            carDto.setDuplicateLicencePlatedto(true);
+            return "add-car";
+        } else {
+            carDto.setDuplicateLicencePlatedto(false);
+        }
+
         try {
             services.fromDtoToEntity(carDto, car);
         } catch (Exception e) {

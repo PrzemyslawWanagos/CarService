@@ -46,7 +46,11 @@
         <main class="col-lg-3">
             <h6 class="text-center" th:text="#{add-car.header}"></h6>
             <p>
+
             <form th:object="${carDto}" th:action="@{/add-car}" method="post">
+            <input class="form-control"  th:type="text" th:field="*{duplicateLicencePlatedto}" th:required="required"/>
+
+
                 <label for="make" th:text="#{make.label}"></label>
                 <br>
                 <input class="form-control" id="make" th:type="text" th:field="*{make}" th:required="required"/>
@@ -69,12 +73,20 @@
                 <label for="licencePlate" th:text="#{licencePlate.label}"></label>
                 <br>
 
+
                 <input class="form-control" id="licencePlate" th:type="text" th:field="*{licencePlate}"
                        th:required="required"/>
                 <div th:if="${#fields.hasErrors('licencePlate')}" th:class="'alert alert-danger'">
 
                     <ul>
                         <li th:each="err : ${#fields.errors('licencePlate')}" th:text="${err}"></li>
+                    </ul>
+
+                </div>
+                <div th:if="${carDto.duplicateLicencePlatedto}" th:class="'alert alert-danger'">
+
+                    <ul>
+                        <li th:text="'Car with this licence plate is already in service'"></li>
                     </ul>
 
                 </div>
@@ -93,7 +105,8 @@
 
                 <label for="serviceStartDate" th:text="#{serviceStartDate.label}"></label>
                 <br>
-                <input id="serviceStartDate" class="form-control" th:type="date" th:field="*{serviceStartDate}" th:required="required"
+                <input id="serviceStartDate" class="form-control" th:type="date" th:field="*{serviceStartDate}"
+                       th:required="required"
                        th:value="${carDto.serviceStartDate}"/>
 
                 <div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
