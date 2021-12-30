@@ -3,14 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <title th:text="#{edit-car-success.title}"></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"></script>
+    <style>
+
+        label {
+            font-weight: bold;
+        }
+
+        .tableFixHead thead {
+            position: sticky;
+            top: 0;
+        }
+
+        .tableFixHead tfoot {
+            position: sticky;
+            bottom: 0;
+        }
+
+        thead,
+        td {
+            padding: 8px 16px;
+            border: 1px solid #ccc;
+        }
+    </style>
 </head>
-<body>
-<h2 th:text="#{edit-car-success.header}"></h2>
-<nav>
-    <br>
-    <br>
-    <div th:replace="fragments/commonButtons :: custom ('fixed-cars','OK')">
+
+<body class="bg-light">
+
+<header class="section-header py-3">
+    <div class="container">
+        <h2>Car Service </h2>
     </div>
-</nav>
+</header>
+<section class="section-content py-3">
+    <div class="row">
+        <aside class="col-lg-3">
+            <div th:insert="fragments/frame :: menu"></div>
+        </aside>
+        <main class="col-lg-3">
+            <h6 class="text-center" th:text="#{edit-car-success.header}"></h6>
+
+            <a th:href="@{/fixed-cars}">
+
+                <button class="btn btn-secondary" type="button" th:text="'OK'"></button>
+            </a>
+        </main>
+    </div>
+</section>
 </body>
 </html>

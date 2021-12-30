@@ -33,6 +33,13 @@
         label {
             font-weight: bold;
         }
+
+        #ConfirmationOfRepair{
+            width: auto;
+            height: auto;
+            margin: auto;
+            position: center;
+        }
     </style>
 </head>
 <body>
@@ -91,7 +98,7 @@
          <td th:text="${car.repaired}"></td> */-->
         <td>
             <a th:href="@{/edit/{EditlicencePlate}(EditlicencePlate=${car.licencePlate})}">
-                <button button weight="100%" class="btn btn-secondary" type="button" th:text="#{confirmCarRepair.caption}"></button>
+                <button id="ConfirmationOfRepair" class="btn btn-secondary" type="button" th:text="#{confirmCarRepair.caption}"></button>
             </a>
         </td>
     </tr>
