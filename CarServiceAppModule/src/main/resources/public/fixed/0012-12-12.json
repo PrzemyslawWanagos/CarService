@@ -25,4 +25,13 @@
   "description" : "ruytu",
   "dateOfRepair" : "0012-12-12",
   "serviceStartDate" : null
+}, {
+  "make" : "2323",
+  "licencePlate" : "2323",
+  "category" : "SEATS",
+  "costOfService" : 100,
+  "repaired" : true,
+  "description" : "2323",
+  "dateOfRepair" : "0012-12-12",
+  "serviceStartDate" : null
 } ]
