@@ -354,11 +354,11 @@
     "make" : "bvcxb",
     "licencePlate" : "bxcvb",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 100,
+    "repaired" : true,
     "description" : "bxcvb",
-    "dateOfRepair" : null,
-    "serviceStartDate" : "0045-12-25"
+    "dateOfRepair" : "0012-12-12",
+    "serviceStartDate" : null
   }, {
     "make" : "fdsgdf",
     "licencePlate" : "gsdfgsd",
@@ -381,10 +381,28 @@
     "make" : "ktyui",
     "licencePlate" : "uryr",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 100,
+    "repaired" : true,
     "description" : "ruytu",
-    "dateOfRepair" : null,
-    "serviceStartDate" : "1111-11-11"
+    "dateOfRepair" : "0012-12-12",
+    "serviceStartDate" : null
+  }, {
+    "make" : "q312",
+    "licencePlate" : "123",
+    "category" : "SEATS",
+    "costOfService" : 100,
+    "repaired" : true,
+    "description" : "qqq",
+    "dateOfRepair" : "1111-11-11",
+    "serviceStartDate" : null
+  }, {
+    "make" : "QWE",
+    "licencePlate" : "QEQW",
+    "category" : "SEATS",
+    "costOfService" : 100,
+    "repaired" : true,
+    "description" : "EQW",
+    "dateOfRepair" : "0101-01-01",
+    "serviceStartDate" : null
   } ]
 }

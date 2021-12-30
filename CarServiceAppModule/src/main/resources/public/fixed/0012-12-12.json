@@ -1,0 +1,19 @@
+[ {
+  "make" : "bvcxb",
+  "licencePlate" : "bxcvb",
+  "category" : "SEATS",
+  "costOfService" : 100,
+  "repaired" : true,
+  "description" : "bxcvb",
+  "dateOfRepair" : "0012-12-12",
+  "serviceStartDate" : null
+}, {
+  "make" : "ktyui",
+  "licencePlate" : "uryr",
+  "category" : "SEATS",
+  "costOfService" : 100,
+  "repaired" : true,
+  "description" : "ruytu",
+  "dateOfRepair" : "0012-12-12",
+  "serviceStartDate" : null
+} ]

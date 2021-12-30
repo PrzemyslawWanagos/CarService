@@ -1,0 +1,19 @@
+[ {
+  "make" : "gdgfda",
+  "licencePlate" : "gsfdggs",
+  "category" : "OTHER",
+  "costOfService" : 100,
+  "repaired" : true,
+  "description" : "gfdgs",
+  "dateOfRepair" : "2001-12-31",
+  "serviceStartDate" : "1212-12-22"
+}, {
+  "make" : "100",
+  "licencePlate" : "100",
+  "category" : "SEATS",
+  "costOfService" : 100,
+  "repaired" : true,
+  "description" : "100",
+  "dateOfRepair" : "2001-12-31",
+  "serviceStartDate" : "0100-10-01"
+} ]

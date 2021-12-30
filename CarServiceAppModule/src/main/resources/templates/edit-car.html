@@ -55,8 +55,7 @@
 
                 <label th:for="make" th:text="#{make.label}"></label>
                 <br>
-                <input id="make" class="form-control"  readonly th:name="make"
-                       th:value="${carDto.make} "/>
+                <input id="make" class="form-control"  readonly th:field="*{make} "/>
                 <br>
                 <br>
 
@@ -76,8 +75,7 @@
 
                 <label th:for="reasonForService" th:text="#{reasonForService.label}"></label>
                 <br>
-                <input id="reasonForService" class="form-control"  readonly th:name="category"
-                       th:value="${carDto.category}" />
+                <input id="reasonForService" class="form-control"  readonly th:field="*{category}" />
                 <br>
                 <br>
 

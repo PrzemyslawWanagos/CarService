@@ -1,0 +1,10 @@
+[ {
+  "make" : "4234",
+  "licencePlate" : "4324",
+  "category" : "SEATS",
+  "costOfService" : 100,
+  "repaired" : true,
+  "description" : "4324",
+  "dateOfRepair" : "1000-12-12",
+  "serviceStartDate" : null
+} ]
