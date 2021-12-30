@@ -3,43 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <title th:text="#{fixed-cars.title}"></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"></script>
+    <style>
+        .tableFixHead {
+            overflow-y: scroll;
+            height: 500px;
+        }
+
+        .tableFixHead thead {
+            position: sticky;
+            top: 0;
+        }
+
+        .tableFixHead tfoot {
+            position: sticky;
+            bottom: 0;
+        }
+
+        thead,
+        td {
+            padding: 8px 16px;
+            border: 1px solid #ccc;
+        }
+    </style>
 </head>
+
 <body>
-<h1 th:text = "#{fixed-cars.header}"></h1>
-<div th:if="${fixedCars.empty}">
-<h2 th:text="#{fixed-cars.empty}" ></h2>
+<header class="section-header py-3">
+    <div class="container">
+        <h2>Car Service </h2>
+    </div>
+</header>
+
+<div class="container">
+
+    <section class="section-content py-3">
+        <div class="row">
+            <aside class="col-lg-3">
+                <div th:insert="fragments/frame :: menu"></div>
+            </aside>
+            <main class="col-lg-9">
+                <h6 class="text-center" th:text="#{fixed-cars.header}"></h6>
+                <div th:if="${fixedCars.isEmpty()}">
+                    <h2 th:text="#{fixed-cars.empty}"></h2>
+                </div>
+                <div th:if="${!fixedCars.isEmpty()}">
+                    <div class="tableFixHead">
+                        <table class="table table-striped table-bordered table-hover">
+                            <thead class="bg-secondary text-white">
+                            <tr>
+                                <th th:text="'#'"></th>
+                                <th th:text="#{make.label}"></th>
+                                <th th:text="#{description.label}"></th>
+                                <th th:text="#{licencePlate.label}"></th>
+                                <th th:text="#{reasonForService.label}"></th>
+                                <th th:text="#{costOfService.label}"></th>
+                                <th th:text="#{repaired.label}"></th>
+                                <th th:text="#{dateOfRepair.label}"></th>
+                                <!--        <th>Edit</th>-->
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="car, stat : ${fixedCars}">
+                                <td th:text="${stat.index + 1}"></td>
+                                <td th:text="${car.make}"></td>
+                                <td th:text="${car.description}"></td>
+                                <td th:text="${car.licencePlate}"></td>
+                                <td th:text="${car.category.categoryName}"></td>
+                                <td th:text="${car.costOfService}"></td>
+                                <td th:text="${car.repaired}"></td>
+                                <td th:text="${car.dateOfRepair}"></td>
+
+                            </tr>
+                            </tbody>
+                            <tfoot class="bg-secondary text-white">
+                            <tr>
+                                <th th:text="'#'"></th>
+                                <th th:text="#{make.label}"></th>
+                                <th th:text="#{description.label}"></th>
+                                <th th:text="#{licencePlate.label}"></th>
+                                <th th:text="#{reasonForService.label}"></th>
+                                <th th:text="#{costOfService.label}"></th>
+                                <th th:text="#{repaired.label}"></th>
+                                <th th:text="#{dateOfRepair.label}"></th>
+                                <!--        <th>Edit</th>-->
+                            </tr>
+                            </tfoot>
+                        </table>
+
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
 </div>
-
-<table border="2" width="70%" cellpadding="2" th:if="${!fixedCars.empty}">
-    <tr>
-        <th th:text="'#'"></th>
-        <th th:text="#{make.label}"></th>
-        <th th:text="#{description.label}"></th>
-        <th th:text="#{licencePlate.label}"></th>
-        <th th:text="#{reasonForService.label}"></th>
-        <th th:text="#{costOfService.label}"></th>
-        <th th:text="#{repaired.label}"></th>
-        <th th:text="#{dateOfRepair.label}"></th>
-<!--        <th>Edit</th>-->
-    </tr>
-    <tr th:each="car, stat : ${fixedCars}">
-        <td th:text="${stat.index + 1}"></td>
-        <td th:text="${car.make}"></td>
-        <td th:text="${car.Description}"></td>
-        <td th:text="${car.licencePlate}"></td>
-        <td th:text="${car.category.categoryName}"></td>
-        <td th:text="${car.costOfService}"></td>
-        <td th:text="${car.repaired}"></td>
-        <td th:text="${car.DateOfRepair}"></td>
-
-    </tr>
-</table>
-
-<nav>
-
-    <div th:insert="fragments/commonButtons :: main"></div>
-</nav>
-
-
 </body>
 </html>
