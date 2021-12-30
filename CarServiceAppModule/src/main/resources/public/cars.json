@@ -336,20 +336,20 @@
     "make" : "4234",
     "licencePlate" : "4324",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 100,
+    "repaired" : true,
     "description" : "4324",
-    "dateOfRepair" : null,
-    "serviceStartDate" : "4432-04-22"
+    "dateOfRepair" : "2000-12-12",
+    "serviceStartDate" : null
   }, {
     "make" : "kfhuty",
     "licencePlate" : "rtyytr",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 100,
+    "repaired" : true,
     "description" : "bvchs",
-    "dateOfRepair" : null,
-    "serviceStartDate" : "2121-12-24"
+    "dateOfRepair" : "2012-12-12",
+    "serviceStartDate" : null
   }, {
     "make" : "bvcxb",
     "licencePlate" : "bxcvb",
@@ -372,11 +372,11 @@
     "make" : "gdgfda",
     "licencePlate" : "gsfdggs",
     "category" : "OTHER",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 100,
+    "repaired" : true,
     "description" : "gfdgs",
-    "dateOfRepair" : null,
-    "serviceStartDate" : "1212-12-22"
+    "dateOfRepair" : "0012-12-12",
+    "serviceStartDate" : null
   }, {
     "make" : "ktyui",
     "licencePlate" : "uryr",

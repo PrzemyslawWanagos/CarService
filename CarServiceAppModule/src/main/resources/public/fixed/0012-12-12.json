@@ -8,6 +8,15 @@
   "dateOfRepair" : "0012-12-12",
   "serviceStartDate" : null
 }, {
+  "make" : "gdgfda",
+  "licencePlate" : "gsfdggs",
+  "category" : "OTHER",
+  "costOfService" : 100,
+  "repaired" : true,
+  "description" : "gfdgs",
+  "dateOfRepair" : "0012-12-12",
+  "serviceStartDate" : null
+}, {
   "make" : "ktyui",
   "licencePlate" : "uryr",
   "category" : "SEATS",

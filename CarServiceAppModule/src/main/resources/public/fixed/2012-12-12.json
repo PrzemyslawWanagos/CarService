@@ -1,10 +1,10 @@
 [ {
-  "make" : "12",
-  "licencePlate" : "12",
+  "make" : "kfhuty",
+  "licencePlate" : "rtyytr",
   "category" : "SEATS",
-  "costOfService" : 150,
+  "costOfService" : 100,
   "repaired" : true,
-  "description" : "12",
+  "description" : "bvchs",
   "dateOfRepair" : "2012-12-12",
-  "serviceStartDate" : "1212-12-12"
+  "serviceStartDate" : null
 } ]

@@ -1,0 +1,10 @@
+[ {
+  "make" : "QWE",
+  "licencePlate" : "QEQW",
+  "category" : "SEATS",
+  "costOfService" : 100,
+  "repaired" : true,
+  "description" : "EQW",
+  "dateOfRepair" : "0101-01-01",
+  "serviceStartDate" : null
+} ]

@@ -75,7 +75,8 @@
 
                 <label th:for="reasonForService" th:text="#{reasonForService.label}"></label>
                 <br>
-                <input id="reasonForService" class="form-control"  readonly th:field="*{category}" />
+                <input id="reasonForService" class="form-control" hidden readonly th:field="*{category}" />
+                <label class="form-control"  readonly th:text="${carDto.getCategory().getCategoryName()}"></label>
                 <br>
                 <br>
 
