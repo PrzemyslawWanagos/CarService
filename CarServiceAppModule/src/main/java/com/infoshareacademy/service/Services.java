@@ -27,6 +27,7 @@ public class Services {
         List<Car> toReturn = cars.getCars()
                 .stream()
                 .filter(c ->c.getLicencePlate().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT))&&!(c.isRepaired()))
+                .sorted((c1, c2)->c1.getServiceStartDate().compareTo(c2.getServiceStartDate()))
                 .collect(Collectors.toList());
         return toReturn;
     }
