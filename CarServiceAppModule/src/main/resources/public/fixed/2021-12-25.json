@@ -5,7 +5,8 @@
   "costOfService" : 100,
   "repaired" : true,
   "description" : "test2",
-  "dateOfRepair" : "2021-12-25"
+  "dateOfRepair" : "2021-12-25",
+  "serviceStartDate" : null
 }, {
   "make" : "Porsche",
   "licencePlate" : "WA123321",
@@ -13,7 +14,8 @@
   "costOfService" : 200,
   "repaired" : true,
   "description" : "test2",
-  "dateOfRepair" : "2021-12-25"
+  "dateOfRepair" : "2021-12-25",
+  "serviceStartDate" : null
 }, {
   "make" : "bmw",
   "licencePlate" : "asds45",
@@ -21,7 +23,8 @@
   "costOfService" : 100,
   "repaired" : true,
   "description" : "test2",
-  "dateOfRepair" : "2021-12-25"
+  "dateOfRepair" : "2021-12-25",
+  "serviceStartDate" : null
 }, {
   "make" : "Gia",
   "licencePlate" : "Giaaaa",
@@ -29,7 +32,8 @@
   "costOfService" : 50,
   "repaired" : true,
   "description" : "77",
-  "dateOfRepair" : "2021-12-25"
+  "dateOfRepair" : "2021-12-25",
+  "serviceStartDate" : null
 }, {
   "make" : "TEST2",
   "licencePlate" : "test222",
@@ -37,7 +41,8 @@
   "costOfService" : 200,
   "repaired" : true,
   "description" : "77",
-  "dateOfRepair" : "2021-12-25"
+  "dateOfRepair" : "2021-12-25",
+  "serviceStartDate" : null
 }, {
   "make" : "ford",
   "licencePlate" : "GS45342",
@@ -45,7 +50,8 @@
   "costOfService" : 4500,
   "repaired" : true,
   "description" : "77",
-  "dateOfRepair" : "2021-12-25"
+  "dateOfRepair" : "2021-12-25",
+  "serviceStartDate" : null
 }, {
   "make" : "Skoda",
   "licencePlate" : "GWE2323",
@@ -53,7 +59,8 @@
   "costOfService" : 333,
   "repaired" : true,
   "description" : "77",
-  "dateOfRepair" : "2021-12-25"
+  "dateOfRepair" : "2021-12-25",
+  "serviceStartDate" : null
 }, {
   "make" : "Fiat",
   "licencePlate" : "GD23345",
@@ -61,7 +68,8 @@
   "costOfService" : 120,
   "repaired" : true,
   "description" : "77",
-  "dateOfRepair" : "2021-12-25"
+  "dateOfRepair" : "2021-12-25",
+  "serviceStartDate" : null
 }, {
   "make" : "Lotus",
   "licencePlate" : "GSP9999",
@@ -69,7 +77,8 @@
   "costOfService" : 121,
   "repaired" : true,
   "description" : "77",
-  "dateOfRepair" : "2021-12-25"
+  "dateOfRepair" : "2021-12-25",
+  "serviceStartDate" : null
 }, {
   "make" : "fgd",
   "licencePlate" : "gsdfsg",
@@ -77,7 +86,8 @@
   "costOfService" : 123,
   "repaired" : true,
   "description" : "gdgsdf",
-  "dateOfRepair" : "2021-12-25"
+  "dateOfRepair" : "2021-12-25",
+  "serviceStartDate" : null
 }, {
   "make" : "hhh",
   "licencePlate" : "hhh",
@@ -85,7 +95,17 @@
   "costOfService" : 200,
   "repaired" : true,
   "description" : "hhh",
-  "dateOfRepair" : "2021-12-25"
+  "dateOfRepair" : "2021-12-25",
+  "serviceStartDate" : null
+}, {
+  "make" : "QW",
+  "licencePlate" : "QW",
+  "category" : "SEATS",
+  "costOfService" : 100,
+  "repaired" : true,
+  "description" : "QW",
+  "dateOfRepair" : "2021-12-25",
+  "serviceStartDate" : null
 }, {
   "make" : "Skoda",
   "licencePlate" : "GST2323A",
@@ -93,7 +113,8 @@
   "costOfService" : 100,
   "repaired" : true,
   "description" : "Fabia",
-  "dateOfRepair" : "2021-12-25"
+  "dateOfRepair" : "2021-12-25",
+  "serviceStartDate" : null
 }, {
   "make" : "Ford",
   "licencePlate" : "KR01000",
@@ -101,7 +122,8 @@
   "costOfService" : 100,
   "repaired" : true,
   "description" : "fkjdslkfj",
-  "dateOfRepair" : "2021-12-25"
+  "dateOfRepair" : "2021-12-25",
+  "serviceStartDate" : null
 }, {
   "make" : "fads",
   "licencePlate" : "fads",
@@ -109,7 +131,8 @@
   "costOfService" : 120,
   "repaired" : true,
   "description" : "fdas",
-  "dateOfRepair" : "2021-12-25"
+  "dateOfRepair" : "2021-12-25",
+  "serviceStartDate" : null
 }, {
   "make" : "fldkasj",
   "licencePlate" : "flkdsjflk",
@@ -117,7 +140,8 @@
   "costOfService" : 100,
   "repaired" : true,
   "description" : "fkldasjflka",
-  "dateOfRepair" : "2021-12-25"
+  "dateOfRepair" : "2021-12-25",
+  "serviceStartDate" : null
 }, {
   "make" : "fsdafasd",
   "licencePlate" : "fasdfasd",
@@ -125,5 +149,24 @@
   "costOfService" : 1000,
   "repaired" : true,
   "description" : "fdsafasd",
-  "dateOfRepair" : "2021-12-25"
+  "dateOfRepair" : "2021-12-25",
+  "serviceStartDate" : null
+}, {
+  "make" : "4321",
+  "licencePlate" : "4132421",
+  "category" : "SEATS",
+  "costOfService" : 120,
+  "repaired" : true,
+  "description" : "4132",
+  "dateOfRepair" : "2021-12-25",
+  "serviceStartDate" : null
+}, {
+  "make" : "fdsaf",
+  "licencePlate" : "gsfdgdf",
+  "category" : "MAINTENANCE",
+  "costOfService" : 100,
+  "repaired" : true,
+  "description" : "hgsh",
+  "dateOfRepair" : "2021-12-25",
+  "serviceStartDate" : null
 } ]

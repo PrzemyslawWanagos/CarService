@@ -13,6 +13,10 @@
             height: 500px;
         }
 
+        label {
+            font-weight: bold;
+        }
+
         .tableFixHead thead {
             position: sticky;
             top: 0;
@@ -44,75 +48,66 @@
         <aside class="col-lg-3">
             <div th:insert="fragments/frame :: menu"></div>
         </aside>
-        <main class="col-lg-9">
+        <main class="col-lg-3">
             <h6 class="text-center" th:text="#{edit-car.header}"></h6>
+            <form th:object="${carDto}" th:action="@{/edit/{licencePlate}(licencePlate=${carDto.licencePlate})}"
+                  method="post" onkeydown="return event.key !== 'Enter';">
+
+                <label th:for="make" th:text="#{make.label}"></label>
+                <br>
+                <input th:id="make" class="form-control-plaintext" th:type="hidden" th:name="make"
+                       th:value="${carDto.make} " th:text="${carDto.make} "/>
+                <br>
+                <br>
+
+                <label th:for="description" th:text="#{description.label}"></label>
+                <br>
+                <input th:id="description" th:class="readonlyInput" th:type="hidden" th:name="description"
+                       th:value="${carDto.description}" th:text="${carDto.description}"/>
+                <br>
+                <br>
+
+                <label th:for="licencePlate" th:text="#{licencePlate.label}"></label>
+                <br>
+                <input th:id="licencePlate" th:class="readonlyInput" th:type="hidden" th:name="licencePlate"
+                       th:value="${carDto.licencePlate}" th:text="${carDto.licencePlate}"/>
+                <br>
+                <br>
+
+                <label th:for="reasonForService" th:text="#{reasonForService.label}"></label>
+                <br>
+                <input th:id="reasonForService" th:class="readonlyInput" th:type="hidden" th:name="category"
+                       th:value="${carDto.category}" th:text="${carDto.category.categoryName}"/>
+                <br>
+                <br>
+
+                <label th:for="costOfService" th:text="#{costOfService.label}"></label>
+                <br>
+                <input class="form-control" th:width="100pc" th:type="number" th:step="1" pattern="\d+"
+                       th:field="*{costOfService}" th:required="required"
+                       th:value="${carDto.costOfService}"/>
+                <div th:if="${#fields.hasErrors('costOfService')}" class="alert alert-danger">
+                    <ul>
+                        <li th:each="err : ${#fields.errors('costOfService')}" th:text="${err}"></li>
+                    </ul>
+                </div>
+                <br>
+
+                <label th:for="dateOfRepair" th:text="#{dateOfRepair.label}"></label>
+                <br>
+                <input class="form-control" th:type="date" th:field="*{dateOfRepair}" th:required="required"
+                       th:value="${carDto.dateOfRepair}"/>
 
 
-<form th:object="${carDto}" th:action="@{/edit/{licencePlate}(licencePlate=${carDto.licencePlate})}" method="post" onkeydown="return event.key !== 'Enter';"> <!---->
-
-    <div>
-        <label th:for="make" th:text="#{make.label}"></label>
-        <br>
-
-    <input th:id="make" th:class="readonlyInput" th:type="hidden" th:name="make" th:value="${carDto.make} " th:text="${carDto.make} "/>
-    <br>
-    <br>
-        <label th:for="description" th:text="#{description.label}"></label>
-        <br>
-        <br>
-    <input th:id="description" th:class="readonlyInput" th:type="hidden" th:name="description" th:value="${carDto.description}" th:text="${carDto.description}"/>
-    <br>
-    <br>
-        <label th:for="licencePlate" th:text="#{licencePlate.label}"></label>
-        <br>
-        <br>
-    <input th:id="licencePlate" th:class="readonlyInput" th:type="hidden" th:name="licencePlate" th:value="${carDto.licencePlate}" th:text="${carDto.licencePlate}"/>
-    <br>
-    <br>
-        <label th:for="reasonForService" th:text="#{reasonForService.label}"></label>
-        <br>
-        <br>
-    <input th:id="reasonForService" th:class="readonlyInput" th:type="hidden" th:name="category"  th:value="${carDto.category}" th:text="${carDto.category.categoryName}" />
-    <br>
-    <br>
+                <div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
+                    <p th:text="#{form.error}">
+                                           </p>
+                </div>
+                <br>
+                <br>
+                <button th:text="#{saveEdits.caption}"></button>
+            </form>
+        </main>
     </div>
-    <label th:for="costOfService" th:text="#{costOfService.label}"></label>
-    <br>
-    <br>
-
-    <input th:type="number" th:step="1" pattern="\d+" th:field="*{costOfService}" th:required="required"
-           th:value="${carDto.costOfService}"/>
-    <div th:if="${#fields.hasErrors('costOfService')}" th:class="'alert alert-danger'">
-        <br>
-        <ul>
-            <li th:each="err : ${#fields.errors('costOfService')}" th:text="${err}"></li>
-        </ul>
-        <br>
-    </div>
-    <br>
-    <br>
-    <label th:for="dateOfRepair" th:text="#{dateOfRepair.label}"></label>
-    <br>
-    <input  th:type="date"  th:field="*{dateOfRepair}" th:required="required"
-           th:value="${carDto.dateOfRepair}" />
-    <!---->
-<!--    th:value="${carDto.dateOfRepair}"-->
-    <br>
-    <br>
-      <div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
-      <p th:text="#{form.error}">
-      <br>
-      <br>
-      </p>
-  </div>
-    <button th:text="#{saveEdits.caption}"></button>
-</form>
-
-
-<nav>
-    <br>
-    <br>
-    <div th:insert="fragments/commonButtons :: main"></div>
-</nav>
 </body>
 </html>
