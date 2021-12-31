@@ -48,9 +48,7 @@
             <p>
 
             <form th:object="${carDto}" th:action="@{/add-car}" method="post">
-            <input class="form-control"  th:type="text" th:field="*{duplicateLicencePlatedto}" th:required="required"/>
-
-
+            
                 <label for="make" th:text="#{make.label}"></label>
                 <br>
                 <input class="form-control" id="make" th:type="text" th:field="*{make}" th:required="required"/>

@@ -462,19 +462,28 @@
     "make" : "AAA",
     "licencePlate" : "aaa",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 1111,
+    "repaired" : true,
     "description" : "AAA",
-    "dateOfRepair" : null,
-    "serviceStartDate" : "0012-12-31"
+    "dateOfRepair" : "1111-11-11",
+    "serviceStartDate" : null
   }, {
     "make" : "aaa",
     "licencePlate" : "aaav",
     "category" : "SEATS",
+    "costOfService" : 100,
+    "repaired" : true,
+    "description" : "aaa",
+    "dateOfRepair" : "0013-12-12",
+    "serviceStartDate" : null
+  }, {
+    "make" : "AAA",
+    "licencePlate" : "AAAB",
+    "category" : "SEATS",
     "costOfService" : 0,
     "repaired" : false,
-    "description" : "aaa",
+    "description" : "AAA",
     "dateOfRepair" : null,
-    "serviceStartDate" : "0012-12-12"
+    "serviceStartDate" : "0021-12-13"
   } ]
 }

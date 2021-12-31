@@ -45,7 +45,7 @@ public class EditCarController {
         if (bindingResult.hasErrors()) {
             return "edit-car";
         }
-        Car car = cars.getCars().get(carToEditID);
+        Car car = services.FindByLicencePlate(cars, carDto.getLicencePlate());
         try {
             services.fromDtoToEntity(carDto, car);
             car.setCostOfService(carDto.getCostOfService());

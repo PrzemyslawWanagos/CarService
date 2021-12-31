@@ -7,4 +7,13 @@
   "description" : "qqq",
   "dateOfRepair" : "1111-11-11",
   "serviceStartDate" : null
+}, {
+  "make" : "AAA",
+  "licencePlate" : "aaa",
+  "category" : "SEATS",
+  "costOfService" : 1111,
+  "repaired" : true,
+  "description" : "AAA",
+  "dateOfRepair" : "1111-11-11",
+  "serviceStartDate" : null
 } ]
