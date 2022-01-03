@@ -647,5 +647,23 @@
     "description" : "AADFD",
     "dateOfRepair" : null,
     "serviceStartDate" : "2022-12-12"
+  }, {
+    "make" : "fkdjs",
+    "licencePlate" : "faldskjf",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "a",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2021-11-11"
+  }, {
+    "make" : "afdfda",
+    "licencePlate" : "fdasfa",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "fdasf",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2022-12-12"
   } ]
 }
