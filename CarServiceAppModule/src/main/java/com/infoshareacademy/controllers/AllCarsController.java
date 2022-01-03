@@ -27,7 +27,7 @@ public class AllCarsController {
         List<Car> listOfCars;
         listOfCars = cars.getCars();
         if (listOfCars == null) {
-            exception = new NullPointerException();
+            exception = new NullPointerException().toString();
             return "redirect:/error/ERROR WHILE ACCESSING THE LIST OF ALL CARS!!!";
         }
         model.addAttribute("allCars", listOfCars);

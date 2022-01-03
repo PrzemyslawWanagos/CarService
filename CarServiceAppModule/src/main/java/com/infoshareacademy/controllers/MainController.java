@@ -23,11 +23,15 @@ public class MainController {
     }
 
     @GetMapping("/")
-    public String mainPage() {
+    public String mainPage(Model model) {
         try {
             cars.setCars(Services.readCarService().getCars());
-        } catch (IOException e) {
-            exception = e;
+        } catch (Exception e) {
+           if(exception.equals("zero length input")){
+               model.addAttribute("exception", exception);
+               return "main";
+           }
+            exception = e.toString();
             return "redirect:/error/ERROR WHILE READING THE FILE 'CARS.JSON'!!!";
         }
         return "main";

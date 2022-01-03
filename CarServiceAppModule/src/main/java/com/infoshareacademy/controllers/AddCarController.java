@@ -72,7 +72,7 @@ public class AddCarController {
             cars.addCarToCarService(car);
             services.saveCarService(cars);
         } catch (Exception e) {
-            exception = e;
+            exception = e.toString();
             return "redirect:/error/ERROR WHILE ADDING NEW CAR!!!";
         }
         return "add-car-success";

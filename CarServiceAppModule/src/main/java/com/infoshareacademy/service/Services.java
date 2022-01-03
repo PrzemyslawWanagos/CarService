@@ -34,9 +34,13 @@ public class Services {
     public static Cars readCarService() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         Cars CarsFromFile = new Cars();
-
-            CarsFromFile = mapper.readValue(new File(PATH_TO_FULL_LIST_OF_CARS), new TypeReference<>() {
-            });
+        File inputFile = new File(PATH_TO_FULL_LIST_OF_CARS);
+        if (inputFile.length() == 0) {
+        exception="zero length input";
+        return null;
+        }
+        CarsFromFile = mapper.readValue(inputFile, new TypeReference<>() {
+        });
 
         return CarsFromFile;
     }
@@ -44,16 +48,16 @@ public class Services {
     public void saveCarService(Cars cars) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
 
-            mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PATH_TO_FULL_LIST_OF_CARS), cars);
+        mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PATH_TO_FULL_LIST_OF_CARS), cars);
 
     }
 
     public void saveRepairedCarList(Cars cars, String dateOfRepair) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
 
-            List<Car> listOfRepairedCars = returnListOfRepairedCars(cars, dateOfRepair);
-            File carsRepairedToday = new File(PATH_TO_FOLDER_WITH_REPAIRED_CARS, dateOfRepair + ".json");
-            mapper.writerWithDefaultPrettyPrinter().writeValue(carsRepairedToday, listOfRepairedCars);
+        List<Car> listOfRepairedCars = returnListOfRepairedCars(cars, dateOfRepair);
+        File carsRepairedToday = new File(PATH_TO_FOLDER_WITH_REPAIRED_CARS, dateOfRepair + ".json");
+        mapper.writerWithDefaultPrettyPrinter().writeValue(carsRepairedToday, listOfRepairedCars);
 
     }
 

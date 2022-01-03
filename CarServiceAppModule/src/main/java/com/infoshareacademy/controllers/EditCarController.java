@@ -37,7 +37,7 @@ public class EditCarController {
             Car carToEdit = services.FindByLicencePlate(cars, licencePlate);
             services.fromEntityToDto(carToEdit, carDto);
         } catch (Exception e) {
-            exception = e;
+            exception = e.toString();
             return "redirect:/error/ERROR WHILE LOOKING FOR CAR BY LICENCE PLATE";
         }
         model.addAttribute("carDto", carDto);
