@@ -14,9 +14,7 @@
         }
     </style>
 </head>
-
 <body class="bg-light">
-
 <header class="section-header py-3">
     <div class="container">
         <h2>Car Service </h2>
@@ -30,9 +28,7 @@
         <main class="col-lg-3">
             <h6 class="text-center" th:text="#{add-car.header}"></h6>
             <p>
-
             <form th:object="${carDto}" th:action="@{/add-car}" method="post">
-
                 <label for="make" th:text="#{make.label}"></label>
                 <br>
                 <input class="form-control" id="make" th:type="text" th:field="*{make}" th:required="required"/>
@@ -42,24 +38,16 @@
                     </ul>
                 </div>
                 <br>
-
-
                 <label for="description" th:text="#{description.label}"></label>
                 <br>
-
                 <input class="form-control" id="description" th:type="text" th:field="*{description}"
                        th:required="required"/>
                 <br>
-
-
                 <label for="licencePlate" th:text="#{licencePlate.label}"></label>
                 <br>
-
-
                 <input class="form-control" id="licencePlate" th:type="text" th:field="*{licencePlate}"
                        th:required="required"/>
                 <div th:if="${#fields.hasErrors('licencePlate')}" th:class="'alert alert-danger'">
-
                     <ul>
                         <li th:each="err : ${#fields.errors('licencePlate')}" th:text="${err}"></li>
                     </ul>
@@ -78,18 +66,15 @@
                             th:value="${categoryOpt.name()}" th:text="${categoryOpt.categoryName}"></option>
                 </select>
                 <br>
-
                 <label for="serviceStartDate" th:text="#{serviceStartDate.label}"></label>
                 <br>
                 <input id="serviceStartDate" class="form-control" th:type="date" th:field="*{serviceStartDate}"
                        th:required="required"
                        th:value="${carDto.serviceStartDate}"/>
                 <div th:if="${carDto.isServiceStartDateError()}" th:class="'alert alert-danger'">
-
                     <ul>
                         <li th:text="'Incorrect service start date'"></li>
                     </ul>
-
                 </div>
                 <br>
                 <button class="btn btn-secondary " th:text="#{addCarToServiceQueue.caption}"></button>

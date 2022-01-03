@@ -6,18 +6,14 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.infoshareacademy.Utils.listToString;
-
 @Repository
 public class Cars {
 
     private List<Car> cars;
 
     public Cars() {
-        cars=new ArrayList<>();
+        cars = new ArrayList<>();
     }
-
-
 
     public List<Car> getCars() {
         return cars;
@@ -26,7 +22,6 @@ public class Cars {
     public void setCars(List<Car> cars) {
         this.cars = cars;
     }
-
 
 
     public void addCarToCarService(Car car) {

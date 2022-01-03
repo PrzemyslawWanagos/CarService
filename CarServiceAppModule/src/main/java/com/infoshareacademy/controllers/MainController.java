@@ -7,8 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import java.io.IOException;
-
 import static com.infoshareacademy.CarServiceApp.exception;
 
 
@@ -27,10 +25,10 @@ public class MainController {
         try {
             cars.setCars(Services.readCarService().getCars());
         } catch (Exception e) {
-           if(exception.equals("zero length input")){
-               model.addAttribute("exception", exception);
-               return "main";
-           }
+            if (exception.equals("zero length input")) {
+                model.addAttribute("exception", exception);
+                return "main";
+            }
             exception = e.toString();
             return "redirect:/error/ERROR WHILE READING THE FILE 'CARS.JSON'!!!";
         }

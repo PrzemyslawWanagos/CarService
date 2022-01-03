@@ -43,21 +43,18 @@ public class AddCarController {
     @PostMapping(value = "add-car")
     public String saveCreatedCar(@Valid @ModelAttribute("carDto") CarDto carDto,
                                  BindingResult bindingResult) {
-//        if(Objects.isNull(cars)){
-//            cars=new Cars();
-//        }
         Car car = new Car();
         if (bindingResult.hasErrors()) {
             return "add-car";
         }
-        if(Objects.nonNull(cars.getCars())){
-        if (services.FindByLicencePlate(cars, carDto.getLicencePlate()) != null) {
-            carDto.setDuplicateLicencePlateError(true);
-            return "add-car";
-        } else {
-            carDto.setDuplicateLicencePlateError(false);
-        }}
-
+        if (Objects.nonNull(cars.getCars())) {
+            if (services.FindByLicencePlate(cars, carDto.getLicencePlate()) != null) {
+                carDto.setDuplicateLicencePlateError(true);
+                return "add-car";
+            } else {
+                carDto.setDuplicateLicencePlateError(false);
+            }
+        }
         String currentDate = LocalDate.now().toString();
         Integer currentYear = Integer.parseInt(currentDate.substring(0, 4));
         Integer enteredDate = Integer.parseInt(carDto.getServiceStartDate().substring(0, 4));

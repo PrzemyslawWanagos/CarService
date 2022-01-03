@@ -38,8 +38,8 @@ public class Services {
         Cars CarsFromFile = new Cars();
         File inputFile = new File(PATH_TO_FULL_LIST_OF_CARS);
         if (inputFile.length() == 0) {
-        exception="zero length input";
-        return null;
+            exception = "zero length input";
+            return null;
         }
         CarsFromFile = mapper.readValue(inputFile, new TypeReference<>() {
         });
@@ -53,11 +53,9 @@ public class Services {
 
     public void saveRepairedCarList(Cars cars, String dateOfRepair) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-
         List<Car> listOfRepairedCars = returnListOfRepairedCars(cars, dateOfRepair);
         File carsRepairedToday = new File(PATH_TO_FOLDER_WITH_REPAIRED_CARS, dateOfRepair + ".json");
         mapper.writerWithDefaultPrettyPrinter().writeValue(carsRepairedToday, listOfRepairedCars);
-
     }
 
     public Car FindByLicencePlate(@NotNull Cars cars, String LicencePlate) {
@@ -119,6 +117,5 @@ public class Services {
         carDto.setCostOfService(car.getCostOfService());
         carDto.setRepaired(car.isRepaired());
         carDto.setServiceStartDate(car.getServiceStartDate());
-
     }
 }

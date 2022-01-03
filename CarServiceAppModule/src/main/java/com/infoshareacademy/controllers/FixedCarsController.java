@@ -28,5 +28,4 @@ public class FixedCarsController {
         model.addAttribute("fixedCars", fixedCars);
         return "fixed-cars";
     }
-
 }

@@ -11,16 +11,14 @@ public class CarDto {
     @Size(min = 2, max = 50)
     private String make;
     @Size(min = 2, max = 12)
-    @Pattern(regexp = "^[A-Za-z0-9//-]+$", message="Only alphanumeric characters and '-' is allowed in this field")
-    private  String licencePlate;
-
+    @Pattern(regexp = "^[A-Za-z0-9//-]+$", message = "Only alphanumeric characters and '-' is allowed in this field")
+    private String licencePlate;
     private String description;
-    private  Category category;
+    private Category category;
     @Min(50)
     @Max(10000)
-    private  Integer costOfService;
-    private  boolean repaired;
-
+    private Integer costOfService;
+    private boolean repaired;
     private String dateOfRepair;
     private String serviceStartDate;
     private boolean duplicateLicencePlateError;
@@ -28,9 +26,9 @@ public class CarDto {
     private boolean serviceStartDateError;
 
     public CarDto() {
-       duplicateLicencePlateError =false;
-        dateOfRepairError="";
-        serviceStartDateError=false;
+        duplicateLicencePlateError = false;
+        dateOfRepairError = "";
+        serviceStartDateError = false;
     }
 
     public boolean isRepaired() {
@@ -123,16 +121,5 @@ public class CarDto {
 
     public void setServiceStartDateError(boolean serviceStartDateError) {
         this.serviceStartDateError = serviceStartDateError;
-    }
-
-    @Override
-    public String toString() {
-        return "CarDto{" +
-                "make='" + make + '\'' +
-                ", licencePlate='" + licencePlate + '\'' +
-                ", category=" + category +
-                ", costOfService=" + costOfService +
-                ", repaired=" + repaired +
-                '}';
     }
 }

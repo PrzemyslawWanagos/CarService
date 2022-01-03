@@ -8,7 +8,9 @@ public abstract class Utils {
 
     public static File findFile(String path, String fName) {
         File f = new File(path);
-        if (fName.equalsIgnoreCase(f.getName())) return f;
+        if (fName.equalsIgnoreCase(f.getName())) {
+            return f;
+        }
         if (f.isDirectory()) {
             for (String aChild : f.list()) {
                 File ff = findFile(path + File.separator + aChild, fName);
@@ -114,6 +116,7 @@ public abstract class Utils {
         }
         return toReturn;
     }
+
     public static List<String> findStringInList(List<String> list, String stringToFind) {
 
         return list.stream()
@@ -122,6 +125,5 @@ public abstract class Utils {
                         .contains(stringToFind.toLowerCase(Locale.ROOT)))
                 .collect(Collectors.toList());
     }
-
 }
 

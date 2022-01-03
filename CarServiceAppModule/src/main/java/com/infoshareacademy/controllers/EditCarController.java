@@ -79,8 +79,8 @@ public class EditCarController {
         } else {
             carDto.setDateOfRepairError("");
         }
-        LocalDate l1=LocalDate.parse(carDto.getDateOfRepair());
-        LocalDate l2=LocalDate.parse(car.getServiceStartDate());
+        LocalDate l1 = LocalDate.parse(carDto.getDateOfRepair());
+        LocalDate l2 = LocalDate.parse(car.getServiceStartDate());
         if (l1.compareTo(l2) < 0) {
             carDto.setDateOfRepairError("Date of repair cannot be before date of service start");
         }

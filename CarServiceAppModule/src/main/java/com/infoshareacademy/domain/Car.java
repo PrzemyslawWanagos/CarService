@@ -1,7 +1,5 @@
 package com.infoshareacademy.domain;
 
-import java.time.LocalDate;
-
 public class Car {
 
     private String make;
@@ -24,7 +22,7 @@ public class Car {
         this.repaired = repaired;
         this.description = description;
         this.dateOfRepair = dateOfRepair;
-        this.serviceStartDate=serviceStartDate;
+        this.serviceStartDate = serviceStartDate;
 
     }
 
@@ -90,11 +88,6 @@ public class Car {
 
     public void setServiceStartDate(String serviceStartDate) {
         this.serviceStartDate = serviceStartDate;
-    }
-
-    @Override
-    public String toString() {
-        return make + ", " + licencePlate + " (" + costOfService + "str.), category: " + category.getCategoryName() + ", " + ((repaired) ? "service completed" : "awaiting for service");
     }
 
 }

@@ -14,7 +14,6 @@ import static com.infoshareacademy.CarServiceApp.exception;
 @Controller
 public class AllCarsController {
 
-
     private final Cars cars;
 
     @Autowired
