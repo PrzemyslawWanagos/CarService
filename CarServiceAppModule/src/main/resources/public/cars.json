@@ -1,75 +1,21 @@
 {
   "cars" : [ {
-    "make" : "Mazda",
-    "licencePlate" : "GD12312",
-    "category" : "OTHER",
-    "costOfService" : 100,
-    "repaired" : true,
-    "description" : "test2",
-    "dateOfRepair" : "2021-12-25",
-    "serviceStartDate" : null
-  }, {
-    "make" : "Fiat",
-    "licencePlate" : "GA43523",
-    "category" : "OTHER",
-    "costOfService" : 200,
-    "repaired" : true,
-    "description" : "test2",
-    "dateOfRepair" : "2021-12-24",
-    "serviceStartDate" : null
-  }, {
-    "make" : "Ford Mondeo",
-    "licencePlate" : "GS23123",
-    "category" : "SEATS",
-    "costOfService" : 234,
-    "repaired" : true,
-    "description" : "test2",
-    "dateOfRepair" : "2021-12-29",
-    "serviceStartDate" : null
-  }, {
-    "make" : "Toyota",
-    "licencePlate" : "GD342SA",
-    "category" : "DRIVE",
-    "costOfService" : 100,
-    "repaired" : true,
-    "description" : "test2",
-    "dateOfRepair" : "2021-12-22",
-    "serviceStartDate" : null
-  }, {
-    "make" : "Porsche",
-    "licencePlate" : "WA123321",
-    "category" : "ENGINE",
-    "costOfService" : 200,
-    "repaired" : true,
-    "description" : "test2",
-    "dateOfRepair" : "2021-12-25",
-    "serviceStartDate" : null
-  }, {
-    "make" : "bmw",
-    "licencePlate" : "asds45",
+    "make" : "WWW",
+    "licencePlate" : "WWW",
     "category" : "SEATS",
     "costOfService" : 100,
     "repaired" : true,
-    "description" : "test2",
-    "dateOfRepair" : "2021-12-25",
-    "serviceStartDate" : null
+    "description" : "WWW",
+    "dateOfRepair" : "2022-12-13",
+    "serviceStartDate" : "2022-12-12"
   }, {
-    "make" : "hyundai",
-    "licencePlate" : "GA989898",
+    "make" : "WWW",
+    "licencePlate" : "WWW2",
     "category" : "SEATS",
-    "costOfService" : 100,
+    "costOfService" : 233,
     "repaired" : true,
-    "description" : "test2",
-    "dateOfRepair" : "2012-12-25",
-    "serviceStartDate" : null
-  }, {
-    "make" : "SKODA",
-    "licencePlate" : "GST3421",
-    "category" : "MAINTENANCE",
-    "costOfService" : 100,
-    "repaired" : true,
-    "description" : "OCTAVIA",
-    "dateOfRepair" : "2022-12-25",
-    "serviceStartDate" : "2022-01-25"
+    "description" : "WWW",
+    "dateOfRepair" : "2022-12-12",
+    "serviceStartDate" : "2022-12-12"
   } ]
 }

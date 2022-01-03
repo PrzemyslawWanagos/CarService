@@ -1,10 +1,10 @@
 [ {
-  "make" : "FAFDSF",
-  "licencePlate" : "FF",
+  "make" : "WWW",
+  "licencePlate" : "WWW",
   "category" : "SEATS",
   "costOfService" : 100,
   "repaired" : true,
-  "description" : "FASDF",
+  "description" : "WWW",
   "dateOfRepair" : "2022-12-13",
   "serviceStartDate" : "2022-12-12"
 } ]

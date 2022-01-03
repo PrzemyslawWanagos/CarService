@@ -1,55 +1,10 @@
 [ {
-  "make" : "aaa",
-  "licencePlate" : "AAA",
+  "make" : "WWW",
+  "licencePlate" : "WWW2",
   "category" : "SEATS",
-  "costOfService" : 100,
+  "costOfService" : 233,
   "repaired" : true,
-  "description" : "AAA",
-  "dateOfRepair" : "2022-12-12",
-  "serviceStartDate" : null
-}, {
-  "make" : "AAA",
-  "licencePlate" : "AAA",
-  "category" : "SEATS",
-  "costOfService" : 100,
-  "repaired" : true,
-  "description" : "AAA",
-  "dateOfRepair" : "2022-12-12",
-  "serviceStartDate" : null
-}, {
-  "make" : "eee",
-  "licencePlate" : "eee",
-  "category" : "SEATS",
-  "costOfService" : 200,
-  "repaired" : true,
-  "description" : "eee",
-  "dateOfRepair" : "2022-12-12",
-  "serviceStartDate" : null
-}, {
-  "make" : "AAA",
-  "licencePlate" : "AAAB",
-  "category" : "SEATS",
-  "costOfService" : 200,
-  "repaired" : true,
-  "description" : "AAA",
-  "dateOfRepair" : "2022-12-12",
-  "serviceStartDate" : null
-}, {
-  "make" : "aaa",
-  "licencePlate" : "aaa",
-  "category" : "SEATS",
-  "costOfService" : 100,
-  "repaired" : true,
-  "description" : "aaa",
-  "dateOfRepair" : "2022-12-12",
-  "serviceStartDate" : null
-}, {
-  "make" : "GLDFGL;KS",
-  "licencePlate" : "GLDKFJGSLK",
-  "category" : "SEATS",
-  "costOfService" : 100,
-  "repaired" : true,
-  "description" : "GKJAKLGS",
+  "description" : "WWW",
   "dateOfRepair" : "2022-12-12",
   "serviceStartDate" : "2022-12-12"
 } ]

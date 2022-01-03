@@ -3,6 +3,7 @@ package com.infoshareacademy.repository;
 import com.infoshareacademy.domain.Car;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static com.infoshareacademy.Utils.listToString;
@@ -12,7 +13,9 @@ public class Cars {
 
     private List<Car> cars;
 
-    public Cars() {}
+    public Cars() {
+        cars=new ArrayList<>();
+    }
 
 
 
@@ -24,10 +27,7 @@ public class Cars {
         this.cars = cars;
     }
 
-    @Override
-    public String toString() {
-        return listToString(cars, true);
-    }
+
 
     public void addCarToCarService(Car car) {
         cars.add(car);
