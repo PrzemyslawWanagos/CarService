@@ -22,8 +22,7 @@ import static com.infoshareacademy.CarServiceApp.exception;
 public class EditCarController {
 
     private final Services services;
-    private Cars cars;
-    private Integer carToEditID;
+    private final Cars cars;
 
     @Autowired
     public EditCarController(Services services, Cars cars) {
@@ -75,9 +74,6 @@ public class EditCarController {
         String currentDate = LocalDate.now().toString();
         Integer currentYear = Integer.parseInt(currentDate.substring(0, 4));
         Integer enteredDate = Integer.parseInt(carDto.getDateOfRepair().substring(0, 4));
-
-
-
         if ((enteredDate > currentYear) || (enteredDate < currentYear - 1)) {
             carDto.setDateOfRepairError("You can only select current and prior year");
         } else {
@@ -85,10 +81,8 @@ public class EditCarController {
         }
         LocalDate l1=LocalDate.parse(carDto.getDateOfRepair());
         LocalDate l2=LocalDate.parse(car.getServiceStartDate());
-
         if (l1.compareTo(l2) < 0) {
             carDto.setDateOfRepairError("Date of repair cannot be before date of service start");
         }
-
     }
 }
