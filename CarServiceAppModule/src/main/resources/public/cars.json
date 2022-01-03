@@ -485,5 +485,14 @@
     "description" : "AAA",
     "dateOfRepair" : null,
     "serviceStartDate" : "0021-12-13"
+  }, {
+    "make" : "DDD",
+    "licencePlate" : "DDD",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "DDD",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2023-12-12"
   } ]
 }

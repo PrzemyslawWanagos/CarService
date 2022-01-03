@@ -20,11 +20,12 @@ public class CarDto {
 
     private String dateOfRepair;
     private String serviceStartDate;
-    private boolean duplicateLicencePlatedto;
-
+    private boolean duplicateLicencePlateError;
+    private boolean dateOfRepairError;
+    private boolean serviceStartDateError;
 
     public CarDto() {
-       duplicateLicencePlatedto=false;
+       duplicateLicencePlateError =false;
     }
 
     public boolean isRepaired() {
@@ -95,12 +96,28 @@ public class CarDto {
         this.dateOfRepair = dateOfRepair;
     }
 
-    public boolean isDuplicateLicencePlatedto() {
-        return duplicateLicencePlatedto;
+    public boolean isDuplicateLicencePlateError() {
+        return duplicateLicencePlateError;
     }
 
-    public void setDuplicateLicencePlatedto(boolean duplicateLicencePlatedto) {
-        this.duplicateLicencePlatedto = duplicateLicencePlatedto;
+    public void setDuplicateLicencePlateError(boolean duplicateLicencePlateError) {
+        this.duplicateLicencePlateError = duplicateLicencePlateError;
+    }
+
+    public boolean isDateOfRepairError() {
+        return dateOfRepairError;
+    }
+
+    public void setDateOfRepairError(boolean dateOfRepairError) {
+        this.dateOfRepairError = dateOfRepairError;
+    }
+
+    public boolean isServiceStartDateError() {
+        return serviceStartDateError;
+    }
+
+    public void setServiceStartDateError(boolean serviceStartDateError) {
+        this.serviceStartDateError = serviceStartDateError;
     }
 
     @Override

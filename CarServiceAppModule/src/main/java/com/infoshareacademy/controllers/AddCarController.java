@@ -17,6 +17,8 @@ import org.springframework.web.context.WebApplicationContext;
 
 import javax.validation.Valid;
 
+import java.time.LocalDate;
+
 import static com.infoshareacademy.CarServiceApp.exception;
 
 @Controller
@@ -50,10 +52,21 @@ public class AddCarController {
             return "add-car";
         }
         if (services.FindByLicencePlate(cars, carDto.getLicencePlate()) != null) {
-            carDto.setDuplicateLicencePlatedto(true);
+            carDto.setDuplicateLicencePlateError(true);
             return "add-car";
         } else {
-            carDto.setDuplicateLicencePlatedto(false);
+            carDto.setDuplicateLicencePlateError(false);
+        }
+
+        String currentDate = LocalDate.now().toString();
+        Integer currentYear=Integer.parseInt(currentDate.substring(0,4));
+        Integer enteredDate=Integer.parseInt(carDto.getServiceStartDate().substring(0,4));
+
+        if (enteredDate>currentYear) {
+            carDto.setServiceStartDateError(true);
+            return "add-car";
+        } else {
+            carDto.setServiceStartDateError(false);
         }
 
         try {

@@ -81,7 +81,7 @@
                     </ul>
 
                 </div>
-                <div th:if="${carDto.duplicateLicencePlatedto}" th:class="'alert alert-danger'">
+                <div th:if="${carDto.duplicateLicencePlateError}" th:class="'alert alert-danger'">
 
                     <ul>
                         <li th:text="'Car with this licence plate is already in service'"></li>
@@ -106,7 +106,13 @@
                 <input id="serviceStartDate" class="form-control" th:type="date" th:field="*{serviceStartDate}"
                        th:required="required"
                        th:value="${carDto.serviceStartDate}"/>
+            <div th:if="${carDto.isServiceStartDateError()}" th:class="'alert alert-danger'">
 
+                <ul>
+                    <li th:text="'Incorrect service start date'"></li>
+                </ul>
+
+            </div>
                 <div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
                     <p th:text="#{form.error}">
                         <br>
