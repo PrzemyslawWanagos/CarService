@@ -15,6 +15,7 @@ public class FixedCarsController {
 
     private final Services services;
     private final Cars cars;
+
     @Autowired
     public FixedCarsController(Services services, Cars cars) {
         this.services = services;
@@ -23,7 +24,7 @@ public class FixedCarsController {
 
     @GetMapping("fixed-cars")
     public String displayFixedCars(Model model) {
-        List <Car> fixedCars = services.returnListOfRepairedCars(cars);
+        List<Car> fixedCars = services.returnListOfRepairedCars(cars);
         model.addAttribute("fixedCars", fixedCars);
         return "fixed-cars";
     }
