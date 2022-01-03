@@ -23,7 +23,7 @@ public class MainController {
         this.cars = cars;
     }
 
-    @GetMapping("/main")
+    @GetMapping("/")
     public String mainPage(Model model) {
         try{
             cars.setCars(Services.readCarService().getCars());

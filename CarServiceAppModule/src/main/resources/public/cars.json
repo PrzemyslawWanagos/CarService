@@ -629,5 +629,23 @@
     "description" : "FADLSKFJ",
     "dateOfRepair" : null,
     "serviceStartDate" : "2022-12-12"
+  }, {
+    "make" : "JJJJ",
+    "licencePlate" : "J-",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "JJJJ",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2022-12-12"
+  }, {
+    "make" : "AAA",
+    "licencePlate" : "FASDF",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "AADFD",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2022-12-12"
   } ]
 }
