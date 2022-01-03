@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import static com.infoshareacademy.CarServiceApp.*;
@@ -25,9 +26,16 @@ public class Services {
     }
 
     public List<Car> returnListOfCarsToRepair(@NotNull Cars cars, String licencePlate) {
+        Predicate<Car> isCarRepaired = c->!c.isRepaired();
+        Predicate<Car> licencePlateFilter = c-> c.getLicencePlate().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT));
+        Predicate<Car> makeFilter = c-> c.getMake().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT));
+        Predicate<Car> descriptionFilter = c-> c.getDescription().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT));
+
+
         List<Car> toReturn = cars.getCars()
                 .stream()
-                .filter(c -> c.getLicencePlate().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT)) && !(c.isRepaired()))
+                .filter(isCarRepaired)
+                .filter(licencePlateFilter.or(makeFilter).or(descriptionFilter))
                 .sorted((c1, c2) -> c1.getServiceStartDate().compareTo(c2.getServiceStartDate()))
                 .collect(Collectors.toList());
         return toReturn;
@@ -59,6 +67,7 @@ public class Services {
     }
 
     public Car FindByLicencePlate(@NotNull Cars cars, String LicencePlate) {
+
         List<Car> toReturn = cars.getCars()
                 .stream()
                 .filter(c -> Objects.nonNull(c.getLicencePlate()))
