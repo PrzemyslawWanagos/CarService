@@ -1,0 +1,19 @@
+[ {
+  "make" : "fdsgdf",
+  "licencePlate" : "gsdfgsd",
+  "category" : "SEATS",
+  "costOfService" : 100,
+  "repaired" : true,
+  "description" : "gsdfgsd",
+  "dateOfRepair" : "2022-12-25",
+  "serviceStartDate" : null
+}, {
+  "make" : "AAA",
+  "licencePlate" : "dddd",
+  "category" : "SEATS",
+  "costOfService" : 100,
+  "repaired" : true,
+  "description" : "AAA",
+  "dateOfRepair" : "2022-12-25",
+  "serviceStartDate" : null
+} ]

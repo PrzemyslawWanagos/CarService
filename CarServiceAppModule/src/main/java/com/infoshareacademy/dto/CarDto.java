@@ -4,13 +4,16 @@ import com.infoshareacademy.domain.Category;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class CarDto {
     @Size(min = 2, max = 50)
     private String make;
     @Size(min = 2, max = 12)
+    @Pattern(regexp = "^[A-Za-z0-9//-]+$", message="Only alphanumeric characters and '-' is allowed in this field")
     private  String licencePlate;
+
     private String description;
     private  Category category;
     @Min(50)
@@ -21,11 +24,13 @@ public class CarDto {
     private String dateOfRepair;
     private String serviceStartDate;
     private boolean duplicateLicencePlateError;
-    private boolean dateOfRepairError;
+    private String dateOfRepairError;
     private boolean serviceStartDateError;
 
     public CarDto() {
        duplicateLicencePlateError =false;
+        dateOfRepairError="";
+        serviceStartDateError=false;
     }
 
     public boolean isRepaired() {
@@ -104,11 +109,11 @@ public class CarDto {
         this.duplicateLicencePlateError = duplicateLicencePlateError;
     }
 
-    public boolean isDateOfRepairError() {
+    public String getDateOfRepairError() {
         return dateOfRepairError;
     }
 
-    public void setDateOfRepairError(boolean dateOfRepairError) {
+    public void setDateOfRepairError(String dateOfRepairError) {
         this.dateOfRepairError = dateOfRepairError;
     }
 

@@ -52,7 +52,7 @@ public class EditCarController {
         try {
             car = services.FindByLicencePlate(cars, carDto.getLicencePlate());
             checkIfDateOfRepairHasErrors(carDto, car);
-            if (bindingResult.hasErrors() || carDto.isDateOfRepairError()) {
+            if (bindingResult.hasErrors() || !(carDto.getDateOfRepairError().isEmpty())) {
                 return "edit-car";
             }
             services.fromDtoToEntity(carDto, car);
@@ -79,15 +79,15 @@ public class EditCarController {
 
 
         if ((enteredDate > currentYear) || (enteredDate < currentYear - 1)) {
-            carDto.setDateOfRepairError(true);
+            carDto.setDateOfRepairError("You can only select current and prior year");
         } else {
-            carDto.setDateOfRepairError(false);
+            carDto.setDateOfRepairError("");
         }
         LocalDate l1=LocalDate.parse(carDto.getDateOfRepair());
         LocalDate l2=LocalDate.parse(car.getServiceStartDate());
 
         if (l1.compareTo(l2) < 0) {
-            carDto.setDateOfRepairError(true);
+            carDto.setDateOfRepairError("Date of repair cannot be before date of service start");
         }
 
     }

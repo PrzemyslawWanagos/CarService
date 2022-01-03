@@ -43,4 +43,13 @@
   "description" : "aaa",
   "dateOfRepair" : "2022-12-12",
   "serviceStartDate" : null
+}, {
+  "make" : "GLDFGL;KS",
+  "licencePlate" : "GLDKFJGSLK",
+  "category" : "SEATS",
+  "costOfService" : 100,
+  "repaired" : true,
+  "description" : "GKJAKLGS",
+  "dateOfRepair" : "2022-12-12",
+  "serviceStartDate" : "2022-12-12"
 } ]

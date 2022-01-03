@@ -48,7 +48,7 @@
             <p>
 
             <form th:object="${carDto}" th:action="@{/add-car}" method="post">
-            
+
                 <label for="make" th:text="#{make.label}"></label>
                 <br>
                 <input class="form-control" id="make" th:type="text" th:field="*{make}" th:required="required"/>
@@ -79,21 +79,15 @@
                     <ul>
                         <li th:each="err : ${#fields.errors('licencePlate')}" th:text="${err}"></li>
                     </ul>
-
                 </div>
                 <div th:if="${carDto.duplicateLicencePlateError}" th:class="'alert alert-danger'">
-
                     <ul>
                         <li th:text="'Car with this licence plate is already in service'"></li>
                     </ul>
-
                 </div>
                 <br>
-
-
                 <label for="reasonForService" th:text="#{reasonForService.label}"></label>
                 <br>
-
                 <select class="form-control" id="reasonForService" th:field="*{category}"
                         th:required="required">
                     <option th:each="categoryOpt : ${T(com.infoshareacademy.domain.Category).values()}"
@@ -106,25 +100,16 @@
                 <input id="serviceStartDate" class="form-control" th:type="date" th:field="*{serviceStartDate}"
                        th:required="required"
                        th:value="${carDto.serviceStartDate}"/>
-            <div th:if="${carDto.isServiceStartDateError()}" th:class="'alert alert-danger'">
+                <div th:if="${carDto.isServiceStartDateError()}" th:class="'alert alert-danger'">
 
-                <ul>
-                    <li th:text="'Incorrect service start date'"></li>
-                </ul>
+                    <ul>
+                        <li th:text="'Incorrect service start date'"></li>
+                    </ul>
 
-            </div>
-                <div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
-                    <p th:text="#{form.error}">
-                        <br>
-
-                    </p>
                 </div>
                 <br>
-
-
                 <button class="btn btn-secondary" th:text="#{addCarToServiceQueue.caption}"></button>
             </form>
-
         </main>
     </div>
 </section>

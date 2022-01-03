@@ -543,19 +543,19 @@
     "make" : "AAA",
     "licencePlate" : "dddd",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 100,
+    "repaired" : true,
     "description" : "AAA",
-    "dateOfRepair" : null,
-    "serviceStartDate" : "2022-12-23"
+    "dateOfRepair" : "2022-12-25",
+    "serviceStartDate" : null
   }, {
     "make" : "JDHF",
     "licencePlate" : "HDFGHD",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 200,
+    "repaired" : true,
     "description" : "HDGHD",
-    "dateOfRepair" : null,
+    "dateOfRepair" : "2022-12-24",
     "serviceStartDate" : "2022-12-23"
   }, {
     "make" : "AAA",
@@ -575,5 +575,59 @@
     "description" : "aaa",
     "dateOfRepair" : "2022-12-12",
     "serviceStartDate" : null
+  }, {
+    "make" : "FKJDHAK",
+    "licencePlate" : ";LFDKAS",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : ";LFDAK",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2022-12-12"
+  }, {
+    "make" : "GLDFGL;KS",
+    "licencePlate" : "GLDKFJGSLK",
+    "category" : "SEATS",
+    "costOfService" : 100,
+    "repaired" : true,
+    "description" : "GKJAKLGS",
+    "dateOfRepair" : "2022-12-12",
+    "serviceStartDate" : "2022-12-12"
+  }, {
+    "make" : "FAFDSF",
+    "licencePlate" : "FF",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "FASDF",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2022-12-12"
+  }, {
+    "make" : "FDAS",
+    "licencePlate" : "aaaa",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "fasdf",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2022-12-12"
+  }, {
+    "make" : "JJJ",
+    "licencePlate" : "j-d",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "jjj",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2022-12-12"
+  }, {
+    "make" : "FASDLKJL",
+    "licencePlate" : "FLDKSA342",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "FADLSKFJ",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2022-12-12"
   } ]
 }

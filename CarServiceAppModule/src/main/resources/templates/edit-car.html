@@ -57,26 +57,31 @@
                 <br>
                 <input id="make" class="form-control" readonly th:field="*{make}"/>
                 <br>
-                <br>
+
 
                 <label th:for="description" th:text="#{description.label}"></label>
                 <br>
                 <input id="description" class="form-control" readonly th:field="*{description}"/>
                 <br>
-                <br>
+
 
                 <label th:for="licencePlate" th:text="#{licencePlate.label}"></label>
                 <br>
                 <input id="licencePlate" class="form-control" readonly th:field="*{licencePlate}"/>
                 <br>
-                <br>
+
 
                 <label th:for="reasonForService" th:text="#{reasonForService.label}"></label>
                 <br>
                 <input id="reasonForService" hidden th:field="*{category}"/>
                 <label class="form-control" readonly th:text="${carDto.getCategory().getCategoryName()}"></label>
+
                 <br>
+                <label th:for="serviceStartDate" th:text="#{serviceStartDate.label}"></label>
                 <br>
+                <input id="serviceStartDate" class="form-control" readonly th:field="*{serviceStartDate}"/>
+                <br>
+
 
                 <label th:for="costOfService" th:text="#{costOfService.label}"></label>
                 <br>
@@ -96,21 +101,21 @@
                 <input id="dateOfRepair" class="form-control" th:type="date" name="dateOfRepair"
                        th:required="required"
                        th:value="${carDto.dateOfRepair}"/>
-                <br>
-                <br>
-                <div th:if="${carDto.isDateOfRepairError()}" th:class="'alert alert-danger'">
+
+                <div th:unless="${carDto.getDateOfRepairError().isEmpty()}" th:class="'alert alert-danger'">
 
                     <ul>
-                        <li th:text="'Incorrect date of repair'"></li>
+                        <li th:text="${carDto.getDateOfRepairError()}"></li>
                     </ul>
 
                 </div>
-                <div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
+                <!--                <div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">-->
 
-                    <p th:text="#{form.error}">
-                    </p>
-                </div>
-
+                <!--                    <p th:text="#{form.error}">-->
+                <!--                    </p>-->
+                <!--                </div>-->
+                <br>
+                <br>
                 <button class="btn btn-secondary" th:text="#{saveEdits.caption}"></button>
             </form>
         </main>
