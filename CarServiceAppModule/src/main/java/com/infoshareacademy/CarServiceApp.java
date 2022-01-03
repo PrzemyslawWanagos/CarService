@@ -23,13 +23,6 @@ public class CarServiceApp {
     static ConfigurableApplicationContext ctx;
 
     public static void main(String[] args) throws IOException {
-
         ctx = SpringApplication.run(CarServiceApp.class, args);
-//        Runtime rt = Runtime.getRuntime();
-//        rt.exec(new String[]{"cmd", "/c", "start http://localhost:8080/main"});
     }
-
-
-
-
 }

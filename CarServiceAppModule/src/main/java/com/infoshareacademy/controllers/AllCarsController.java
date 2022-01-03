@@ -27,7 +27,7 @@ public class AllCarsController {
         List<Car> listOfCars;
         listOfCars = cars.getCars();
         if (listOfCars == null) {
-            exception = new NullPointerException().toString();
+            exception = new Exception("List of Cars is empty").toString();
             return "redirect:/error/ERROR WHILE ACCESSING THE LIST OF ALL CARS!!!";
         }
         model.addAttribute("allCars", listOfCars);

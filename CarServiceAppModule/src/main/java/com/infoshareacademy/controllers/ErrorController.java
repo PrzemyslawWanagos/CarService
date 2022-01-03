@@ -13,7 +13,7 @@ public class ErrorController {
 
     @GetMapping("error/{errorName}")
     public String displayError(@PathVariable String errorName, Model model) {
-        model.addAttribute("exception", exception.toString());
+        model.addAttribute("exception", exception);
         model.addAttribute("errorName", errorName);
         exception = null;
         return "error-message";
