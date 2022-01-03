@@ -683,5 +683,23 @@
     "description" : "GSDF",
     "dateOfRepair" : null,
     "serviceStartDate" : "2022-12-25"
+  }, {
+    "make" : "AAA",
+    "licencePlate" : "AAA",
+    "category" : "MAINTENANCE",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "AAA",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2022-12-12"
+  }, {
+    "make" : "AAA",
+    "licencePlate" : "AAAD",
+    "category" : "ENGINE",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "AAA",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2022-12-13"
   } ]
 }

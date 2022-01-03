@@ -26,13 +26,11 @@ public class AddCarController {
 
     private final Services services;
     private final Cars cars;
-    private boolean duplicateLicencePlate;
 
     @Autowired
     public AddCarController(Services services, Cars cars) {
         this.services = services;
         this.cars = cars;
-        duplicateLicencePlate = false;
     }
 
     @GetMapping("add-car")
