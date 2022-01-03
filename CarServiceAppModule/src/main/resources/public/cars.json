@@ -1,0 +1,75 @@
+{
+  "cars" : [ {
+    "make" : "Mazda",
+    "licencePlate" : "GD12312",
+    "category" : "OTHER",
+    "costOfService" : 200,
+    "repaired" : true,
+    "description" : "test2",
+    "dateOfRepair" : "2022-12-22",
+    "serviceStartDate" : "2021-12-25"
+  }, {
+    "make" : "Fiat",
+    "licencePlate" : "GA43523",
+    "category" : "OTHER",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "test2",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2021-12-25"
+  }, {
+    "make" : "Ford Mondeo",
+    "licencePlate" : "GS23123",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "test2",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2021-12-25"
+  }, {
+    "make" : "Toyota",
+    "licencePlate" : "GD342SA",
+    "category" : "DRIVE",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "test2",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2021-12-25"
+  }, {
+    "make" : "Porsche",
+    "licencePlate" : "WA123321",
+    "category" : "ENGINE",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "test2",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2021-12-25"
+  }, {
+    "make" : "bmw",
+    "licencePlate" : "asds45",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "test2",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2021-12-25"
+  }, {
+    "make" : "hyundai",
+    "licencePlate" : "GA989898",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "test2",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2021-12-25"
+  }, {
+    "make" : "SKODA",
+    "licencePlate" : "GST3421",
+    "category" : "MAINTENANCE",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "OCTAVIA",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2021-12-25"
+  } ]
+}
