@@ -597,10 +597,10 @@
     "make" : "FAFDSF",
     "licencePlate" : "FF",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 100,
+    "repaired" : true,
     "description" : "FASDF",
-    "dateOfRepair" : null,
+    "dateOfRepair" : "2022-12-13",
     "serviceStartDate" : "2022-12-12"
   }, {
     "make" : "FDAS",
@@ -665,5 +665,23 @@
     "description" : "fdasf",
     "dateOfRepair" : null,
     "serviceStartDate" : "2022-12-12"
+  }, {
+    "make" : "DSDS",
+    "licencePlate" : "RQERQ",
+    "category" : "SEATS",
+    "costOfService" : 110,
+    "repaired" : true,
+    "description" : "ERWQ",
+    "dateOfRepair" : "2022-12-11",
+    "serviceStartDate" : "2022-11-21"
+  }, {
+    "make" : "GGSFDSG",
+    "licencePlate" : "G-",
+    "category" : "DRIVE",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "GSDF",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2022-12-25"
   } ]
 }

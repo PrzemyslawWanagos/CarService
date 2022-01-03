@@ -1,9 +1,8 @@
-
-/*.tableFixHead {
-    overflow-y: scroll;
-    height: 500px;
-}*/
-
+thead,
+td {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+}
 
 label {
     font-weight: bold;
@@ -18,9 +17,14 @@ label {
     position: sticky;
     bottom: 0;
 }
-
-thead,
-td {
-    padding: 8px 16px;
-    border: 1px solid #ccc;
+#licencePlate{
+    width: 30%;
 }
+
+#ConfirmationOfRepair{
+    width: auto;
+    height: auto;
+    margin: auto;
+    position: center;
+}
+
