@@ -521,5 +521,14 @@
     "description" : "SSS",
     "dateOfRepair" : "2021-12-12",
     "serviceStartDate" : null
+  }, {
+    "make" : "AAA",
+    "licencePlate" : "AAA",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "AAA",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2022-12-12"
   } ]
 }

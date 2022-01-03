@@ -65,11 +65,11 @@ public class EditCarController {
             car.setDateOfRepair(carDto.getDateOfRepair());
             services.saveCarService(cars);
             if(exception!=null){
-                return "redirect:/error/Error while updating the list of cars";
+                return "main";//"redirect:/error/Error while updating the list of cars";
             }
             services.saveRepairedCarList(cars, car.getDateOfRepair());
             if(exception!=null){
-                return "redirect:/error/Error while updating the list of repaired cars";
+                return "main";//return "redirect:/error/Error while updating the list of repaired cars";
             }
         } catch (Exception e) {
             return e.toString();

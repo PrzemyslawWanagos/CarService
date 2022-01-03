@@ -77,7 +77,7 @@ public class AddCarController {
         cars.addCarToCarService(car);
         services.saveCarService(cars);
         if(exception!=null){
-        return "redirect:/error/Error while adding the car";
+        return "main"; //"redirect:/error/1";
         }
         return "add-car-success";
 

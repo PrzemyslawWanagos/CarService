@@ -51,7 +51,7 @@ public class Services {
             mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PATH_TO_FULL_LIST_OF_CARS), cars);
         } catch (IOException e) {
             exception=e;
-            System.out.println(e.toString());
+            System.out.println(e.toString());//xxxx
         }
     }
 

@@ -1,0 +1,10 @@
+[ {
+  "make" : "SSS",
+  "licencePlate" : "SSS",
+  "category" : "SEATS",
+  "costOfService" : 200,
+  "repaired" : true,
+  "description" : "SSS",
+  "dateOfRepair" : "2021-12-12",
+  "serviceStartDate" : null
+} ]
