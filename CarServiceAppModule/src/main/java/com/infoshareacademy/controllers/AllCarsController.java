@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -18,6 +17,7 @@ public class AllCarsController {
 
     private final Services services;
     private final Cars cars;
+
     @Autowired
     public AllCarsController(Services services, Cars cars) {
         this.services = services;
@@ -27,11 +27,9 @@ public class AllCarsController {
     @GetMapping("all-cars")
     public String displayAllCars(Model model) {
         List<Car> listOfCars;
-
-           listOfCars = cars.getCars();
-    if(listOfCars==null){
-
-            exception=new NullPointerException();
+        listOfCars = cars.getCars();
+        if (listOfCars == null) {
+            exception = new NullPointerException();
             return "redirect:/error/ERROR WHILE ACCESSING THE LIST OF ALL CARS!!!";
         }
         model.addAttribute("allCars", listOfCars);

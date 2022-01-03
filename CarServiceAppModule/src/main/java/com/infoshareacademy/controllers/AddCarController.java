@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.context.WebApplicationContext;
 
 import javax.validation.Valid;
-
 import java.time.LocalDate;
 
 import static com.infoshareacademy.CarServiceApp.exception;
@@ -33,20 +32,18 @@ public class AddCarController {
     public AddCarController(Services services, Cars cars) {
         this.services = services;
         this.cars = cars;
-        duplicateLicencePlate=false;
+        duplicateLicencePlate = false;
     }
 
     @GetMapping("add-car")
     public String createCarForm(Model model) {
         model.addAttribute("carDto", new CarDto());
-       // model.addAttribute("duplicateLicencePlate", duplicateLicencePlate);
-
         return "add-car";
     }
 
     @PostMapping(value = "add-car")
     public String saveCreatedCar(@Valid @ModelAttribute("carDto") CarDto carDto,
-                               BindingResult bindingResult) {
+                                 BindingResult bindingResult) {
         Car car = new Car();
         if (bindingResult.hasErrors()) {
             return "add-car";
@@ -58,9 +55,9 @@ public class AddCarController {
             carDto.setDuplicateLicencePlateError(false);
         }
         String currentDate = LocalDate.now().toString();
-        Integer currentYear=Integer.parseInt(currentDate.substring(0,4));
-        Integer enteredDate=Integer.parseInt(carDto.getServiceStartDate().substring(0,4));
-        if ((enteredDate>currentYear)||(enteredDate<currentYear-1)) {
+        Integer currentYear = Integer.parseInt(currentDate.substring(0, 4));
+        Integer enteredDate = Integer.parseInt(carDto.getServiceStartDate().substring(0, 4));
+        if ((enteredDate > currentYear) || (enteredDate < currentYear - 1)) {
             carDto.setServiceStartDateError(true);
             return "add-car";
         } else {
@@ -68,19 +65,12 @@ public class AddCarController {
         }
         try {
             services.fromDtoToEntity(carDto, car);
-        } catch (Exception e) {
-            return e.toString();
-        }
-        try {
             cars.addCarToCarService(car);
             services.saveCarService(cars);
-        }catch(Exception e){
-        exception=e;
+        } catch (Exception e) {
+            exception = e;
             return "redirect:/error/ERROR WHILE ADDING NEW CAR!!!";
         }
         return "add-car-success";
-
     }
-
-
 }

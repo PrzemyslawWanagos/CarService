@@ -525,11 +525,11 @@
     "make" : "AAA",
     "licencePlate" : "AAA",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 100,
+    "repaired" : true,
     "description" : "AAA",
-    "dateOfRepair" : null,
-    "serviceStartDate" : "2022-12-12"
+    "dateOfRepair" : "2022-12-12",
+    "serviceStartDate" : null
   }, {
     "make" : "eee",
     "licencePlate" : "eee",
@@ -557,5 +557,14 @@
     "description" : "HDGHD",
     "dateOfRepair" : null,
     "serviceStartDate" : "2022-12-23"
+  }, {
+    "make" : "AAA",
+    "licencePlate" : "AAAB",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "AAA",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2022-12-12"
   } ]
 }

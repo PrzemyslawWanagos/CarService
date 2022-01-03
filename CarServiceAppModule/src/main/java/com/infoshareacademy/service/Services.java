@@ -6,13 +6,12 @@ import com.infoshareacademy.domain.Car;
 import com.infoshareacademy.dto.CarDto;
 import com.infoshareacademy.repository.Cars;
 import org.springframework.stereotype.Service;
+
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
-import java.util.stream.*;
 import java.util.stream.Collectors;
 
 import static com.infoshareacademy.CarServiceApp.*;
@@ -23,11 +22,12 @@ public class Services {
     public Services() {
 
     }
+
     public List<Car> returnListOfCarsToRepair(Cars cars, String licencePlate) {
         List<Car> toReturn = cars.getCars()
                 .stream()
-                .filter(c ->c.getLicencePlate().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT))&&!(c.isRepaired()))
-                .sorted((c1, c2)->c1.getServiceStartDate().compareTo(c2.getServiceStartDate()))
+                .filter(c -> c.getLicencePlate().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT)) && !(c.isRepaired()))
+                .sorted((c1, c2) -> c1.getServiceStartDate().compareTo(c2.getServiceStartDate()))
                 .collect(Collectors.toList());
         return toReturn;
     }
@@ -39,7 +39,7 @@ public class Services {
             CarsFromFile = mapper.readValue(new File(PATH_TO_FULL_LIST_OF_CARS), new TypeReference<>() {
             });
         } catch (IOException e) {
-            exception=e;
+            exception = e;
             System.out.println(e.toString());
         }
         return CarsFromFile;
@@ -50,7 +50,7 @@ public class Services {
         try {
             mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PATH_TO_FULL_LIST_OF_CARS), cars);
         } catch (IOException e) {
-            exception=e;
+            exception = e;
             System.out.println(e.toString());//xxxx
         }
     }
@@ -58,46 +58,44 @@ public class Services {
     public void saveRepairedCarList(Cars cars, String dateOfRepair) {
         ObjectMapper mapper = new ObjectMapper();
         try {
-            List <Car> listOfRepairedCars = returnListOfRepairedCars(cars, dateOfRepair);
-            File carsRepairedToday=new File(PATH_TO_FOLDER_WITH_REPAIRED_CARS,dateOfRepair+".json");
+            List<Car> listOfRepairedCars = returnListOfRepairedCars(cars, dateOfRepair);
+            File carsRepairedToday = new File(PATH_TO_FOLDER_WITH_REPAIRED_CARS, dateOfRepair + ".json");
             mapper.writerWithDefaultPrettyPrinter().writeValue(carsRepairedToday, listOfRepairedCars);
         } catch (IOException e) {
-            exception=e;
+            exception = e;
             System.out.println(e.toString());
         }
     }
 
     public Car FindByLicencePlate(Cars cars, String LicencePlate) {
-        try{
         List<Car> toReturn = cars.getCars()
                 .stream()
-                .filter(c ->Objects.nonNull(c.getLicencePlate()))
-                .filter(c ->c.getLicencePlate().equals(LicencePlate))
-                .filter(c->Objects.isNull(c.getDateOfRepair()))
+                .filter(c -> Objects.nonNull(c.getLicencePlate()))
+                .filter(c -> c.getLicencePlate().equals(LicencePlate))
+                .filter(c -> Objects.isNull(c.getDateOfRepair()))
                 .collect(Collectors.toList());
         if (toReturn.size() > 0) {
-            return toReturn.get(0);}
-        } catch (Exception e) {
-                exception=e;
-                System.out.println(e.toString());
-            }
-        return null;
+            return toReturn.get(0);
+        } else {
+            return null;
+        }
     }
 
     public List<Car> returnListOfRepairedCars(Cars cars, String dateOfRepair) {
         List<Car> toReturn = cars.getCars()
                 .stream()
-                .filter(c ->Objects.nonNull(c.getDateOfRepair()))
-                .filter(c ->c.getDateOfRepair().equals(dateOfRepair))
+                .filter(c -> Objects.nonNull(c.getDateOfRepair()))
+                .filter(c -> c.getDateOfRepair().equals(dateOfRepair))
                 .collect(Collectors.toList());
         return toReturn;
     }
+
     public List<Car> returnListOfRepairedCars(Cars cars) {
         List<Car> toReturn = cars.getCars()
                 .stream()
-                .filter(c ->Objects.nonNull(c.isRepaired()))
-                .filter(c ->c.isRepaired()==true)
-                .sorted((c1, c2)->c2.getDateOfRepair().compareTo(c1.getDateOfRepair()))
+                .filter(c -> Objects.nonNull(c.isRepaired()))
+                .filter(c -> c.isRepaired() == true)
+                .sorted((c1, c2) -> c2.getDateOfRepair().compareTo(c1.getDateOfRepair()))
                 .collect(Collectors.toList());
         return toReturn;
     }
@@ -105,9 +103,9 @@ public class Services {
     public List<Car> returnListCarsToRepair(Cars cars) {
         List<Car> toReturn = cars.getCars()
                 .stream()
-                .filter(c ->Objects.nonNull(c.isRepaired()))
-                .filter(c ->c.isRepaired()==false)
-                .sorted((c1, c2)->c1.getServiceStartDate().compareTo(c2.getServiceStartDate()))
+                .filter(c -> Objects.nonNull(c.isRepaired()))
+                .filter(c -> c.isRepaired() == false)
+                .sorted((c1, c2) -> c1.getServiceStartDate().compareTo(c2.getServiceStartDate()))
                 .collect(Collectors.toList());
         return toReturn;
     }

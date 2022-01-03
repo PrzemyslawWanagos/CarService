@@ -7,4 +7,13 @@
   "description" : "AAA",
   "dateOfRepair" : "2022-12-12",
   "serviceStartDate" : null
+}, {
+  "make" : "AAA",
+  "licencePlate" : "AAA",
+  "category" : "SEATS",
+  "costOfService" : 100,
+  "repaired" : true,
+  "description" : "AAA",
+  "dateOfRepair" : "2022-12-12",
+  "serviceStartDate" : null
 } ]
