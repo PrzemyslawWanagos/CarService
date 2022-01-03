@@ -1,13 +1,4 @@
 [ {
-  "make" : "Test",
-  "licencePlate" : "fadsfa",
-  "category" : "BRAKES",
-  "costOfService" : 200,
-  "repaired" : true,
-  "description" : "fdasf",
-  "dateOfRepair" : "0012-12-12",
-  "serviceStartDate" : null
-}, {
   "make" : "bvcxb",
   "licencePlate" : "bxcvb",
   "category" : "SEATS",
@@ -41,6 +32,33 @@
   "costOfService" : 100,
   "repaired" : true,
   "description" : "2323",
+  "dateOfRepair" : "0012-12-12",
+  "serviceStartDate" : null
+}, {
+  "make" : "AAA",
+  "licencePlate" : "AAAB",
+  "category" : "SEATS",
+  "costOfService" : 100,
+  "repaired" : true,
+  "description" : "AAA",
+  "dateOfRepair" : "0012-12-12",
+  "serviceStartDate" : null
+}, {
+  "make" : "DDD",
+  "licencePlate" : "DDD",
+  "category" : "SEATS",
+  "costOfService" : 121,
+  "repaired" : true,
+  "description" : "DDD",
+  "dateOfRepair" : "0012-12-12",
+  "serviceStartDate" : null
+}, {
+  "make" : "ZZZ",
+  "licencePlate" : "ZZZ",
+  "category" : "SEATS",
+  "costOfService" : 100,
+  "repaired" : true,
+  "description" : "ZZZ",
   "dateOfRepair" : "0012-12-12",
   "serviceStartDate" : null
 } ]

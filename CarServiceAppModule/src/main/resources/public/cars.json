@@ -453,11 +453,11 @@
     "make" : "aaa",
     "licencePlate" : "AAA",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 100,
+    "repaired" : true,
     "description" : "AAA",
-    "dateOfRepair" : null,
-    "serviceStartDate" : "1212-12-12"
+    "dateOfRepair" : "2022-12-12",
+    "serviceStartDate" : null
   }, {
     "make" : "AAA",
     "licencePlate" : "aaa",
@@ -480,19 +480,46 @@
     "make" : "AAA",
     "licencePlate" : "AAAB",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 100,
+    "repaired" : true,
     "description" : "AAA",
-    "dateOfRepair" : null,
-    "serviceStartDate" : "0021-12-13"
+    "dateOfRepair" : "0012-12-12",
+    "serviceStartDate" : null
   }, {
     "make" : "DDD",
     "licencePlate" : "DDD",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 121,
+    "repaired" : true,
     "description" : "DDD",
-    "dateOfRepair" : null,
-    "serviceStartDate" : "2023-12-12"
+    "dateOfRepair" : "0012-12-12",
+    "serviceStartDate" : null
+  }, {
+    "make" : "ZZZ",
+    "licencePlate" : "ZZZ",
+    "category" : "SEATS",
+    "costOfService" : 100,
+    "repaired" : true,
+    "description" : "ZZZ",
+    "dateOfRepair" : "0012-12-12",
+    "serviceStartDate" : null
+  }, {
+    "make" : "CCC",
+    "licencePlate" : "CCC",
+    "category" : "SEATS",
+    "costOfService" : 200,
+    "repaired" : true,
+    "description" : "CCC",
+    "dateOfRepair" : "2023-12-12",
+    "serviceStartDate" : null
+  }, {
+    "make" : "SSS",
+    "licencePlate" : "SSS",
+    "category" : "SEATS",
+    "costOfService" : 200,
+    "repaired" : true,
+    "description" : "SSS",
+    "dateOfRepair" : "2021-12-12",
+    "serviceStartDate" : null
   } ]
 }

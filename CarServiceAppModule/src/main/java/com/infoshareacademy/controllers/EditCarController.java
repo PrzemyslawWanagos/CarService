@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.validation.Valid;
 
+import java.time.LocalDate;
+
 import static com.infoshareacademy.CarServiceApp.exception;
 
 @Controller
@@ -44,6 +46,16 @@ public class EditCarController {
                                 BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return "edit-car";
+        }
+        String currentDate = LocalDate.now().toString();
+        Integer currentYear=Integer.parseInt(currentDate.substring(0,4));
+        Integer enteredDate=Integer.parseInt(carDto.getDateOfRepair().substring(0,4));
+
+        if ((enteredDate>currentYear)||(enteredDate<currentYear-1)) {
+            carDto.setDateOfRepairError(true);
+            return "edit-car";
+        } else {
+            carDto.setDateOfRepairError(false);
         }
         Car car = services.FindByLicencePlate(cars, carDto.getLicencePlate());
         try {

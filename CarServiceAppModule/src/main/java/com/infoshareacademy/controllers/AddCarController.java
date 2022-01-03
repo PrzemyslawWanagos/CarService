@@ -62,7 +62,7 @@ public class AddCarController {
         Integer currentYear=Integer.parseInt(currentDate.substring(0,4));
         Integer enteredDate=Integer.parseInt(carDto.getServiceStartDate().substring(0,4));
 
-        if (enteredDate>currentYear) {
+        if ((enteredDate>currentYear)||(enteredDate<currentYear-1)) {
             carDto.setServiceStartDateError(true);
             return "add-car";
         } else {

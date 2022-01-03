@@ -98,6 +98,13 @@
                        th:value="${carDto.dateOfRepair}"/>
                 <br>
                 <br>
+                <div th:if="${carDto.isDateOfRepairError()}" th:class="'alert alert-danger'">
+
+                    <ul>
+                        <li th:text="'Incorrect date of repair'"></li>
+                    </ul>
+
+                </div>
                 <div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
 
                     <p th:text="#{form.error}">
