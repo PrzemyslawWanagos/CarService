@@ -1,28 +1,10 @@
 [ {
-  "make" : "fdsgdf",
-  "licencePlate" : "gsdfgsd",
-  "category" : "SEATS",
+  "make" : "SKODA",
+  "licencePlate" : "GST3421",
+  "category" : "MAINTENANCE",
   "costOfService" : 100,
   "repaired" : true,
-  "description" : "gsdfgsd",
+  "description" : "OCTAVIA",
   "dateOfRepair" : "2022-12-25",
-  "serviceStartDate" : null
-}, {
-  "make" : "AAA",
-  "licencePlate" : "dddd",
-  "category" : "SEATS",
-  "costOfService" : 100,
-  "repaired" : true,
-  "description" : "AAA",
-  "dateOfRepair" : "2022-12-25",
-  "serviceStartDate" : null
-}, {
-  "make" : "FASDLKJL",
-  "licencePlate" : "FLDKSA342",
-  "category" : "SEATS",
-  "costOfService" : 100,
-  "repaired" : true,
-  "description" : "FADLSKFJ",
-  "dateOfRepair" : "2022-12-25",
-  "serviceStartDate" : "2022-12-12"
+  "serviceStartDate" : "2022-01-25"
 } ]
