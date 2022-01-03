@@ -6,9 +6,9 @@ import com.infoshareacademy.repository.Cars;
 import com.infoshareacademy.service.Services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -25,24 +25,16 @@ public class SearchCarController {
     }
 
     @GetMapping("/search-car")
-    public ModelAndView displaySearchedCars(@RequestParam("licencePlate") String licencePlate) {
-        List<Car> CarSearchResult= services.returnListOfCarsToRepair(cars, licencePlate);
-
-        ModelAndView modelAndView = new ModelAndView("search-cars");
-//
-//        System.out.println(listToString(CarSearchResult,true));
-        modelAndView.addObject("carSearchResult",CarSearchResult);
-
-        return modelAndView;
+    public String displaySearchedCars(@RequestParam("licencePlate") String licencePlate, Model model) {
+        List<Car> CarSearchResult = services.returnListOfCarsToRepair(cars, licencePlate);
+        model.addAttribute("carSearchResult", CarSearchResult);
+        return "search-cars";
     }
-    @GetMapping("/show-cars-to-repair")
-    public ModelAndView displayCarsToFix() {
-        List<Car> CarSearchResult= services.returnListCarsToRepair(cars);
-        ModelAndView modelAndView = new ModelAndView("search-cars");
-//
-//        System.out.println(listToString(CarSearchResult,true));
-        modelAndView.addObject("carSearchResult",CarSearchResult);
 
-        return modelAndView;
+    @GetMapping("/show-cars-to-repair")
+    public String displayCarsToFix(Model model) {
+        List<Car> CarSearchResult = services.returnListCarsToRepair(cars);
+        model.addAttribute("carSearchResult", CarSearchResult);
+        return "search-cars";
     }
 }

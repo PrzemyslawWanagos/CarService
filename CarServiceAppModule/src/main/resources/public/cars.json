@@ -624,10 +624,10 @@
     "make" : "FASDLKJL",
     "licencePlate" : "FLDKSA342",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 100,
+    "repaired" : true,
     "description" : "FADLSKFJ",
-    "dateOfRepair" : null,
+    "dateOfRepair" : "2022-12-25",
     "serviceStartDate" : "2022-12-12"
   }, {
     "make" : "JJJJ",
