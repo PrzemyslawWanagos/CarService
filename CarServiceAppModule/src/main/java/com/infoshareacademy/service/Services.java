@@ -30,8 +30,6 @@ public class Services {
         Predicate<Car> licencePlateFilter = c-> c.getLicencePlate().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT));
         Predicate<Car> makeFilter = c-> c.getMake().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT));
         Predicate<Car> descriptionFilter = c-> c.getDescription().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT));
-
-
         List<Car> toReturn = cars.getCars()
                 .stream()
                 .filter(isCarRepaired)
