@@ -548,5 +548,14 @@
     "description" : "AAA",
     "dateOfRepair" : null,
     "serviceStartDate" : "2022-12-23"
+  }, {
+    "make" : "JDHF",
+    "licencePlate" : "HDFGHD",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "HDGHD",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2022-12-23"
   } ]
 }
