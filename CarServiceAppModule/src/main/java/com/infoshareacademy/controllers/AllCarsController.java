@@ -25,11 +25,14 @@ public class AllCarsController {
     @GetMapping("all-cars")
     public String displayAllCars(Model model) {
         List<Car> listOfCars;
-        listOfCars = cars.getCars();
-        if (listOfCars == null) {
-            exception = new NullPointerException();
-            return "redirect:/error/ERROR WHILE ACCESSING THE LIST OF ALL CARS!!!";
+        try{ listOfCars = cars.getCars();}
+        catch(Exception e){
+            listOfCars=null;
         }
+//        if (listOfCars == null) {
+//            exception = new NullPointerException();
+//            return "redirect:/error/ERROR WHILE ACCESSING THE LIST OF ALL CARS!!!";
+//        }
         model.addAttribute("allCars", listOfCars);
         return "all-cars";
     }
