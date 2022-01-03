@@ -2,7 +2,6 @@ package com.infoshareacademy.controllers;
 
 import com.infoshareacademy.domain.Car;
 import com.infoshareacademy.repository.Cars;
-import com.infoshareacademy.service.Services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,12 +14,11 @@ import static com.infoshareacademy.CarServiceApp.exception;
 @Controller
 public class AllCarsController {
 
-    private final Services services;
+
     private final Cars cars;
 
     @Autowired
-    public AllCarsController(Services services, Cars cars) {
-        this.services = services;
+    public AllCarsController(Cars cars) {
         this.cars = cars;
     }
 
@@ -35,6 +33,4 @@ public class AllCarsController {
         model.addAttribute("allCars", listOfCars);
         return "all-cars";
     }
-
-
 }

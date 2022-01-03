@@ -701,5 +701,14 @@
     "description" : "AAA",
     "dateOfRepair" : null,
     "serviceStartDate" : "2022-12-13"
+  }, {
+    "make" : "QQQ",
+    "licencePlate" : "QQQ",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "QQQ",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2022-12-12"
   } ]
 }
