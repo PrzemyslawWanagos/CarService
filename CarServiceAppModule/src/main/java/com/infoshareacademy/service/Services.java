@@ -56,10 +56,9 @@ public class Services {
     }
 
     public void saveRepairedCarList(Cars cars, String dateOfRepair) {
-         List <Car> listOfRepairedCars = returnListOfRepairedCars(cars, dateOfRepair);
-
         ObjectMapper mapper = new ObjectMapper();
         try {
+            List <Car> listOfRepairedCars = returnListOfRepairedCars(cars, dateOfRepair);
             File carsRepairedToday=new File(PATH_TO_FOLDER_WITH_REPAIRED_CARS,dateOfRepair+".json");
             mapper.writerWithDefaultPrettyPrinter().writeValue(carsRepairedToday, listOfRepairedCars);
         } catch (IOException e) {
@@ -69,7 +68,7 @@ public class Services {
     }
 
     public Car FindByLicencePlate(Cars cars, String LicencePlate) {
-
+        try{
         List<Car> toReturn = cars.getCars()
                 .stream()
                 .filter(c ->Objects.nonNull(c.getLicencePlate()))
@@ -77,11 +76,12 @@ public class Services {
                 .filter(c->Objects.isNull(c.getDateOfRepair()))
                 .collect(Collectors.toList());
         if (toReturn.size() > 0) {
-            return toReturn.get(0);
-        } else {
-            return null;
-        }
-
+            return toReturn.get(0);}
+        } catch (Exception e) {
+                exception=e;
+                System.out.println(e.toString());
+            }
+        return null;
     }
 
     public List<Car> returnListOfRepairedCars(Cars cars, String dateOfRepair) {

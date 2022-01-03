@@ -22,7 +22,7 @@ public class AllCarsController {
     @GetMapping("all-cars")
     public String displayAllCars(Model model) {
         model.addAttribute("allCars", cars.getCars());
-        model.addAttribute("prevPath", "main");
+       /* model.addAttribute("prevPath", "main");*/
         return "all-cars";
     }
 

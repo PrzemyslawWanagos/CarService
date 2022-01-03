@@ -57,27 +57,26 @@ public class AddCarController {
         } else {
             carDto.setDuplicateLicencePlateError(false);
         }
-
         String currentDate = LocalDate.now().toString();
         Integer currentYear=Integer.parseInt(currentDate.substring(0,4));
         Integer enteredDate=Integer.parseInt(carDto.getServiceStartDate().substring(0,4));
-
         if ((enteredDate>currentYear)||(enteredDate<currentYear-1)) {
             carDto.setServiceStartDateError(true);
             return "add-car";
         } else {
             carDto.setServiceStartDateError(false);
         }
-
         try {
             services.fromDtoToEntity(carDto, car);
         } catch (Exception e) {
             return e.toString();
         }
-        cars.addCarToCarService(car);
-        services.saveCarService(cars);
-        if(exception!=null){
-        return "main"; //"redirect:/error/1";
+        try {
+            cars.addCarToCarService(car);
+            services.saveCarService(cars);
+        }catch(Exception e){
+        exception=e;
+            return "redirect:/error/ERROR WHILE ADDING NEW CAR!!!";
         }
         return "add-car-success";
 

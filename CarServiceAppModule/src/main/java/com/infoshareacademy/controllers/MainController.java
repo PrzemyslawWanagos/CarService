@@ -25,7 +25,7 @@ public class MainController {
     public String mainPage(Model model) {
         cars.setCars(Services.readCarService().getCars());
         if(exception!=null){
-            return "redirect:/error/XXXX";
+            return "redirect:/error/ERROR WHILE READING THE FILE 'CARS.JSON'!!!";
         }
         return "main";
     }
