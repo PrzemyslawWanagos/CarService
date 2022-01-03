@@ -8,15 +8,20 @@ label {
     font-weight: bold;
 }
 
-.tableFixHead thead {
-    position: sticky;
-    top: 0;
+.tableFixHead {
+    overflow-y: scroll;
+    height: 500px;
 }
+/*}*/
+/*.tableFixHead thead {*/
+/*    position: sticky;*/
+/*    top: 0;*/
+/*}*/
 
-.tableFixHead tfoot {
-    position: sticky;
-    bottom: 0;
-}
+/*.tableFixHead tfoot {*/
+/*    position: sticky;*/
+/*    bottom: 0;*/
+/*}*/
 #licencePlate{
     width: 30%;
 }
