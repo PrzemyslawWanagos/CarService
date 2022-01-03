@@ -12,19 +12,19 @@
     "make" : "Fiat",
     "licencePlate" : "GA43523",
     "category" : "OTHER",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 100,
+    "repaired" : true,
     "description" : "test2",
-    "dateOfRepair" : null,
+    "dateOfRepair" : "2021-12-27",
     "serviceStartDate" : "2021-12-25"
   }, {
     "make" : "Ford Mondeo",
     "licencePlate" : "GS23123",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 100,
+    "repaired" : true,
     "description" : "test2",
-    "dateOfRepair" : null,
+    "dateOfRepair" : "2022-12-12",
     "serviceStartDate" : "2021-12-25"
   }, {
     "make" : "Toyota",
@@ -69,6 +69,15 @@
     "costOfService" : 0,
     "repaired" : false,
     "description" : "OCTAVIA",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2021-12-25"
+  }, {
+    "make" : "AAA",
+    "licencePlate" : "AAA",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "AAA",
     "dateOfRepair" : null,
     "serviceStartDate" : "2021-12-25"
   } ]

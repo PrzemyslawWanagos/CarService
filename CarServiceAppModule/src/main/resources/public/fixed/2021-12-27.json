@@ -1,10 +1,10 @@
 [ {
-  "make" : "Ford Mondeo",
-  "licencePlate" : "GS23123",
-  "category" : "SEATS",
+  "make" : "Fiat",
+  "licencePlate" : "GA43523",
+  "category" : "OTHER",
   "costOfService" : 100,
   "repaired" : true,
   "description" : "test2",
-  "dateOfRepair" : "2022-12-12",
+  "dateOfRepair" : "2021-12-27",
   "serviceStartDate" : "2021-12-25"
 } ]

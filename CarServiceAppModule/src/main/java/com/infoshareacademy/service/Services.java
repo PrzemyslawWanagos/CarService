@@ -5,6 +5,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.infoshareacademy.domain.Car;
 import com.infoshareacademy.dto.CarDto;
 import com.infoshareacademy.repository.Cars;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
@@ -22,7 +24,7 @@ public class Services {
     public Services() {
     }
 
-    public List<Car> returnListOfCarsToRepair(Cars cars, String licencePlate) {
+    public List<Car> returnListOfCarsToRepair(@NotNull Cars cars, String licencePlate) {
         List<Car> toReturn = cars.getCars()
                 .stream()
                 .filter(c -> c.getLicencePlate().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT)) && !(c.isRepaired()))
@@ -31,7 +33,7 @@ public class Services {
         return toReturn;
     }
 
-    public static Cars readCarService() throws IOException {
+    public static @Nullable Cars readCarService() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         Cars CarsFromFile = new Cars();
         File inputFile = new File(PATH_TO_FULL_LIST_OF_CARS);
@@ -41,15 +43,12 @@ public class Services {
         }
         CarsFromFile = mapper.readValue(inputFile, new TypeReference<>() {
         });
-
         return CarsFromFile;
     }
 
     public void saveCarService(Cars cars) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-
         mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PATH_TO_FULL_LIST_OF_CARS), cars);
-
     }
 
     public void saveRepairedCarList(Cars cars, String dateOfRepair) throws IOException {
@@ -61,7 +60,7 @@ public class Services {
 
     }
 
-    public Car FindByLicencePlate(Cars cars, String LicencePlate) {
+    public Car FindByLicencePlate(@NotNull Cars cars, String LicencePlate) {
         List<Car> toReturn = cars.getCars()
                 .stream()
                 .filter(c -> Objects.nonNull(c.getLicencePlate()))
@@ -75,7 +74,7 @@ public class Services {
         }
     }
 
-    public List<Car> returnListOfRepairedCars(Cars cars, String dateOfRepair) {
+    public List<Car> returnListOfRepairedCars(@NotNull Cars cars, String dateOfRepair) {
         List<Car> toReturn = cars.getCars()
                 .stream()
                 .filter(c -> Objects.nonNull(c.getDateOfRepair()))
@@ -84,7 +83,7 @@ public class Services {
         return toReturn;
     }
 
-    public List<Car> returnListOfRepairedCars(Cars cars) {
+    public List<Car> returnListOfRepairedCars(@NotNull Cars cars) {
         List<Car> toReturn = cars.getCars()
                 .stream()
                 .filter(c -> Objects.nonNull(c.isRepaired()))
@@ -94,7 +93,7 @@ public class Services {
         return toReturn;
     }
 
-    public List<Car> returnListCarsToRepair(Cars cars) {
+    public List<Car> returnListCarsToRepair(@NotNull Cars cars) {
         List<Car> toReturn = cars.getCars()
                 .stream()
                 .filter(c -> Objects.nonNull(c.isRepaired()))
@@ -104,7 +103,7 @@ public class Services {
         return toReturn;
     }
 
-    public void fromDtoToEntity(CarDto carDto, Car car) {
+    public void fromDtoToEntity(@NotNull CarDto carDto, @NotNull Car car) {
         car.setMake(carDto.getMake());
         car.setLicencePlate(carDto.getLicencePlate());
         car.setDescription(carDto.getDescription());
@@ -112,7 +111,7 @@ public class Services {
         car.setServiceStartDate(carDto.getServiceStartDate());
     }
 
-    public void fromEntityToDto(Car car, CarDto carDto) {
+    public void fromEntityToDto(@NotNull Car car, @NotNull CarDto carDto) {
         carDto.setMake(car.getMake());
         carDto.setLicencePlate(car.getLicencePlate());
         carDto.setDescription(car.getDescription());
