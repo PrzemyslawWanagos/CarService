@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.io.IOException;
+
 import static com.infoshareacademy.CarServiceApp.exception;
 
 
@@ -23,20 +25,13 @@ public class MainController {
 
     @GetMapping("/main")
     public String mainPage(Model model) {
-        cars.setCars(Services.readCarService().getCars());
-        if(exception!=null){
+        try{
+            cars.setCars(Services.readCarService().getCars());
+        }
+        catch (IOException e) {
+            exception=e;
             return "redirect:/error/ERROR WHILE READING THE FILE 'CARS.JSON'!!!";
         }
         return "main";
     }
-
-    @GetMapping("/exit")
-    @ResponseBody
-    public void exit() {
-        try {
-            //xxx
-        } catch (Exception e) {
-        }
-    }
-
 }

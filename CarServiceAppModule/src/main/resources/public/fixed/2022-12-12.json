@@ -16,4 +16,31 @@
   "description" : "AAA",
   "dateOfRepair" : "2022-12-12",
   "serviceStartDate" : null
+}, {
+  "make" : "eee",
+  "licencePlate" : "eee",
+  "category" : "SEATS",
+  "costOfService" : 200,
+  "repaired" : true,
+  "description" : "eee",
+  "dateOfRepair" : "2022-12-12",
+  "serviceStartDate" : null
+}, {
+  "make" : "AAA",
+  "licencePlate" : "AAAB",
+  "category" : "SEATS",
+  "costOfService" : 200,
+  "repaired" : true,
+  "description" : "AAA",
+  "dateOfRepair" : "2022-12-12",
+  "serviceStartDate" : null
+}, {
+  "make" : "aaa",
+  "licencePlate" : "aaa",
+  "category" : "SEATS",
+  "costOfService" : 100,
+  "repaired" : true,
+  "description" : "aaa",
+  "dateOfRepair" : "2022-12-12",
+  "serviceStartDate" : null
 } ]

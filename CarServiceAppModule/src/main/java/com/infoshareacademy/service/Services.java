@@ -20,7 +20,6 @@ import static com.infoshareacademy.CarServiceApp.*;
 public class Services {
 
     public Services() {
-
     }
 
     public List<Car> returnListOfCarsToRepair(Cars cars, String licencePlate) {
@@ -32,39 +31,30 @@ public class Services {
         return toReturn;
     }
 
-    public static Cars readCarService() {
+    public static Cars readCarService() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         Cars CarsFromFile = new Cars();
-        try {
+
             CarsFromFile = mapper.readValue(new File(PATH_TO_FULL_LIST_OF_CARS), new TypeReference<>() {
             });
-        } catch (IOException e) {
-            exception = e;
-            System.out.println(e.toString());
-        }
+
         return CarsFromFile;
     }
 
-    public void saveCarService(Cars cars) {
+    public void saveCarService(Cars cars) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-        try {
+
             mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PATH_TO_FULL_LIST_OF_CARS), cars);
-        } catch (IOException e) {
-            exception = e;
-            System.out.println(e.toString());//xxxx
-        }
+
     }
 
-    public void saveRepairedCarList(Cars cars, String dateOfRepair) {
+    public void saveRepairedCarList(Cars cars, String dateOfRepair) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-        try {
+
             List<Car> listOfRepairedCars = returnListOfRepairedCars(cars, dateOfRepair);
             File carsRepairedToday = new File(PATH_TO_FOLDER_WITH_REPAIRED_CARS, dateOfRepair + ".json");
             mapper.writerWithDefaultPrettyPrinter().writeValue(carsRepairedToday, listOfRepairedCars);
-        } catch (IOException e) {
-            exception = e;
-            System.out.println(e.toString());
-        }
+
     }
 
     public Car FindByLicencePlate(Cars cars, String LicencePlate) {
@@ -126,6 +116,6 @@ public class Services {
         carDto.setCostOfService(car.getCostOfService());
         carDto.setRepaired(car.isRepaired());
         carDto.setServiceStartDate(car.getServiceStartDate());
-        //carDto.setDateOfRepair(car.getDateOfRepair());
+
     }
 }

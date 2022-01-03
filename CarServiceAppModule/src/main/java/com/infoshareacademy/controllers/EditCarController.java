@@ -48,36 +48,47 @@ public class EditCarController {
     @PostMapping(value = "/edit/{licencePlate}")
     public String saveEditedCar(@Valid @ModelAttribute("carDto") CarDto carDto,
                                 BindingResult bindingResult) {
-        if (bindingResult.hasErrors()) {
-            return "edit-car";
-        }
-        String currentDate = LocalDate.now().toString();
-        Integer currentYear = Integer.parseInt(currentDate.substring(0, 4));
-        Integer enteredDate = Integer.parseInt(carDto.getDateOfRepair().substring(0, 4));
-
-        if ((enteredDate > currentYear) || (enteredDate < currentYear - 1)) {
-            carDto.setDateOfRepairError(true);
-            return "edit-car";
-        } else {
-            carDto.setDateOfRepairError(false);
-        }
-        Car car = services.FindByLicencePlate(cars, carDto.getLicencePlate());
+        Car car;
         try {
+            car = services.FindByLicencePlate(cars, carDto.getLicencePlate());
+            checkIfDateOfRepairHasErrors(carDto, car);
+            if (bindingResult.hasErrors() || carDto.isDateOfRepairError()) {
+                return "edit-car";
+            }
             services.fromDtoToEntity(carDto, car);
             car.setCostOfService(carDto.getCostOfService());
             car.setRepaired(true);
             car.setDateOfRepair(carDto.getDateOfRepair());
             services.saveCarService(cars);
-            if (exception != null) {
-                return "redirect:/error/Error while updating the list of cars";
-            }
-            services.saveRepairedCarList(cars, car.getDateOfRepair());
-            if (exception != null) {
-                return "redirect:/error/Error while updating the list of repaired cars";
-            }
         } catch (Exception e) {
-            return e.toString();
+            return "redirect:/error/Error while updating the list of cars";
+        }
+        try {
+            services.saveRepairedCarList(cars, car.getDateOfRepair());
+        } catch (Exception e) {
+            return "redirect:/error/Error while updating the list of repaired cars";
         }
         return "edit-car-success";
+    }
+
+    private void checkIfDateOfRepairHasErrors(CarDto carDto, Car car) {
+        String currentDate = LocalDate.now().toString();
+        Integer currentYear = Integer.parseInt(currentDate.substring(0, 4));
+        Integer enteredDate = Integer.parseInt(carDto.getDateOfRepair().substring(0, 4));
+
+
+
+        if ((enteredDate > currentYear) || (enteredDate < currentYear - 1)) {
+            carDto.setDateOfRepairError(true);
+        } else {
+            carDto.setDateOfRepairError(false);
+        }
+        LocalDate l1=LocalDate.parse(carDto.getDateOfRepair());
+        LocalDate l2=LocalDate.parse(car.getServiceStartDate());
+
+        if (l1.compareTo(l2) < 0) {
+            carDto.setDateOfRepairError(true);
+        }
+
     }
 }
