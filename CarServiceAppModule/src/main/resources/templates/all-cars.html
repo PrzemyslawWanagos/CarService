@@ -75,7 +75,9 @@
                                 <td th:text="${car.licencePlate}"></td>
                                 <td th:text="${car.category.categoryName}"></td>
                                 <td th:text="${car.costOfService}"></td>
-                                <td th:text="${car.repaired}"></td>
+                                <td th:if="${car.repaired}" th:text="#{form.yes}"></td>
+                                <td th:unless="${car.repaired}" th:text="#{form.no}"></td>
+<!--                                <td th:text="${car.repaired}"></td>-->
                                 <td th:text="${car.dateOfRepair}"></td>
                             </tr>
                             </tbody>
