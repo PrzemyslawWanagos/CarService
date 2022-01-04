@@ -5,7 +5,7 @@
     "category" : "OTHER",
     "costOfService" : 200,
     "repaired" : true,
-    "description" : "test2",
+    "description" : "323",
     "dateOfRepair" : "2022-12-22",
     "serviceStartDate" : "2021-12-25"
   }, {
@@ -14,7 +14,7 @@
     "category" : "OTHER",
     "costOfService" : 100,
     "repaired" : true,
-    "description" : "test2",
+    "description" : "TIPO",
     "dateOfRepair" : "2021-12-27",
     "serviceStartDate" : "2021-12-25"
   }, {
@@ -23,7 +23,7 @@
     "category" : "SEATS",
     "costOfService" : 100,
     "repaired" : true,
-    "description" : "test2",
+    "description" : "BLUE",
     "dateOfRepair" : "2022-12-12",
     "serviceStartDate" : "2021-12-25"
   }, {
@@ -32,7 +32,7 @@
     "category" : "DRIVE",
     "costOfService" : 0,
     "repaired" : false,
-    "description" : "test2",
+    "description" : "AURIS",
     "dateOfRepair" : null,
     "serviceStartDate" : "2021-12-25"
   }, {
@@ -41,7 +41,7 @@
     "category" : "ENGINE",
     "costOfService" : 0,
     "repaired" : false,
-    "description" : "test2",
+    "description" : "CAYENNE",
     "dateOfRepair" : null,
     "serviceStartDate" : "2021-12-25"
   }, {
@@ -50,7 +50,7 @@
     "category" : "SEATS",
     "costOfService" : 0,
     "repaired" : false,
-    "description" : "test2",
+    "description" : "200XC",
     "dateOfRepair" : null,
     "serviceStartDate" : "2021-12-25"
   }, {
@@ -59,7 +59,7 @@
     "category" : "SEATS",
     "costOfService" : 0,
     "repaired" : false,
-    "description" : "test2",
+    "description" : "NIEBIESKI",
     "dateOfRepair" : null,
     "serviceStartDate" : "2021-12-25"
   }, {
@@ -71,41 +71,5 @@
     "description" : "OCTAVIA",
     "dateOfRepair" : null,
     "serviceStartDate" : "2021-12-25"
-  }, {
-    "make" : "AAA",
-    "licencePlate" : "AAA",
-    "category" : "SEATS",
-    "costOfService" : 100,
-    "repaired" : true,
-    "description" : "AAA",
-    "dateOfRepair" : "2022-12-11",
-    "serviceStartDate" : "2021-12-25"
-  }, {
-    "make" : "AAA",
-    "licencePlate" : "ASFD",
-    "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
-    "description" : "DFFKDS",
-    "dateOfRepair" : null,
-    "serviceStartDate" : "2022-12-12"
-  }, {
-    "make" : "AAA",
-    "licencePlate" : "AAAB",
-    "category" : "SEATS",
-    "costOfService" : 100,
-    "repaired" : true,
-    "description" : "_FKJDSFOIWE.FKLDS,FDSAF",
-    "dateOfRepair" : "2022-12-12",
-    "serviceStartDate" : "2022-12-12"
-  }, {
-    "make" : "AAA",
-    "licencePlate" : "SDSD",
-    "category" : "MAINTENANCE",
-    "costOfService" : 100,
-    "repaired" : true,
-    "description" : "FDSAS",
-    "dateOfRepair" : "2022-12-12",
-    "serviceStartDate" : "2021-12-12"
-  } ]
+  }]
 }
