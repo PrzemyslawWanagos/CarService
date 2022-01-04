@@ -1,10 +1,10 @@
 [ {
-  "make" : "DSDS",
-  "licencePlate" : "RQERQ",
+  "make" : "AAA",
+  "licencePlate" : "AAA",
   "category" : "SEATS",
-  "costOfService" : 110,
+  "costOfService" : 100,
   "repaired" : true,
-  "description" : "ERWQ",
+  "description" : "AAA",
   "dateOfRepair" : "2022-12-11",
-  "serviceStartDate" : "2022-11-21"
+  "serviceStartDate" : "2021-12-25"
 } ]

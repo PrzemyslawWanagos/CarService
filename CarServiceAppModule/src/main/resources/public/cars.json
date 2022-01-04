@@ -75,10 +75,37 @@
     "make" : "AAA",
     "licencePlate" : "AAA",
     "category" : "SEATS",
+    "costOfService" : 100,
+    "repaired" : true,
+    "description" : "AAA",
+    "dateOfRepair" : "2022-12-11",
+    "serviceStartDate" : "2021-12-25"
+  }, {
+    "make" : "AAA",
+    "licencePlate" : "ASFD",
+    "category" : "SEATS",
     "costOfService" : 0,
     "repaired" : false,
-    "description" : "AAA",
+    "description" : "DFFKDS",
     "dateOfRepair" : null,
-    "serviceStartDate" : "2021-12-25"
+    "serviceStartDate" : "2022-12-12"
+  }, {
+    "make" : "AAA",
+    "licencePlate" : "AAAB",
+    "category" : "SEATS",
+    "costOfService" : 100,
+    "repaired" : true,
+    "description" : "_FKJDSFOIWE.FKLDS,FDSAF",
+    "dateOfRepair" : "2022-12-12",
+    "serviceStartDate" : "2022-12-12"
+  }, {
+    "make" : "AAA",
+    "licencePlate" : "SDSD",
+    "category" : "MAINTENANCE",
+    "costOfService" : 100,
+    "repaired" : true,
+    "description" : "FDSAS",
+    "dateOfRepair" : "2022-12-12",
+    "serviceStartDate" : "2021-12-12"
   } ]
 }
