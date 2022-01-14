@@ -68,9 +68,10 @@
                         <li th:text="${carDto.getDateOfRepairError()}"></li>
                     </ul>
                 </div>
-                 <br>
                 <br>
-                <button class="btn btn-secondary" th:text="#{saveEdits.caption}"></button>
+                <br>
+                <button type="submit" class="btn btn-secondary" th:text="#{saveEdits.caption}"></button>
+                <button type="reset" class="btn btn-secondary " th:text="#{form.Clear}"></button>
             </form>
         </main>
     </div>

@@ -42,8 +42,8 @@
                 <br>
                 <label for="description" th:text="#{description.label}"></label>
                 <br>
-            <textarea class="form-control" id="description" th:type="text" th:field="*{description}"
-                       th:required="required"/>
+                <textarea class="form-control" id="description" th:type="text" th:field="*{description}"
+                          th:required="required"/>
                 <br>
                 <label for="licencePlate" th:text="#{licencePlate.label}"></label>
                 <br>
@@ -80,8 +80,7 @@
                 </div>
                 <br>
                 <button type="submit" class="btn btn-secondary " th:text="#{addCarToServiceQueue.caption}"></button>
-             <button type="reset" class="btn btn-secondary "
-                    th:text="'clear form'"></button>
+                <button type="reset" class="btn btn-secondary " th:text="#{form.Clear}"></button>
         </form>
         </main>
     </div>
