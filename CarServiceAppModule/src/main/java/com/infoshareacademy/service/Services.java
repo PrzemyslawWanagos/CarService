@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
@@ -26,15 +27,15 @@ public class Services {
     }
 
     public List<Car> returnListOfCarsToRepair(@NotNull Cars cars, String licencePlate) {
-        Predicate<Car> isCarRepaired = c->!c.isRepaired();
-        Predicate<Car> licencePlateFilter = c-> c.getLicencePlate().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT));
-        Predicate<Car> makeFilter = c-> c.getMake().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT));
-        Predicate<Car> descriptionFilter = c-> c.getDescription().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT));
+        Predicate<Car> isCarRepaired = c -> !c.isRepaired();
+        Predicate<Car> licencePlateFilter = c -> c.getLicencePlate().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT));
+        Predicate<Car> makeFilter = c -> c.getMake().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT));
+        Predicate<Car> descriptionFilter = c -> c.getDescription().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT));
         List<Car> toReturn = cars.getCars()
                 .stream()
                 .filter(isCarRepaired)
                 .filter(licencePlateFilter.or(makeFilter).or(descriptionFilter))
-                .sorted((c1, c2) -> c1.getServiceStartDate().compareTo(c2.getServiceStartDate()))
+                .sorted(Comparator.comparing(Car::getServiceStartDate))
                 .collect(Collectors.toList());
         return toReturn;
     }
@@ -92,7 +93,7 @@ public class Services {
         List<Car> toReturn = cars.getCars()
                 .stream()
                 .filter(c -> Objects.nonNull(c.isRepaired()))
-                .filter(c -> c.isRepaired() == true)
+                .filter(Car::isRepaired)
                 .sorted((c1, c2) -> c2.getDateOfRepair().compareTo(c1.getDateOfRepair()))
                 .collect(Collectors.toList());
         return toReturn;
@@ -102,8 +103,8 @@ public class Services {
         List<Car> toReturn = cars.getCars()
                 .stream()
                 .filter(c -> Objects.nonNull(c.isRepaired()))
-                .filter(c -> c.isRepaired() == false)
-                .sorted((c1, c2) -> c1.getServiceStartDate().compareTo(c2.getServiceStartDate()))
+                .filter(c -> !c.isRepaired())
+                .sorted(Comparator.comparing(Car::getServiceStartDate))
                 .collect(Collectors.toList());
         return toReturn;
     }

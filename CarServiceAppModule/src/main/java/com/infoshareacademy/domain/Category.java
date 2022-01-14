@@ -2,7 +2,7 @@ package com.infoshareacademy.domain;
 
 public enum Category {
 
-    SEATS ("Problems with seats"),
+    SEATS("Problems with seats"),
     BRAKES("Problems with brakes"),
     MAINTENANCE("General maintenance"),
     OTHER("Other problems"),

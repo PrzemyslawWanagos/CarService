@@ -11,7 +11,7 @@ public class CarDto {
     @Size(min = 2, max = 50)
     private String make;
     @Size(min = 2, max = 12)
-    @Pattern(regexp = "^[A-Za-z0-9//-]+$", message = "Only alphanumeric characters and '-' is allowed in this field")
+    @Pattern(regexp = "^[A-Za-z0-9/-]+$", message = "Only alphanumeric characters and '-' is allowed in this field")
     private String licencePlate;
     private String description;
     private Category category;

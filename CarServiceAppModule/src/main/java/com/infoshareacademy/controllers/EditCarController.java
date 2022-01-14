@@ -72,8 +72,8 @@ public class EditCarController {
 
     private void checkIfDateOfRepairHasErrors(CarDto carDto, Car car) {
         String currentDate = LocalDate.now().toString();
-        Integer currentYear = Integer.parseInt(currentDate.substring(0, 4));
-        Integer enteredDate = Integer.parseInt(carDto.getDateOfRepair().substring(0, 4));
+        int currentYear = Integer.parseInt(currentDate.substring(0, 4));
+        int enteredDate = Integer.parseInt(carDto.getDateOfRepair().substring(0, 4));
         if ((enteredDate > currentYear) || (enteredDate < currentYear - 1)) {
             carDto.setDateOfRepairError("You can only select current and prior year");
         } else {
