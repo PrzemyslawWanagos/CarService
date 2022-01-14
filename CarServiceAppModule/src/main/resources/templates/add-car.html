@@ -42,7 +42,7 @@
                 <br>
                 <label for="description" th:text="#{description.label}"></label>
                 <br>
-                <input class="form-control" id="description" th:type="text" th:field="*{description}"
+            <textarea class="form-control" id="description" th:type="text" th:field="*{description}"
                        th:required="required"/>
                 <br>
                 <label for="licencePlate" th:text="#{licencePlate.label}"></label>
@@ -62,7 +62,7 @@
                 <br>
                 <label for="reasonForService" th:text="#{reasonForService.label}"></label>
                 <br>
-                <select class="form-control" id="reasonForService" th:field="*{category}"
+                <select th:class="'form-control'" id="reasonForService" th:field="*{category}"
                         th:required="required">
                     <option th:each="categoryOpt : ${T(com.infoshareacademy.domain.Category).values()}"
                             th:value="${categoryOpt.name()}" th:text="${categoryOpt.categoryName}"></option>
@@ -79,8 +79,10 @@
                     </ul>
                 </div>
                 <br>
-                <button class="btn btn-secondary " th:text="#{addCarToServiceQueue.caption}"></button>
-            </form>
+                <button type="submit" class="btn btn-secondary " th:text="#{addCarToServiceQueue.caption}"></button>
+             <button type="reset" class="btn btn-secondary "
+                    th:text="'clear form'"></button>
+        </form>
         </main>
     </div>
 </section>

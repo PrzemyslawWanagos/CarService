@@ -1,17 +1,10 @@
 [ {
-  "make" : "Toyota",
-  "licencePlate" : "WW89764",
-  "category" : "SEATS",
-  "costOfService" : 145,
+  "make" : "Audi",
+  "licencePlate" : "GA3254E",
+  "category" : "MAINTENANCE",
+  "costOfService" : 200,
   "repaired" : true,
-  "description" : "77",
-  "dateOfRepair" : "2021-12-28"
-}, {
-  "make" : "vbklpocrbu",
-  "licencePlate" : "fewioqrk",
-  "category" : "SEATS",
-  "costOfService" : 1000,
-  "repaired" : true,
-  "description" : "fisufka",
-  "dateOfRepair" : "2021-12-28"
+  "description" : "Old one",
+  "dateOfRepair" : "2021-12-28",
+  "serviceStartDate" : "2021-12-28"
 } ]
