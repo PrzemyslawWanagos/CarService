@@ -57,10 +57,10 @@
     "make" : "hyundai",
     "licencePlate" : "GA989898",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 120,
+    "repaired" : true,
     "description" : "NIEBIESKI",
-    "dateOfRepair" : null,
+    "dateOfRepair" : "2022-12-12",
     "serviceStartDate" : "2021-12-25"
   }, {
     "make" : "SKODA",
@@ -89,5 +89,14 @@
     "description" : "Old one",
     "dateOfRepair" : "2021-12-28",
     "serviceStartDate" : "2021-12-28"
+  }, {
+    "make" : "AAA",
+    "licencePlate" : "GD-23",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "fasdfasd",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2022-01-20"
   } ]
 }

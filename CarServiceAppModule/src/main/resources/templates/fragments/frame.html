@@ -9,31 +9,20 @@
           rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
           crossorigin="anonymous">
-
 </head>
 </html>
 </div>
 <html>
 <body>
-<div th:fragment="logo">
-    <div class="container bg-dark text-white">
-        <img src="../../static/LOGO.jpg" height="150" th:src="@{LOGO.jpg}"/>
-    </div>
-</div>
-
-
 <div th:fragment="menu">
     <div class="nav-link navbar-right">
-
         <nav>
             <div th:insert="fragments/commonButtons :: custom ('all-cars','Full list of cars')"></div>
             <div th:insert="fragments/commonButtons :: custom ('add-car','Add car')"></div>
-            <div th:insert="fragments/commonButtons :: custom ('show-cars-to-repair','Show cars to fix')"></div>
-            <div th:insert="fragments/commonButtons :: custom ('fixed-cars','Show fixed Cars')"></div>
+            <div th:insert="fragments/commonButtons :: custom ('show-cars-to-repair','Cars to fix')"></div>
+            <div th:insert="fragments/commonButtons :: custom ('fixed-cars','Fixed Cars')"></div>
         </nav>
-
     </div>
-
 </div>
 </body>
 </html>

@@ -4,25 +4,16 @@
   "category" : "SEATS",
   "costOfService" : 100,
   "repaired" : true,
-  "description" : "test2",
+  "description" : "BLUE",
   "dateOfRepair" : "2022-12-12",
   "serviceStartDate" : "2021-12-25"
 }, {
-  "make" : "AAA",
-  "licencePlate" : "AAAB",
+  "make" : "hyundai",
+  "licencePlate" : "GA989898",
   "category" : "SEATS",
-  "costOfService" : 100,
+  "costOfService" : 120,
   "repaired" : true,
-  "description" : "_FKJDSFOIWE.FKLDS,FDSAF",
+  "description" : "NIEBIESKI",
   "dateOfRepair" : "2022-12-12",
-  "serviceStartDate" : "2022-12-12"
-}, {
-  "make" : "AAA",
-  "licencePlate" : "SDSD",
-  "category" : "MAINTENANCE",
-  "costOfService" : 100,
-  "repaired" : true,
-  "description" : "FDSAS",
-  "dateOfRepair" : "2022-12-12",
-  "serviceStartDate" : "2021-12-12"
+  "serviceStartDate" : "2021-12-25"
 } ]
