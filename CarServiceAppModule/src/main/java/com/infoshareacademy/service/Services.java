@@ -8,8 +8,12 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.infoshareacademy.domain.Car;
 import com.infoshareacademy.dto.CarDto;
 import com.infoshareacademy.repository.Cars;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.event.EventListener;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Service;
+
 import javax.validation.constraints.NotNull;
 import java.io.File;
 import java.io.IOException;
@@ -25,6 +29,14 @@ import static com.infoshareacademy.CarServiceApp.*;
 
 @Service
 public class Services {
+
+    @Autowired
+    public Services(Cars cars) {
+        this.cars = cars;
+    }
+
+
+    private Cars cars;
 
     public Services() {
     }
@@ -43,9 +55,10 @@ public class Services {
         return toReturn;
     }
 
+
     public static @Nullable
     Cars readCarService() throws IOException {
-        ObjectMapper mapper = new ObjectMapper()
+             ObjectMapper mapper = new ObjectMapper()
                 .enable(SerializationFeature.INDENT_OUTPUT)
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
                 .registerModule(new JavaTimeModule());
@@ -58,8 +71,18 @@ public class Services {
         }
         CarsFromFile = mapper.readValue(inputFile, new TypeReference<>() {
         });
-        return CarsFromFile;
+         return CarsFromFile;
     }
+    @EventListener(ApplicationReadyEvent.class)
+    public void initialize() {
+        try {
+            cars.setCars(readCarService().getCars());
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+    }
+
 
     public void saveCarService(Cars cars) throws IOException {
         ObjectMapper mapper = new ObjectMapper()
@@ -75,7 +98,7 @@ public class Services {
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
                 .registerModule(new JavaTimeModule());
         List<Car> listOfRepairedCars = returnListOfRepairedCars(cars, dateOfRepair);
-        String s=dateOfRepair.toString();
+        String s = dateOfRepair.toString();
         File carsRepairedToday = new File(PATH_TO_FOLDER_WITH_REPAIRED_CARS, dateOfRepair.toString() + ".json");
         mapper.writerWithDefaultPrettyPrinter().writeValue(carsRepairedToday, listOfRepairedCars);
     }
@@ -112,7 +135,7 @@ public class Services {
                 .filter(Car::isRepaired)
                 .collect(Collectors.toList());
         if (toReturn.size() > 1) {
-            toReturn=toReturn
+            toReturn = toReturn
                     .stream()
                     .sorted((c1, c2) -> c2.getDateOfRepair().compareTo(c1.getDateOfRepair()))
                     .collect(Collectors.toList());
