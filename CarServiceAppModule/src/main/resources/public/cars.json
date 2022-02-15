@@ -93,9 +93,18 @@
     "brand" : "test",
     "licencePlate" : "rqwerqwe",
     "problemCategory" : "SEATS",
+    "costOfService" : 1000,
+    "repaired" : true,
+    "description" : "qwrwqer",
+    "dateOfRepair" : [ 2022, 2, 15 ],
+    "serviceStartDate" : [ 2022, 2, 15 ]
+  }, {
+    "brand" : "jflkdajflj",
+    "licencePlate" : "oreiuoiewr",
+    "problemCategory" : "SEATS",
     "costOfService" : 0,
     "repaired" : false,
-    "description" : "qwrwqer",
+    "description" : "fdjflasdkjfl",
     "dateOfRepair" : null,
     "serviceStartDate" : [ 2022, 2, 15 ]
   } ]

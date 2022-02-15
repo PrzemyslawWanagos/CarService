@@ -92,7 +92,6 @@ public class Services {
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
                 .registerModule(new JavaTimeModule());
         List<Car> listOfRepairedCars = returnListOfRepairedCars(cars, dateOfRepair);
-        String s = dateOfRepair.toString();
         File carsRepairedToday = new File(PATH_TO_FOLDER_WITH_REPAIRED_CARS, dateOfRepair.toString() + ".json");
         mapper.writerWithDefaultPrettyPrinter().writeValue(carsRepairedToday, listOfRepairedCars);
     }
