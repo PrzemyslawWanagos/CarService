@@ -29,14 +29,12 @@ import static com.infoshareacademy.CarServiceApp.*;
 
 @Service
 public class Services {
+    private Cars cars;
 
     @Autowired
     public Services(Cars cars) {
         this.cars = cars;
     }
-
-
-    private Cars cars;
 
     public Services() {
     }
@@ -46,33 +44,14 @@ public class Services {
         Predicate<Car> licencePlateFilter = c -> c.getLicencePlate().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT));
         Predicate<Car> brandFilter = c -> c.getBrand().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT));
         Predicate<Car> descriptionFilter = c -> c.getDescription().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT));
-        List<Car> toReturn = cars.getCars()
+        return cars.getCars()
                 .stream()
                 .filter(isCarRepaired)
                 .filter(licencePlateFilter.or(brandFilter).or(descriptionFilter))
                 .sorted(Comparator.comparing(Car::getServiceStartDate))
                 .collect(Collectors.toList());
-        return toReturn;
     }
 
-
-    public static @Nullable
-    Cars readCarService() throws IOException {
-             ObjectMapper mapper = new ObjectMapper()
-                .enable(SerializationFeature.INDENT_OUTPUT)
-                .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
-                .registerModule(new JavaTimeModule());
-
-        Cars CarsFromFile = new Cars();
-        File inputFile = new File(PATH_TO_FULL_LIST_OF_CARS);
-        if (inputFile.length() == 0) {
-            exception = "zero length input";
-            return null;
-        }
-        CarsFromFile = mapper.readValue(inputFile, new TypeReference<>() {
-        });
-         return CarsFromFile;
-    }
     @EventListener(ApplicationReadyEvent.class)
     public void initialize() {
         try {
@@ -80,9 +59,24 @@ public class Services {
         } catch (Exception e) {
             System.out.println(e);
         }
-
     }
 
+    public static @Nullable
+    Cars readCarService() throws IOException {
+        ObjectMapper mapper = new ObjectMapper()
+                .enable(SerializationFeature.INDENT_OUTPUT)
+                .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
+                .registerModule(new JavaTimeModule());
+        Cars carsFromFile;
+        File inputFile = new File(PATH_TO_FULL_LIST_OF_CARS);
+        if (inputFile.length() == 0) {
+            exception = "zero length input";
+            return null;
+        }
+        carsFromFile = mapper.readValue(inputFile, new TypeReference<>() {
+        });
+        return carsFromFile;
+    }
 
     public void saveCarService(Cars cars) throws IOException {
         ObjectMapper mapper = new ObjectMapper()
@@ -153,21 +147,5 @@ public class Services {
         return toReturn;
     }
 
-    public void fromDtoToEntity(@NotNull CarDto carDto, @NotNull Car car) {
-        car.setBrand(carDto.getBrand());
-        car.setLicencePlate(carDto.getLicencePlate());
-        car.setDescription(carDto.getDescription());
-        car.setProblemCategory(carDto.getProblemCategory());
-        car.setServiceStartDate(carDto.getServiceStartDate());
-    }
 
-    public void fromEntityToDto(@NotNull Car car, @NotNull CarDto carDto) {
-        carDto.setBrand(car.getBrand());
-        carDto.setLicencePlate(car.getLicencePlate());
-        carDto.setDescription(car.getDescription());
-        carDto.setProblemCategory(car.getProblemCategory());
-        carDto.setCostOfService(car.getCostOfService());
-        carDto.setRepaired(car.isRepaired());
-        carDto.setServiceStartDate(car.getServiceStartDate());
-    }
 }

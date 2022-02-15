@@ -2,6 +2,7 @@ package com.infoshareacademy.controllers;
 
 import com.infoshareacademy.domain.Car;
 import com.infoshareacademy.dto.CarDto;
+import com.infoshareacademy.mappers.CarVsCarDto;
 import com.infoshareacademy.repository.Cars;
 import com.infoshareacademy.service.Services;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -67,7 +68,7 @@ public class AddCarController {
 //            carDto.setServiceStartDateError(false);
 //        }
         try {
-            services.fromDtoToEntity(carDto, car);
+            CarVsCarDto.fromDtoToEntity(carDto, car);
             cars.addCarToCarService(car);
             services.saveCarService(cars);
         } catch (Exception e) {

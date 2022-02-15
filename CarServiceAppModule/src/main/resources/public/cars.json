@@ -75,18 +75,27 @@
     "brand" : "trtwe",
     "licencePlate" : "twretwert",
     "problemCategory" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 2312,
+    "repaired" : true,
     "description" : "twertwer",
-    "dateOfRepair" : null,
+    "dateOfRepair" : [ 2022, 2, 15 ],
     "serviceStartDate" : [ 2022, 2, 15 ]
   }, {
     "brand" : "kljlkjlkj",
     "licencePlate" : "123123",
     "problemCategory" : "SEATS",
+    "costOfService" : 400,
+    "repaired" : true,
+    "description" : "oipoipoi",
+    "dateOfRepair" : [ 2022, 2, 15 ],
+    "serviceStartDate" : [ 2022, 2, 15 ]
+  }, {
+    "brand" : "test",
+    "licencePlate" : "rqwerqwe",
+    "problemCategory" : "SEATS",
     "costOfService" : 0,
     "repaired" : false,
-    "description" : "oipoipoi",
+    "description" : "qwrwqer",
     "dateOfRepair" : null,
     "serviceStartDate" : [ 2022, 2, 15 ]
   } ]

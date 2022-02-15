@@ -2,6 +2,7 @@ package com.infoshareacademy.controllers;
 
 import com.infoshareacademy.domain.Car;
 import com.infoshareacademy.dto.CarDto;
+import com.infoshareacademy.mappers.CarVsCarDto;
 import com.infoshareacademy.repository.Cars;
 import com.infoshareacademy.service.Services;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +36,7 @@ public class EditCarController {
         CarDto carDto = new CarDto();
         try {
             Car carToEdit = services.FindByLicencePlate(cars, licencePlate);
-            services.fromEntityToDto(carToEdit, carDto);
+            CarVsCarDto.fromEntityToDto(carToEdit, carDto);
             carDto.setDateOfRepair(LocalDate.now());
         } catch (Exception e) {
             exception = e.toString();
@@ -55,7 +56,7 @@ public class EditCarController {
             if (bindingResult.hasErrors() || !(carDto.getDateOfRepairError().isEmpty())) {
                 return "edit-car";
             }
-            services.fromDtoToEntity(carDto, car);
+            CarVsCarDto.fromDtoToEntity(carDto, car);
             car.setCostOfService(carDto.getCostOfService());
             car.setRepaired(true);
             car.setDateOfRepair(carDto.getDateOfRepair());
@@ -72,14 +73,6 @@ public class EditCarController {
     }
 
     private void checkIfDateOfRepairHasErrors(CarDto carDto, Car car) {
-//        String currentDate = LocalDate.now().toString();
-//        int currentYear = Integer.parseInt(currentDate.substring(0, 4));
-//        int enteredDate = Integer.parseInt(carDto.getDateOfRepair().substring(0, 4));
-//        if ((enteredDate > currentYear) || (enteredDate < currentYear - 1)) {
-//            carDto.setDateOfRepairError("You can only select current and prior year");
-//        } else {
-//            carDto.setDateOfRepairError("");
-//        }
         LocalDate l1 = carDto.getDateOfRepair();
         LocalDate l2 = car.getServiceStartDate();
         if (l1.compareTo(l2) < 0) {

@@ -10,11 +10,10 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import java.time.LocalDate;
+
 @Getter
 @Setter
 @AllArgsConstructor
-
-
 public class CarDto {
     @Size(min = 2, max = 50)
     private String brand;

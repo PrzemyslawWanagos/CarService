@@ -11,8 +11,6 @@ import java.time.LocalDate;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-
-
 public class Car {
     private String brand;
     private String licencePlate;
