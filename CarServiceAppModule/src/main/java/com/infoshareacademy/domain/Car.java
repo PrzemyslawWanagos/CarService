@@ -1,5 +1,7 @@
 package com.infoshareacademy.domain;
 
+import java.time.LocalDate;
+
 public class Car {
 
     private String brand;
@@ -9,12 +11,12 @@ public class Car {
     private boolean repaired;
     private String description;
     private String dateOfRepair;
-    private String serviceStartDate;
+    private LocalDate serviceStartDate;
 
     public Car() {
     }
 
-    public Car(String brand, String licencePlate, Category category, int costOfService, boolean repaired, String description, String dateOfRepair, String serviceStartDate) {
+    public Car(String brand, String licencePlate, Category category, int costOfService, boolean repaired, String description, String dateOfRepair, LocalDate serviceStartDate) {
         this.brand = brand;
         this.licencePlate = licencePlate;
         this.category = category;
@@ -82,11 +84,11 @@ public class Car {
         this.dateOfRepair = dateOfRepair;
     }
 
-    public String getServiceStartDate() {
+    public LocalDate getServiceStartDate() {
         return serviceStartDate;
     }
 
-    public void setServiceStartDate(String serviceStartDate) {
+    public void setServiceStartDate(LocalDate serviceStartDate) {
         this.serviceStartDate = serviceStartDate;
     }
 

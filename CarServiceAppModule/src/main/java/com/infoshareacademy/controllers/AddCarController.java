@@ -37,7 +37,7 @@ public class AddCarController {
     @GetMapping("add-car")
     public String createCarForm(Model model) {
         CarDto carDto= new CarDto();
-        carDto.setServiceStartDate("2022-02-15");
+        carDto.setServiceStartDate(LocalDate.now());
         model.addAttribute("carDto", carDto);
         return "add-car";
     }
@@ -58,14 +58,14 @@ public class AddCarController {
             }
         }
         String currentDate = LocalDate.now().toString();
-        int currentYear = Integer.parseInt(currentDate.substring(0, 4));
-        int enteredDate = Integer.parseInt(carDto.getServiceStartDate().substring(0, 4));
-        if ((enteredDate > currentYear) || (enteredDate < currentYear - 1)) {
-            carDto.setServiceStartDateError(true);
-            return "add-car";
-        } else {
-            carDto.setServiceStartDateError(false);
-        }
+//        int currentYear = Integer.parseInt(currentDate.substring(0, 4));
+//        int enteredDate = Integer.parseInt(carDto.getServiceStartDate().substring(0, 4));
+//        if ((enteredDate > currentYear) || (enteredDate < currentYear - 1)) {
+//            carDto.setServiceStartDateError(true);
+//            return "add-car";
+//        } else {
+//            carDto.setServiceStartDateError(false);
+//        }
         try {
             services.fromDtoToEntity(carDto, car);
             cars.addCarToCarService(car);

@@ -6,6 +6,7 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import java.time.LocalDate;
 
 public class CarDto {
     @Size(min = 2, max = 50)
@@ -20,7 +21,7 @@ public class CarDto {
     private Integer costOfService;
     private boolean repaired;
     private String dateOfRepair;
-    private String serviceStartDate;
+    private LocalDate serviceStartDate;
     private boolean duplicateLicencePlateError;
     private String dateOfRepairError;
     private boolean serviceStartDateError;
@@ -35,11 +36,11 @@ public class CarDto {
         return repaired;
     }
 
-    public String getServiceStartDate() {
+    public LocalDate getServiceStartDate() {
         return serviceStartDate;
     }
 
-    public void setServiceStartDate(String serviceStartDate) {
+    public void setServiceStartDate(LocalDate serviceStartDate) {
         this.serviceStartDate = serviceStartDate;
     }
 
