@@ -62,9 +62,9 @@
                 <br>
                 <label for="reasonForService" th:text="#{reasonForService.label}"></label>
                 <br>
-                <select th:class="'form-control'" id="reasonForService" th:field="*{category}"
+                <select th:class="'form-control'" id="reasonForService" th:field="*{problemCategory}"
                         th:required="required">
-                    <option th:each="categoryOpt : ${T(com.infoshareacademy.domain.Category).values()}"
+                    <option th:each="categoryOpt : ${T(com.infoshareacademy.domain.ProblemCategory).values()}"
                             th:value="${categoryOpt.name()}" th:text="${categoryOpt.categoryName}"></option>
                 </select>
                 <br>

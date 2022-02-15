@@ -1,9 +1,8 @@
 package com.infoshareacademy.dto;
 
-import com.infoshareacademy.domain.Category;
+import com.infoshareacademy.domain.ProblemCategory;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.validation.constraints.Max;
@@ -23,7 +22,7 @@ public class CarDto {
     @Pattern(regexp = "^[A-Za-z0-9/-]+$", message = "Only alphanumeric characters and '-' is allowed in this field")
     private String licencePlate;
     private String description;
-    private Category category;
+    private ProblemCategory problemCategory;
     @Min(50)
     @Max(10000)
     private Integer costOfService;

@@ -2,7 +2,7 @@
   "cars" : [ {
     "brand" : "Toyota",
     "licencePlate" : "fdfa",
-    "category" : "SEATS",
+    "problemCategory" : "SEATS",
     "costOfService" : 100,
     "repaired" : true,
     "description" : "dasa",
@@ -11,7 +11,7 @@
   }, {
     "brand" : "Toyota",
     "licencePlate" : "GS31231",
-    "category" : "SEATS",
+    "problemCategory" : "SEATS",
     "costOfService" : 100,
     "repaired" : true,
     "description" : "Avensis",
@@ -20,7 +20,7 @@
   }, {
     "brand" : "Audi",
     "licencePlate" : "fweardf",
-    "category" : "SEATS",
+    "problemCategory" : "SEATS",
     "costOfService" : 200,
     "repaired" : true,
     "description" : "fafd",
@@ -29,7 +29,7 @@
   }, {
     "brand" : "kjhjhk",
     "licencePlate" : "uyiuyiu",
-    "category" : "SEATS",
+    "problemCategory" : "SEATS",
     "costOfService" : 456,
     "repaired" : true,
     "description" : "kjhkjhk",
@@ -38,7 +38,7 @@
   }, {
     "brand" : "jhkjhhj",
     "licencePlate" : "mbnbmn",
-    "category" : "SEATS",
+    "problemCategory" : "SEATS",
     "costOfService" : 150,
     "repaired" : true,
     "description" : "uyiuyi",
@@ -47,7 +47,7 @@
   }, {
     "brand" : "bvnzbcvnzb",
     "licencePlate" : "ncbvnbv",
-    "category" : "SEATS",
+    "problemCategory" : "SEATS",
     "costOfService" : 200,
     "repaired" : true,
     "description" : "cnbvnbx",
@@ -56,11 +56,38 @@
   }, {
     "brand" : "lkjljjlkljkl",
     "licencePlate" : "lklhjkjh",
-    "category" : "SEATS",
+    "problemCategory" : "SEATS",
     "costOfService" : 100,
     "repaired" : true,
     "description" : "ljljklj",
     "dateOfRepair" : [ 2022, 2, 15 ],
+    "serviceStartDate" : [ 2022, 2, 15 ]
+  }, {
+    "brand" : "dasfasdf",
+    "licencePlate" : "fasdfadsfa",
+    "problemCategory" : "SEATS",
+    "costOfService" : 345,
+    "repaired" : true,
+    "description" : "fasdfasd",
+    "dateOfRepair" : [ 2022, 2, 22 ],
+    "serviceStartDate" : [ 2022, 2, 18 ]
+  }, {
+    "brand" : "trtwe",
+    "licencePlate" : "twretwert",
+    "problemCategory" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "twertwer",
+    "dateOfRepair" : null,
+    "serviceStartDate" : [ 2022, 2, 15 ]
+  }, {
+    "brand" : "kljlkjlkj",
+    "licencePlate" : "123123",
+    "problemCategory" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "oipoipoi",
+    "dateOfRepair" : null,
     "serviceStartDate" : [ 2022, 2, 15 ]
   } ]
 }

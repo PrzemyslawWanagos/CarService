@@ -157,7 +157,7 @@ public class Services {
         car.setBrand(carDto.getBrand());
         car.setLicencePlate(carDto.getLicencePlate());
         car.setDescription(carDto.getDescription());
-        car.setCategory(carDto.getCategory());
+        car.setProblemCategory(carDto.getProblemCategory());
         car.setServiceStartDate(carDto.getServiceStartDate());
     }
 
@@ -165,7 +165,7 @@ public class Services {
         carDto.setBrand(car.getBrand());
         carDto.setLicencePlate(car.getLicencePlate());
         carDto.setDescription(car.getDescription());
-        carDto.setCategory(car.getCategory());
+        carDto.setProblemCategory(car.getProblemCategory());
         carDto.setCostOfService(car.getCostOfService());
         carDto.setRepaired(car.isRepaired());
         carDto.setServiceStartDate(car.getServiceStartDate());

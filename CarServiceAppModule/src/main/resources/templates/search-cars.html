@@ -65,7 +65,7 @@
                             <td th:text="${car.brand}"></td>
                             <td th:text="${car.description}"></td>
                             <td th:text="${car.licencePlate}"></td>
-                            <td th:text="${car.category.categoryName}"></td>
+                            <td th:text="${car.getProblemCategory.categoryName}"></td>
                             <td th:text="${car.getServiceStartDate()}"></td>
                             <td>
                                 <a th:href="@{/edit/{EditlicencePlate}(EditlicencePlate=${car.licencePlate})}">

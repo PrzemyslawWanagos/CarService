@@ -1,6 +1,6 @@
 package com.infoshareacademy.domain;
 
-public enum Category {
+public enum ProblemCategory {
 
     SEATS("Problems with seats"),
     BRAKES("Problems with brakes"),
@@ -11,7 +11,7 @@ public enum Category {
 
     private final String categoryName;
 
-    Category(String categoryName) {
+    ProblemCategory(String categoryName) {
         this.categoryName = categoryName;
     }
 
