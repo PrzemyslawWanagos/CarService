@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title th:text="#{all-cars.title}"></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"></script>
+    <link th:href="@{/css/Style.css}" rel="stylesheet" type="text/css"/>
+
+</head>
+<body class="bg-light">
+<header class="section-header py-3">
+    <div class="container">
+        <section class="section-content py-3">
+            <div class="row">
+                <aside class="col-lg-3">
+                    <h2>Car Service </h2>
+                </aside>
+            </div>
+        </section>
+    </div>
+</header>
+
+    <section class="section-content py-3">
+        <div class="row">
+            <aside class="col-lg-2">
+                <div th:insert="fragments/frame :: menu"></div>
+            </aside>
+            <main class="col-lg-10">
+                <h1 id="zadanie-dodatkowe-1">Zadanie dodatkowe 1</h1>
+                <h3 id="serwis-samochodowy---aplikacja-webowa-car-blue_car-oncoming_automobile">Serwis samochodowy -
+                    aplikacja webowa <span class="emoji" data-emoji="car">🚗</span> <span class="emoji"
+                                                                                          data-emoji="blue_car">🚙</span>
+                    <span class="emoji" data-emoji="oncoming_automobile">🚘</span></h3>
+                <h6 id="zakres-spring-boot-spring-mvc-http-thymeleaf-http-css-bootstrap-zapisodczyt-plików-obsługa-formatu-jsonxml-oop-struktury-danych-clean-code">
+                    Zakres: Spring Boot, Spring MVC, HTTP, Thymeleaf, HTTP, CSS, Bootstrap, zapis/odczyt plików, obsługa
+                    formatu JSON/XML, OOP, struktury danych, clean code</h6>
+                <br/>
+                Napisz program, do obsługi serwisu samochodowego.
+
+                <p><br/>Program powinien umożliwiać 4 poniższe opcje:</p>
+                <ol>
+                    <li>wyświetlenie listy aktywnych pojazdów (przyjętych do serwisu, nienaprawionych)</li>
+                    <li>dodanie nowego pojazdu (przyjęcie do serwisu)</li>
+                    <li>naprawę pojazdu</li>
+                    <li>zapis i wczytanie danych o pojazdach z pliku</li>
+                </ol>
+                <br/>
+
+                <h5 id="przyjęcie-samochodu-so-serwisu">Przyjęcie samochodu so serwisu:</h5>
+                <p>Na stronie web powinien być dostępny formularz pozwalający na przyjęcie nowego pojazdu do
+                    naprawy.<br/>
+                    Wszystkie wprowadzane do formularza dane powinny być walidowane pod kątem ich poprawności.<br/>
+                    Samochód powinien mieć pole tekstowe "registration number", pole tekstowe "name" oraz pole logiczne
+                    "isFixed" (z wartością domyślną <em>false</em>), poza tym może mieć dowolne inne cechy (np. kolor,
+                    rocznik).<br/>
+                    Po zatwierdzeniu formularza samochód jest dodawany do listy aktywnych pojazdów i zapisywany do
+                    pliku.<br/>
+                    Aplikacja powinna obsługiwać pliki JSON lub XML (lub oba typy, a wybór pliku można zmienić w
+                    konfiguracji). Pliki te są wczytywane przy starcie aplikacji.<br/>
+                    <br/></p>
+                <h5 id="lista-aktywnych-pojazdów">Lista aktywnych pojazdów:</h5>
+                <p>Aplikacja powinna umożliwiać podgląd aktywnej listy pojazdów (jeszcze nienaprawionych) z wszystkimi
+                    dostępnymi informacjami o danym pojeździe. Wyświetlenie listy powinno być dostępne z menu na stronie
+                    głównej (lub paska nawigacji).<br/>
+                    Lista wszystkich aktywnych pojazdów powinna zostać wczytana z pliku podczas uruchomienia
+                    aplikacji.<br/>
+                    <br/></p>
+                <h5 id="naprawa-samochodu">Naprawa samochodu:</h5>
+                <p>Z aktywnej listy możemy wybrać jeden pojazd i go naprawić (np. poprzez naciśnięcie przycisku
+                    "napraw") - tylko jeden na raz.<br/>
+                    Dodatkowo można zaimplementować mechanizm wyszukiwania pojazdu do naprawy (np. po numerze
+                    rejestracyjnym lub nazwie). Auto można naprawić tylko jeden na raz. Po naprawie samochód powinien
+                    zniknąć z listy aktywnych pojazdów.<br/>
+                    Naprawa samochodu polega na zamianie jego flagi "isFixed" z <em>false</em> na <em>true</em>.<br/>
+                    Naprawione samochody powinny zostać zapisane do pliku json/xml w osobnym katalogu "fixed".<br/>
+                    W katalogu "fixed" nazwy plików to daty wykonywania napraw, wszystkie samochody naprawione tego
+                    samego dnia powinny być w jednym pliku.<br/>
+                    <em>Przykładowy scenariusz:</em><br/>
+                    Jeżeli dnia 10.12.2021 naprawimy 2 pojazdy, a 13.12.2021 3 pojazdy, to w plikach odpowiadających
+                    danym dniom powinny znaleźć się listy o rozmiarach odpowiednio 2 i 3.</p>
+                <br/>
+
+                <h3 id="przykładowy-wygląd-aplikacji-webowej-propozycja">Przykładowy wygląd aplikacji webowej
+                    (propozycja):</h3>
+                <p><br/>Pasek <strong><code>menu</code></strong></p>
+                <hr/>
+                <table>
+                    <thead>
+                    <tr class="header">
+                        <th>Pojazdy do naprawy</th>
+                        <th>Dodaj nowy pojazd</th>
+                        <th>Napraw pojazd</th>
+                        <th>Pojazdy naprawione</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <hr/>
+                <p><br/><br/>widok <strong><code>Pojazdy do naprawy</code></strong></p>
+                <hr/>
+                <table>
+                    <thead>
+                    <tr class="header">
+                        <th>Numer rejestracyjny</th>
+                        <th>Nazwa</th>
+                        <th>Kolor</th>
+                        <th>Rocznik</th>
+                        <th>Data przyjęcia do serwisu</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="odd">
+                        <td>GD 1A234</td>
+                        <td>Audi A3</td>
+                        <td>czarny</td>
+                        <td>2015</td>
+                        <td>2021-12-01</td>
+                        <td><a href="">napraw</a></td>
+                    </tr>
+                    <tr class="even">
+                        <td>WI 6DE89</td>
+                        <td>Fiat Panda</td>
+                        <td>niebieski</td>
+                        <td>2006</td>
+                        <td>2021-12-03</td>
+                        <td><a href="">napraw</a></td>
+                    </tr>
+                    <tr class="odd">
+                        <td>CGR 657ABX</td>
+                        <td>Skoda Rapid</td>
+                        <td>czerwony</td>
+                        <td>2018</td>
+                        <td>2021-12-04</td>
+                        <td><a href="">napraw</a></td>
+                    </tr>
+                    <tr class="even">
+                        <td>GDA K12L</td>
+                        <td>Opel Corsa</td>
+                        <td>biały</td>
+                        <td>2016</td>
+                        <td>2021-12-08</td>
+                        <td><a href="">napraw</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <ul>
+                    <li>Lista powinna być posortowana według daty przyjęcia pojazdu do serwisu (ostatnio przyjęte auto
+                        trafia na dół listy).
+                    </li>
+                </ul>
+                <hr/>
+                <p><br/><br/>widok <strong><code>Dodaj nowy pojazd</code></strong></p>
+                <hr/>
+                <table>
+                    <thead>
+                    <tr class="header">
+                        <th>Dodaj nowy pojazd</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="odd">
+                        <td><strong>Numer rejestracyjny</strong></td>
+                        <td>GA 85C27</td>
+                    </tr>
+                    <tr class="even">
+                        <td><strong>Nazwa</strong></td>
+                        <td>Renault Clio</td>
+                    </tr>
+                    <tr class="odd">
+                        <td><strong>Kolor</strong></td>
+                        <td>zielony</td>
+                    </tr>
+                    <tr class="even">
+                        <td><strong>Rocznik</strong></td>
+                        <td>2011</td>
+                    </tr>
+                    <tr class="odd">
+                        <td></td>
+                        <td><a href="">zapisz</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <ul>
+                    <li>po zapisaniu auto powinno się pojawić na liście pojazdów do naprawy.</li>
+                </ul>
+                <hr/>
+                <p><br/><br/>widok <strong><code>Napraw pojazd</code></strong></p>
+                <hr/>
+                <ol>
+                    <li>W pierwszym kroku jesteśmy proszeni o podanie numeru rejestracyjnego pojazdu:</li>
+                </ol>
+                <pre><code>Podaj numer samochodu do naprawy: GD 1A234
+</code></pre>
+                <ol start="2">
+                    <li>Jeśli numer rejestracyjny pojazdu jest prawidłowy i samochód nie został jeszcze naprawiony, to
+                        wyświetlone zostaną dane tego samochodu plus przycisk <code>napraw</code>:
+                    </li>
+                </ol>
+                <table>
+                    <thead>
+                    <tr class="header">
+                        <th>Numer rejestracyjny</th>
+                        <th>Nazwa</th>
+                        <th>Kolor</th>
+                        <th>Rocznik</th>
+                        <th>Data przyjęcia do serwisu</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="odd">
+                        <td>GD 1A234</td>
+                        <td>Audi A3</td>
+                        <td>czarny</td>
+                        <td>2015</td>
+                        <td>2021-12-01</td>
+                        <td><a href="">napraw</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <ol start="3">
+                    <li>Po naciśnięciu przycisku <code>napraw</code> zostaje zmieniony status tego pojazdu (nie będzie
+                        już widoczny na liście pojazdów do naprawy, a pojawia się na liście pojazdów naprawionych).
+                    </li>
+                    <li>Jeśli brak pojazdu o podanym numerze rejestracyjnym lub został ten pojazd już naprawiony, to
+                        otrzymamy stosowny komunikat.
+                    </li>
+                    <li>(Dla chętnych) Zamiast pola do wprowadzania numeru rejestracyjnego zaimplementować rozszerzony
+                        mechanizm wyszukiwania pojazdów, np. można wpisać tylko część nazwy (panda) lub kolor (biały).
+                        Jako wynik wyszukiwania otrzymamy listę pasujących do zapytania pojazdów.
+                    </li>
+                </ol>
+                <hr/>
+                <p><br/><br/>widok <strong><code>Pojazdy naprawione</code></strong></p>
+                <hr/>
+                <table>
+                    <thead>
+                    <tr class="header">
+                        <th>Numer rejestracyjny</th>
+                        <th>Nazwa</th>
+                        <th>Kolor</th>
+                        <th>Rocznik</th>
+                        <th>Data naprawy</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="odd">
+                        <td>KR 5D852</td>
+                        <td>Toyota Yaris</td>
+                        <td>srebrny</td>
+                        <td>2010</td>
+                        <td>2021-12-13</td>
+                    </tr>
+                    <tr class="even">
+                        <td>NIL 2FS36</td>
+                        <td>Ford Focus</td>
+                        <td>brązowy</td>
+                        <td>2014</td>
+                        <td>2021-12-10</td>
+                    </tr>
+                    <tr class="odd">
+                        <td>WSK 557GH</td>
+                        <td>KIA Rio</td>
+                        <td>grafitowy</td>
+                        <td>2017</td>
+                        <td>2021-12-09</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <ul>
+                    <li>Lista powinna być posortowana według daty naprawy (ostatnie naprawione na górze listy).</li>
+                </ul>
+                <hr/>
+                <br/>
+
+                <h2 id="wymagania">Wymagania:</h2>
+                <ul>
+                    <li><p>Aplikacja powinna wykorzystywać frameworki:</p>
+                        <ul>
+                            <li>Spring Boot</li>
+                            <li>Thymeleaf / Bootstrap</li>
+                        </ul>
+                    </li>
+                    <li><p>Aplikacja powinna być napisana obiektowo i wykorzystywać wzorzec MVC.</p></li>
+                    <li><p>Zadbaj o walidację danych wejściowych oraz wczytywanych plików.</p></li>
+                    <li><p>Zadbaj o obsługę błędów.</p></li>
+                    <li><p>Zwróć uwagę na zasady clean code.</p></li>
+                </ul>
+                <h2 id="forma-oddania-zadania">Forma oddania zadania</h2>
+                <p>Jeśli chcesz podjąć się tego zadania, to daj mi o tym znać na Slacku w prywatnej wiadomości.</p>
+                <p><span class="emoji" data-emoji="heavy_exclamation_mark">❗</span> Nie umieszczaj kodu w repozytorium
+                    homeworks! Utwórz własne repozytorium na swoim koncie na GitHubie dedykowane dla tego projektu. Ta
+                    aplikacja może być częścią twojego portfolio. Po wykonaniu zadania (na feature branchu, zanim kod
+                    znajdzie się na branchu main/master), utwórz pull request i dodaj mnie jako reviewera.</p>
+                <hr/>
+                <h2 id="extra-punktacja">Extra Punktacja</h2>
+                <p>Za prawidłowe rozwiązanie można zdobyć maksymalnie <strong>15</strong> punktów do ogólnej punktacji
+                    za prace domowe:</p>
+                <ul>
+                    <li>za poprawnie i estetycznie zaimplementowaną warstwę widoków - <span class="emoji"
+                                                                                            data-emoji="five">5️⃣</span>
+                        pkt.
+                    </li>
+                    <li>za poprawnie zaimplementowaną warstwę kontrolerów i serwisów (logika biznesowa) - <span
+                            class="emoji" data-emoji="five">5️⃣</span> pkt.
+                    </li>
+                    <li>za poprawnie zaimplementowaną warstwę persystencji (zapis do plików) - <span class="emoji"
+                                                                                                     data-emoji="five">5️⃣</span>
+                        pkt.
+                    </li>
+                </ul>
+                <p>Osoby, które mają komplet punktów z prac domowych, również mogą wykonać to zadanie i zdobyć <span
+                        class="emoji" data-emoji="two">2️⃣</span> ekstra punkty procentowe do końcowego wyniku <span
+                        class="emoji" data-emoji="yum">😋</span></p>
+                <h3 id="clock12-termin-realizacji-14012022"><span class="emoji" data-emoji="clock12">🕛</span> Termin
+                    realizacji: 14.01.2022</h3>
+                <h4 id="powodzenia">Powodzenia!</h4>
+
+            </main>
+        </div>
+    </section>
+</body>
+</html>

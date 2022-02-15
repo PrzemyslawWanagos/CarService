@@ -1,0 +1,46 @@
+[ {
+  "brand" : "bvnzbcvnzb",
+  "licencePlate" : "ncbvnbv",
+  "problemCategory" : "SEATS",
+  "costOfService" : 200,
+  "repaired" : true,
+  "description" : "cnbvnbx",
+  "dateOfRepair" : [ 2022, 2, 15 ],
+  "serviceStartDate" : [ 2022, 2, 15 ]
+}, {
+  "brand" : "lkjljjlkljkl",
+  "licencePlate" : "lklhjkjh",
+  "problemCategory" : "SEATS",
+  "costOfService" : 100,
+  "repaired" : true,
+  "description" : "ljljklj",
+  "dateOfRepair" : [ 2022, 2, 15 ],
+  "serviceStartDate" : [ 2022, 2, 15 ]
+}, {
+  "brand" : "trtwe",
+  "licencePlate" : "twretwert",
+  "problemCategory" : "SEATS",
+  "costOfService" : 2312,
+  "repaired" : true,
+  "description" : "twertwer",
+  "dateOfRepair" : [ 2022, 2, 15 ],
+  "serviceStartDate" : [ 2022, 2, 15 ]
+}, {
+  "brand" : "kljlkjlkj",
+  "licencePlate" : "123123",
+  "problemCategory" : "SEATS",
+  "costOfService" : 400,
+  "repaired" : true,
+  "description" : "oipoipoi",
+  "dateOfRepair" : [ 2022, 2, 15 ],
+  "serviceStartDate" : [ 2022, 2, 15 ]
+}, {
+  "brand" : "test",
+  "licencePlate" : "rqwerqwe",
+  "problemCategory" : "SEATS",
+  "costOfService" : 1000,
+  "repaired" : true,
+  "description" : "qwrwqer",
+  "dateOfRepair" : [ 2022, 2, 15 ],
+  "serviceStartDate" : [ 2022, 2, 15 ]
+} ]

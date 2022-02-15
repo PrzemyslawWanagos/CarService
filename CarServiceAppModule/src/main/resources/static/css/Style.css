@@ -1,0 +1,41 @@
+thead,
+td,.table td, .table th {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+   }
+
+label {
+    font-weight: bold;
+}
+
+.tableFixHead {
+    overflow-y: scroll;
+    height: 350px;
+}
+
+.tableFixHead thead {
+    position: sticky;
+    top: 0;
+}
+
+#ConfirmationOfRepair{
+    width: auto;
+    height: auto;
+    margin: auto;
+    position: center;
+}
+
+.tableFixHead tfoot {
+    position: sticky;
+    bottom: 0;
+}
+
+#licencePlate {
+    width: 50%;
+}
+
+
+
+
+
+

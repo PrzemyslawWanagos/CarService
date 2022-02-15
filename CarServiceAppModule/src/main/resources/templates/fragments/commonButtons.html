@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{main.title}"></title>
+    <link th:href="@{/css/Style.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div th:fragment="custom (customPath, customLabel)">
+    <a th:href="@{/{path}(path=${customPath})}" class="nav-link" th:text="${customLabel}"></a>
+</div>
+
+<div th:fragment="main">
+    <a th:href="@{/{path}(path=#{main.path})}">
+        <button type="button" th:text="#{main.label}"></button>
+    </a>
+</div>
+</body>
+</html>

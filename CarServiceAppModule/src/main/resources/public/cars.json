@@ -1,0 +1,111 @@
+{
+  "cars" : [ {
+    "brand" : "Toyota",
+    "licencePlate" : "fdfa",
+    "problemCategory" : "SEATS",
+    "costOfService" : 100,
+    "repaired" : true,
+    "description" : "dasa",
+    "dateOfRepair" : [ 4500, 12, 25 ],
+    "serviceStartDate" : [ 2022, 2, 15 ]
+  }, {
+    "brand" : "Toyota",
+    "licencePlate" : "GS31231",
+    "problemCategory" : "SEATS",
+    "costOfService" : 100,
+    "repaired" : true,
+    "description" : "Avensis",
+    "dateOfRepair" : [ 2022, 12, 25 ],
+    "serviceStartDate" : [ 2022, 2, 18 ]
+  }, {
+    "brand" : "Audi",
+    "licencePlate" : "fweardf",
+    "problemCategory" : "SEATS",
+    "costOfService" : 200,
+    "repaired" : true,
+    "description" : "fafd",
+    "dateOfRepair" : [ 2222, 12, 25 ],
+    "serviceStartDate" : [ 2022, 2, 15 ]
+  }, {
+    "brand" : "kjhjhk",
+    "licencePlate" : "uyiuyiu",
+    "problemCategory" : "SEATS",
+    "costOfService" : 456,
+    "repaired" : true,
+    "description" : "kjhkjhk",
+    "dateOfRepair" : [ 3000, 12, 25 ],
+    "serviceStartDate" : [ 2022, 2, 15 ]
+  }, {
+    "brand" : "jhkjhhj",
+    "licencePlate" : "mbnbmn",
+    "problemCategory" : "SEATS",
+    "costOfService" : 150,
+    "repaired" : true,
+    "description" : "uyiuyi",
+    "dateOfRepair" : [ 4000, 12, 25 ],
+    "serviceStartDate" : [ 2022, 2, 15 ]
+  }, {
+    "brand" : "bvnzbcvnzb",
+    "licencePlate" : "ncbvnbv",
+    "problemCategory" : "SEATS",
+    "costOfService" : 200,
+    "repaired" : true,
+    "description" : "cnbvnbx",
+    "dateOfRepair" : [ 2022, 2, 15 ],
+    "serviceStartDate" : [ 2022, 2, 15 ]
+  }, {
+    "brand" : "lkjljjlkljkl",
+    "licencePlate" : "lklhjkjh",
+    "problemCategory" : "SEATS",
+    "costOfService" : 100,
+    "repaired" : true,
+    "description" : "ljljklj",
+    "dateOfRepair" : [ 2022, 2, 15 ],
+    "serviceStartDate" : [ 2022, 2, 15 ]
+  }, {
+    "brand" : "dasfasdf",
+    "licencePlate" : "fasdfadsfa",
+    "problemCategory" : "SEATS",
+    "costOfService" : 345,
+    "repaired" : true,
+    "description" : "fasdfasd",
+    "dateOfRepair" : [ 2022, 2, 22 ],
+    "serviceStartDate" : [ 2022, 2, 18 ]
+  }, {
+    "brand" : "trtwe",
+    "licencePlate" : "twretwert",
+    "problemCategory" : "SEATS",
+    "costOfService" : 2312,
+    "repaired" : true,
+    "description" : "twertwer",
+    "dateOfRepair" : [ 2022, 2, 15 ],
+    "serviceStartDate" : [ 2022, 2, 15 ]
+  }, {
+    "brand" : "kljlkjlkj",
+    "licencePlate" : "123123",
+    "problemCategory" : "SEATS",
+    "costOfService" : 400,
+    "repaired" : true,
+    "description" : "oipoipoi",
+    "dateOfRepair" : [ 2022, 2, 15 ],
+    "serviceStartDate" : [ 2022, 2, 15 ]
+  }, {
+    "brand" : "test",
+    "licencePlate" : "rqwerqwe",
+    "problemCategory" : "SEATS",
+    "costOfService" : 1000,
+    "repaired" : true,
+    "description" : "qwrwqer",
+    "dateOfRepair" : [ 2022, 2, 15 ],
+    "serviceStartDate" : [ 2022, 2, 15 ]
+  }, {
+    "brand" : "jflkdajflj",
+    "licencePlate" : "oreiuoiewr",
+    "problemCategory" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "fdjflasdkjfl",
+    "dateOfRepair" : null,
+    "serviceStartDate" : [ 2022, 2, 15 ]
+  } ]
+}
