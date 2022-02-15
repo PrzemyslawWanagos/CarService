@@ -1,5 +1,5 @@
 [ {
-  "make" : "q312",
+  "brand" : "q312",
   "licencePlate" : "123",
   "category" : "SEATS",
   "costOfService" : 100,
@@ -8,7 +8,7 @@
   "dateOfRepair" : "1111-11-11",
   "serviceStartDate" : null
 }, {
-  "make" : "AAA",
+  "brand" : "AAA",
   "licencePlate" : "aaa",
   "category" : "SEATS",
   "costOfService" : 1111,

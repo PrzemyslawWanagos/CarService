@@ -31,12 +31,12 @@
             <h6 class="text-center" th:text="#{add-car.header}"></h6>
             <p>
             <form th:object="${carDto}" th:action="@{/add-car}" method="post">
-                <label for="make" th:text="#{make.label}"></label>
+                <label for="brand" th:text="#{brand.label}"></label>
                 <br>
-                <input class="form-control" id="make" th:type="text" th:field="*{make}" th:required="required"/>
-                <div th:if="${#fields.hasErrors('make')}" th:class="'alert alert-danger'">
+                <input class="form-control" id="brand" th:type="text" th:field="*{brand}" th:required="required"/>
+                <div th:if="${#fields.hasErrors('brand')}" th:class="'alert alert-danger'">
                     <ul>
-                        <li th:each="err : ${#fields.errors('make')}" th:text="${err}"></li>
+                        <li th:each="err : ${#fields.errors('brand')}" th:text="${err}"></li>
                     </ul>
                 </div>
                 <br>

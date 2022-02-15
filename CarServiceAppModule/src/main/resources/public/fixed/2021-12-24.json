@@ -1,5 +1,5 @@
 [ {
-  "make" : "Fiat",
+  "brand" : "Fiat",
   "licencePlate" : "GA43523",
   "category" : "OTHER",
   "costOfService" : 200,
@@ -7,7 +7,7 @@
   "description" : "test2",
   "dateOfRepair" : "2021-12-24"
 }, {
-  "make" : "fiat",
+  "brand" : "fiat",
   "licencePlate" : "GSP0101",
   "category" : "SEATS",
   "costOfService" : 211,

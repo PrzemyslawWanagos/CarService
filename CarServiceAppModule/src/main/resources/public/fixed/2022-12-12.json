@@ -1,5 +1,5 @@
 [ {
-  "make" : "Ford Mondeo",
+  "brand" : "Ford Mondeo",
   "licencePlate" : "GS23123",
   "category" : "SEATS",
   "costOfService" : 100,
@@ -8,7 +8,7 @@
   "dateOfRepair" : "2022-12-12",
   "serviceStartDate" : "2021-12-25"
 }, {
-  "make" : "hyundai",
+  "brand" : "hyundai",
   "licencePlate" : "GA989898",
   "category" : "SEATS",
   "costOfService" : 120,

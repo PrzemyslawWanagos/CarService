@@ -1,5 +1,5 @@
 [ {
-  "make" : "SKODA",
+  "brand" : "SKODA",
   "licencePlate" : "GST3421",
   "category" : "MAINTENANCE",
   "costOfService" : 100,

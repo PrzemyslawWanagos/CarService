@@ -1,5 +1,5 @@
 [ {
-  "make" : "Porsche",
+  "brand" : "Porsche",
   "licencePlate" : "WA123321",
   "category" : "ENGINE",
   "costOfService" : 200,

@@ -2,7 +2,7 @@ package com.infoshareacademy.domain;
 
 public class Car {
 
-    private String make;
+    private String brand;
     private String licencePlate;
     private Category category;
     private int costOfService;
@@ -14,8 +14,8 @@ public class Car {
     public Car() {
     }
 
-    public Car(String make, String licencePlate, Category category, int costOfService, boolean repaired, String description, String dateOfRepair, String serviceStartDate) {
-        this.make = make;
+    public Car(String brand, String licencePlate, Category category, int costOfService, boolean repaired, String description, String dateOfRepair, String serviceStartDate) {
+        this.brand = brand;
         this.licencePlate = licencePlate;
         this.category = category;
         this.costOfService = costOfService;
@@ -26,12 +26,12 @@ public class Car {
 
     }
 
-    public String getMake() {
-        return make;
+    public String getBrand() {
+        return brand;
     }
 
-    public void setMake(String make) {
-        this.make = make;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
     public String getLicencePlate() {

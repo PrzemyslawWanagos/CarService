@@ -1,5 +1,5 @@
 [ {
-  "make" : "bvcxb",
+  "brand" : "bvcxb",
   "licencePlate" : "bxcvb",
   "category" : "SEATS",
   "costOfService" : 100,
@@ -8,7 +8,7 @@
   "dateOfRepair" : "0012-12-12",
   "serviceStartDate" : null
 }, {
-  "make" : "gdgfda",
+  "brand" : "gdgfda",
   "licencePlate" : "gsfdggs",
   "category" : "OTHER",
   "costOfService" : 100,
@@ -17,7 +17,7 @@
   "dateOfRepair" : "0012-12-12",
   "serviceStartDate" : null
 }, {
-  "make" : "ktyui",
+  "brand" : "ktyui",
   "licencePlate" : "uryr",
   "category" : "SEATS",
   "costOfService" : 100,
@@ -26,7 +26,7 @@
   "dateOfRepair" : "0012-12-12",
   "serviceStartDate" : null
 }, {
-  "make" : "2323",
+  "brand" : "2323",
   "licencePlate" : "2323",
   "category" : "SEATS",
   "costOfService" : 100,
@@ -35,7 +35,7 @@
   "dateOfRepair" : "0012-12-12",
   "serviceStartDate" : null
 }, {
-  "make" : "AAA",
+  "brand" : "AAA",
   "licencePlate" : "AAAB",
   "category" : "SEATS",
   "costOfService" : 100,
@@ -44,7 +44,7 @@
   "dateOfRepair" : "0012-12-12",
   "serviceStartDate" : null
 }, {
-  "make" : "DDD",
+  "brand" : "DDD",
   "licencePlate" : "DDD",
   "category" : "SEATS",
   "costOfService" : 121,
@@ -53,7 +53,7 @@
   "dateOfRepair" : "0012-12-12",
   "serviceStartDate" : null
 }, {
-  "make" : "ZZZ",
+  "brand" : "ZZZ",
   "licencePlate" : "ZZZ",
   "category" : "SEATS",
   "costOfService" : 100,

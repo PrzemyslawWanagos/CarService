@@ -1,6 +1,6 @@
 {
   "cars" : [ {
-    "make" : "Mazda",
+    "brand" : "Mazda",
     "licencePlate" : "GD12312",
     "category" : "OTHER",
     "costOfService" : 200,
@@ -9,7 +9,7 @@
     "dateOfRepair" : "2022-12-22",
     "serviceStartDate" : "2021-12-25"
   }, {
-    "make" : "Fiat",
+    "brand" : "Fiat",
     "licencePlate" : "GA43523",
     "category" : "OTHER",
     "costOfService" : 100,
@@ -18,7 +18,7 @@
     "dateOfRepair" : "2021-12-27",
     "serviceStartDate" : "2021-12-25"
   }, {
-    "make" : "Ford Mondeo",
+    "brand" : "Ford Mondeo",
     "licencePlate" : "GS23123",
     "category" : "SEATS",
     "costOfService" : 100,
@@ -27,7 +27,7 @@
     "dateOfRepair" : "2022-12-12",
     "serviceStartDate" : "2021-12-25"
   }, {
-    "make" : "Toyota",
+    "brand" : "Toyota",
     "licencePlate" : "GD342SA",
     "category" : "DRIVE",
     "costOfService" : 200,
@@ -36,7 +36,7 @@
     "dateOfRepair" : "2021-12-26",
     "serviceStartDate" : "2021-12-25"
   }, {
-    "make" : "Porsche",
+    "brand" : "Porsche",
     "licencePlate" : "WA123321",
     "category" : "ENGINE",
     "costOfService" : 200,
@@ -45,7 +45,7 @@
     "dateOfRepair" : "2021-12-25",
     "serviceStartDate" : "2021-12-25"
   }, {
-    "make" : "bmw",
+    "brand" : "bmw",
     "licencePlate" : "asds45",
     "category" : "SEATS",
     "costOfService" : 4000,
@@ -54,7 +54,7 @@
     "dateOfRepair" : "2021-12-26",
     "serviceStartDate" : "2021-12-25"
   }, {
-    "make" : "hyundai",
+    "brand" : "hyundai",
     "licencePlate" : "GA989898",
     "category" : "SEATS",
     "costOfService" : 120,
@@ -63,7 +63,7 @@
     "dateOfRepair" : "2022-12-12",
     "serviceStartDate" : "2021-12-25"
   }, {
-    "make" : "SKODA",
+    "brand" : "SKODA",
     "licencePlate" : "GST3421",
     "category" : "MAINTENANCE",
     "costOfService" : 0,
@@ -72,7 +72,7 @@
     "dateOfRepair" : null,
     "serviceStartDate" : "2021-12-25"
   }, {
-    "make" : "rqewrq",
+    "brand" : "rqewrq",
     "licencePlate" : "rqewrqe",
     "category" : "SEATS",
     "costOfService" : 0,
@@ -81,7 +81,7 @@
     "dateOfRepair" : null,
     "serviceStartDate" : "2022-01-12"
   }, {
-    "make" : "Audi",
+    "brand" : "Audi",
     "licencePlate" : "GA3254E",
     "category" : "MAINTENANCE",
     "costOfService" : 200,
@@ -90,7 +90,7 @@
     "dateOfRepair" : "2021-12-28",
     "serviceStartDate" : "2021-12-28"
   }, {
-    "make" : "AAA",
+    "brand" : "AAA",
     "licencePlate" : "GD-23",
     "category" : "SEATS",
     "costOfService" : 0,
@@ -99,7 +99,7 @@
     "dateOfRepair" : null,
     "serviceStartDate" : "2022-01-20"
   }, {
-    "make" : "fsjakljd",
+    "brand" : "fsjakljd",
     "licencePlate" : "fkdsajflkasj",
     "category" : "OTHER",
     "costOfService" : 0,
@@ -108,7 +108,7 @@
     "dateOfRepair" : null,
     "serviceStartDate" : "2021-12-25"
   }, {
-    "make" : "ab",
+    "brand" : "ab",
     "licencePlate" : "ahj",
     "category" : "SEATS",
     "costOfService" : 0,
@@ -116,5 +116,14 @@
     "description" : "a",
     "dateOfRepair" : null,
     "serviceStartDate" : "2021-12-12"
+  }, {
+    "brand" : "aa",
+    "licencePlate" : "dlkjfa",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "fldsjflkja",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2021-12-25"
   } ]
 }

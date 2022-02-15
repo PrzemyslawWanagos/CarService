@@ -25,9 +25,9 @@
             <h6 class="text-center" th:text="#{edit-car.header}"></h6>
             <form th:object="${carDto}" th:action="@{/edit/{licencePlate}(licencePlate=${carDto.licencePlate})}"
                   method="post"> <!--onkeydown="return key !== 'Enter';"-->
-                <label th:for="make" th:text="#{make.label}"></label>
+                <label th:for="brand" th:text="#{brand.label}"></label>
                 <br>
-                <input id="make" class="form-control" readonly th:field="*{make}"/>
+                <input id="brand" class="form-control" readonly th:field="*{brand}"/>
                 <br>
                 <label th:for="description" th:text="#{description.label}"></label>
                 <br>

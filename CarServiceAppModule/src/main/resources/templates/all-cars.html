@@ -40,7 +40,7 @@
                             <thead class="bg-secondary text-white">
                             <tr>
                                 <th th:text="'#'"></th>
-                                <th th:text="#{make.label}"></th>
+                                <th th:text="#{brand.label}"></th>
                                 <th th:text="#{description.label}"></th>
                                 <th th:text="#{licencePlate.label}"></th>
                                 <th th:text="#{reasonForService.label}"></th>
@@ -52,7 +52,7 @@
                             <tbody>
                             <tr th:each="car, stat : ${allCars}" class="odd-row-color">
                                 <td th:text="${stat.index + 1}"></td>
-                                <td th:text="${car.make}"></td>
+                                <td th:text="${car.brand}"></td>
                                 <td th:text="${car.description}"></td>
                                 <td th:text="${car.licencePlate}"></td>
                                 <td th:text="${car.category.categoryName}"></td>

@@ -9,7 +9,7 @@ import javax.validation.constraints.Size;
 
 public class CarDto {
     @Size(min = 2, max = 50)
-    private String make;
+    private String brand;
     @Size(min = 2, max = 12)
     @Pattern(regexp = "^[A-Za-z0-9/-]+$", message = "Only alphanumeric characters and '-' is allowed in this field")
     private String licencePlate;
@@ -43,12 +43,12 @@ public class CarDto {
         this.serviceStartDate = serviceStartDate;
     }
 
-    public String getMake() {
-        return make;
+    public String getBrand() {
+        return brand;
     }
 
-    public void setMake(String make) {
-        this.make = make;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
     public String getLicencePlate() {

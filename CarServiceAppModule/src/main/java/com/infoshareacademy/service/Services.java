@@ -29,12 +29,12 @@ public class Services {
     public List<Car> returnListOfCarsToRepair(@NotNull Cars cars, String licencePlate) {
         Predicate<Car> isCarRepaired = c -> !c.isRepaired();
         Predicate<Car> licencePlateFilter = c -> c.getLicencePlate().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT));
-        Predicate<Car> makeFilter = c -> c.getMake().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT));
+        Predicate<Car> brandFilter = c -> c.getBrand().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT));
         Predicate<Car> descriptionFilter = c -> c.getDescription().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT));
         List<Car> toReturn = cars.getCars()
                 .stream()
                 .filter(isCarRepaired)
-                .filter(licencePlateFilter.or(makeFilter).or(descriptionFilter))
+                .filter(licencePlateFilter.or(brandFilter).or(descriptionFilter))
                 .sorted(Comparator.comparing(Car::getServiceStartDate))
                 .collect(Collectors.toList());
         return toReturn;
@@ -110,7 +110,7 @@ public class Services {
     }
 
     public void fromDtoToEntity(@NotNull CarDto carDto, @NotNull Car car) {
-        car.setMake(carDto.getMake());
+        car.setBrand(carDto.getBrand());
         car.setLicencePlate(carDto.getLicencePlate());
         car.setDescription(carDto.getDescription());
         car.setCategory(carDto.getCategory());
@@ -118,7 +118,7 @@ public class Services {
     }
 
     public void fromEntityToDto(@NotNull Car car, @NotNull CarDto carDto) {
-        carDto.setMake(car.getMake());
+        carDto.setBrand(car.getBrand());
         carDto.setLicencePlate(car.getLicencePlate());
         carDto.setDescription(car.getDescription());
         carDto.setCategory(car.getCategory());

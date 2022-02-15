@@ -1,5 +1,5 @@
 [ {
-  "make" : "gdgfda",
+  "brand" : "gdgfda",
   "licencePlate" : "gsfdggs",
   "category" : "OTHER",
   "costOfService" : 100,
@@ -8,7 +8,7 @@
   "dateOfRepair" : "2001-12-31",
   "serviceStartDate" : "1212-12-22"
 }, {
-  "make" : "100",
+  "brand" : "100",
   "licencePlate" : "100",
   "category" : "SEATS",
   "costOfService" : 100,
