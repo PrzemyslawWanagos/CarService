@@ -1,12 +1,20 @@
 package com.infoshareacademy.dto;
 
 import com.infoshareacademy.domain.Category;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import java.time.LocalDate;
+@Getter
+@Setter
+@AllArgsConstructor
+
 
 public class CarDto {
     @Size(min = 2, max = 50)
@@ -20,7 +28,7 @@ public class CarDto {
     @Max(10000)
     private Integer costOfService;
     private boolean repaired;
-    private String dateOfRepair;
+    private LocalDate dateOfRepair;
     private LocalDate serviceStartDate;
     private boolean duplicateLicencePlateError;
     private String dateOfRepairError;
@@ -32,95 +40,5 @@ public class CarDto {
         serviceStartDateError = false;
     }
 
-    public boolean isRepaired() {
-        return repaired;
-    }
 
-    public LocalDate getServiceStartDate() {
-        return serviceStartDate;
-    }
-
-    public void setServiceStartDate(LocalDate serviceStartDate) {
-        this.serviceStartDate = serviceStartDate;
-    }
-
-    public String getBrand() {
-        return brand;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
-    public String getLicencePlate() {
-        return licencePlate;
-    }
-
-    public void setLicencePlate(String licencePlate) {
-        this.licencePlate = licencePlate;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
-
-    public Integer getCostOfService() {
-        return costOfService;
-    }
-
-    public void setCostOfService(Integer costOfService) {
-        this.costOfService = costOfService;
-    }
-
-    public boolean getRepaired() {
-        return repaired;
-    }
-
-    public void setRepaired(boolean repaired) {
-        this.repaired = repaired;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getDateOfRepair() {
-        return dateOfRepair;
-    }
-
-    public void setDateOfRepair(String dateOfRepair) {
-        this.dateOfRepair = dateOfRepair;
-    }
-
-    public boolean isDuplicateLicencePlateError() {
-        return duplicateLicencePlateError;
-    }
-
-    public void setDuplicateLicencePlateError(boolean duplicateLicencePlateError) {
-        this.duplicateLicencePlateError = duplicateLicencePlateError;
-    }
-
-    public String getDateOfRepairError() {
-        return dateOfRepairError;
-    }
-
-    public void setDateOfRepairError(String dateOfRepairError) {
-        this.dateOfRepairError = dateOfRepairError;
-    }
-
-    public boolean isServiceStartDateError() {
-        return serviceStartDateError;
-    }
-
-    public void setServiceStartDateError(boolean serviceStartDateError) {
-        this.serviceStartDateError = serviceStartDateError;
-    }
 }

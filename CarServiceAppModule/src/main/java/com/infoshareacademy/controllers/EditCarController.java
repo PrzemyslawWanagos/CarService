@@ -36,6 +36,7 @@ public class EditCarController {
         try {
             Car carToEdit = services.FindByLicencePlate(cars, licencePlate);
             services.fromEntityToDto(carToEdit, carDto);
+            carDto.setDateOfRepair(LocalDate.now());
         } catch (Exception e) {
             exception = e.toString();
             return "redirect:/error/ERROR WHILE LOOKING FOR CAR BY LICENCE PLATE";
@@ -71,15 +72,15 @@ public class EditCarController {
     }
 
     private void checkIfDateOfRepairHasErrors(CarDto carDto, Car car) {
-        String currentDate = LocalDate.now().toString();
-        int currentYear = Integer.parseInt(currentDate.substring(0, 4));
-        int enteredDate = Integer.parseInt(carDto.getDateOfRepair().substring(0, 4));
-        if ((enteredDate > currentYear) || (enteredDate < currentYear - 1)) {
-            carDto.setDateOfRepairError("You can only select current and prior year");
-        } else {
-            carDto.setDateOfRepairError("");
-        }
-        LocalDate l1 = LocalDate.parse(carDto.getDateOfRepair());
+//        String currentDate = LocalDate.now().toString();
+//        int currentYear = Integer.parseInt(currentDate.substring(0, 4));
+//        int enteredDate = Integer.parseInt(carDto.getDateOfRepair().substring(0, 4));
+//        if ((enteredDate > currentYear) || (enteredDate < currentYear - 1)) {
+//            carDto.setDateOfRepairError("You can only select current and prior year");
+//        } else {
+//            carDto.setDateOfRepairError("");
+//        }
+        LocalDate l1 = carDto.getDateOfRepair();
         LocalDate l2 = car.getServiceStartDate();
         if (l1.compareTo(l2) < 0) {
             carDto.setDateOfRepairError("Date of repair cannot be before date of service start");

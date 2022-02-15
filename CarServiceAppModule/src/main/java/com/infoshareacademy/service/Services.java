@@ -8,12 +8,12 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.infoshareacademy.domain.Car;
 import com.infoshareacademy.dto.CarDto;
 import com.infoshareacademy.repository.Cars;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Service;
-
+import javax.validation.constraints.NotNull;
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
@@ -43,7 +43,8 @@ public class Services {
         return toReturn;
     }
 
-    public static @Nullable Cars readCarService() throws IOException {
+    public static @Nullable
+    Cars readCarService() throws IOException {
         ObjectMapper mapper = new ObjectMapper()
                 .enable(SerializationFeature.INDENT_OUTPUT)
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
@@ -68,10 +69,14 @@ public class Services {
         mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PATH_TO_FULL_LIST_OF_CARS), cars);
     }
 
-    public void saveRepairedCarList(Cars cars, String dateOfRepair) throws IOException {
-        ObjectMapper mapper = new ObjectMapper();
+    public void saveRepairedCarList(Cars cars, LocalDate dateOfRepair) throws IOException {
+        ObjectMapper mapper = new ObjectMapper()
+                .enable(SerializationFeature.INDENT_OUTPUT)
+                .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
+                .registerModule(new JavaTimeModule());
         List<Car> listOfRepairedCars = returnListOfRepairedCars(cars, dateOfRepair);
-        File carsRepairedToday = new File(PATH_TO_FOLDER_WITH_REPAIRED_CARS, dateOfRepair + ".json");
+        String s=dateOfRepair.toString();
+        File carsRepairedToday = new File(PATH_TO_FOLDER_WITH_REPAIRED_CARS, dateOfRepair.toString() + ".json");
         mapper.writerWithDefaultPrettyPrinter().writeValue(carsRepairedToday, listOfRepairedCars);
     }
 
@@ -90,7 +95,7 @@ public class Services {
         }
     }
 
-    public List<Car> returnListOfRepairedCars(@NotNull Cars cars, String dateOfRepair) {
+    public List<Car> returnListOfRepairedCars(@NotNull Cars cars, LocalDate dateOfRepair) {
         List<Car> toReturn = cars.getCars()
                 .stream()
                 .filter(c -> Objects.nonNull(c.getDateOfRepair()))
@@ -100,12 +105,18 @@ public class Services {
     }
 
     public List<Car> returnListOfRepairedCars(@NotNull Cars cars) {
+
         List<Car> toReturn = cars.getCars()
                 .stream()
                 .filter(c -> Objects.nonNull(c.isRepaired()))
                 .filter(Car::isRepaired)
-                .sorted((c1, c2) -> c2.getDateOfRepair().compareTo(c1.getDateOfRepair()))
                 .collect(Collectors.toList());
+        if (toReturn.size() > 1) {
+            toReturn=toReturn
+                    .stream()
+                    .sorted((c1, c2) -> c2.getDateOfRepair().compareTo(c1.getDateOfRepair()))
+                    .collect(Collectors.toList());
+        }
         return toReturn;
     }
 
