@@ -125,5 +125,23 @@
     "description" : "fldsjflkja",
     "dateOfRepair" : null,
     "serviceStartDate" : "2021-12-25"
+  }, {
+    "brand" : "safd",
+    "licencePlate" : "fasdf",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "fasdf",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2022-02-15"
+  }, {
+    "brand" : "fsdfa",
+    "licencePlate" : "fasdffsdf",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "fasdfa",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2022-02-24"
   } ]
 }

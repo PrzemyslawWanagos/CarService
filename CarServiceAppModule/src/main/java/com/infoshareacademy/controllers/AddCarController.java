@@ -36,7 +36,9 @@ public class AddCarController {
 
     @GetMapping("add-car")
     public String createCarForm(Model model) {
-        model.addAttribute("carDto", new CarDto());
+        CarDto carDto= new CarDto();
+        carDto.setServiceStartDate("2022-02-15");
+        model.addAttribute("carDto", carDto);
         return "add-car";
     }
 
