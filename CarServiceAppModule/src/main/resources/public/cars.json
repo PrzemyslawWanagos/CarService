@@ -30,10 +30,10 @@
     "make" : "Toyota",
     "licencePlate" : "GD342SA",
     "category" : "DRIVE",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 200,
+    "repaired" : true,
     "description" : "AURIS",
-    "dateOfRepair" : null,
+    "dateOfRepair" : "2021-12-26",
     "serviceStartDate" : "2021-12-25"
   }, {
     "make" : "Porsche",
@@ -48,10 +48,10 @@
     "make" : "bmw",
     "licencePlate" : "asds45",
     "category" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 4000,
+    "repaired" : true,
     "description" : "200XC",
-    "dateOfRepair" : null,
+    "dateOfRepair" : "2021-12-26",
     "serviceStartDate" : "2021-12-25"
   }, {
     "make" : "hyundai",
@@ -98,5 +98,23 @@
     "description" : "fasdfasd",
     "dateOfRepair" : null,
     "serviceStartDate" : "2022-01-20"
+  }, {
+    "make" : "fsjakljd",
+    "licencePlate" : "fkdsajflkasj",
+    "category" : "OTHER",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "fsdjkfklajslkj",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2021-12-25"
+  }, {
+    "make" : "ab",
+    "licencePlate" : "ahj",
+    "category" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "a",
+    "dateOfRepair" : null,
+    "serviceStartDate" : "2021-12-12"
   } ]
 }
