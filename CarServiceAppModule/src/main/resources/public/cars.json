@@ -111,10 +111,10 @@
     "brand" : "sdfas",
     "licencePlate" : "fdsafds",
     "problemCategory" : "SEATS",
-    "costOfService" : 0,
-    "repaired" : false,
+    "costOfService" : 130,
+    "repaired" : true,
     "description" : "fdsfas",
-    "dateOfRepair" : null,
+    "dateOfRepair" : [ 2022, 2, 22 ],
     "serviceStartDate" : [ 2022, 2, 17 ]
   }, {
     "brand" : "Toyota",
@@ -123,6 +123,24 @@
     "costOfService" : 300,
     "repaired" : true,
     "description" : "fdsafasd",
+    "dateOfRepair" : [ 2022, 2, 17 ],
+    "serviceStartDate" : [ 2022, 2, 17 ]
+  }, {
+    "brand" : "3432",
+    "licencePlate" : "rqwerqw",
+    "problemCategory" : "SEATS",
+    "costOfService" : 134,
+    "repaired" : true,
+    "description" : "weqrwe",
+    "dateOfRepair" : [ 2022, 2, 25 ],
+    "serviceStartDate" : [ 2022, 2, 17 ]
+  }, {
+    "brand" : "432534",
+    "licencePlate" : "524352",
+    "problemCategory" : "SEATS",
+    "costOfService" : 156,
+    "repaired" : true,
+    "description" : "52435234",
     "dateOfRepair" : [ 2022, 2, 17 ],
     "serviceStartDate" : [ 2022, 2, 17 ]
   } ]

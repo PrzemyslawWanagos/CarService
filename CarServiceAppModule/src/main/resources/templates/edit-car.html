@@ -67,7 +67,13 @@
                     <ul>
                         <li th:text="${carDto.getDateOfRepairError()}"></li>
                     </ul>
-                </div>
+                    </div>
+                    <div th:if="${#fields.hasErrors('dateOfRepair')}" class="alert alert-danger">
+                        <ul>
+                            <li th:each="err : ${#fields.errors('dateOfRepair')}" th:text="${err}"></li>
+                        </ul>
+                    </div>
+
                 <br>
                 <br>
                 <button type="submit" class="btn btn-secondary" th:text="#{saveEdits.caption}"></button>

@@ -12,6 +12,7 @@ import java.time.LocalDate;
 @Setter
 @AllArgsConstructor
 public class CarDto {
+
     @Size(min = 2, max = 50)
     private String brand;
     @Size(min = 2, max = 12)
@@ -23,17 +24,18 @@ public class CarDto {
     @Max(10000)
     private Integer costOfService;
     private boolean repaired;
+   @PastOrPresent(message="Date of Repair cannot be in the future")
     private LocalDate dateOfRepair;
-    @PastOrPresent(message="Service Start Date Cannot be in the future")
+    @PastOrPresent(message="Service Start Date cannot be in the future")
     private LocalDate serviceStartDate;
     private boolean duplicateLicencePlateError;
     private String dateOfRepairError;
-    private boolean serviceStartDateError;
+
 
     public CarDto() {
         duplicateLicencePlateError = false;
         dateOfRepairError = "";
-        serviceStartDateError = false;
+
     }
 
 
