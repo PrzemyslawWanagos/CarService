@@ -38,11 +38,11 @@ public class InOutSearch {
     public InOutSearch() {
     }
 
-    public List<Car> returnListOfCarsToRepair(@NotNull Cars cars, String licencePlate) {
+    public List<Car> returnListOfCarsToRepair(@NotNull Cars cars, String stringToFind) {
         Predicate<Car> isCarRepaired = c -> !c.isRepaired();
-        Predicate<Car> licencePlateFilter = c -> c.getLicencePlate().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT));
-        Predicate<Car> brandFilter = c -> c.getBrand().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT));
-        Predicate<Car> descriptionFilter = c -> c.getDescription().toUpperCase(Locale.ROOT).contains(licencePlate.toUpperCase(Locale.ROOT));
+        Predicate<Car> licencePlateFilter = c -> c.getLicencePlate().toUpperCase(Locale.ROOT).contains(stringToFind.toUpperCase(Locale.ROOT));
+        Predicate<Car> brandFilter = c -> c.getBrand().toUpperCase(Locale.ROOT).contains(stringToFind.toUpperCase(Locale.ROOT));
+        Predicate<Car> descriptionFilter = c -> c.getDescription().toUpperCase(Locale.ROOT).contains(stringToFind.toUpperCase(Locale.ROOT));
         return cars.getCars()
                 .stream()
                 .filter(isCarRepaired)

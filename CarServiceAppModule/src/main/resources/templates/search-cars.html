@@ -37,8 +37,8 @@
             </div>
             <div th:if="${!carSearchResult.isEmpty()}">
                 <form action="/search-car">
-                    <label th:for="licencePlate" th:text="#{searchCriteria.label}"></label>
-                    <input class="form-control" id="licencePlate" th:type="text" th:name="licencePlate"/>
+                    <label th:for="stringToFind" th:text="#{searchCriteria.label}"></label>
+                    <input class="form-control" id="stringToFind" th:type="text" th:name="stringToFind"/>
                     <br>
                     <button type="submit" class="btn btn-secondary col-lg-2" th:text="#{searchButton.caption}"></button>
                     <button type="submit" class="btn btn-secondary col-lg-2" th:text="#{searchButtonCancel.caption}"></button>

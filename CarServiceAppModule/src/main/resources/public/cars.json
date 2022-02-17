@@ -143,5 +143,14 @@
     "description" : "52435234",
     "dateOfRepair" : [ 2022, 2, 17 ],
     "serviceStartDate" : [ 2022, 2, 17 ]
+  }, {
+    "brand" : "treww",
+    "licencePlate" : "twertwe",
+    "problemCategory" : "SEATS",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "twretwe",
+    "dateOfRepair" : null,
+    "serviceStartDate" : [ 2022, 2, 17 ]
   } ]
 }

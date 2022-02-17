@@ -25,8 +25,8 @@ public class SearchCarController {
     }
 
     @GetMapping("/search-car")
-    public String displaySearchedCars(@RequestParam("licencePlate") String licencePlate, Model model) {
-        List<Car> CarSearchResult = services.returnListOfCarsToRepair(cars, licencePlate);
+    public String displaySearchedCars(@RequestParam("stringToFind") String stringToFind, Model model) {
+        List<Car> CarSearchResult = services.returnListOfCarsToRepair(cars, stringToFind);
         model.addAttribute("carSearchResult", CarSearchResult);
         return "search-cars";
     }
