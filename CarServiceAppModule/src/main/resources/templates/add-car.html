@@ -73,11 +73,16 @@
                 <input id="serviceStartDate" class="form-control" th:type="date" th:field="*{serviceStartDate}"
                        th:required="required"
                        th:value="${carDto.serviceStartDate}"/>
-                <div th:if="${carDto.isServiceStartDateError()}" th:class="'alert alert-danger'">
-                    <ul>
-                        <li th:text="'Incorrect service start date'"></li>
-                    </ul>
-                </div>
+            <div th:if="${#fields.hasErrors('serviceStartDate')}" th:class="'alert alert-danger'">
+                <ul>
+                    <li th:each="err : ${#fields.errors('serviceStartDate')}" th:text="${err}"></li>
+                </ul>
+            </div>
+<!--                <div th:if="${carDto.isServiceStartDateError()}" th:class="'alert alert-danger'">-->
+<!--                    <ul>-->
+<!--                        <li th:text="'Incorrect service start date'"></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
                 <br>
                 <button type="submit" class="btn btn-secondary " th:text="#{addCarToServiceQueue.caption}"></button>
                 <button type="reset" class="btn btn-secondary " th:text="#{form.Clear}"></button>
