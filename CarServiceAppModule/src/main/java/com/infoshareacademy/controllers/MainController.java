@@ -1,7 +1,7 @@
 package com.infoshareacademy.controllers;
 
 import com.infoshareacademy.repository.Cars;
-import com.infoshareacademy.service.Services;
+import com.infoshareacademy.service.InOutSearch;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,7 +23,7 @@ public class MainController {
     @GetMapping("/")
     public String mainPage(Model model) {
         try {
-            cars.setCars(Services.readCarService().getCars());
+            cars.setCars(InOutSearch.readCarService().getCars());
         } catch (Exception e) {
             if (exception.equals("zero length input")) {
                 model.addAttribute("exception", exception);

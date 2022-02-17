@@ -4,7 +4,7 @@ import com.infoshareacademy.domain.Car;
 import com.infoshareacademy.dto.CarDto;
 import com.infoshareacademy.mappers.CarVsCarDto;
 import com.infoshareacademy.repository.Cars;
-import com.infoshareacademy.service.Services;
+import com.infoshareacademy.service.InOutSearch;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
@@ -26,11 +26,11 @@ import static com.infoshareacademy.CarServiceApp.exception;
 @Scope(value = WebApplicationContext.SCOPE_REQUEST, proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class AddCarController {
 
-    private final Services services;
+    private final InOutSearch services;
     private final Cars cars;
 
     @Autowired
-    public AddCarController(Services services, Cars cars) {
+    public AddCarController(InOutSearch services, Cars cars) {
         this.services = services;
         this.cars = cars;
     }

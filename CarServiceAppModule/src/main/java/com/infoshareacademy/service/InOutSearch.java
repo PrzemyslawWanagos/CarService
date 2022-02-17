@@ -6,7 +6,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.infoshareacademy.domain.Car;
-import com.infoshareacademy.dto.CarDto;
 import com.infoshareacademy.repository.Cars;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
@@ -28,15 +27,15 @@ import java.util.stream.Collectors;
 import static com.infoshareacademy.CarServiceApp.*;
 
 @Service
-public class Services {
+public class InOutSearch {
     private Cars cars;
 
     @Autowired
-    public Services(Cars cars) {
+    public InOutSearch(Cars cars) {
         this.cars = cars;
     }
 
-    public Services() {
+    public InOutSearch() {
     }
 
     public List<Car> returnListOfCarsToRepair(@NotNull Cars cars, String licencePlate) {

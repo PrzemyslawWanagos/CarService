@@ -4,7 +4,7 @@ import com.infoshareacademy.domain.Car;
 import com.infoshareacademy.dto.CarDto;
 import com.infoshareacademy.mappers.CarVsCarDto;
 import com.infoshareacademy.repository.Cars;
-import com.infoshareacademy.service.Services;
+import com.infoshareacademy.service.InOutSearch;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,11 +22,11 @@ import static com.infoshareacademy.CarServiceApp.exception;
 @Controller
 public class EditCarController {
 
-    private final Services services;
+    private final InOutSearch services;
     private final Cars cars;
 
     @Autowired
-    public EditCarController(Services services, Cars cars) {
+    public EditCarController(InOutSearch services, Cars cars) {
         this.services = services;
         this.cars = cars;
     }
