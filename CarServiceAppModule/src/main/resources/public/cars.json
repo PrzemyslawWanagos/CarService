@@ -152,5 +152,14 @@
     "description" : "twretwe",
     "dateOfRepair" : null,
     "serviceStartDate" : [ 2022, 2, 17 ]
+  }, {
+    "brand" : "ewrqwe",
+    "licencePlate" : "rqwerqwe",
+    "problemCategory" : "OTHER",
+    "costOfService" : 0,
+    "repaired" : false,
+    "description" : "rwqerq",
+    "dateOfRepair" : null,
+    "serviceStartDate" : [ 2022, 2, 20 ]
   } ]
 }

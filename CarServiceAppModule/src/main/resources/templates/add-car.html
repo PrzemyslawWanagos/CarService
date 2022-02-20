@@ -64,8 +64,8 @@
                 <br>
                 <select th:class="'form-control'" id="reasonForService" th:field="*{problemCategory}"
                         th:required="required">
-                    <option th:each="categoryOpt : ${T(com.infoshareacademy.domain.ProblemCategory).values()}"
-                            th:value="${categoryOpt.name()}" th:text="${categoryOpt.categoryName}"></option>
+                    <option th:each="categoryOpt : ${categories}"
+                            th:value="${categoryOpt}" th:text="${categoryOpt.getCategoryName()}"></option>
                 </select>
                 <br>
                 <label for="serviceStartDate" th:text="#{serviceStartDate.label}"></label>

@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.infoshareacademy.domain.Car;
+import com.infoshareacademy.domain.ProblemCategory;
 import com.infoshareacademy.repository.Cars;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
@@ -17,10 +18,7 @@ import javax.validation.constraints.NotNull;
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Locale;
-import java.util.Objects;
+import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -143,6 +141,9 @@ public class InOutSearch {
                 .sorted(Comparator.comparing(Car::getServiceStartDate))
                 .collect(Collectors.toList());
         return toReturn;
+    }
+    public List<ProblemCategory> getCategories() {
+        return Arrays.asList(ProblemCategory.values());
     }
 
 

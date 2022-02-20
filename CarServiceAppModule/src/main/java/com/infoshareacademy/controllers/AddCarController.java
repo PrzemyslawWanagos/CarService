@@ -40,6 +40,9 @@ public class AddCarController {
         CarDto carDto= new CarDto();
         carDto.setServiceStartDate(LocalDate.now());
         model.addAttribute("carDto", carDto);
+        model.addAttribute("categories", services.getCategories());
+
+
         return "add-car";
     }
 
